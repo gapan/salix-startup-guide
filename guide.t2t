@@ -31,7 +31,7 @@ Many thanks especially to //**jrd**//, //**akuna**//, //**mimosa**// and //**max
 
 =Salix at a Glance=
 
-[desktop_rotated.png]
+[img/desktop_rotated.png]
 
 
 Salix is a [Linux Distribution http://en.wikipedia.org/wiki/Linux_distro] based on
@@ -71,7 +71,7 @@ software, //minimalistic// Fluxbox window manager, wickedly fast LXDE
 desktop or "say good-bye to the rodent" Ratpoison, all with the
 Salix look and feel!
 
-[screenshots_rotated.jpg]
+[img/screenshots_rotated.jpg]
 
 
 For a list of applications available in each Edition, please refer
@@ -215,7 +215,7 @@ wise to check the following points:
 
 ===Partition Management===
 
-[SalixStartUpGuide_13.37_draft4_html_m4548ab69.png]
+[gparted.png]
 
 Before installing Salix (from the live CD or not), you need to have the
 necessary partition space available on your system, and if the computer
@@ -284,74 +284,6 @@ Each partition can be formatted into one of several
 Unless you have a
 particular favourite for a reason, we recommend you format your
 partitions with the ext4 file system.
-
-
-==Installing from a Live CD / USB== 
-
-Salix Live Installer is found on the Desktop of every Live CD and is
-very easy to use. Contextual help triggered by the position of the mouse
-will be displayed above the application and will guide you every step of
-the way.
-
-You will be greeted by a reminder that all the necessary partitions have
-to be created first. As we have seen, this can be done simply with the
-help of [Gparted #gparted], which is included in Salix Live and is
-available directly on the desktop.
-
-
-[SalixStartUpGuide_13.37_draft4_html_46a995ce.png]
-
-
-On the left side of the application, you will notice the different
-sections that must be configured before launching the installation
-process: Time, Keyboard, Locale, Partitions, Users and Software.
-Clicking on one of these sections will display the corresponding options
-that need to be set. As you progress through the configuration process,
-a check will be displayed beside each completed section. Only when
-all the sections have been completed will the "Launch Salix
-Install" button be activated.
-So do take the time to familiarise yourself fully with Salix Live
-Installer. Undo options are available and none of the settings will be
-applied until you click on the "Launch Salix Install" button.
-Remember that the existing swap partition will be automatically used by
-the Live installer without any prompting on your part.
-
-
-
-[SalixStartUpGuide_13.37_draft4_html_1289aa62.png]
-
-Salix comes with three different installation modes. The Full
-installation mode includes a range of useful applications one could need
-on a daily basis while following the "one application per task"
-rationale, while the Basic Mode provides a user with a graphical desktop
-environment, a web browser and [Gslapt package manager #gslapt].
-
-This is ideal for advanced users who would like to have the basic
-desktop environment installed first, and then to add their own choice of
-applications. The Core Mode installs the minimum software essential for
-a console system to start (i.e. a graphical environment is not
-provided). This is ideal if you are an experienced user and love
-to customise your installation for any specific purpose, such as a web
-server, file server and so on.
-
-Once the installation process is completed, you will be given the choice
-to launch [Lilo Setup #lilosetup] to configure your LILO bootloader.
-Most of the time this is what you will want to do although occasionally,
-it might be preferable not to, for example if you want to use Grub
-instead or if you want to simply incorporate Salix into an existing
-bootloader configuration from another distribution in a multiple
-boot setup.
-
-
-[SalixStartUpGuide_13.37_draft4_html_609b5e05.png]
-
-Lilo Setup is also very easy to use. Contextual help triggered by the
-position of the mouse will also be displayed above the application and
-will guide you every step of the way.
-
-Once Lilo is set up, you are good to go! You can re-start your machine,
-and start enjoying Salix time.
-
 
 
 ==Installing from a Salix Installation CD==
