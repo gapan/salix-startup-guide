@@ -1358,6 +1358,26 @@ Here is a short list of key bindings common to many of the Salix
 Ratpoison edition's applications.
 
 
+|| Shortcuts  | Description 
+| gg          | go to the top
+| G           | go to the bottom
+| h           | left 
+| j           | down
+| k           | up 
+| l           | right 
+| TAB         | select form fields, links. C-z to type in some forms 
+| o           | open
+| t           | open in new tab/window 
+| f           | follow a link
+| d           | close/delete 
+| H           | go back 
+| /           | search forwards
+| ?           | search backwards 
+| ESC         | return to command mode (and clear the buffer of any mistyped keystrokes) 
+| :           | pass a non-shortcut command to the application 
+
+
+
 For a summary of Ratpoison's own shortcuts, type **C-t ?**.
 
 While what is covered here should be enough to get you started, many
