@@ -215,7 +215,7 @@ wise to check the following points:
 
 ===Partition Management===
 
-[gparted.png]
+[img/gparted.png]
 
 Before installing Salix (from the live CD or not), you need to have the
 necessary partition space available on your system, and if the computer
@@ -419,7 +419,7 @@ under "Edit".
 
 
 
-[SalixStartUpGuide_13.37_draft4_html_m5f75e440.png]
+[img/gslapt.png]
 
 
 ===slapt-get===
@@ -457,7 +457,7 @@ click on the **Execute**button.
 
 
 
-[SalixStartUpGuide_13.37_draft4_html_m7b675ef9.png]
+[img/sourcery.png]
 
 
 
@@ -563,7 +563,7 @@ simple interface to connect to networks with a wide variety of
 settings.
 
 
-[SalixStartUpGuide_13.37_draft4_html_m4a3f324d.png]
+[img/wicd.png]
 
 
 It will connect to wired (Ethernet only, no PPPoE/DSL support yet) and
@@ -604,7 +604,7 @@ below. This is the important part. Or if you have a
 instead, you can load it here.
 
 
-[SalixStartUpGuide_13.37_draft4_html_m16f97de6.png]
+[img/addprinter.png]
 
 
 
@@ -640,7 +640,7 @@ For more information on what is actually installed, please see
 ===What are the Salix Tools?===
 
 
-[SalixStartUpGuide_13.37_draft4_html_3967a40f.png]
+[img/salixtools-gtk.png]
 
 
 Salix tools are a collection of utilities that are designed to manage
@@ -664,7 +664,7 @@ sound card for your system other than the one automatically picked
 during installation/start-up.
 
 
-[SalixStartUpGuide_13.37_draft4_html_m2ef6b7d6.png]
+[img/gtkalsasetup.png]
 
 
 
@@ -684,7 +684,7 @@ machine as a server.
 
 
 
-[SalixStartUpGuide_13.37_draft4_html_7926d3fa.png]
+[img/gtkhostsetup.png]
 
 
 
@@ -695,7 +695,7 @@ will display a possible course of action for each new configuration file
 found in the system.
 
 
-[SalixStartUpGuide_13.37_draft4_html_3abe4f1a.jpg]
+[img/dotnew.jpg]
 
 
 To execute this utility in runlevel 3, simply type dotnew.
@@ -704,7 +704,7 @@ To execute this utility in runlevel 3, simply type dotnew.
 ===Keyboard Layout===
 
 
-[SalixStartUpGuide_13.37_draft4_html_m6e7eada0.png]
+[img/gtkkeyboardsetup.png]
 
 
 This utility will configure the keyboard disposition being used both in
@@ -722,7 +722,7 @@ To execute this utility in runlevel 3, simply type keyboardsetup.
 
 Lilo Setup will install a new LILO bootloader on your computer.
 
-[SalixStartUpGuide_13.37_draft4_html_1127e4be.png]
+[img/lilosetup.png]
 
 A bootloader is required to load the main operating system of a computer
 and will initially display a boot menu if several operating systems are
@@ -747,7 +747,7 @@ button and will not necessitate a reboot.
 
 To execute this utility in runlevel 3, simply type servicesetup.
 
-[SalixStartUpGuide_13.37_draft4_html_m266ffa76.png]
+[img/gtkservicesetup.png]
 
 
 
@@ -767,7 +767,7 @@ To execute it in runlevel 3, simply type clocksetup.
 
 ===Users Profile===
 
-[SalixStartUpGuide_13.37_draft4_html_m11ed8757.png]
+[img/gtkusersetup.png]
 
 In Unix/Linux, all users and groups of users are given certain
 [permissions and access rights http://en.wikibooks.org/wiki/UNIX_Computing_Security/Access_authorization]
@@ -784,7 +784,7 @@ To execute it in runlevel 3, simply type usersetup.
 
 ===Salix-Update-Notifier===
 
-[SalixStartUpGuide_13.37_draft4_html_14cd5caf.png]
+[img/salix-update-notifier.png]
 
 Salix update notifier is a tool that periodically checks for available
 package updates and informs the user about them with the display of a
@@ -843,7 +843,7 @@ normally the same as "**/home/your user name**" (replace the
 content, type "**ls**" and press enter. You will see something like
 this:
 
-[SalixStartUpGuide_13.37_draft4_html_190dd0b3.png]
+[img/ls.png]
 
 Now to move around directories, we use "**cd**". If you just type in
 "**cd**" and enter, nothing will happen. "**cd**" must be followed
@@ -881,7 +881,7 @@ Next, let's create a log file for the photo folder. "**nano**" is a
 command line application for reading and writing texts. To bring up the
 program, type in "**nano**".
 
-[SalixStartUpGuide_13.37_draft4_html_1cf0fd24.png]
+[img/nano.png]
 
 The application is simple to use, and you can see command options shown
 at the buttom. Type "**log file created**", and with **Ctrl+x**, save
@@ -939,7 +939,8 @@ folder?
 But... "**cp photo ../Pictures**" (remember that **..** refers to the
 folder one level up) will give an error like this.
 
-[SalixStartUpGuide_13.37_draft4_html_m32d8d4a3.png]
+[img/cp.png]
+
 
 Let's see what we can do here. The first thing when encountering such a
 problem is to check the corresponding help file. This can normally be
@@ -998,7 +999,7 @@ still running, but as you don't see anything, perhaps it is not running
 properly. To terminate the process, press "**Ctrl+c**". You will get
 back the normal input line back on your terminal.
 
-[SalixStartUpGuide_13.37_draft4_html_e331e22.png]
+[img/cowsay.png]
 
 So what was going wrong? Check "**cowsay**" with "**-h**". You will see
 that you need to type in a **[message]**. Try again with
@@ -1075,7 +1076,7 @@ back up a level. Right arrow or enter runs the application (if you open
 one by mistake, don't worry, just type **C-t r** again - we will
 see how to close windows and applications later).
 
-[SalixStartUpGuide_13.37_draft4_html_3b5af707.png]
+[img/ratmenu.png]
 
 Some common options are available directly at the top. The
 //Vimprobable2//browser, for instance, can be found under Network but
@@ -1104,7 +1105,7 @@ Type
 When the page has loaded, type
 **f** and then select a number to follow a link:
 
-[SalixStartUpGuide_13.37_draft4_html_23fe0b54.png]
+[img/ratpoisonmanual.png]
 
 **Shift-h** takes you back to where you were before. **t** works like
 **o** but opens the URL in a new window, as does **shift-f** instead of
@@ -1153,7 +1154,7 @@ though some of these may already be present.
 Let's now see how ratpoison deals with several open windows. **C-t e**
 reveals all of them:
 
-[SalixStartUpGuide_13.37_draft4_html_123e223c.png]
+[img/ratpoison.png]
 
 Notice that each one is associated with a number: typing it focuses on
 that window and hides all the others. (**C-t w** simply provides a list
@@ -1176,7 +1177,7 @@ swaps the tiled windows over. **C-t Q** undoes the splitting
 and allows the currently focused window to fill the screen. In practice,
 it's rarely useful to have more than one or two windows visible:
 
-[SalixStartUpGuide_13.37_draft4_html_60216ca2.png]
+[img/vimprobable.png]
 
 
 
@@ -1273,7 +1274,7 @@ using Ratpoison, you can open the file now (with //GVim//or //Vim//) and
 tile it horizontally with the window where you are reading this guide
 (**C-t shift-s**). Let's go through some items in the file.
 
-[SalixStartUpGuide_13.37_draft4_html_m33ed454d.png]
+[img/ratpoisonrc.png]
 
 //banish//sends the mouse pointer to bottom right (incidentally, you may
 wish to install //unclutter//, which makes it fade out altogether
@@ -1313,7 +1314,7 @@ which were set up in the last line of the configuration file. In a
 console, type **rpws help** .
 
 
-[SalixStartUpGuide_13.37_draft4_html_m42df6fc7.png]
+[img/rpwd.png]
 
 The usage summary you will see may be a little cryptic. Just as "C"
 means Control, "M" refers to Alt. Use Alt with the function keys to
@@ -1340,7 +1341,7 @@ C-t ! gvim ~/.ratmenu/network.sh
 ```
 
 
-[SalixStartUpGuide_13.37_draft4_html_70fa41c2.png]
+[img/ratmenu_edit.png]
 
 Note that graphical applications are called directly, but command line
 programs need to be opened inside a terminal.
@@ -1397,7 +1398,7 @@ instant help if necessary. If you do however, you might want to modify
 the default //qwebircxxx//login to something more personal and human
 readable.
 
-[SalixStartUpGuide_13.37_draft4_html_2c2d9d6.png]
+[img/salix-online.png]
 
 
 We hope that the information here will allow you to get Salix up and
@@ -1516,7 +1517,7 @@ be able to take Linux at your own pace.
 
 ====Abiword==== 
 
-[SalixStartUpGuide_13.37_draft4_html_m5fb48e46.png]
+[img/abiword.png]
 
 AbiWord is a word processing program suitable for a wide variety of word
 processing tasks.
@@ -1524,7 +1525,7 @@ processing tasks.
 
 ====Asunder==== 
 
-[SalixStartUpGuide_13.37_draft4_html_52bccc42.png]
+[img/asunder.png]
 
 Asunder is an Audio CD ripper and encoder for Linux. You can use Asunder
 to save tracks from an Audio CD as any of WAV, MP3, OGG, FLAC, WavPack,
@@ -1538,7 +1539,7 @@ as possible and has some unique features to enable users to create their
 discs easily and quickly.
 
 
-[SalixStartUpGuide_13.37_draft4_html_118fb740.png]
+[img/brasero.png]
 
 
 ====Catfish====
@@ -1547,7 +1548,7 @@ Catfish is a handy file searching tool which provides a unified,
 lightweight and simple interface for different search engines
 such as find, (s)locate, doodle, tracker and beagle.
 
-[SalixStartUpGuide_13.37_draft4_html_m3b40d09.png]
+[img/catfish.png]
 
 
 
@@ -1558,13 +1559,13 @@ configuration and an abundance of features. It stores mail in the MH
 mailbox format as well as the Mbox mailbox format via a plugin.
 
 
-[SalixStartUpGuide_13.37_draft4_html_m28ba0b7e.png]
+[img/claws.png]
 
 ====Document Viewer (Atril)==== 
 
 Document Viewer is a a very lightweight, simple PDF document viewer.
 
-[SalixStartUpGuide_13.37_draft4_html_m51364628.png]
+[img/atril.png]
 
 
 
@@ -1574,7 +1575,7 @@ ePDFView is a lightweight PDF document viewer that only uses the GTK+
 and Poppler libraries. It opens PDF files, save copies of documents, and
 has support for printing using CUPS.
 
-[SalixStartUpGuide_13.37_draft4_html_m6f714a64.png]
+[img/epdfview.png]
 
 
 
@@ -1582,21 +1583,21 @@ has support for printing using CUPS.
 
 ====Exaile==== 
 
-[SalixStartUpGuide_13.37_draft4_html_m7dce7a41.png]
+[img/exaile.png]
 
 Exaile is a music manager which incorporates automatic fetching of album
 art, lyrics fetching, Last.fm scrobbling, support for many portable
 media players, Internet radio such as Shoutcast, tabbed playlists, etc.
 
 
-====File Roller====
+====Engrampa====
 
-File Roller is an archive manager. Supported archive types include gzip,
+Engrampa is an archive manager. Supported archive types include gzip,
 bzip, bzip2, compress, lzop, zip, jar, lha, rar, zoo, arj, 7-zip,
 etc.
 
 
-[SalixStartUpGuide_13.37_draft4_html_m64e32084.png]
+[img/engrampa.png]
 
 
 ====Firefox====
@@ -1605,7 +1606,7 @@ Mozilla Firefox is a free and open source web browser with tabbed
 browsing, spell checking, incremental find, private browsing and
 numerous plugins.
 
-[SalixStartUpGuide_13.37_draft4_html_723b438c.png]
+[img/firefox.png]
 
 
 
@@ -1625,14 +1626,14 @@ which only has a few dependencies and is independent of any particular
 Desktop Environment.
 
 
-[SalixStartUpGuide_13.37_draft4_html_31069167.png]
+[img/geany.png]
 
 ====gFTP====
 
 gFTP is an FTP client with both a text and a GUI interface. gFTP aims to
 be simple to use yet powerful.
 
-[SalixStartUpGuide_13.37_draft4_html_30e50154.png]
+[img/gftp.png]
 
 
 
@@ -1645,7 +1646,7 @@ using GIO/GVfs. It allows you to quickly connect/mount a remote
 filesystem and browse local networks shares.
 
 
-[SalixStartUpGuide_13.37_draft4_html_74660c1c.png]
+[img/gigolo.png]
 
 ====Gimp==== 
 
@@ -1656,7 +1657,7 @@ photos, combining multiple images, converting between different image
 formats as well as create basic animated images in GIF.
 
 
-[SalixStartUpGuide_13.37_draft4_html_m7a5b210a.png]
+[img/gimp.png]
 
 
 ====Gnumeric====
@@ -1667,7 +1668,7 @@ files saved with other spreadsheets and offers a customizable feel that
 attempts to minimize the costs of transition.
 
 
-[SalixStartUpGuide_13.37_draft4_html_m209a02ac.png]
+[img/gnumeric.png]
 
 
 ====Gtkman====
@@ -1677,7 +1678,7 @@ specifying their name and optionally the section they are in, just as
 with the original man command. The manual pages are displayed in simple
 text form using the default system monospace font.
 
-[SalixStartUpGuide_13.37_draft4_html_m76479f8.png]
+[img/gtkman.png]
 
 
 
@@ -1694,7 +1695,7 @@ go to qtconfig and select "ibus" instead of "xim" in
 
 ====ISO Master====
 
-[SalixStartUpGuide_13.37_draft4_html_m4779bb05.png]
+[img/isomaster.png]
 
 ISO Master is an application for creating and modifying ISO9660 files
 (ISO images). Its functionalities include: creating an ISO image from
@@ -1718,7 +1719,7 @@ Subversion, Bazaar-ng and Mercurial.
 
 ====Midori====
 
-[SalixStartUpGuide_13.37_draft4_html_606a8104.png]
+[img/midori.png]
 
 Midori (Japanese for green) is a web browser that aims to be lightweight
 and fast. It uses the WebKit rendering engine.
@@ -1730,7 +1731,7 @@ manipulate digital photos. Due to its efficient design it can run on
 older PC hardware (e.g. a 200MHz CPU and 16MB of free RAM).
 
 
-[SalixStartUpGuide_13.37_draft4_html_6b3421f6.png]
+[img/mtpaint.png]
 
 ====LibreOffice====
 
@@ -1741,7 +1742,7 @@ stores all your data in an international open standard format and can
 also read and write files from other common office software packages.
 
 
-[SalixStartUpGuide_13.37_draft4_html_3073e10.png]
+[img/libreoffice.png]
 
 
 ====Orage====
@@ -1754,12 +1755,12 @@ can be accessed using the Orage Clock plugin for the panel. Simply click
 on a date to display or set the agenda for the day.
 
 
-[SalixStartUpGuide_13.37_draft4_html_342e305.png]
+[img/orage.png]
 
 
 ====Parole Media Player==== 
 
-[SalixStartUpGuide_13.37_draft4_html_3e1bb30d.png]
+[img/parole.png]
 
 Parole Media Player is a media player (audio and video) which utilises
 the GStreamer framework for playback.
@@ -1772,7 +1773,7 @@ accounts on multiple chat networks simultaneously. Pidgin is compatible
 with numerous chat networks out of the box: AIM, ICQ, Google Talk,
 Jabber/XMPP, MSN Messenger, Yahoo, etc.
 
-[SalixStartUpGuide_13.37_draft4_html_1b01889f.png]
+[img/pidgin.png]
 
 
 
@@ -1784,7 +1785,7 @@ PiTiVi is an easy to use video editor. The interface is intuitive to
 most users. Just by dragging your video clips, you can create your own
 film clips.
 
-[SalixStartUpGuide_13.37_draft4_html_3e831056.png]
+[img/pitivi.png]
 
 
 
@@ -1796,7 +1797,7 @@ Simple Scan allows you to scan your documents/photos with your scanner
 or even with your webcam!
 
 
-[SalixStartUpGuide_13.37_draft4_html_m74944935.png]
+[img/simple-scan.png]
 
 
 ====Transmission====
@@ -1805,7 +1806,7 @@ Transmission is a
 [BitTorrent https://en.wikipedia.org/wiki/BitTorrent] client that is
 simple, lean and powerful.
 
-[SalixStartUpGuide_13.37_draft4_html_725004eb.png]
+[img/transmission.png]
 
 
 ====Viewnior==== 
@@ -1813,7 +1814,7 @@ simple, lean and powerful.
 Viewnior is a fast and lightweight picture viewer.
 
 
-[SalixStartUpGuide_13.37_draft4_html_m568e3ecf.png]
+[img/viewnior.png]
 
 
 ====Whaaw! MediaPlayer==== 
@@ -1824,7 +1825,7 @@ settings and more. It is intended to be a basic media player with few
 dependencies.
 
 
-[SalixStartUpGuide_13.37_draft4_html_51a1d792.png]
+[img/whaaw.png]
 
 
 ====Zim==== 
