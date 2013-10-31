@@ -16,7 +16,7 @@ the many functionalities of Salix. The latest version of this document
 is available from [our website http://www.salixos.org].
 
 
-**The Salix start up guide is released under the [CC-BY-SA 3.0 http://creativecommons.org/licenses/by-sa/3.0/] icense.**
+**The Salix start up guide is released under the [CC-BY-SA 3.0 http://creativecommons.org/licenses/by-sa/3.0/] license.**
 
 
 //**Your contribution is important!**//
@@ -177,10 +177,10 @@ Setup, configuring some partitions with Gparted, etc.
 
 - Open the .iso file using a software archiver (file-roller, xarchiver, 7-zip, iso-master, …).
 - Extract all files and folders (boot, packages and Salix Live) to your USB root directory.
-- Go to the "boot" directory on the USB key.
+- Go to the ``boot`` directory on the USB key.
 - If you're running on Unix (Linux, BSD, Mac OS X), just run the file
-  called "install-on-USB.sh". If you're on Windows, just run the file
-  called "install-on-USB.cmd" instead.
+  called ``install-on-USB.sh``. If you're on Windows, just run the file
+  called ``install-on-USB.cmd`` instead.
 
 
 +++Booting from a Salix Installation CD/DVD/USB Key+++
@@ -190,7 +190,7 @@ before defaulting to the internal hard disk drive.
 If that is not the case, you need to first modify the
 [BIOS http://en.wikipedia.org/wiki/BIOS] setting, usually by pressing the Del
 key or the F2 key (or some other key combinations depending on your
-machine). Once in the BIOS, find the "boot menu" or similar and
+machine). Once in the BIOS, find the //boot menu// or similar and
 set the order of the boot devices properly, with your optical drive/USB
 port in the first position. Save your changes and reboot your computer.
 Insert the Salix (Live)CD/DVD or USB key, and start up your computer.
@@ -258,7 +258,7 @@ difference between a logical and a primary partition except for that
 +++So what kind of partitions do you need?+++
 
 - Salix needs, at the very minimum, one partition which holds the root
-directory and must be assigned as "/" (without the quotation marks).
+directory and must be assigned as ``/``.
 - It is highly recommended to have one swap partition. If you already
 have another Linux OS running on your machine, its swap partition can be
 shared, and you do not need to create another. A swap partition size is
@@ -306,35 +306,36 @@ semi-graphical command line interface.
   "extended" partition first and then set the size. Remember, you can have
   up to four primary partitions or three primary partition with one
   extended partition for more partitions. Let's say we want to create one
-  swap partition and partitions for the "/" and "/home" directories.
+  swap partition and partitions for the ``/`` and ``/home`` directories.
   To create a swap partition, for example, select "primary" partition. Hit
   enter (for the default starting cylinder), and then type in "+1024M" for
   1024 Mb. Choose Type to specify the file system type. Enter **82**
   (Linux swap).
   Let's assume that you have already used up the first three primary
   partitions, the last one should be made into an "extended" partition as
-  you would still like to create the partitions for "/" and for "/home".
+  you would still like to create the partitions for ``/`` and for
+  ``/home``.
   To create an extended partition, select "extended" partition. Hit enter
   and again hit enter for the default value. This will create an extended
   partition out of the remaining disk space.
   Now select Free disk space from the extended partition, and create
   **New**. Create a "logical" partition as you did for the primary
   partition. Set the size to "+10240M" for roughly 10 Gb. This will be
-  your partition for the root directory ("/"). Select **Type**, and type
+  your partition for the root directory (``/``). Select **Type**, and type
   "**83**" (Linux partition).
   Create again a new partition and this time, accept all the default
   selections. The remaing disk space will be put in this partition. This
-  will be your partition for the "/home" directory. Select **Type**, and
+  will be your partition for the ``/home`` directory. Select **Type**, and
   type "**83**".
   Select **Write**, and then **Quit** to exit the partition management.
-- Your swap partition will be automatically detected. Say "yes" if the
+- Your swap partition will be automatically detected. Say ``yes`` if the
   detected partition corresponds to that.
-- You will then be asked to specify the partition for the root "/"
-  directory. Select the partition you have created for the "/", and
+- You will then be asked to specify the partition for the root ``/``
+  directory. Select the partition you have created for the ``/``, and
   continue to format the partition. The ext4 file system is recommended
   here.
 - If you have other partitions to mount, you can do so. As we have a
-  partition for a "/home" directory, we select the partition and continue.
+  partition for a ``/home`` directory, we select the partition and continue.
   Unless the partition is new or you would like to erase the content of
   this partition, select not to format.
 - Other partitions such as Windows partitions will be detected
@@ -359,7 +360,7 @@ semi-graphical command line interface.
 Installing Salix from a USB key is also possible (but consider
 installing from a Salix Live USB also). The most difficult part
 is to know the device name of your USB key. You may wish to issue the
-command "fdisk -l" as root to know which device is used for your USB
+command ``fdisk -l`` as root to know which device is used for your USB
 key.
 
 - Create your USB stick with [unetbootin http://unetbootin.sourceforge.net/]
@@ -375,10 +376,11 @@ Alternatively, you can mount your USB key first.
 
 
 - After starting up the set up screen, select your keyboard type and exit the setup
-- Type "mkdir /salix" (without the quotation marks)
-- Type "mount /dev/sdb /salix" (sdb can be sdb1, depending on the assignment by your machine)
+- Type ``mkdir /salix``
+- Type ``mount /dev/sdb /salix`` (sdb can be sdb1, depending on the assignment by your machine)
 - Type setup to restart the installation process
-- When asked for the source file, select "from a local directory" and type in "/salix/salix"
+- When asked for the source file, select "from a local directory" and
+  type in ``/salix/salix``
 - Installation should continue normally
 
 
@@ -435,12 +437,29 @@ command line tool for Slackware package management. It allows one to
 search Slackware/Salix mirrors and third party sources for packages,
 compare them with installed packages, install new packages, or
 upgrade all installed packages.
-To use the application, open a Terminal window and issue the command
-``slapt-get -u`` first to update the package database on your
-computer. Then ``slapt-get -l`` to list all the available packages,
-``slapt-get -search [package name]`` to search for a package, and
-``slapt-get -i [package name]`` to install a package. For more
-command line instructions, please refer to ``slapt-get --help``.
+To use the application, open a Terminal window and first issue the
+command
+```
+slapt-get -u
+```
+in order to update the package database on your
+computer. Then
+```
+slapt-get -l
+```
+to list all the available packages,
+```
+slapt-get -search [package name]
+```
+to search for a package, and
+```
+slapt-get -i [package name]
+```
+to install a package. For more
+command line instructions, please refer to
+```
+slapt-get --help
+```
 
 Here is a little exercise for you. Try installing "w3m" which is a
 terminal based web browser, by using slapt-get.
@@ -472,11 +491,25 @@ packages that are still not available from the official Salix /
 Slackware repositories. Thousands of extra packages are now available to
 users through this tool.
 
-To use the application, type in ``slapt-src -u`` first to update on
+To use the application, type in
+```
+slapt-src -u
+```
+first to update on
 your computer the list of build scripts available from Slackbuild.org.
-``slapt-src -l`` shows you a list of available packages, and as in
-slapt-get, ``slapt-src -i [package name]`` will install a package. For
-more command line instructions, please refer to ``slapt-src -help``.
+```
+slapt-src -l
+```
+shows you a list of available packages, and as in
+slapt-get,
+```
+slapt-src -i [package name]
+```
+will install a package. For
+more command line instructions, please refer to
+```
+slapt-src -help
+```
 
 Another small exercise for you! Skype is a commonly used software to
 make voice calls over the Internet. It is not available from the common
@@ -492,12 +525,19 @@ Note that the skype is 32-bit only, so if you are running a
 An alternative way to install a package (which for Salix and many other
 slackware based distribution ends with the .tgz, .tlz or .txz
 extension) is to use the command line input
-``spkg -i [exact name of a package]``. This is a handy way of installing a package if
+```
+spkg -i [exact name of a package]
+```
+This is a handy way of installing a package if
 you have just created your own package or if you have downloaded it from
 the Internet. Note that the name of the package must be exact to the
 last extension (as in xxxxx-i486-tt.txz).
 Removing a package is somewhat similar. You can remove a package by
-issuing ``spkg -d [software name]``, e.g. ``spkg -d skype``.
+issuing
+```
+spkg -d [software name]
+```
+e.g. ``spkg -d skype``.
 
 
 +++Making a Package from a Source File with SLKBUILD+++
@@ -514,18 +554,28 @@ commands.
 - type in ``make install``
 
 
-(Make sure to read accompanying files such as "README", "INSTALL" and so
+Make sure to read accompanying files such as "README", "INSTALL" and so
 on for installation instructions before compiling. These files may list
 dependency packages which you need to install prior to the
 configuration.
-``./configure --help`` or ``./configure --help=short output``
-should also help you with some configuration options).
+```
+./configure --help
+```
+or
+```
+./configure --help=short output
+```
+should also help you with some configuration options.
 
 Although you should manage to install the software after the final
 command, it is essentially //untracked//and neither Gslapt nor slapt-get
 can see that the software is installed. A better way is to create a
 Salix package using SLKBUILD, which is a build script you can prepare
-before issuing ``slkbuild -X`` to create a Salix compatible package.
+before issuing
+```
+slkbuild -X
+```
+to create a Salix compatible package.
 For more on SLKBULD, please consult
 [SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild].
 
@@ -836,107 +886,153 @@ keys are used to switch between consoles.
 
 +++Moving Around - cd+++
 
-You should be in your user directory (denoted as "**~**"), which is
-normally the same as "**/home/your user name**" (replace the
-"**your user name**" with your own). In Salix, this directory contains
-"**Desktop**", "**Music**", "**Documents**" and so on. To see its
-content, type "**ls**" and press enter. You will see something like
+You should be in your user directory (denoted as ``~``), which is
+normally the same as ``/home/your_user_name`` (replace the
+``your_user_name`` with your own). In Salix, this directory contains
+``Desktop``, ``Music``, ``Documents`` and so on. To see its
+content, type ``ls`` and press enter. You will see something like
 this:
 
 [img/ls.png]
 
-Now to move around directories, we use "**cd**". If you just type in
-"**cd**" and enter, nothing will happen. "**cd**" must be followed
+Now to move around directories, we use the command ``cd``. If you just type in
+``cd`` and enter, nothing will happen. ``cd`` must be followed
 either by a name of a directory which is within the directory you are in
 or by a full path to the directory you wish to move into. You can also
-go one directory up by typing "**cd ..**" (be careful, there is a space
-between **cd** and **..**). Remember on Linux,
+go one directory up by typing ``cd ..`` (be careful, there is a space
+between ``cd`` and ``..``). Remember on Linux,
 //arguments are separated by spaces//. So for now, let's move to the root directory.
 The root directory is, as the name suggests, the core of your
 directories - every directory stems from here. Once you wipe out the
 root directory, you will not see your machine booting up again.
 
-To move to the root **/**, type in **cd /**.
+To move to the root ``/``, type in
+```
+cd /
+```
 
-Type in **ls** to see the list of files and directories in the
-directory. You should see something like "**tmp/**", "**usr/**",
-"**home/**" and so on. OK, not so interesting here. Let us move back to
-your home directory with "**cd /home/your user name**".
+Type in ``ls`` to see the list of files and directories in the
+directory. You should see something like ``tmp/``, ``usr/``,
+``home`` and so on. OK, not so interesting here. Let us move back to
+your home directory with
+```
+cd /home/your_user_name
+```
 
-Now move into the "**Music**" directory by issuing "**cd Music**". In
-fact, you do not have to type to the end. By pressing Tab after the
+Now move into the ``Music`` directory by issuing
+```
+cd Music
+```
+In fact, you do not have to type to the end. By pressing Tab after the
 first letter or two, you may complete the rest of the directory name
 automatically.
 
 
 +++Creating a Folder - mkdir+++
 
-You can create a folder by issuing "**mkdir** **name of a new folder**".
-For example, let's say we are going to create a photo folder. "**mkdir**
-**photo**" will place the new folder in the
+You can create a folder by issuing
+```
+mkdir name_of_a_new_folder
+```
+For example, let's say we are going to create a photo folder.
+```
+mkdir photo
+```
+will place the new folder in the
 current directory. You can check this by typing
-"**ls**".
+```
+ls
+```
 
-Next, let's create a log file for the photo folder. "**nano**" is a
+Next, let's create a log file for the photo folder. ``nano`` is a
 command line application for reading and writing texts. To bring up the
-program, type in "**nano**".
+program, type in
+```
+nano
+```
 
 [img/nano.png]
 
 The application is simple to use, and you can see command options shown
-at the buttom. Type "**log file created**", and with **Ctrl+x**, save
-the document as "**log**" and quit the application.
+at the buttom. Type
+```
+log file created
+```
+and with ``Ctrl+x``, save
+the document as ``log`` and quit the application.
 
 
 +++Copying & Moving & Removing a File - cp & mv & rm+++
 
-**cp**" is perhaps one of the most used commands in a console mode.
-"**cp**" copies a file or files from one location to another. Since we
-created the file called "**log**" and it is currently in the wrong
-directory, let us move it inside the "**photo**" directory. You can do
-so by issuing "**cp log photo/**" but perhaps it is better to call the
-log file not just "**log**" but "**log.txt**", so that it would be
+``cp`` is perhaps one of the most used commands in a console mode.
+``cp`` copies a file or files from one location to another. Since we
+created the file called ``log`` and it is currently in the wrong
+directory, let us move it inside the ``photo`` directory. You can do
+so by issuing ``cp log photo/`` but perhaps it is better to call the
+log file not just ``log`` but ``log.txt``, so that it would be
 obvious to a Windows user that it is a text file. Type in
-"**cp log photo/log.txt**" and enter to execute the command.
+```
+cp log photo/log.txt
+```
+and enter to execute the command.
 
-You can go inside the "**photo**" directory and check if the copying has
-been done properly. "**cd photo**" and then "**ls**". The file should be
+You can go inside the ``photo`` directory and check if the copying has
+been done properly. ``cd photo`` and then ``ls``. The file should be
 there. Let's add to the log file by saying that it has been moved from
-"**Music**" to "**photo**". Issuing "**nano log.txt**" will bring up the
+``Music`` to ``photo``. Issuing
+```
+nano log.txt
+```
+will bring up the
 text. Add a line to say it has been moved, and then save and quit the
-application by **Ctrl+x**.
+application by ``Ctrl+x``.
 
-Oh, but we forgot to delete the original "**log**" file in the
-"**Music**" folder. Let's just get back to the "**Music**" directory
-using "**cd ..**" and remove the "**log**" file by issuing "**rm log**".
-The "**rm** command removes a file or files. For example, if you would
+Oh, but we forgot to delete the original ``log`` file in the
+``Music`` folder. Let's just get back to the ``Music`` directory
+using ``cd ..`` and remove the ``log`` file by issuing ``rm log``.
+The ``rm`` command removes a file or files. For example, if you would
 like to remove all photos with .jpg extension but not with .png, you can
-issue a command something like: "**rm @star.jpg**". This will remove all
+issue a command something like:
+```
+rm *.jpg
+```
+This will remove all
 the files with .jpg extension within the directory you are in. Note that
-the "**rm**" command will not ask you to confirm your order. It will
+the ``rm`` command will not ask you to confirm your order. It will
 just carry out your instructions without further ado and once a file is
 removed, it is deleted forever. You cannot recover it from the recycle
 bin.
 
-In this example, we used "**cp**" to copy the log file and then later on
-deleted it. Normally, this would be done by issuing a "**mv**" command;
-"**mv log photo/**". You can also use the "**mv**" command to rename a
+In this example, we used ``cp`` to copy the log file and then later on
+deleted it. Normally, this would be done by issuing a ``mv`` command;
+```
+mv log photo/
+```
+You can also use the ``mv`` command to rename a
 file. Let's say that you did not like the earlier decision to call the
-log file "**log.txt**" and you now want to rename it as "**log**" again.
-Type in "**mv photo/log.txt photo/log**" and execute the command. Now
-the file name has been changed back to "log".
+log file ``log.txt`` and you now want to rename it as ``log`` again.
+Type in
+```
+mv photo/log.txt photo/log
+```
+and execute the command. Now
+the file name has been changed back to ``log``.
 
 
 
 +++Copying & Moving & Removing a Folder - cp & mv & rm+++
 
-So now you have the folder called "**photo**" and a log file in the
-"**Music**" directory. This is a little strange as we should normally
-have the folder not in "**Music**" but in "**Pictures**". But now you
+So now you have the folder called ``photo`` and a log file in the
+``Music`` directory. This is a little strange as we should normally
+have the folder not in ``Music`` but in ``Pictures``. But now you
 know how to move a file, perhaps the same command will work for moving a
 folder?
 
-But... "**cp photo ../Pictures**" (remember that **..** refers to the
+But...
+```
+cp photo ../Pictures
+```
+remember that ``..`` refers to the
 folder one level up) will give an error like this.
 
 [img/cp.png]
@@ -944,30 +1040,39 @@ folder one level up) will give an error like this.
 
 Let's see what we can do here. The first thing when encountering such a
 problem is to check the corresponding help file. This can normally be
-done by issuing a command with an option like "**cp --help**". It is
-possible that **--help** will just be **-h**, and there may be no help
-at all. "**man**" is another command if this is the case. "**man cp**"
+done by issuing a command with an option like ``cp --help``. It is
+possible that ``--help`` will just be ``-h``, and there may be no help
+at all. ``man`` is another command if this is the case.
+```
+man cp
+```
 will give a more indepth explanation of this command. (To get out of the
-manual, press "**q**").
+manual, press ``q``).
 
 If you read the help carefully, you will see that you need to give an
-extra option "**-r**" if you wish to copy a folder to another location.
-So now "**cp -r photo ../Pictures**" should copy the "**photo**" folder
-inside the correct "**Pictures**" directory. After checking that the
-folder has been safely copied, you can remove the "**photo**" folder
-from the "**Music**" directory: "**rm -r photo/**".
-
+extra option ``-r`` if you wish to copy a folder to another location.
+So now
+```
+cp -r photo ../Pictures
+```
+should copy the ``photo`` folder
+inside the correct ``Pictures`` directory. After checking that the
+folder has been safely copied, you can remove the ``photo`` folder
+from the ``Music`` directory:
+```
+rm -r photo/
+```
 
 
 +++Installing a Program - slapt-get and slapt-src+++
 
 Maybe a little bird has told you that there is a wonderful application
-called "**cowsay**" in Linux, and now you would like to see what this
+called ``cowsay`` in Linux, and now you would like to see what this
 program can do.
 
 In order to install a program, one needs to be logged in as root (=
 superuser = administrator), because it is a system wide action.
-Alternatively, you can acquire the superuser rights by issuing "**su**".
+Alternatively, you can acquire the superuser rights by issuing ``su``.
 You will be asked to enter the root password. After providing the
 correct password, you are now free to do whatever you wish to do on your
 system (even to make the machine unworkable).
@@ -975,35 +1080,52 @@ system (even to make the machine unworkable).
 So "cowsay". If this is the first time you are installing an application
 on Salix, the first thing you should do is to update the package
 database on your computer by executing
-"**slapt-get -u**". Then to
+```
+slapt-get -u
+```
+Then to
 search for an application (in this case, "cowsay"), type in
-"**slapt-get --search cowsay**". Unfortunately, cowsay is not in the official
+```
+slapt-get --search cowsay
+```
+Unfortunately, cowsay is not in the official
 repositories neither of Salix nor of Slackware. But it is still too
 early to give up. Slackbuild.org maintains extra packages for Slackware,
 which of course can be utilised by Salix users.
 
 Search for "cowsay" with slapt-src by typing
-"**slapt-src --search cowsay**"
+```
+slapt-src --search cowsay
+```
 after first updating the local database with
-"**slapt-src -u**". You will see that it is available from Slackbuild.org. To install
-it, execute "**slapt-src -i cowsay**". If you are not sure what this
-"**-i**" is, you can check it with the **--help** option. You will see a
+```
+slapt-src -u
+```
+You will see that it is available from Slackbuild.org. To install
+it, execute
+```
+slapt-src -i cowsay
+```
+If you are not sure what this
+``-i`` is, you can check it with the ``--help`` option. You will see a
 lot of lines running up the terminal quickly until the application is
 installed.
 
 Once it is installed, you might want to test it. First get out of the
-superuser mode by typing "**exit**". Then type in "**cowsay**". Nothing
+superuser mode by typing ``exit``. Then type in ``cowsay``. Nothing
 happens, and in fact, you will see that you are now in a strange mode
 that you cannot execute any commands. This is because the application is
 still running, but as you don't see anything, perhaps it is not running
-properly. To terminate the process, press "**Ctrl+c**". You will get
+properly. To terminate the process, press ``Ctrl+c``. You will get
 back the normal input line back on your terminal.
 
 [img/cowsay.png]
 
-So what was going wrong? Check "**cowsay**" with "**-h**". You will see
-that you need to type in a **[message]**. Try again with
-"**cowsay Hello Salix!**".
+So what was going wrong? Check ``cowsay`` with ``-h``. You will see
+that you need to type in a ``[message]``. Try again with
+```
+cowsay Hello Salix!
+```
 
 To sum up, we have merely scratched the surface of the power of the
 command line. The best way to learn more is by using it, but remember to
@@ -1016,10 +1138,6 @@ A final tip - it can be difficult to copy longer commands accurately. If
 you select the text with the mouse, in Linux, clicking the middle button
 or wheel will paste it accurately into the command line or wherever you
 wish.
-
-
-
-
 
 
 ++Getting started with Salix Ratpoison++ 
@@ -1060,20 +1178,24 @@ just follow the instructions.
 
 When you boot Salix Ratpoison, there is no graphical login screen: when
 you log in, you enter the linux terminal. Log in as your normal user
-(not root) and type **startx**to start Ratpoison itself.
+(not root) and type
+```
+startx
+```
+to start Ratpoison itself.
 
 You should then see the Salix wallpaper, and a message will appear
 briefly telling you how to view a list of commands. Type
-**Ctrl-t**(**C-t**, in Ratpoison's own notation) then a question mark;
+``Ctrl-t`` (``C-t``, in Ratpoison's own notation) then a question mark;
 pressing any key takes you back to where you were before. There is
 nothing to see (apart from the beautiful Salix wallpaper)! But it's just
 as easy to set Ratpoison to work as with any more conventional desktop.
 
-To select an application from the menu, type **C-t r,** and use the arrow
-keys to navigate(Vim's **hjkl**keys also work). Right arrow (or **l**)
-accesses submenus (such as **Network**), and left arrow (or **h**) goes
+To select an application from the menu, type ``C-t r``, and use the arrow
+keys to navigate(Vim's ``hjkl`` keys also work). Right arrow (or ``l``)
+accesses submenus (such as "Network"), and left arrow (or ``h``) goes
 back up a level. Right arrow or enter runs the application (if you open
-one by mistake, don't worry, just type **C-t r** again - we will
+one by mistake, don't worry, just type ``C-t r`` again - we will
 see how to close windows and applications later).
 
 [img/ratmenu.png]
@@ -1082,7 +1204,7 @@ Some common options are available directly at the top. The
 //Vimprobable2//browser, for instance, can be found under Network but
 also by just selecting "Browser". Remember to use the keyboard and not
 the mouse! A third way to open it bypasses the menu altogether:
-**C-t v**.
+``C-t v``.
 You can create more shortcuts like this for applications you use a
 lot by adding them to the configuration file, which we will look at
 below.
@@ -1099,81 +1221,86 @@ unusual ones.
 
 Notice that there are no menus, toolbars, buttons, or scrolling - just a
 line at the bottom containing the URL. To open a different page, type
-**o**, and **:open** should appear at the very bottom left of the screen.
+``o``, and ``:open`` should appear at the very bottom left of the screen.
 Type
 [http://www.nongnu.org/ratpoison/doc/ http://www.nongnu.org/ratpoison/doc/].
 When the page has loaded, type
-**f** and then select a number to follow a link:
+``f`` and then select a number to follow a link:
 
 [img/ratpoisonmanual.png]
 
-**Shift-h** takes you back to where you were before. **t** works like
-**o** but opens the URL in a new window, as does **shift-f** instead of
-**f**. Pressing **TAB** after typing the beginning of a URL will suggest
-completions taken from the history; use **TAB** again to move through the
-choices (**shift-TAB** to go back up) and **Enter** to select. **O** rather
-than **o** (and **T** rather than **t**) allows you to edit the URL of the
-current page - try it. **j** and **k** scroll down and up.
-**Shift-l** moves one page forward in your browsing history. **d** closes
-the current window. For more details, consult **man vimprobable2** as
-well as the Vimprobable website; see also **man vimprobablerc** for
-configuration options. Note that **.** and **,** are handy alternatives to
-**f** and **shift-f**.
+``Shift-h``* takes you back to where you were before. ``t`` works like
+``o`` but opens the URL in a new window, as does ``shift-f`` instead of
+``f``. Pressing ``TAB`` after typing the beginning of a URL will suggest
+completions taken from the history; use ``TAB`` again to move through the
+choices (``shift-TAB`` to go back up) and ``Enter`` to select. ``O`` rather
+than ``o`` (and ``T`` rather than ``t``) allows you to edit the URL of the
+current page - try it. ``j`` and ``k`` scroll down and up.
+``Shift-l`` moves one page forward in your browsing history. ``d`` closes
+the current window. For more details, consult ``man vimprobable2`` as
+well as the Vimprobable website; see also ``man vimprobablerc`` for
+configuration options. Note that ``.`` and ``,`` are handy alternatives to
+``f`` and ``shift-f``.
 
 There are no tabs. In the next section, we will see how Ratpoison allows
 you to use windows to do the work of tabs, but more informatively.
 
-Note that if the input received by **o** or **t** can't be resolved into a
+Note that if the input received by ``o`` or ``t`` can't be resolved into a
 URL, it will be sent to a search engine; the default is //duckduckgo//.
-If the first item is **i**, **s**, **w**, **wd**, or **y**, a different
+If the first item is ``i``, ``s``, ``w``, ``wd``, or ``y``, a different
 search engine is used in each case. These shorcuts are described in the
 Vimprobable man page, and may also be customised in the .vimprobablerc
 configuration file.
 
 To insert data in forms (for instance, login and password) use tab till
-the cursor is in the right place. Another **TAB** moves to the next field
-or link; you may then use **ESC** to leave insert mode and return to
+the cursor is in the right place. Another ``TAB`` moves to the next field
+or link; you may then use ``ESC`` to leave insert mode and return to
 command mode.
 
 If you find your keystrokes are still being interpreted as browser
 commands, which may happen as a result of the way certain sites are
-designed, try **C-z**. The converse problem may arise if you have
-inadvertently passed keystrokes to **o**or **t**; they will appear at
+designed, try ``C-z``. The converse problem may arise if you have
+inadvertently passed keystrokes to ``o`` or ``t``; they will appear at
 the very bottom right of the browser window. To ignore them and return
-to command mode, clearing the buffer, press **ESC**.
+to command mode, clearing the buffer, press ``ESC``.
 
 As described in Vimprobable's man page, it is necessary to create some
 files for all its features to work:
-**touch ~/.config/vimprobable/history** 
+```
+touch ~/.config/vimprobable/history
+```
 though some of these may already be present.
 
 
 
 +++Window management+++
 
-Let's now see how ratpoison deals with several open windows. **C-t e**
+Let's now see how ratpoison deals with several open windows. ``C-t e``
 reveals all of them:
 
 [img/ratpoison.png]
 
 Notice that each one is associated with a number: typing it focuses on
-that window and hides all the others. (**C-t w** simply provides a list
-of open windows.) **C-t** **C-t**returns to the previous window.
+that window and hides all the others. (``C-t w`` simply provides a list
+of open windows.) ``C-t`` ``C-t`` returns to the previous window.
 This is very useful indeed for switching rapidly back and forth between
 two apps - for instance, an editor and a browser - and is an example of
-how Ratpoison shines ergonomically. **C-t k** closes the current window,
-and **C-t shift-k** kills the current application. To see a list
-of commands, type **C-t ?**; for further detail, see also 
-**man ratpoison**and the online manual, which we opened above with
+how Ratpoison shines ergonomically. ``C-t k`` closes the current window,
+and ``C-t shift-k`` kills the current application. To see a list
+of commands, type ``C-t ?`` for further detail, see also
+```
+man ratpoison
+```
+and the online manual, which we opened above with
 //Vimprobable2//.
 
 To work with two or more windows together, Ratpoison allows the user to
-tile windows. **C-t s** splits the screen with the current window above
-whichever window was last open; **C-t S** splits them horizontally. These
-steps can be repeated to split the focused window further. **C-t TAB**
-(or **C-t** and an arrow key) moves the focus around, and
-**C-t C-[arrow]**
-swaps the tiled windows over. **C-t Q** undoes the splitting
+tile windows. ``C-t s`` splits the screen with the current window above
+whichever window was last open; ``C-t S`` splits them horizontally. These
+steps can be repeated to split the focused window further. ``C-t TAB``
+(or ``C-t`` and an arrow key) moves the focus around, and
+``C-t C-[arrow]``
+swaps the tiled windows over. ``C-t Q`` undoes the splitting
 and allows the currently focused window to fill the screen. In practice,
 it's rarely useful to have more than one or two windows visible:
 
@@ -1183,13 +1310,15 @@ it's rarely useful to have more than one or two windows visible:
 
 +++The console and package management+++
 
-To open the command line, type **C-t c**. There is no automatic package
+To open the command line, type ``C-t c``. There is no automatic package
 management in the Ratpoison edition, so you will need to make regular
 manual checks for updates:
 
-**$su** #change to root
-**#slapt-get --update** #update the package list
-**#slapt-get --upgrade** #upgrade to reflect any changes
+```
+$ su                  #change to root
+# slapt-get --update  #update the package list
+# slapt-get --upgrade #upgrade to reflect any changes
+```
 
 Apart from the //Vimprobable2//browser, the default applications include
 //Mutt//as the mail client and //Gnome Commander// as the file manager.
@@ -1222,8 +1351,10 @@ necessary.
 As an example, we will install //Alpine//, derived from the classic
 //Pine//mail client.
 
+```
 **#slapt-get -u**
 **#slapt-get -i alpine**
+```
 
 Note: To see how to edit Alpine's configuration file to access mail from
 one popular provider via smtp, see the page in the
@@ -1236,43 +1367,46 @@ For //Mutt//, see
 +++Editing the configuration file+++
 
 After using //Alpine//a little, one problem may become apparent. Its
-shortcut for selecting a file, for example to attach it, is **C-t**. But
+shortcut for selecting a file, for example to attach it, is ``C-t``. But
 that's Ratpoison's escape key combination! In fact, Ratpoison has a
 solution for such conflicts, referred to somewhat cryptically in the
-shortcut list as //meta//: **C-t t**should send **C-t**to the
+shortcut list as //meta//: ``C-t t`` should send ``C-t`` to the
 application in the active window. However, this does not work in the
 terminal, which does not recognise the character if it receives it in
 this form.
 
-Everything in Ratpoison is configurable, and the **C-t**combination
+Everything in Ratpoison is configurable, and the ``C-t`` combination
 itself is no exception. A temporary solution is to reassign the binding
-using Ratpoison's command input feature. **C-t :** conjures up an input
+using Ratpoison's command input feature. ``C-t :`` conjures up an input
 line at the top right of the screen. This can be used for passing
 instructions to Ratpoison. For instance, one way of opening an
 application in a new console is:
-
-**:exec xterm -e alpine**
-
-(that is, **C-t : exec xterm -e alpine**) which starts the program we
+```
+C-t :exec xterm -e alpine
+```
+which starts the program we
 just installed. The colon command can be used to pass a number of
 instructions to Ratpoison; see **man** **Ratpoison**for a full list
 together with shortcuts where they have been defined. In fact, there is
-a shortcut for **exec**. Just type **C-t ! [application]**;
-**C-t C-!** opens it in a console.
+a shortcut for ``exec``. Just type
+```
+C-t ! [application]
+```
+``C-t C-!`` opens it in a console.
 
-To change the **C-t** default, do: **:escape Super_L**,
+To change the ``C-t`` default, do: ``C-t :escape Super_L``,
 which is the so-called "Windows key" to the left of the keyboard. As
 well as resolving the conflict with //Alpine//, this has the great
 benefit of being just one keystroke. Some functions may not work
-correctly, in particular the very useful **C-t C-t** to go back to where
+correctly, in particular the very useful ``C-t C-t`` to go back to where
 you just were, and performance varies from one keyboard to another, so
 it's worth experimenting. Another possibility is the "Menu" key. To
-return to the default: **:escape C-t**.
+return to the default: ``C-t :escape C-t``.
 
 To make such a change permanent, edit //~/.ratpoisonrc//. If you are
 using Ratpoison, you can open the file now (with //GVim//or //Vim//) and
 tile it horizontally with the window where you are reading this guide
-(**C-t shift-s**). Let's go through some items in the file.
+(``C-t shift-s``). Let's go through some items in the file.
 
 [img/ratpoisonrc.png]
 
@@ -1282,13 +1416,14 @@ after a few seconds' stillness; place the line **unclutter &** in your
 //~/.xinitrc// to run it automatically when X is started). We've seen
 all but one of the custom keybindings in the "bind" statements. To
 change the wallpaper, point to a different image. The final item sets
-up workspaces, which we'll look at next - including **C-t W**.
+up workspaces, which we'll look at next - including ``C-t W``.
 
 Before editing the file, create a backup copy in case anything goes
-wrong. To change the **C-t**default, simply add a line:
+wrong. To change the ``C-t`` default, simply add a line:
 
-**escape Menu** # make sure you test your choice first using
-'**:**'
+```
+escape Menu
+```
 
 We've seen many of the custom keybindings in the "bind" statements.
 
@@ -1304,20 +1439,20 @@ some other applications, the number of windows may become unwieldy. To
 help with this, Ratpoison allows you to use workspaces. (In the online
 Ratpoison manual, these are referred to more precisely as
 "groups".) You might then put all browser windows in one
-workspace, so that **C-t e** has the same effect as tabs, but with
+workspace, so that ``C-t e`` has the same effect as tabs, but with
 thumbnails".
 
 Managing these is roughly analogous to how windows are managed within
-each workspace. As we saw, **C-t e** shows all windows in the current
-workspace; **C-t w** lists them. **C-t W** shows four more workspaces,
+each workspace. As we saw, ``C-t e`` shows all windows in the current
+workspace; ``C-t w`` lists them. ``C-t W`` shows four more workspaces,
 which were set up in the last line of the configuration file. In a
-console, type **rpws help** .
+console, type ``rpws help`` .
 
 
 [img/rpws.png]
 
-The usage summary you will see may be a little cryptic. Just as "C"
-means Control, "M" refers to Alt. Use Alt with the function keys to
+The usage summary you will see may be a little cryptic. Just as ``C``
+means Control, ``M`` refers to Alt. Use Alt with the function keys to
 access each workspace. Ctrl-Alt and the arrows move up and down
 workspaces. The remaining options move the current window to a different
 workspace.
@@ -1328,10 +1463,10 @@ workspace.
 The directory //~/.ratmenu//contains the main menu file //menu.sh//, and
 the submenus it calls; all these are editable scripts. We will now edit
 the Network menu using //GVim//. //GVim//is in the menu, but try calling
-it using the colon (**C-t :**)
+it using the colon
 
 ```
-:exec gvim ~/.ratmenu/network.sh
+C-t :exec gvim ~/.ratmenu/network.sh
 ```
 
 or simply
@@ -1346,9 +1481,9 @@ C-t ! gvim ~/.ratmenu/network.sh
 Note that graphical applications are called directly, but command line
 programs need to be opened inside a terminal.
 
-Use **j** and **k** to navigate to where you want to add the entry for
-//Alpine//, type **i** to insert, **ESC** to return to command mode, and
-``:wq`` to write and save. Test the change by typing **C-t r** - the new
+Use ``j`` and ``k`` to navigate to where you want to add the entry for
+//Alpine//, type ``i`` to insert, ``ESC`` to return to command mode, and
+``:wq`` to write and save. Test the change by typing ``C-t r`` - the new
 item should already appear. If all is well, you may close the editor.
 
 
@@ -1377,8 +1512,7 @@ Ratpoison edition's applications.
 | :           | pass a non-shortcut command to the application 
 
 
-
-For a summary of Ratpoison's own shortcuts, type **C-t ?**.
+For a summary of Ratpoison's own shortcuts, type ``C-t ?``.
 
 While what is covered here should be enough to get you started, many
 more features of the applications and especially Ratpoison itself are
@@ -1393,7 +1527,7 @@ needs and taste.
 One miscellaneous item is the mount manager in the System menu, which
 may also be called from the command line as //gmountman//. When needed,
 this deals with the mounting of removable devices, including DVDs. Also,
-//banish//may be called at any time by the shortcut **C-t b**.
+//banish//may be called at any time by the shortcut ``C-t b``.
 
 Remember to check frequently for package updates using //slapt-get//.
 
