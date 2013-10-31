@@ -92,17 +92,16 @@ Salix offers three software installation options: **Full**, **Basic**
 and **Core**, to meet your demands!
 
 
-|| Installation Type | Target Users | Features  | Examples of Available Applications
-| Full | All users | - Graphical environment | - Libreoffice
-|  |  |  - Full software installation | - Exaile
-|  |  |  | - Midori
-|  |  |  | - Pidgin
-| Basic | Advanced users who would like to add their own choice of applications | - Graphical environment | - Midori
-|  |  | - Minimum selection of software | - Gslapt
-|  |  |  | - Desktop
-| Core | Advanced users who would like to run a console system | - No graphical environment | - vi 
-| | Server maintainers | - Minimum number of software essential for a console system | 
-
+|| Installation Type | Target Users | Features                     | Examples of Available Applications
+| Full               | All users    | - Graphical environment      | - Libreoffice
+|                    |              | - Full software installation | - Exaile
+|                    |              |                              | - Midori
+|                    |              |                              | - Pidgin
+| Basic              | Advanced users who would like to add their own choice of applications | - Graphical environment | - Midori
+|                    |              | - Minimum selection of software | - Gslapt
+|                    |              |                              | - Desktop
+| Core               | Advanced users who would like to run a console system | - No graphical environment | - vi 
+|                    | Server maintainers | - Minimum number of software essential for a console system | 
 
 
 
@@ -414,14 +413,14 @@ application.
 
 Gslapt is the GUI version of [slapt-get #slapt-get]. It allows one to
 search Slackware/Salix mirrors and third party sources for packages.
-Before use you should first click on the **Update**button to ensure that
+Before use you should first click on the **Update** button to ensure that
 the latest updates from the software repositories are known to Gslapt.
 The search field is there for you to search for a particular package.
 You can highlight with your left click and choose to
 install/uninstall/reinstall packages with a right click. Gslapt detects
 dependencies and will install all the dependency files for a package
 automatically. Installation/uninstallation/reinstallation will take
-place once you click on the **Execute**button. You can blacklist
+place once you click on the **Execute** button. You can blacklist
 packages by adding their names to the blacklist found in "Preferences"
 under "Edit".
 
@@ -696,8 +695,9 @@ For more information on what is actually installed, please see
 Salix tools are a collection of utilities that are designed to manage
 every aspect of Salix configuration easily. You can find these tools
 under the System section of the application menu. Of course, system
-management in Salix can also be done the usual (
-[manual http://www.slackbook.org/html/book.html]) Slackware way.
+management in Salix can also be done the usual
+([manual http://www.slackbook.org/html/book.html])
+Slackware way.
 
 Please note that most Salix tools (except Lilo Setup) have an ncurses
 counterpart which can be used in a non-graphical environment
@@ -1170,7 +1170,7 @@ only a small subset of keys, which makes the learning curve smoother:
 for basic browsing, for instance, all you need to get started is page
 and history navigation and to know how to open links and tabs or
 windows. Other functions can be learned by exploration at your own pace.
-To begin using Vim itself, try running **vimtutor**from a terminal, and
+To begin using Vim itself, try running ``vimtutor`` from a terminal, and
 just follow the instructions.
 
 
@@ -1386,7 +1386,11 @@ C-t :exec xterm -e alpine
 ```
 which starts the program we
 just installed. The colon command can be used to pass a number of
-instructions to Ratpoison; see **man** **Ratpoison**for a full list
+instructions to Ratpoison; see
+```
+man ratpoison
+```
+for a full list
 together with shortcuts where they have been defined. In fact, there is
 a shortcut for ``exec``. Just type
 ```
