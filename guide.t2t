@@ -1416,7 +1416,11 @@ tile it horizontally with the window where you are reading this guide
 
 //banish//sends the mouse pointer to bottom right (incidentally, you may
 wish to install //unclutter//, which makes it fade out altogether
-after a few seconds' stillness; place the line **unclutter &** in your
+after a few seconds' stillness; place the line
+```
+unclutter &
+```
+in your
 //~/.xinitrc// to run it automatically when X is started). We've seen
 all but one of the custom keybindings in the "bind" statements. To
 change the wallpaper, point to a different image. The final item sets
@@ -1432,7 +1436,7 @@ escape Menu
 We've seen many of the custom keybindings in the "bind" statements.
 
 The final item, together with the bindings to function keys, sets up
-workspaces; we'll look at these next - including **C-t W**.
+workspaces; we'll look at these next - including ``C-t W``.
 
 
 
