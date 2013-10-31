@@ -47,7 +47,7 @@ also applies it to the viewpoint of the end user.
 - One application per task rationale
 - Fully backwards compatible with Slackware
 - Optimised for desktop usage
-- With Salix tools to assist [system management #salix-tools]
+- With Salix tools to assist [system management #salixtools]
 - High quality package repositories with dependency support
 - Simple & fully localised system administration tools
 - Salix artwork
@@ -398,7 +398,7 @@ initially, but then in good time, you will gather enough experience
 and as you start to see the inner workings of Linux, you will
 become more confident.
 
-You have to be the [superuser #root_pass] in order to install an
+You have to be the superuser in order to install an
 application.
 
 
@@ -422,7 +422,7 @@ under "Edit".
 [img/gslapt.png]
 
 
-===slapt-get===
+===slapt-get===[slapt-get]
 
 [slapt-get http://software.jaos.org/git/slapt-get/plain/FAQ.html] is a
 command line tool for Slackware package management. It allows one to
@@ -463,7 +463,7 @@ click on the **Execute**button.
 
 
 
-===slapt-src===
+===slapt-src===[slapt-src]
 
 slapt-src is a command line tool that makes the process of downloading
 and building software packages from slackbuilds.org simple and easy.
@@ -569,8 +569,8 @@ settings.
 It will connect to wired (Ethernet only, no PPPoE/DSL support yet) and
 wireless networks.
 
-Note that **wicd**and **wireless**must be activated in the [startup
-services #startupServices] in order to make wireless networks visible on
+Note that **wicd**and **wireless**must be activated in the
+[system services #system_services] in order to make wireless networks visible on
 Wicd.
 
 
@@ -582,7 +582,7 @@ them out with your printer. To do this, you need to have a printer
 already installed on your system. "**Manage Printing**", which is found
 under "System" in the main application menu, handles the installation
 and general management of your printers. (Ensure that "CUPS" is enabled
-in the [startup services #startupServices], or Manage Printing
+in the [system services #system_services], or Manage Printing
 will not start properly).
 
 If you are buying a new printer, it is recommended to check the
@@ -634,7 +634,7 @@ For more information on what is actually installed, please see
 [here http://docs.salixos.org/wiki/What_gets_installed_with_the_%22Install_multimedia_codecs%22_application%3F].
 
 
-==Salix Tools== 
+==Salix Tools==[salixtools]
 
 
 ===What are the Salix Tools?===
@@ -737,7 +737,7 @@ other means to boot into your system.
 
 
 
-===Startup Services===
+===System Services===[system_services]
 
 Here you will be able to select the services that should or shouldn't be
 activated in the background when your system starts.
@@ -798,7 +798,7 @@ with Gslapt.
 
 
 
-==Working with the Command Line Interface==
+==Working with the Command Line Interface==[working_with_cli]
 
 This section deals with working in a console mode or with a terminal
 (such as xfce terminal, xterm, konsole and so forth), and serves merely
@@ -1448,7 +1448,7 @@ sources of information. The search option of the forum will quickly show
 you if the question you have in mind has already been posted by a member
 of the community and if it has been answered. For the same reason,
 please also search the internet. If you are working on the command
-line ([Working with the Command Line Interface #4_1]), remember to
+line ([Working with the Command Line Interface #working_with_cli]), remember to
 consult **man** (and try **man salix** for a summary of key points
 specific to this distribution). There are several online
 forums devoted to Linux, such as
@@ -1704,7 +1704,7 @@ text form using the default system monospace font.
 
 
 
-====Ibus====
+====Ibus====[ibus]
 
 Ibus is a new generation of input method editors after SCIM. It supports
 for more than thirty languages (Chinese, Japanese, Korean and other
