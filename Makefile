@@ -2,6 +2,26 @@
 html: 
 	txt2tags -t html guide.t2t
 
+epub: html
+	ebook-convert guide.html guide.epub \
+		--cover=img/screenshots_rotated.jpg \
+		--chapter "//h:h1" \
+		--chapter "//h:h2" \
+		--chapter "//h:h3" \
+		--level1-toc "//h:h1" \
+		--level2-toc "//h:h2" \
+		--level3-toc "//h:h3"
+
+mobi: html
+	ebook-convert guide.html guide.mobi \
+		--cover=img/screenshots_rotated.jpg \
+		--chapter "//h:h1" \
+		--chapter "//h:h2" \
+		--chapter "//h:h3" \
+		--level1-toc "//h:h1" \
+		--level2-toc "//h:h2" \
+		--level3-toc "//h:h3"
+
 help:
 	@echo 'Makefile for generating the Salix startup guide                        '
 	@echo '                                                                       '
@@ -13,7 +33,9 @@ help:
 	@echo '                                                                       '
 
 clean:
-	find ./ -name "*.html"  -delete
+	rm -f guide.html
+	rm -f guide.epub
+	rm -f guide.mobi
 
 upload: html
 	echo "Not implemented yet"
