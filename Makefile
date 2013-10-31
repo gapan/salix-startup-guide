@@ -22,8 +22,10 @@ mobi: html
 		--level2-toc "//h:h2" \
 		--level3-toc "//h:h3"
 
-pdf: html
+tex:
 	txt2tags -t tex guide.t2t
+
+pdf: tex
 	xelatex guide.tex
 	rm -f guide.aux
 	rm -f guide.log
@@ -48,4 +50,4 @@ clean:
 upload: html
 	echo "Not implemented yet"
 
-.PHONY: html epub mobi pdf help clean upload
+.PHONY: html epub mobi tex pdf help clean upload
