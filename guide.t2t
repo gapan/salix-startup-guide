@@ -1323,7 +1323,7 @@ $ su                  #change to root
 Apart from the //Vimprobable2//browser, the default applications include
 //Mutt//as the mail client and //Gnome Commander// as the file manager.
 //Music On Console// and //Whaaw Media Player// are the audio and video
-players, with //GVim//as text/code editor. //apvlv//can be used to view
+players, with //GVim// as text/code editor. //apvlv//can be used to view
 pdf files. As we have just seen, package management is console-based,
 using //slapt-get//and //slapt-src//. Further options are available
 in the repository. //Firefox//may be installed adding the
@@ -1404,7 +1404,7 @@ it's worth experimenting. Another possibility is the "Menu" key. To
 return to the default: ``C-t :escape C-t``.
 
 To make such a change permanent, edit //~/.ratpoisonrc//. If you are
-using Ratpoison, you can open the file now (with //GVim//or //Vim//) and
+using Ratpoison, you can open the file now (with //GVim// or //Vim//) and
 tile it horizontally with the window where you are reading this guide
 (``C-t shift-s``). Let's go through some items in the file.
 
@@ -1462,7 +1462,7 @@ workspace.
 
 The directory //~/.ratmenu//contains the main menu file //menu.sh//, and
 the submenus it calls; all these are editable scripts. We will now edit
-the Network menu using //GVim//. //GVim//is in the menu, but try calling
+the Network menu using //GVim//. //GVim// is in the menu, but try calling
 it using the colon
 
 ```
