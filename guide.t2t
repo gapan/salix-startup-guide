@@ -2,6 +2,8 @@ Salix Start-Up Guide
 
 Getting familiar with your new operating System
 
+%!postproc(tex): "\\includegraphics" "\\includegraphics[width=0.9\\textwidth]"
+
 ===About this manual===
 
 The purpose of this manual is to enable you to take full advantage of
