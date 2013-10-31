@@ -48,6 +48,7 @@ clean:
 	rm -f guide.html
 	rm -f guide.epub
 	rm -f guide.mobi
+	rm -f guide.pdf
 
 upload: html
 	@echo "Not implemented yet"
