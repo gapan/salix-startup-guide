@@ -50,6 +50,6 @@ clean:
 	rm -f guide.mobi
 
 upload: html
-	echo "Not implemented yet"
+	@echo "Not implemented yet"
 
 .PHONY: html epub mobi tex pdf help clean upload
