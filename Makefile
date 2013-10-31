@@ -23,13 +23,15 @@ mobi: html
 		--level3-toc "//h:h3"
 
 tex:
-	txt2tags -t tex guide.t2t
+	txt2tags --toc -t tex guide.t2t
 
 pdf: tex
+	xelatex guide.tex
 	xelatex guide.tex
 	rm -f guide.aux
 	rm -f guide.log
 	rm -f guide.out
+	rm -f guide.toc
 	#rm -f guide.tex
 
 help:

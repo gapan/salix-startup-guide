@@ -2,6 +2,9 @@ Salix Start-Up Guide
 
 Getting familiar with your new operating System
 
+%%!postproc(tex): "\\documentclass{article}" "\\documentclass[a4paper,10pt]{article}"
+%!postproc(tex): "\\tableofcontents" "\\pagenumbering{roman}\n\\tableofcontents"
+%!postproc(tex): "\\hypertarget{toc1}{}" "\\pagenumbering{arabic}\n\n\\hypertarget{toc1}{}"
 %!postproc(tex): "\\includegraphics" "\\includegraphics[width=0.9\\textwidth]"
 
 ===About this manual===
@@ -31,7 +34,7 @@ Many thanks especially to //**jrd**//, //**akuna**//, //**mimosa**// and //**max
 
 
 
-=Salix at a Glance=
++Salix at a Glance+
 
 [img/desktop_rotated.png]
 
@@ -44,7 +47,7 @@ Slackware adheres to refers to the viewpoint of system design, Salix
 also applies it to the viewpoint of the end user.
 
 
-===Salix Features===
++++Salix Features+++
 
 - One application per task rationale
 - Fully backwards compatible with Slackware
@@ -60,7 +63,7 @@ also applies it to the viewpoint of the end user.
 
 
 
-===Salix Editions===
++++Salix Editions+++
 
 
 **Salix** comes in five different editions - **Xfce**, **LXDE**,
@@ -81,7 +84,7 @@ to the later section
 ([List of Applications #list_of_applications])
 
 
-===Installation Modes===
++++Installation Modes+++
 
 Salix offers three software installation options: **Full**, **Basic**
 and **Core**, to meet your demands!
@@ -102,7 +105,7 @@ and **Core**, to meet your demands!
 
 
 
-===Salix Repositories & Package Management===
++++Salix Repositories & Package Management+++
 
 - **slapt-get** and its graphical interface **Gslapt** are used for
   package management, including **slapt-src** and **Sourcery** for even
@@ -120,13 +123,13 @@ and **Core**, to meet your demands!
 
 
 
-=Starting Up Salix=
++Starting Up Salix+
 
 
-==Introduction== 
+++Introduction++ 
 
 
-===Downloading Salix===
++++Downloading Salix+++
 
 The latest Salix or Salix Live releases are freely and easily available
 as ISO image files from the Salix
@@ -141,7 +144,7 @@ does, you have made a mistake in the process.
 
 
 
-===What is a Live CD / USB?===
++++What is a Live CD / USB?+++
 
 A Live CD is a CD-ROM holding a self-contained bootable and fully
 functional operating system. It loads into memory using only the data
@@ -168,7 +171,7 @@ Setup, configuring some partitions with Gparted, etc.
 
 
 
-===Creating a Salix Live USB Key===
++++Creating a Salix Live USB Key+++
 
 - Open the .iso file using a software archiver (file-roller, xarchiver, 7-zip, iso-master, …).
 - Extract all files and folders (boot, packages and Salix Live) to your USB root directory.
@@ -178,7 +181,7 @@ Setup, configuring some partitions with Gparted, etc.
   called "install-on-USB.cmd" instead.
 
 
-===Booting from a Salix Installation CD/DVD/USB Key===
++++Booting from a Salix Installation CD/DVD/USB Key+++
 
 Your computer must be set to boot on the optical drive / USB port first
 before defaulting to the internal hard disk drive.
@@ -192,10 +195,10 @@ Insert the Salix (Live)CD/DVD or USB key, and start up your computer.
 
 
 
-==Installing Salix== 
+++Installing Salix++ 
 
 
-===Before starting===
++++Before starting+++
 
 Installing Salix on your computer is simple. But before starting, it is
 wise to check the following points:
@@ -214,7 +217,7 @@ wise to check the following points:
 //Although it is possible to install Linux on a Mac computer, you have to install a bootcamp software called rEFIt beforehand. Certain file systems, such as xfs, cannot be used with a Mac. The easiest way to check the compatibility of your computer is to use one of the available Salix Live editions.//
 
 
-===Partition Management===
++++Partition Management+++
 
 [img/gparted.png]
 
@@ -250,7 +253,7 @@ difference between a logical and a primary partition except for that
 "Windows" OS cannot be installed on a logical partition.
 
 
-===So what kind of partitions do you need?===
++++So what kind of partitions do you need?+++
 
 - Salix needs, at the very minimum, one partition which holds the root
 directory and must be assigned as "/" (without the quotation marks).
@@ -287,7 +290,7 @@ particular favourite for a reason, we recommend you format your
 partitions with the ext4 file system.
 
 
-==Installing from a Salix Installation CD==
+++Installing from a Salix Installation CD++
 
 Installing Salix from a Salix Installation CD is very similar to
 installing Slackware. Everything will be done efficiently in a
@@ -349,7 +352,7 @@ semi-graphical command line interface.
 
 
 
-==Installing from a Salix Installation USB== 
+++Installing from a Salix Installation USB++ 
 
 Installing Salix from a USB key is also possible (but consider
 installing from a Salix Live USB also). The most difficult part
@@ -379,11 +382,11 @@ Alternatively, you can mount your USB key first.
 
 
 
-=Your Salix=
++Your Salix+
 
 
 
-==Package Management== 
+++Package Management++ 
 
 Installing applications (which roughly equates to "installing packages"
 as we say in Linux) is a fundamental part of the Linux
@@ -403,7 +406,7 @@ You have to be the superuser in order to install an
 application.
 
 
-===Gslapt===
++++Gslapt+++
 
 Gslapt is the GUI version of [slapt-get #slapt-get]. It allows one to
 search Slackware/Salix mirrors and third party sources for packages.
@@ -423,7 +426,7 @@ under "Edit".
 [img/gslapt.png]
 
 
-===slapt-get===[slapt-get]
++++slapt-get+++[slapt-get]
 
 [slapt-get http://software.jaos.org/git/slapt-get/plain/FAQ.html] is a
 command line tool for Slackware package management. It allows one to
@@ -441,7 +444,7 @@ Here is a little exercise for you. Try installing "w3m" which is a
 terminal based web browser, by using slapt-get.
 
 
-===Sourcery===
++++Sourcery+++
 
 Sourcery is a new graphical frontend to [slapt-src #slapt-src], a
 utility to build and install packages from source using SlackBuilds
@@ -458,7 +461,7 @@ click on the **Execute** button.
 [img/sourcery.png]
 
 
-===slapt-src===[slapt-src]
++++slapt-src+++[slapt-src]
 
 slapt-src is a command line tool that makes the process of downloading
 and building software packages from slackbuilds.org simple and easy.
@@ -482,7 +485,7 @@ Note that the skype is 32-bit only, so if you are running a
 64-bit system, please try out some other application).
 
 
-===spkg===
++++spkg+++
 
 An alternative way to install a package (which for Salix and many other
 slackware based distribution ends with the .tgz, .tlz or .txz
@@ -495,7 +498,7 @@ Removing a package is somewhat similar. You can remove a package by
 issuing ``spkg -d [software name]``, e.g. ``spkg -d skype``.
 
 
-===Making a Package from a Source File with SLKBUILD===
++++Making a Package from a Source File with SLKBUILD+++
 
 Installing a software from a source file is in most cases not difficult.
 You can compile a lot of software generally with the following
@@ -525,7 +528,7 @@ For more on SLKBULD, please consult
 [SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild].
 
 
-===Salix Packages that are different from Slackware===
++++Salix Packages that are different from Slackware+++
 
 Although the vast majority of packages found in the Salix repositories
 are complementary to the Slackware repositories, you will find that some
@@ -536,7 +539,7 @@ as to why are found in
 [this wiki entry http://www.salixos.org/wiki/index.php/Packages,_that_are_different_from_Slackware].
 
 
-===Upgrading Salix to a Newer Version===
++++Upgrading Salix to a Newer Version+++
 
 If you wish to upgrade an older version of Salix on your machine to the
 latest, please refer to the following link for upgrading your Salix.
@@ -547,10 +550,10 @@ latest, please refer to the following link for upgrading your Salix.
 
 
 
-==Configuring Your Salix==
+++Configuring Your Salix++
 
 
-===Setting up the Internet===
++++Setting up the Internet+++
 
 Network connections are managed by Wicd in Salix. It is an open source
 wired and wireless network manager for Linux which aims to provide a
@@ -569,7 +572,7 @@ Note that **wicd**and **wireless**must be activated in the
 Wicd.
 
 
-===Setting up a Printer===
++++Setting up a Printer+++
 
 After writing a document, transferring photos from your camera, or
 creating your own images with GIMP, you would probably like to print
@@ -610,7 +613,7 @@ For setting up a network printer, please consult the Salix
 [wiki http://www.salixos.org/wiki/index.php/How_to_share_a_printer_via_CUPS].
 
 
-===Salix Codecs Installer===
++++Salix Codecs Installer+++
 
 Salix only includes, by default, software that are legally free to use
 in any country, and that means that proprietary media formats are not
@@ -629,10 +632,10 @@ For more information on what is actually installed, please see
 [here http://docs.salixos.org/wiki/What_gets_installed_with_the_%22Install_multimedia_codecs%22_application%3F].
 
 
-==Salix Tools==[salixtools]
+++Salix Tools++[salixtools]
 
 
-===What are the Salix Tools?===
++++What are the Salix Tools?+++
 
 
 [img/salixtools-gtk.png]
@@ -649,7 +652,7 @@ counterpart which can be used in a non-graphical environment
 ([runlevel 3 http://www.bilbos-stekkie.com/slack_init/en/init.html#SLACK-RUNLEVELS]).
 
 
-===ALSA Sound Card===
++++ALSA Sound Card+++
 
 ALSA Sound Card manages the system sound card configuration. It will
 display available sound cards in your system and let you select the card
@@ -664,14 +667,14 @@ during installation/start-up.
 
 
 
-===Rebuild Icon Cache===
++++Rebuild Icon Cache+++
 
 As the name indicates, Rebuild Icon Cache reconnects some icons that may
 have become lost after updating your system / installing some new
 program, and makes them appear again in the application menu.
 
 
-===Hostnames===
++++Hostnames+++
 
 Hostnames manages the host names used by your computer. This tool
 facilitates defining / overviewing host names used while setting up your
@@ -683,7 +686,7 @@ machine as a server.
 
 
 
-===Dotnew===
++++Dotnew+++
 
 Dotnew manages the system configuration upgrades used by Slackware. It
 will display a possible course of action for each new configuration file
@@ -696,7 +699,7 @@ found in the system.
 To execute this utility in runlevel 3, simply type dotnew.
 
 
-===Keyboard Layout===
++++Keyboard Layout+++
 
 
 [img/gtkkeyboardsetup.png]
@@ -713,7 +716,7 @@ up, you can do so by ticking the optional box.
 To execute this utility in runlevel 3, simply type keyboardsetup.
 
 
-===Lilo Setup===
++++Lilo Setup+++
 
 Lilo Setup will install a new LILO bootloader on your computer.
 
@@ -732,7 +735,7 @@ other means to boot into your system.
 
 
 
-===System Services===[system_services]
++++System Services+++[system_services]
 
 Here you will be able to select the services that should or shouldn't be
 activated in the background when your system starts.
@@ -748,19 +751,19 @@ To execute this utility in runlevel 3, simply type servicesetup.
 
 
 
-===System Language===
++++System Language+++
 
 This utility will configure the language of your system.
 To execute it in runlevel 3, simply type localesetup.
 
 
-===System Clock===
++++System Clock+++
 
 This utility will configure your computer clock.
 To execute it in runlevel 3, simply type clocksetup.
 
 
-===Users Profile===
++++Users Profile+++
 
 [img/gtkusersetup.png]
 
@@ -777,7 +780,7 @@ To execute it in runlevel 3, simply type usersetup.
 
 
 
-===Salix-Update-Notifier===
++++Salix-Update-Notifier+++
 
 [img/salix-update-notifier.png]
 
@@ -789,11 +792,11 @@ with Gslapt.
 
 
 
-=Salix Mini Walkthroughs=
++Salix Mini Walkthroughs+
 
 
 
-==Working with the Command Line Interface==[working_with_cli]
+++Working with the Command Line Interface++[working_with_cli]
 
 This section deals with working in a console mode or with a terminal
 (such as xfce terminal, xterm, konsole and so forth), and serves merely
@@ -829,7 +832,7 @@ graphical desktop, press **Ctrl+Alt+F4**, for example. F number
 keys are used to switch between consoles.
 
 
-===Moving Around - cd===
++++Moving Around - cd+++
 
 You should be in your user directory (denoted as "**~**"), which is
 normally the same as "**/home/your user name**" (replace the
@@ -864,7 +867,7 @@ first letter or two, you may complete the rest of the directory name
 automatically.
 
 
-===Creating a Folder - mkdir===
++++Creating a Folder - mkdir+++
 
 You can create a folder by issuing "**mkdir** **name of a new folder**".
 For example, let's say we are going to create a photo folder. "**mkdir**
@@ -883,7 +886,7 @@ at the buttom. Type "**log file created**", and with **Ctrl+x**, save
 the document as "**log**" and quit the application.
 
 
-===Copying & Moving & Removing a File - cp & mv & rm===
++++Copying & Moving & Removing a File - cp & mv & rm+++
 
 **cp**" is perhaps one of the most used commands in a console mode.
 "**cp**" copies a file or files from one location to another. Since we
@@ -923,7 +926,7 @@ the file name has been changed back to "log".
 
 
 
-===Copying & Moving & Removing a Folder - cp & mv & rm===
++++Copying & Moving & Removing a Folder - cp & mv & rm+++
 
 So now you have the folder called "**photo**" and a log file in the
 "**Music**" directory. This is a little strange as we should normally
@@ -954,7 +957,7 @@ from the "**Music**" directory: "**rm -r photo/**".
 
 
 
-===Installing a Program - slapt-get and slapt-src===
++++Installing a Program - slapt-get and slapt-src+++
 
 Maybe a little bird has told you that there is a wonderful application
 called "**cowsay**" in Linux, and now you would like to see what this
@@ -1017,10 +1020,10 @@ wish.
 
 
 
-==Getting started with Salix Ratpoison== 
+++Getting started with Salix Ratpoison++ 
 
 
-===Overview===
++++Overview+++
 
 Ratpoison is a tiling window manager, somewhat like //xmonad//or
 //scrotwm//. Its two main features are that applications fill the whole
@@ -1051,7 +1054,7 @@ To begin using Vim itself, try running **vimtutor**from a terminal, and
 just follow the instructions.
 
 
-===Starting Ratpoison and running applications===
++++Starting Ratpoison and running applications+++
 
 When you boot Salix Ratpoison, there is no graphical login screen: when
 you log in, you enter the linux terminal. Log in as your normal user
@@ -1090,7 +1093,7 @@ unusual ones.
 
 
 
-===Vimprobable browsing===
++++Vimprobable browsing+++
 
 Notice that there are no menus, toolbars, buttons, or scrolling - just a
 line at the bottom containing the URL. To open a different page, type
@@ -1144,7 +1147,7 @@ though some of these may already be present.
 
 
 
-===Window management===
++++Window management+++
 
 Let's now see how ratpoison deals with several open windows. **C-t e**
 reveals all of them:
@@ -1176,7 +1179,7 @@ it's rarely useful to have more than one or two windows visible:
 
 
 
-===The console and package management===
++++The console and package management+++
 
 To open the command line, type **C-t c**. There is no automatic package
 management in the Ratpoison edition, so you will need to make regular
@@ -1228,7 +1231,7 @@ For //Mutt//, see
 [this wiki entry http://crunchbanglinux.org/wiki/howto/howto_setup_mutt_with_gmail_imap].
 
 
-===Editing the configuration file===
++++Editing the configuration file+++
 
 After using //Alpine//a little, one problem may become apparent. Its
 shortcut for selecting a file, for example to attach it, is **C-t**. But
@@ -1292,7 +1295,7 @@ workspaces; we'll look at these next - including **C-t W**.
 
 
 
-===Using workspaces===
++++Using workspaces+++
 
 If you have several terminals open, and various browser windows, and
 some other applications, the number of windows may become unwieldy. To
@@ -1318,7 +1321,7 @@ workspaces. The remaining options move the current window to a different
 workspace.
 
 
-===Adding an item to the menu===
++++Adding an item to the menu+++
 
 The directory //~/.ratmenu//contains the main menu file //menu.sh//, and
 the submenus it calls; all these are editable scripts. We will now edit
@@ -1347,7 +1350,7 @@ Use **j** and **k** to navigate to where you want to add the entry for
 item should already appear. If all is well, you may close the editor.
 
 
-===Summary===
++++Summary+++
 
 Here is a short list of key bindings common to many of the Salix
 Ratpoison edition's applications.
@@ -1397,7 +1400,7 @@ from where it is also possible to reboot or shut down the computer.
 
 
 
-=Support=
++Support+
 
 
 If you are still quite new to either Salix, Slackware or even Linux in
@@ -1494,10 +1497,10 @@ get the essentials set up as you wish reasonably quickly; then you will
 be able to take Linux at your own pace.
 
 
-=Appendix=
++Appendix+
 
 
-===List of Applications===[list_of_applications]
++++List of Applications+++[list_of_applications]
 
 || Salix Edition      | Xfce                 | KDE                          | Ratpoison
 | Web Browser         | Midori               | QupZilla                     | Vimprobable2
@@ -1527,7 +1530,7 @@ be able to take Linux at your own pace.
 | Package Management  | Gslapt, Sourcery     | Gslapt, Sourcery             | Gslapt,Sourcery
 
 
-===Selected Applications found in Salix===
++++Selected Applications found in Salix+++
 
 
 ====Abiword==== 
