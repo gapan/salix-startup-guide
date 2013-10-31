@@ -431,11 +431,11 @@ search Slackware/Salix mirrors and third party sources for packages,
 compare them with installed packages, install new packages, or
 upgrade all installed packages.
 To use the application, open a Terminal window and issue the command
-"**slapt-get -u**" first to update the package database on your
-computer. Then "**slapt-get -l**" to list all the available packages,
-"**slapt-get -search [package name]**" to search for a package, and
-"**slapt-get -i [package name]**" to install a package. For more
-command line instructions, please refer to "**slapt-get --help**".
+``slapt-get -u`` first to update the package database on your
+computer. Then ``slapt-get -l`` to list all the available packages,
+``slapt-get -search [package name]`` to search for a package, and
+``slapt-get -i [package name]`` to install a package. For more
+command line instructions, please refer to ``slapt-get --help``.
 
 Here is a little exercise for you. Try installing "w3m" which is a
 terminal based web browser, by using slapt-get.
@@ -446,22 +446,16 @@ terminal based web browser, by using slapt-get.
 Sourcery is a new graphical frontend to [slapt-src #slapt-src], a
 utility to build and install packages from source using SlackBuilds
 and/or SLKBUILDs. Before use, you should first click on the
-**Update**button on the tool bar to ensure that the latest updates from
+**Update** button on the tool bar to ensure that the latest updates from
 the software repositories are known to Sourcery. The search field is
 there for you to search for a particular package, and installations,
 uninstallations or reinstallations of selected packages are done
 with right clicks on their status boxes.
 
-
 Installation/uninstallation/reinstallation will take place once you
-click on the **Execute**button.
-
-
+click on the **Execute** button.
 
 [img/sourcery.png]
-
-
-
 
 
 ===slapt-src===[slapt-src]
@@ -473,15 +467,15 @@ packages that are still not available from the official Salix /
 Slackware repositories. Thousands of extra packages are now available to
 users through this tool.
 
-To use the application, type in "**slapt-src -u**" first to update on
+To use the application, type in ``slapt-src -u`` first to update on
 your computer the list of build scripts available from Slackbuild.org.
-"slapt-src -l" shows you a list of available packages, and as in
-slapt-get, "**slapt-src -i [package name]**" will install a package. For
-more command line instructions, please refer to "**slapt-src -help**".
+``slapt-src -l`` shows you a list of available packages, and as in
+slapt-get, ``slapt-src -i [package name]`` will install a package. For
+more command line instructions, please refer to ``slapt-src -help``.
 
 Another small exercise for you! Skype is a commonly used software to
 make voice calls over the Internet. It is not available from the common
-Salix / Slackware repository, but its build script is available from
+Salix/Slackware repository, but its build script is available from
 Slackbuilds.org. Try installing "skype" by using slapt-src. (If you do
 not wish to install it, you may just want to build the package.
 Note that the skype is 32-bit only, so if you are running a
@@ -493,12 +487,12 @@ Note that the skype is 32-bit only, so if you are running a
 An alternative way to install a package (which for Salix and many other
 slackware based distribution ends with the .tgz, .tlz or .txz
 extension) is to use the command line input
-"**spkg -i [exact name of a package]**". This is a handy way of installing a package if
+``spkg -i [exact name of a package]``. This is a handy way of installing a package if
 you have just created your own package or if you have downloaded it from
 the Internet. Note that the name of the package must be exact to the
 last extension (as in xxxxx-i486-tt.txz).
 Removing a package is somewhat similar. You can remove a package by
-issuing "**spkg -d [software name]**", e.g. "**spkg -d skype**".
+issuing ``spkg -d [software name]``, e.g. ``spkg -d skype``.
 
 
 ===Making a Package from a Source File with SLKBUILD===
@@ -508,25 +502,25 @@ You can compile a lot of software generally with the following
 commands.
 
 - unpack a source file, move inside the folder
-- type in "./configure" on the terminal
-- type in "make"
-- type in "su"
+- type in ``./configure`` on the terminal
+- type in ``make``
+- type in ``su``
 - type your root password
-- type in "make install"
+- type in ``make install``
 
 
 (Make sure to read accompanying files such as "README", "INSTALL" and so
 on for installation instructions before compiling. These files may list
 dependency packages which you need to install prior to the
 configuration.
-**./configure --help**or **./configure --help=short output**
+``./configure --help`` or ``./configure --help=short output``
 should also help you with some configuration options).
 
 Although you should manage to install the software after the final
 command, it is essentially //untracked//and neither Gslapt nor slapt-get
 can see that the software is installed. A better way is to create a
 Salix package using SLKBUILD, which is a build script you can prepare
-before issuing "**slkbuild -X**" to create a Salix compatible package.
+before issuing ``slkbuild -X`` to create a Salix compatible package.
 For more on SLKBULD, please consult
 [SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild].
 
