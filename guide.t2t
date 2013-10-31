@@ -1314,7 +1314,7 @@ which were set up in the last line of the configuration file. In a
 console, type **rpws help** .
 
 
-[img/rpwd.png]
+[img/rpws.png]
 
 The usage summary you will see may be a little cryptic. Just as "C"
 means Control, "M" refers to Alt. Use Alt with the function keys to
