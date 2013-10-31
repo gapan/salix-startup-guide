@@ -1502,7 +1502,7 @@ be able to take Linux at your own pace.
 +Appendix+
 
 
-+++List of Applications+++[list_of_applications]
+===List of Applications===[list_of_applications]
 
 || Salix Edition      | Xfce                 | KDE                          | Ratpoison
 | Web Browser         | Midori               | QupZilla                     | Vimprobable2
@@ -1532,7 +1532,7 @@ be able to take Linux at your own pace.
 | Package Management  | Gslapt, Sourcery     | Gslapt, Sourcery             | Gslapt,Sourcery
 
 
-+++Selected Applications found in Salix+++
+===Selected Applications found in Salix===
 
 
 ====Abiword==== 
