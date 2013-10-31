@@ -25,6 +25,10 @@ mobi: html
 pdf: html
 	txt2tags -t tex guide.t2t
 	xelatex guide.tex
+	rm -f guide.aux
+	rm -f guide.log
+	rm -f guide.out
+	#rm -f guide.tex
 
 help:
 	@echo 'Makefile for generating the Salix startup guide                        '
