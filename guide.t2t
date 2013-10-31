@@ -1460,7 +1460,7 @@ workspace.
 
 +++Adding an item to the menu+++
 
-The directory //~/.ratmenu//contains the main menu file //menu.sh//, and
+The directory ``~/.ratmenu`` contains the main menu file //menu.sh//, and
 the submenus it calls; all these are editable scripts. We will now edit
 the Network menu using //GVim//. //GVim// is in the menu, but try calling
 it using the colon
