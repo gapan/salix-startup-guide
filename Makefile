@@ -22,6 +22,10 @@ mobi: html
 		--level2-toc "//h:h2" \
 		--level3-toc "//h:h3"
 
+pdf: html
+	txt2tags -t tex guide.t2t
+	xelatex guide.tex
+
 help:
 	@echo 'Makefile for generating the Salix startup guide                        '
 	@echo '                                                                       '
@@ -40,4 +44,4 @@ clean:
 upload: html
 	echo "Not implemented yet"
 
-.PHONY: html help clean upload
+.PHONY: html epub mobi pdf help clean upload
