@@ -1491,7 +1491,11 @@ programs need to be opened inside a terminal.
 
 Use ``j`` and ``k`` to navigate to where you want to add the entry for
 //Alpine//, type ``i`` to insert, ``ESC`` to return to command mode, and
-``:wq`` to write and save. Test the change by typing ``C-t r`` - the new
+``:wq`` to write and save. Test the change by typing
+```
+C-t r
+```
+The new
 item should already appear. If all is well, you may close the editor.
 
 
@@ -1535,7 +1539,7 @@ needs and taste.
 One miscellaneous item is the mount manager in the System menu, which
 may also be called from the command line as //gmountman//. When needed,
 this deals with the mounting of removable devices, including DVDs. Also,
-//banish//may be called at any time by the shortcut ``C-t b``.
+//banish// may be called at any time by the shortcut ``C-t b``.
 
 Remember to check frequently for package updates using //slapt-get//.
 
@@ -1557,7 +1561,7 @@ use the
 above
 to be in live communication with members of the community and get
 instant help if necessary. If you do however, you might want to modify
-the default //qwebircxxx//login to something more personal and human
+the default //qwebircxxx// login to something more personal and human
 readable.
 
 [img/salix-online.png]
@@ -1591,7 +1595,7 @@ you if the question you have in mind has already been posted by a member
 of the community and if it has been answered. For the same reason,
 please also search the internet. If you are working on the command
 line ([Working with the Command Line Interface #working_with_cli]), remember to
-consult **man** (and try **man salix** for a summary of key points
+consult ``man`` (and try ``man salix``* for a summary of key points
 specific to this distribution). There are several online
 forums devoted to Linux, such as
 [linuxquestions.org http://www.linuxquestions.org/].
