@@ -1144,7 +1144,7 @@ to command mode, clearing the buffer, press **ESC**.
 
 As described in Vimprobable's man page, it is necessary to create some
 files for all its features to work:
-**touch ~/.config/vimprobable/histor** 
+**touch ~/.config/vimprobable/history** 
 though some of these may already be present.
 
 
