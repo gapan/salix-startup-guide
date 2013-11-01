@@ -1,12 +1,16 @@
 
 html: 
 	mkdir -p output
-	txt2tags -t html guide.t2t
+	txt2tags -t html -o output/guide.html guide.t2t
 
 htmlsep: html
 	rm -rf output/htmlsep
+	rm -rf output/img
 	mkdir -p output/htmlsep
-	htmldoc -t htmlsep --outdir output/htmlsep guide.html
+	cp -r img output/
+	mogrify -resize '600>' output/img/*.png
+	mogrify -resize '600>' output/img/*.jpg
+	htmldoc -t htmlsep --outdir output/htmlsep output/guide.html
 	cp css/*.css output/htmlsep/
 	cp img-css/*.png output/htmlsep/
 	sed -i "/<STYLE TYPE=/,/--><\/STYLE>/d" output/htmlsep/*.html
@@ -19,9 +23,8 @@ htmlsep: html
 	sed -i "s|^<A HREF=\"\(.*\)\">Next</A>|<li class=\"Next\"><A HREF=\"\1\"><strong>Next</strong></A></li></ul>|" \
 		output/htmlsep/*.html
 
-
 epub: html
-	ebook-convert guide.html output/guide.epub \
+	ebook-convert output/guide.html output/guide.epub \
 		--cover=img/screenshots_rotated.jpg \
 		--chapter "//h:h1" \
 		--chapter "//h:h2" \
@@ -31,7 +34,7 @@ epub: html
 		--level3-toc "//h:h3"
 
 mobi: html
-	ebook-convert guide.html output/guide.mobi \
+	ebook-convert output/guide.html output/guide.mobi \
 		--cover=img/screenshots_rotated.jpg \
 		--chapter "//h:h1" \
 		--chapter "//h:h2" \
