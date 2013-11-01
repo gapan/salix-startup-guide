@@ -770,7 +770,9 @@ code {
 /*	white-space: nowrap;*/
 	white-space: pre-wrap;
 	word-wrap: break-word;
-	font-weight:bold;
+	border: 1px solid #aaaaaa;
+	padding:.1em 0.1em;
+	font-size: 0.9em;
 }
 
 .parameter code {
