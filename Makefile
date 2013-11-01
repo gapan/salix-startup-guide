@@ -1,21 +1,27 @@
 
 html: 
+	mkdir -p output
 	txt2tags -t html guide.t2t
 
 htmlsep: html
-	rm -rf htmlsep
-	mkdir -p htmlsep
-	htmldoc -t htmlsep --outdir htmlsep guide.html
-	cp css/*.css htmlsep/
-	sed -i "/<STYLE TYPE=/,/--><\/STYLE>/d" htmlsep/*.html
-	sed -i "s|^</HEAD>|<link rel=\"stylesheet\" href=\"default.css\" type=\"text/css\">\n</HEAD>|" htmlsep/*.html
-	sed -i "s|^<A HREF=\"toc.html\">Contents</A>|<ul class=\"docnav\"><li class=\"home\"><A HREF=\"toc.html\"><strong>Contents</strong></A></li>|" htmlsep/*.html
-	sed -i "s|^<A HREF=\"\(.*\)\">Previous</A>|<li class=\"previous\"><A HREF=\"\1\"><strong>Previous</strong></A></li>|" htmlsep/*.html
-	sed -i "s|^<A HREF=\"\(.*\)\">Next</A>|<li class=\"Next\"><A HREF=\"\1\"><strong>Next</strong></A></li></ul>|" htmlsep/*.html
+	rm -rf output/htmlsep
+	mkdir -p output/htmlsep
+	htmldoc -t htmlsep --outdir output/htmlsep guide.html
+	cp css/*.css output/htmlsep/
+	cp img-css/*.png output/htmlsep/
+	sed -i "/<STYLE TYPE=/,/--><\/STYLE>/d" output/htmlsep/*.html
+	sed -i "s|^</HEAD>|<link rel=\"stylesheet\" href=\"default.css\" type=\"text/css\">\n</HEAD>|" \
+		output/htmlsep/*.html
+	sed -i "s|^<A HREF=\"toc.html\">Contents</A>|<ul class=\"docnav\"><li class=\"home\"><A HREF=\"toc.html\"><strong>Contents</strong></A></li>|" \
+		output/htmlsep/*.html
+	sed -i "s|^<A HREF=\"\(.*\)\">Previous</A>|<li class=\"previous\"><A HREF=\"\1\"><strong>Previous</strong></A></li>|" \
+		output/htmlsep/*.html
+	sed -i "s|^<A HREF=\"\(.*\)\">Next</A>|<li class=\"Next\"><A HREF=\"\1\"><strong>Next</strong></A></li></ul>|" \
+		output/htmlsep/*.html
 
 
 epub: html
-	ebook-convert guide.html guide.epub \
+	ebook-convert guide.html output/guide.epub \
 		--cover=img/screenshots_rotated.jpg \
 		--chapter "//h:h1" \
 		--chapter "//h:h2" \
@@ -25,7 +31,7 @@ epub: html
 		--level3-toc "//h:h3"
 
 mobi: html
-	ebook-convert guide.html guide.mobi \
+	ebook-convert guide.html output/guide.mobi \
 		--cover=img/screenshots_rotated.jpg \
 		--chapter "//h:h1" \
 		--chapter "//h:h2" \
@@ -35,16 +41,17 @@ mobi: html
 		--level3-toc "//h:h3"
 
 tex:
-	txt2tags --toc -t tex guide.t2t
+	mkdir -p output
+	txt2tags --toc -t tex -o output/guide.tex guide.t2t
 
 pdf: tex
-	xelatex guide.tex
-	xelatex guide.tex
-	rm -f guide.aux
-	rm -f guide.log
-	rm -f guide.out
-	rm -f guide.toc
-	#rm -f guide.tex
+	xelatex -output-directory=output output/guide.tex
+	xelatex -output-directory=output output/guide.tex
+	rm -f output/guide.aux
+	rm -f output/guide.log
+	rm -f output/guide.out
+	rm -f output/guide.toc
+	@#rm -f output/guide.tex
 
 help:
 	@echo 'Makefile for generating the Salix startup guide                        '
@@ -57,10 +64,8 @@ help:
 	@echo '                                                                       '
 
 clean:
+	rm -rf output
 	rm -f guide.html
-	rm -f guide.epub
-	rm -f guide.mobi
-	rm -f guide.pdf
 
 upload: html
 	@echo "Not implemented yet"
