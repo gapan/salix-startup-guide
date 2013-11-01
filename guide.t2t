@@ -143,7 +143,7 @@ rendered or burned to a DVD or CD by using media authoring or disc
 burning software. The resulting CD must not contain the .iso file; if it
 does, you have made a mistake in the process.
 
-//It is recommended, if possible, to verify the integrity of your downloaded file by comparing its [md5sum http://en.wikipedia.org/wiki/Md5sum] ile with the original one uploaded besides the corresponding ISO image file by Salix. This ensures that your downloaded image file matches exactly with the one provided on the Salix website, and minimises the possibility of installation errors later on.//
+//It is recommended, if possible, to verify the integrity of your downloaded file by comparing its [md5sum http://en.wikipedia.org/wiki/Md5sum] file with the original one uploaded besides the corresponding ISO image file by Salix. This ensures that your downloaded image file matches exactly with the one provided on the Salix website, and minimises the possibility of installation errors later on.//
 
 
 
@@ -620,7 +620,7 @@ settings.
 It will connect to wired (Ethernet only, no PPPoE/DSL support yet) and
 wireless networks.
 
-Note that **wicd**and **wireless**must be activated in the
+Note that **wicd** and **wireless** must be activated in the
 [system services #system_services] in order to make wireless networks visible on
 Wicd.
 
@@ -731,7 +731,7 @@ program, and makes them appear again in the application menu.
 +++Hostnames+++
 
 Hostnames manages the host names used by your computer. This tool
-facilitates defining / overviewing host names used while setting up your
+facilitates defining/overviewing host names used while setting up your
 machine as a server.
 
 
@@ -889,7 +889,7 @@ keys are used to switch between consoles.
 +++Moving Around - cd+++
 
 You should be in your user directory (denoted as ``~``), which is
-normally the same as ``/home/your_user_name`` (replace the
+normally the same as ``/home/your_user_name`` (replace
 ``your_user_name`` with your own). In Salix, this directory contains
 ``Desktop``, ``Music``, ``Documents`` and so on. To see its
 content, type ``ls`` and press enter. You will see something like
@@ -901,30 +901,27 @@ Now to move around directories, we use the command ``cd``. If you just type in
 ``cd`` and enter, nothing will happen. ``cd`` must be followed
 either by a name of a directory which is within the directory you are in
 or by a full path to the directory you wish to move into. You can also
-go one directory up by typing ``cd ..`` (be careful, there is a space
-between ``cd`` and ``..``). Remember on Linux,
+go one directory up by typing
+``` cd ..
+(be careful, there is a space between ``cd`` and ``..``).
+Remember on Linux,
 //arguments are separated by spaces//. So for now, let's move to the root directory.
 The root directory is, as the name suggests, the core of your
 directories - every directory stems from here. Once you wipe out the
 root directory, you will not see your machine booting up again.
 
 To move to the root ``/``, type in
-```
-cd /
-```
+``` cd /
 
 Type in ``ls`` to see the list of files and directories in the
 directory. You should see something like ``tmp/``, ``usr/``,
 ``home`` and so on. OK, not so interesting here. Let us move back to
 your home directory with
-```
-cd /home/your_user_name
-```
+``` cd /home/your_user_name
 
 Now move into the ``Music`` directory by issuing
-```
-cd Music
-```
+``` cd Music
+
 In fact, you do not have to type to the end. By pressing Tab after the
 first letter or two, you may complete the rest of the directory name
 automatically.
@@ -933,33 +930,26 @@ automatically.
 +++Creating a Folder - mkdir+++
 
 You can create a folder by issuing
-```
-mkdir name_of_a_new_folder
-```
+``` mkdir name_of_a_new_folder
+
 For example, let's say we are going to create a photo folder.
-```
-mkdir photo
-```
+``` mkdir photo
+
 will place the new folder in the
 current directory. You can check this by typing
-```
-ls
-```
+``` ls
 
 Next, let's create a log file for the photo folder. ``nano`` is a
 command line application for reading and writing texts. To bring up the
 program, type in
-```
-nano
-```
+``` nano
 
 [img/nano.png]
 
 The application is simple to use, and you can see command options shown
 at the buttom. Type
-```
-log file created
-```
+``` log file created
+
 and with ``Ctrl+x``, save
 the document as ``log`` and quit the application.
 
