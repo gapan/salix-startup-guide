@@ -6,6 +6,7 @@ html:
 
 htmlsep: html
 	rm -rf output/htmlsep
+	rm -rf output/img
 	mkdir -p output/htmlsep
 	cp -r img output/
 	mogrify -resize '600>' output/img/*.png
