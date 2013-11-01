@@ -2,7 +2,6 @@
 html: 
 	mkdir -p output
 	txt2tags -t html -o output/guide.html guide.t2t
-	rm -f output/guide.t2t
 
 htmlsep: html
 	rm -rf output/htmlsep
