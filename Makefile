@@ -2,6 +2,18 @@
 html: 
 	txt2tags -t html guide.t2t
 
+htmlsep: html
+	rm -rf htmlsep
+	mkdir -p htmlsep
+	htmldoc -t htmlsep --outdir htmlsep guide.html
+	cp css/*.css htmlsep/
+	sed -i "/<STYLE TYPE=/,/--><\/STYLE>/d" htmlsep/*.html
+	sed -i "s|^</HEAD>|<link rel=\"stylesheet\" href=\"default.css\" type=\"text/css\">\n</HEAD>|" htmlsep/*.html
+	sed -i "s|^<A HREF=\"toc.html\">Contents</A>|<ul class=\"docnav\"><li class=\"home\"><A HREF=\"toc.html\"><strong>Contents</strong></A></li>|" htmlsep/*.html
+	sed -i "s|^<A HREF=\"\(.*\)\">Previous</A>|<li class=\"previous\"><A HREF=\"\1\"><strong>Previous</strong></A></li>|" htmlsep/*.html
+	sed -i "s|^<A HREF=\"\(.*\)\">Next</A>|<li class=\"Next\"><A HREF=\"\1\"><strong>Next</strong></A></li></ul>|" htmlsep/*.html
+
+
 epub: html
 	ebook-convert guide.html guide.epub \
 		--cover=img/screenshots_rotated.jpg \
@@ -53,4 +65,4 @@ clean:
 upload: html
 	@echo "Not implemented yet"
 
-.PHONY: html epub mobi tex pdf help clean upload
+.PHONY: html htmlsep epub mobi tex pdf help clean upload
