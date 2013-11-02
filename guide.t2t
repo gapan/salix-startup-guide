@@ -10,6 +10,7 @@ Getting familiar with your new operating System
 %!postproc(tex): "\\tableofcontents" "\\pagenumbering{roman}\n\\tableofcontents"
 %!postproc(tex): "\\hypertarget{toc1}{}" "\\pagenumbering{arabic}\n\n\\hypertarget{toc1}{}"
 
+%!postproc(html): '<BODY BGCOLOR="white" TEXT="black">' '<BODY>'
 
 ===About this manual===
 
