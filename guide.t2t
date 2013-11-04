@@ -1138,7 +1138,7 @@ wish.
 
 +++Overview+++
 
-Ratpoison is a tiling window manager, somewhat like //xmonad//or
+Ratpoison is a tiling window manager, somewhat like //xmonad// or
 //scrotwm//. Its two main features are that applications fill the whole
 screen, with no bars or buttons; and the user interface can be
 controlled entirely from the keyboard, with no mouse. If needed, any
@@ -1194,7 +1194,7 @@ see how to close windows and applications later).
 [img/ratmenu.png]
 
 Some common options are available directly at the top. The
-//Vimprobable2//browser, for instance, can be found under Network but
+//Vimprobable2// browser, for instance, can be found under Network but
 also by just selecting "Browser". Remember to use the keyboard and not
 the mouse! A third way to open it bypasses the menu altogether:
 ``C-t v``.
@@ -1269,10 +1269,7 @@ though some of these may already be present.
 +++Window management+++
 
 Let's now see how Ratpoison deals with several open windows. ``C-t w``
-generates a list showing all of them:
-
-[img/ratpoison.png]
-
+generates a list showing all of them. 
 Notice that each one is associated with a number: ``C-t`` followed by the number changes to that one.
 ``C-t`` ``C-t`` returns to the previous window.
 This is very useful indeed for switching rapidly back and forth between
@@ -1313,31 +1310,31 @@ $ su                  #change to root
 ```
 
 Apart from the //Vimprobable2// browser, the default applications include
-//Alpine//as the mail client and //Gnome Commander// as the file manager.
+//Alpine// as the mail client and //Gnome Commander// as the file manager.
 //Music On Console// and //Whaaw Media Player// are the audio and video
-players, with //GVim// as text/code editor. //apvlv//can be used to view
+players, with //GVim// as text/code editor. //apvlv// can be used to view
 pdf files. As we have just seen, package management is console-based,
-using //slapt-get//and //slapt-src//. Further options are available
-in the repository. //Firefox//may be installed adding the
-//pentadactyl//or //vimperator//addon for mouse-free browsing, or
-alternatively //Jumanji//, //XXXTerm//or //w3m//, a browser for the
-command line. //Thunderbird//can be used with the //Muttator//addon
-while //Claws-mail//works almost entirely from the keyboard;
+using //slapt-get// and //slapt-src//. Further options are available
+in the repository. //Firefox// may be installed adding the
+//pentadactyl// or //vimperator// addon for mouse-free browsing, or
+alternatively //Jumanji//, //XXXTerm// or //w3m//, a browser for the
+command line. //Thunderbird// can be used with the //Muttator// addon
+while //Claws-mail// works almost entirely from the keyboard;
 //mcabber// and //irssi// are jabber and irc clients for the console.
 
 Note: To see how to edit Alpine's configuration file to access mail from
 one popular provider via smtp, see the page in the
-[Salix wiki http://www.salixos.org/wiki/index.php/How20to20set20up20Alpine20with20a20Gmail20account].
+[Salix wiki http://www.salixos.org/wiki/index.php/How_to_set_up_Alpine_with_a_Gmail_account].
 
 Wordgrinder and sc are wordprocessing and spreadsheet applications.  Flash is not included, but is available from the
 repositories. Screen for managing multiple consoles works well with
-Ratpoison. Users are encouraged to tailor and expand the application selection according to taste; when it comes to text processing, for instance, //PyRoom//is
+Ratpoison. Users are encouraged to tailor and expand the application selection according to taste; when it comes to text processing, for instance, //PyRoom// is
 an elegant choice for full-screen, distraction-free writing, and it
-might be complemented by //Antiword//to convert proprietary file
+might be complemented by //Antiword// to convert proprietary file
 formats into plain text.
 
-Note that the //Gslapt//and //Sourcery//graphical package management
-tools (equivalent to //slapt-get//and //slapt-src//) may also be used
+Note that the //Gslapt// and //Sourcery// graphical package management
+tools (equivalent to //slapt-get// and //slapt-src//)  may also be used
 mouselessly, though this is perhaps more awkward than working on the
 command line. In either case, regular manual upgrading will still be
 necessary.
@@ -1352,7 +1349,7 @@ As an example, we will install //MPLayer//, the classic console media player.
 
 +++Editing the configuration file+++
 
-After using //Alpine//a little, one problem may become apparent. Its
+After using //Alpine// a little, one problem may become apparent. Its
 shortcut for selecting a file, for example to attach it, is ``C-t``. But
 that's Ratpoison's escape key combination! In fact, Ratpoison has a
 solution for such conflicts, referred to somewhat cryptically in the
@@ -1400,7 +1397,7 @@ tile it horizontally with the window where you are reading this guide
 
 [img/ratpoisonrc.png]
 
-//banish//sends the mouse pointer to bottom right (incidentally, you may
+//banish// sends the mouse pointer to bottom right (incidentally, you may
 wish to install //unclutter//, which makes it fade out altogether
 after a few seconds' stillness; place the line
 ```
