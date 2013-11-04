@@ -34,7 +34,7 @@ up guide, please contact //tsuren// on the forum or write to:
 
 //**Acknowledgement**//
 My sincere thanks to all the people who have contributed to and worked on this start up guide, including translators.
-Many thanks especially to //**jrd**//, //**akuna**//, //**mimosa**// and //**maximus**// for their contributions in writing and thorough proof-reading.
+Many thanks especially to //**jrd**//, //**akuna**//, //**mimosa**// and //**maximus**// for their contributions in writing and thorough proof-reading; and above all, to //**tsuren**//, the original editor of the Guide.
 
 
 
@@ -1148,14 +1148,14 @@ although - or perhaps because - the interface is so very different from
 the conventional point-and-click approach, it can quickly become highly
 intuitive. Learning which actual keys do what takes far less time than
 might be imagined. Apart from its efficiency and lack of clutter,
-ratpoison is a good choice for anyone concerned about RSI
+Ratpoison is a good choice for anyone concerned about RSI
 (cumulative strain from long-term mouse use), or for netbook
 users, because "every pixel counts". It is also highly
 configurable - and fast!
 
 The applications present for the Ratpoison edition aim to fit in with
 its minimalist (but not spartan) approach. The majority use vim-style
-keybindings, even though ratpoison itself does not, so users will need
+keybindings, even though Ratpoison itself does not, so users will need
 to become comfortable with these if they are not already; cheatsheets
 are available online to help assimilate them, as well as guides (and
 manpages) for the individual applications. Common operations use
@@ -1252,7 +1252,7 @@ command mode.
 
 If you find your keystrokes are still being interpreted as browser
 commands, which may happen as a result of the way certain sites are
-designed, try ``C-z``. The converse problem may arise if you have
+designed, try pressing enter twice instead of just once after typing ``f`` and selecting the number; failing this, try ``C-z``. The converse problem may arise if you have
 inadvertently passed keystrokes to ``o`` or ``t``; they will appear at
 the very bottom right of the browser window. To ignore them and return
 to command mode, clearing the buffer, press ``ESC``.
@@ -1268,14 +1268,13 @@ though some of these may already be present.
 
 +++Window management+++
 
-Let's now see how ratpoison deals with several open windows. ``C-t e``
-reveals all of them:
+Let's now see how Ratpoison deals with several open windows. ``C-t w``
+generates a list showing all of them:
 
 [img/ratpoison.png]
 
-Notice that each one is associated with a number: typing it focuses on
-that window and hides all the others. (``C-t w`` simply provides a list
-of open windows.) ``C-t`` ``C-t`` returns to the previous window.
+Notice that each one is associated with a number: ``C-t`` followed by the number changes to that one.
+``C-t`` ``C-t`` returns to the previous window.
 This is very useful indeed for switching rapidly back and forth between
 two apps - for instance, an editor and a browser - and is an example of
 how Ratpoison shines ergonomically. ``C-t k`` closes the current window,
@@ -1313,8 +1312,8 @@ $ su                  #change to root
 # slapt-get --upgrade #upgrade to reflect any changes
 ```
 
-Apart from the //Vimprobable2//browser, the default applications include
-//Mutt//as the mail client and //Gnome Commander// as the file manager.
+Apart from the //Vimprobable2// browser, the default applications include
+//Alpine//as the mail client and //Gnome Commander// as the file manager.
 //Music On Console// and //Whaaw Media Player// are the audio and video
 players, with //GVim// as text/code editor. //apvlv//can be used to view
 pdf files. As we have just seen, package management is console-based,
@@ -1324,37 +1323,31 @@ in the repository. //Firefox//may be installed adding the
 alternatively //Jumanji//, //XXXTerm//or //w3m//, a browser for the
 command line. //Thunderbird//can be used with the //Muttator//addon
 while //Claws-mail//works almost entirely from the keyboard;
-//Alpine//is a friendly console email client.
+//mcabber// and //irssi// are jabber and irc clients for the console.
 
-No office suite is included, and in this as in other respects, the user
-is encouraged to tailor the system by installing their preferred
-applications. Flash is not included, but is available from the
+Note: To see how to edit Alpine's configuration file to access mail from
+one popular provider via smtp, see the page in the
+[Salix wiki http://www.salixos.org/wiki/index.php/How20to20set20up20Alpine20with20a20Gmail20account].
+
+Wordgrinder and sc are wordprocessing and spreadsheet applications.  Flash is not included, but is available from the
 repositories. Screen for managing multiple consoles works well with
-Ratpoison. Sc is a console-based spreadsheet. For writers, //PyRoom//is
+Ratpoison. Users are encouraged to tailor and expand the application selection according to taste; when it comes to text processing, for instance, //PyRoom//is
 an elegant choice for full-screen, distraction-free writing, and it
 might be complemented by //Antiword//to convert proprietary file
 formats into plain text.
 
 Note that the //Gslapt//and //Sourcery//graphical package management
 tools (equivalent to //slapt-get//and //slapt-src//) may also be used
-mouse-lessly, though this is perhaps more awkward than working on the
+mouselessly, though this is perhaps more awkward than working on the
 command line. In either case, regular manual upgrading will still be
 necessary.
 
-As an example, we will install //Alpine//, derived from the classic
-//Pine//mail client.
+As an example, we will install //MPLayer//, the classic console media player.
 
 ```
 **#slapt-get -u**
-**#slapt-get -i alpine**
+**#slapt-get -i MPlayer**
 ```
-
-Note: To see how to edit Alpine's configuration file to access mail from
-one popular provider via smtp, see the page in the
-[Salix wiki http://www.salixos.org/wiki/index.php/How20to20set20up20Alpine20with20a20Gmail20account].
-
-For //Mutt//, see
-[this wiki entry http://crunchbanglinux.org/wiki/howto/howto_setup_mutt_with_gmail_imap].
 
 
 +++Editing the configuration file+++
