@@ -767,9 +767,9 @@ pre .keycap {
 
 code {
 	font-family:"liberation mono", "bitstream vera mono", "dejavu mono", monospace;
-/*	white-space: nowrap;*/
-	white-space: pre-wrap;
-	word-wrap: break-word;
+	white-space: nowrap;
+/*	white-space: pre-wrap;*/
+/*	word-wrap: break-word;*/
 	border: 1px solid #aaaaaa;
 	padding:.1em 0.1em;
 	font-size: 0.9em;
