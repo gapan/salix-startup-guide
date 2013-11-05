@@ -106,7 +106,7 @@ and **Core**, to meet your demands!
 |                    |              | - Minimum selection of software | - Gslapt
 |                    |              |                              | - Desktop
 | Core               | Advanced users who would like to run a console system | - No graphical environment | - vi 
-|                    | Server maintainers | - Minimum number of software essential for a console system | 
+|                    | Server maintainers | - Minimum number of software essential for a console system |  |
 
 
 
@@ -572,7 +572,7 @@ or
 should also help you with some configuration options.
 
 Although you should manage to install the software after the final
-command, it is essentially //untracked//and neither Gslapt nor slapt-get
+command, it is essentially //untracked// and neither Gslapt nor slapt-get
 can see that the software is installed. A better way is to create a
 Salix package using SLKBUILD, which is a build script you can prepare
 before issuing
@@ -1140,7 +1140,7 @@ wish.
 
 +++Overview+++
 
-Ratpoison is a tiling window manager, somewhat like //xmonad//or
+Ratpoison is a tiling window manager, somewhat like //xmonad// or
 //scrotwm//. Its two main features are that applications fill the whole
 screen, with no bars or buttons; and the user interface can be
 controlled entirely from the keyboard, with no mouse. If needed, any
@@ -1196,7 +1196,7 @@ see how to close windows and applications later).
 [img/ratmenu.png]
 
 Some common options are available directly at the top. The
-//Vimprobable2//browser, for instance, can be found under Network but
+//Vimprobable2// browser, for instance, can be found under Network but
 also by just selecting "Browser". Remember to use the keyboard and not
 the mouse! A third way to open it bypasses the menu altogether:
 ``C-t v``.
@@ -1315,36 +1315,36 @@ $ su                  #change to root
 # slapt-get --upgrade #upgrade to reflect any changes
 ```
 
-Apart from the //Vimprobable2//browser, the default applications include
-//Mutt//as the mail client and //Gnome Commander// as the file manager.
+Apart from the //Vimprobable2// browser, the default applications include
+//Mutt// as the mail client and //Gnome Commander// as the file manager.
 //Music On Console// and //Whaaw Media Player// are the audio and video
-players, with //GVim// as text/code editor. //apvlv//can be used to view
+players, with //GVim// as text/code editor. //apvlv// can be used to view
 pdf files. As we have just seen, package management is console-based,
-using //slapt-get//and //slapt-src//. Further options are available
-in the repository. //Firefox//may be installed adding the
-//pentadactyl//or //vimperator//addon for mouse-free browsing, or
-alternatively //Jumanji//, //XXXTerm//or //w3m//, a browser for the
-command line. //Thunderbird//can be used with the //Muttator//addon
-while //Claws-mail//works almost entirely from the keyboard;
-//Alpine//is a friendly console email client.
+using //slapt-get// and //slapt-src//. Further options are available
+in the repository. //Firefox// may be installed adding the
+//pentadactyl// or //vimperator// addon for mouse-free browsing, or
+alternatively //Jumanji//, //XXXTerm// or //w3m//, a browser for the
+command line. //Thunderbird// can be used with the //Muttator// addon
+while //Claws-mail// works almost entirely from the keyboard;
+//Alpine// is a friendly console email client.
 
 No office suite is included, and in this as in other respects, the user
 is encouraged to tailor the system by installing their preferred
 applications. Flash is not included, but is available from the
 repositories. Screen for managing multiple consoles works well with
-Ratpoison. Sc is a console-based spreadsheet. For writers, //PyRoom//is
+Ratpoison. Sc is a console-based spreadsheet. For writers, //PyRoom// is
 an elegant choice for full-screen, distraction-free writing, and it
-might be complemented by //Antiword//to convert proprietary file
+might be complemented by //Antiword// to convert proprietary file
 formats into plain text.
 
-Note that the //Gslapt//and //Sourcery//graphical package management
-tools (equivalent to //slapt-get//and //slapt-src//) may also be used
+Note that the //Gslapt// and //Sourcery// graphical package management
+tools (equivalent to //slapt-get// and //slapt-src//) may also be used
 mouse-lessly, though this is perhaps more awkward than working on the
 command line. In either case, regular manual upgrading will still be
 necessary.
 
 As an example, we will install //Alpine//, derived from the classic
-//Pine//mail client.
+//Pine// mail client.
 
 ```
 # slapt-get -u
@@ -1409,7 +1409,7 @@ tile it horizontally with the window where you are reading this guide
 
 [img/ratpoisonrc.png]
 
-//banish//sends the mouse pointer to bottom right (incidentally, you may
+//banish// sends the mouse pointer to bottom right (incidentally, you may
 wish to install //unclutter//, which makes it fade out altogether
 after a few seconds' stillness; place the line
 ```
