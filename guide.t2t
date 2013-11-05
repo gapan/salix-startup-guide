@@ -1679,19 +1679,19 @@ be able to take Linux at your own pace.
 
 ====Abiword==== 
 
-[img/abiword.png]
-
 AbiWord is a word processing program suitable for a wide variety of word
 processing tasks.
+
+[img/abiword.png]
 
 
 ====Asunder==== 
 
-[img/asunder.png]
-
 Asunder is an Audio CD ripper and encoder for Linux. You can use Asunder
 to save tracks from an Audio CD as any of WAV, MP3, OGG, FLAC, WavPack,
 Musepack, AAC, and Monkey's Audio files.
+
+[img/asunder.png]
 
 
 ====Brasero==== 
@@ -1699,7 +1699,6 @@ Musepack, AAC, and Monkey's Audio files.
 Brasero is an application to burn CD/DVD. It is designed to be as simple
 as possible and has some unique features to enable users to create their
 discs easily and quickly.
-
 
 [img/brasero.png]
 
@@ -1713,22 +1712,20 @@ such as find, (s)locate, doodle, tracker and beagle.
 [img/catfish.png]
 
 
-
 ====Claws-mail==== 
 
 Claws Mail is an open source email and news client. It offers easy
 configuration and an abundance of features. It stores mail in the MH
 mailbox format as well as the Mbox mailbox format via a plugin.
 
-
 [img/claws.png]
+
 
 ====Document Viewer (Atril)==== 
 
 Document Viewer is a a very lightweight, simple PDF document viewer.
 
 [img/atril.png]
-
 
 
 ====ePDFview==== 
@@ -1740,24 +1737,19 @@ has support for printing using CUPS.
 [img/epdfview.png]
 
 
-
-
-
 ====Exaile==== 
-
-[img/exaile.png]
 
 Exaile is a music manager which incorporates automatic fetching of album
 art, lyrics fetching, Last.fm scrobbling, support for many portable
 media players, Internet radio such as Shoutcast, tabbed playlists, etc.
 
+[img/exaile.png]
 
 ====Engrampa====
 
 Engrampa is an archive manager. Supported archive types include gzip,
 bzip, bzip2, compress, lzop, zip, jar, lha, rar, zoo, arj, 7-zip,
 etc.
-
 
 [img/engrampa.png]
 
@@ -1769,9 +1761,6 @@ browsing, spell checking, incremental find, private browsing and
 numerous plugins.
 
 [img/firefox.png]
-
-
-
 
 
 ====Galculator====
@@ -1787,8 +1776,8 @@ Geany is a small and lightweight Integrated Development Environment
 which only has a few dependencies and is independent of any particular
 Desktop Environment.
 
-
 [img/geany.png]
+
 
 ====gFTP====
 
@@ -1798,17 +1787,14 @@ be simple to use yet powerful.
 [img/gftp.png]
 
 
-
-
-
 ====Gigolo==== 
 
 Gigolo is a frontend to easily manage connections to remote filesystems
 using GIO/GVfs. It allows you to quickly connect/mount a remote
 filesystem and browse local networks shares.
 
-
 [img/gigolo.png]
+
 
 ====Gimp==== 
 
@@ -1817,7 +1803,6 @@ tool. In addition to offering free form drawing, it can accomplish
 essential image workflow steps such as resizing, editing, and cropping
 photos, combining multiple images, converting between different image
 formats as well as create basic animated images in GIF.
-
 
 [img/gimp.png]
 
@@ -1828,7 +1813,6 @@ The goal of Gnumeric is to be the best possible spreadsheet. While not
 attempting to clone existing applications, Gnumeric can however read
 files saved with other spreadsheets and offers a customizable feel that
 attempts to minimize the costs of transition.
-
 
 [img/gnumeric.png]
 
@@ -1841,9 +1825,6 @@ with the original man command. The manual pages are displayed in simple
 text form using the default system monospace font.
 
 [img/gtkman.png]
-
-
-
 
 
 ====Ibus====[ibus]
@@ -1881,19 +1862,20 @@ Subversion, Bazaar-ng and Mercurial.
 
 ====Midori====
 
-[img/midori.png]
-
 Midori (Japanese for green) is a web browser that aims to be lightweight
 and fast. It uses the WebKit rendering engine.
 
+[img/midori.png]
+
 
 ====mtPaint==== 
+
 mtPaint is a painting program designed to easily create pixel art and
 manipulate digital photos. Due to its efficient design it can run on
 older PC hardware (e.g. a 200MHz CPU and 16MB of free RAM).
 
-
 [img/mtpaint.png]
+
 
 ====LibreOffice====
 
@@ -1902,7 +1884,6 @@ processing, spreadsheets, presentations, graphics, databases and more.
 It is available in many languages and works on all common computers. It
 stores all your data in an international open standard format and can
 also read and write files from other common office software packages.
-
 
 [img/libreoffice.png]
 
@@ -1916,16 +1897,15 @@ application for everyday use, it launches itself in the background and
 can be accessed using the Orage Clock plugin for the panel. Simply click
 on a date to display or set the agenda for the day.
 
-
 [img/orage.png]
 
 
 ====Parole Media Player==== 
 
-[img/parole.png]
-
 Parole Media Player is a media player (audio and video) which utilises
 the GStreamer framework for playback.
+
+[img/parole.png]
 
 
 ====Pidgin====
@@ -1938,9 +1918,6 @@ Jabber/XMPP, MSN Messenger, Yahoo, etc.
 [img/pidgin.png]
 
 
-
-
-
 ====PiTiVi Video Editor====
 
 PiTiVi is an easy to use video editor. The interface is intuitive to
@@ -1950,14 +1927,10 @@ film clips.
 [img/pitivi.png]
 
 
-
-
-
 ====Simple Scan====
 
 Simple Scan allows you to scan your documents/photos with your scanner
 or even with your webcam!
-
 
 [img/simple-scan.png]
 
@@ -1975,7 +1948,6 @@ simple, lean and powerful.
 
 Viewnior is a fast and lightweight picture viewer.
 
-
 [img/viewnior.png]
 
 
@@ -1985,7 +1957,6 @@ Whaaw! Media Player will play any audio/video files which GStreamer can
 manage. It supports fullscreen mode, seeking, changing video colour
 settings and more. It is intended to be a basic media player with few
 dependencies.
-
 
 [img/whaaw.png]
 
