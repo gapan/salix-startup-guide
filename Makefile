@@ -23,6 +23,10 @@ htmlsep: html
 		output/htmlsep/*.html
 	sed -i "s|^<A HREF=\"\(.*\)\">Next</A>|<li class=\"Next\"><A HREF=\"\1\"><strong>Next</strong></A></li></ul>|" \
 		output/htmlsep/*.html
+	sed -i ':a;{N;s/Previous<\/strong><\/A><\/li>\n<HR NOSHADE>/Previous<\/strong><\/A><\/li><\/ul>\n<HR NOSHADE>/};ba' \
+		output/htmlsep/*.html
+	sed -i ':a;{N;s/Previous<\/strong><\/A><\/li>\n<\/BODY>/Previous<\/strong><\/A><\/li><\/ul>\n<\/BODY>/};ba' \
+		output/htmlsep/*.html
 
 epub: html
 	ebook-convert output/guide.html output/guide.epub \
