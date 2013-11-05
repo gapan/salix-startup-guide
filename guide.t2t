@@ -103,7 +103,7 @@ and **Core**, to meet your demands!
 || Installation Type | Target Users | Features                     | Examples of Available Applications
 | Full               | All users    | Graphical environment, full software installation      | Libreoffice, Exaile, Midori, Pidgin
 | Basic              | Advanced users who would like to add their own choice of applications | Graphical environment | Midori, Gslapt
-| Core               | Advanced users who would like to run a console system server maintainers | No graphical environment, minimal number of software essential for a console system | vi
+| Core               | Advanced users who would like to run a console system, server maintainers | No graphical environment, minimal number of software essential for a console system | vi
 
 
 
