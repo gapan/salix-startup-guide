@@ -179,7 +179,8 @@ Setup, configuring some partitions with Gparted, etc.
 
 +++Creating a Salix Live USB Key+++
 
-- Open the .iso file using a software archiver (file-roller, xarchiver, 7-zip, iso-master, …).
+- Open the .iso file using a software archiver (file-roller, xarchiver,
+  7-zip, isomaster, ...).
 - Extract all files and folders (boot, packages and Salix Live) to your USB root directory.
 - Go to the ``boot`` directory on the USB key.
 - If you're running on Unix (Linux, BSD, Mac OS X), just run the file
@@ -189,7 +190,7 @@ Setup, configuring some partitions with Gparted, etc.
 
 +++Booting from a Salix Installation CD/DVD/USB Key+++
 
-Your computer must be set to boot on the optical drive / USB port first
+Your computer must be set to boot on the optical drive/USB port first
 before defaulting to the internal hard disk drive.
 If that is not the case, you need to first modify the
 [BIOS http://en.wikipedia.org/wiki/BIOS] setting, usually by pressing the Del
@@ -197,7 +198,7 @@ key or the F2 key (or some other key combinations depending on your
 machine). Once in the BIOS, find the //boot menu// or similar and
 set the order of the boot devices properly, with your optical drive/USB
 port in the first position. Save your changes and reboot your computer.
-Insert the Salix (Live)CD/DVD or USB key, and start up your computer.
+Insert the Salix (Live) CD/DVD or USB key, and start up your computer.
 
 
 
@@ -1332,7 +1333,7 @@ No office suite is included, and in this as in other respects, the user
 is encouraged to tailor the system by installing their preferred
 applications. Flash is not included, but is available from the
 repositories. Screen for managing multiple consoles works well with
-Ratpoison. Sc is a console-based spreadsheet. For writers, //PyRoom// is
+Ratpoison. //sc// is a console-based spreadsheet. For writers, //PyRoom// is
 an elegant choice for full-screen, distraction-free writing, and it
 might be complemented by //Antiword// to convert proprietary file
 formats into plain text.
@@ -1614,7 +1615,7 @@ forums. Even if you just want to use core office, multimedia or network
 applications productively, over time the power that Linux gives users
 tends to promote self-reliance and an ability to configure and fix their
 computer setup independently. The same approach underlies the
-development of Linux as an operating system ̶ where there is room for
+development of Linux as an operating system; where there is room for
 improvement, someone will dive in and tinker. The cumulative result is
 that Linux today is highly usable out of the box.
 
