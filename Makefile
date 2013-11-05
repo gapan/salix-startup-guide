@@ -13,6 +13,7 @@ htmlsep: html
 	htmldoc -t htmlsep --outdir output/htmlsep output/guide.html
 	cp css/*.css output/htmlsep/
 	cp img-css/*.png output/htmlsep/
+	rm -rf output/img
 	sed -i "/<STYLE TYPE=/,/--><\/STYLE>/d" output/htmlsep/*.html
 	sed -i "s|^</HEAD>|<link rel=\"stylesheet\" href=\"default.css\" type=\"text/css\">\n</HEAD>|" \
 		output/htmlsep/*.html
