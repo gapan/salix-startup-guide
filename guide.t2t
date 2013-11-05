@@ -2,6 +2,8 @@ Salix Start-Up Guide
 
 Getting familiar with your new operating System
 
+%!encoding: UTF-8
+
 %%!postproc(tex): "\\documentclass{article}" "\\documentclass[a4paper,10pt]{article}"
 %!postproc(tex): "\\maketitle" ""
 %!postproc(tex): "\\usepackage{graphicx}" "\\usepackage{graphicx}\n\\usepackage[export]{adjustbox}"
