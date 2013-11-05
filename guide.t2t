@@ -1347,8 +1347,8 @@ As an example, we will install //Alpine//, derived from the classic
 //Pine//mail client.
 
 ```
-**#slapt-get -u**
-**#slapt-get -i alpine**
+# slapt-get -u
+# slapt-get -i alpine
 ```
 
 Note: To see how to edit Alpine's configuration file to access mail from
