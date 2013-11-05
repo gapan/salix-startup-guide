@@ -5,12 +5,15 @@ Getting familiar with your new operating System
 %!encoding: UTF-8
 
 %%!postproc(tex): "\\documentclass{article}" "\\documentclass[a4paper,10pt]{article}"
+
+%!style(tex): xltxtra
 %!postproc(tex): "\\maketitle" ""
 %!postproc(tex): "\\usepackage{graphicx}" "\\usepackage{graphicx}\n\\usepackage[export]{adjustbox}"
 %!postproc(tex): "\\includegraphics" "\\includegraphics[max width=0.9\\textwidth]"
 %!postproc(tex): "\\usepackage\[urlcolor=blue," "\\usepackage[linkcolor=blue,urlcolor=red,"
 %!postproc(tex): "\\tableofcontents" "\\pagenumbering{roman}\n\\tableofcontents"
 %!postproc(tex): "\\hypertarget{toc1}{}" "\\pagenumbering{arabic}\n\n\\hypertarget{toc1}{}"
+%!postproc(tex): "\\title" "\\setmainfont[Mapping=tex-text]{CMU Sans Serif}\n\n\\title"
 
 %!postproc(html): '<BODY BGCOLOR="white" TEXT="black">' '<BODY>'
 
@@ -98,15 +101,9 @@ and **Core**, to meet your demands!
 
 
 || Installation Type | Target Users | Features                     | Examples of Available Applications
-| Full               | All users    | - Graphical environment      | - Libreoffice
-|                    |              | - Full software installation | - Exaile
-|                    |              |                              | - Midori
-|                    |              |                              | - Pidgin
-| Basic              | Advanced users who would like to add their own choice of applications | - Graphical environment | - Midori
-|                    |              | - Minimum selection of software | - Gslapt
-|                    |              |                              | - Desktop
-| Core               | Advanced users who would like to run a console system | - No graphical environment | - vi 
-|                    | Server maintainers | - Minimum number of software essential for a console system |  |
+| Full               | All users    | Graphical environment, full software installation      | Libreoffice, Exaile, Midori, Pidgin
+| Basic              | Advanced users who would like to add their own choice of applications | Graphical environment | Midori, Gslapt
+| Core               | Advanced users who would like to run a console system server maintainers | No graphical environment, minimal number of software essential for a console system | vi
 
 
 
