@@ -1649,7 +1649,7 @@ be able to take Linux at your own pace.
 || Salix Edition      | Xfce                 | KDE                          | Ratpoison
 | Web Browser         | Midori               | QupZilla                     | Vimprobable2
 | Word Processor      | LibreOffice Writer   | KWord                        | Wordgrinder
-| Email Client        | Claws–mail           | KMail                        | Mutt
+| Email Client        | Claws-mail           | KMail                        | Mutt
 | Picture Viewer      | Viewnior             | Gwenview                     | Feh
 | Image Editing       | GIMP                 | Krita, Kolorpaint, Karbon14  | -
 | Video Editing       | PiTiVi               | -                            | -
