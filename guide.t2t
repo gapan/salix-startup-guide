@@ -1197,6 +1197,7 @@ Some common options are available directly at the top. The
 //Vimprobable2// browser, for instance, can be found under Network but
 also by just selecting "Browser". Remember to use the keyboard and not
 the mouse! A third way to open it bypasses the menu altogether:
+
 ``C-t v``.
 You can create more shortcuts like this for applications you use a
 lot by adding them to the configuration file, which we will look at
@@ -1222,7 +1223,8 @@ When the page has loaded, type
 
 [img/ratpoisonmanual.png]
 
-``Shift-h``* takes you back to where you were before. ``t`` works like
+``Shift-h``* takes you back to where you were before. 
+``t`` works like
 ``o`` but opens the URL in a new window, as does ``shift-f`` instead of
 ``f``. Pressing ``TAB`` after typing the beginning of a URL will suggest
 completions taken from the history; use ``TAB`` again to move through the
