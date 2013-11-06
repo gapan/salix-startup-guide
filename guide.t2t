@@ -1,27 +1,11 @@
 Salix Start-Up Guide
 
-Getting familiar with your new operating System
+Getting familiar with your new operating System.
 
-%!encoding: UTF-8
-
-%!postproc(tex): "\\documentclass{article}" "\\documentclass[a4paper,12pt]{book}"
-
-%!style(tex): xltxtra,tabulary
-%%!postproc(tex): "\\maketitle" ""
-%!postproc(tex): "\\usepackage{graphicx}" "\\usepackage{graphicx}\n\\usepackage[export]{adjustbox}"
-%!postproc(tex): "\\includegraphics" "\\includegraphics[max width=0.9\\textwidth]"
-%!postproc(tex): "\\usepackage\[urlcolor=blue," "\\usepackage[linkcolor=blue,urlcolor=red,"
-%!postproc(tex): "\\tableofcontents" "\\pagenumbering{roman}\n\\tableofcontents"
-%!postproc(tex): "\\hypertarget{toc1}{}" "\\pagenumbering{arabic}\n\n\\hypertarget{toc1}{}"
-%!postproc(tex): "\\title" "\\setmainfont[Mapping=tex-text]{CMU Sans Serif}\n\\title"
-%!postproc(tex): "\\title" "\\makeatletter\\def\\cleardoublepage{\\clearpage\\if@twoside \\ifodd \\c@page\\else \\hbox{}\\vspace*{\\fill}\\vspace{\\fill} \\thispagestyle{empty} \\newpage \\if@twocolumn \\hbox{} \\newpage \\fi \\fi \\fi} \\makeatother\n\n\\title"
-%%!postproc(tex): "\\hypertarget{toc1}{}" "\\clearpage\n\\hypertarget{toc1}{}"
-%!postproc(tex): "\\section{" "\\chapter{"
-%!postproc(tex): "\\subsection{" "\\section{"
-%!postproc(tex): "\\subsubsection{" "\\subsection{"
+%!includeconf: config.t2t
 
 
-%!postproc(html): '<BODY BGCOLOR="white" TEXT="black">' '<BODY>'
+This document was updated on %%date(%c).
 
 ===About this manual===
 
