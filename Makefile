@@ -28,9 +28,8 @@ html:
 	mkdir -p output
 	txt2tags -t html -o output/guide.html guide.t2t
 
-
-
 epub: html
+	cp -r img output/
 	ebook-convert output/guide.html output/guide.epub \
 		--cover=img/screenshots_rotated.jpg \
 		--chapter "//h:h1" \
@@ -39,8 +38,10 @@ epub: html
 		--level1-toc "//h:h1" \
 		--level2-toc "//h:h2" \
 		--level3-toc "//h:h3"
+	rm -rf output/img
 
 mobi: html
+	cp -r img output/
 	ebook-convert output/guide.html output/guide.mobi \
 		--cover=img/screenshots_rotated.jpg \
 		--chapter "//h:h1" \
@@ -49,6 +50,7 @@ mobi: html
 		--level1-toc "//h:h1" \
 		--level2-toc "//h:h2" \
 		--level3-toc "//h:h3"
+	rm -rf output/img
 
 tex:
 	mkdir -p output
