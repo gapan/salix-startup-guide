@@ -51,6 +51,10 @@ mobi: html
 tex:
 	mkdir -p output
 	txt2tags --toc -t tex -o output/guide.tex guide.t2t
+	sed -i -e "/begin{tabular}/s/l/L/g" -e "/begin{tabuLar}/s/tabuLar/tabulary}{\\\textwidth/" \
+		output/guide.tex
+	sed -i "/end{tabular}/s/end{tabular}/end{tabulary}/" \
+		output/guide.tex
 
 pdf: tex
 	xelatex -output-directory=output output/guide.tex

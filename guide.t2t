@@ -6,7 +6,7 @@ Getting familiar with your new operating System
 
 %%!postproc(tex): "\\documentclass{article}" "\\documentclass[a4paper,10pt]{article}"
 
-%!style(tex): xltxtra
+%!style(tex): xltxtra,tabulary
 %!postproc(tex): "\\maketitle" ""
 %!postproc(tex): "\\usepackage{graphicx}" "\\usepackage{graphicx}\n\\usepackage[export]{adjustbox}"
 %!postproc(tex): "\\includegraphics" "\\includegraphics[max width=0.9\\textwidth]"
