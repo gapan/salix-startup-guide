@@ -1,11 +1,11 @@
 Salix Start-Up Guide
-
 Getting familiar with your new operating System.
+Last updated on %%mtime(%Y-%m-%d %H:%M)
 
 %!includeconf: config.t2t
 
 
-This document was updated on %%date(%c).
+
 
 ===About this manual===
 
