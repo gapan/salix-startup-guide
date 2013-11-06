@@ -1,8 +1,4 @@
 
-html: 
-	mkdir -p output
-	txt2tags -t html -o output/guide.html guide.t2t
-
 htmlsep: html
 	rm -rf output/htmlsep
 	rm -rf output/img
@@ -27,6 +23,12 @@ htmlsep: html
 		output/htmlsep/*.html
 	sed -i ':a;{N;s/Previous<\/strong><\/A><\/li>\n<\/BODY>/Previous<\/strong><\/A><\/li><\/ul>\n<\/BODY>/};ba' \
 		output/htmlsep/*.html
+
+html: 
+	mkdir -p output
+	txt2tags -t html -o output/guide.html guide.t2t
+
+
 
 epub: html
 	ebook-convert output/guide.html output/guide.epub \
@@ -65,6 +67,8 @@ pdf: tex
 	rm -f output/guide.toc
 	@#rm -f output/guide.tex
 
+all: htmlsep pdf epub mobi
+
 help:
 	@echo 'Makefile for generating the Salix startup guide                        '
 	@echo '                                                                       '
@@ -82,4 +86,4 @@ clean:
 upload: html
 	@echo "Not implemented yet"
 
-.PHONY: html htmlsep epub mobi tex pdf help clean upload
+.PHONY: all html htmlsep epub mobi tex pdf help clean upload
