@@ -1,16 +1,11 @@
 Salix Start-Up Guide
+Getting familiar with your new operating System.
+Last updated on %%mtime(%Y-%m-%d %H:%M)
 
-Getting familiar with your new operating System
+%!includeconf: config.t2t
 
-%%!postproc(tex): "\\documentclass{article}" "\\documentclass[a4paper,10pt]{article}"
-%!postproc(tex): "\\maketitle" ""
-%!postproc(tex): "\\usepackage{graphicx}" "\\usepackage{graphicx}\n\\usepackage[export]{adjustbox}"
-%!postproc(tex): "\\includegraphics" "\\includegraphics[max width=0.9\\textwidth]"
-%!postproc(tex): "\\usepackage\[urlcolor=blue," "\\usepackage[linkcolor=blue,urlcolor=red,"
-%!postproc(tex): "\\tableofcontents" "\\pagenumbering{roman}\n\\tableofcontents"
-%!postproc(tex): "\\hypertarget{toc1}{}" "\\pagenumbering{arabic}\n\n\\hypertarget{toc1}{}"
 
-%!postproc(html): '<BODY BGCOLOR="white" TEXT="black">' '<BODY>'
+
 
 ===About this manual===
 
@@ -96,15 +91,9 @@ and **Core**, to meet your demands!
 
 
 || Installation Type | Target Users | Features                     | Examples of Available Applications
-| Full               | All users    | - Graphical environment      | - Libreoffice
-|                    |              | - Full software installation | - Exaile
-|                    |              |                              | - Midori
-|                    |              |                              | - Pidgin
-| Basic              | Advanced users who would like to add their own choice of applications | - Graphical environment | - Midori
-|                    |              | - Minimum selection of software | - Gslapt
-|                    |              |                              | - Desktop
-| Core               | Advanced users who would like to run a console system | - No graphical environment | - vi 
-|                    | Server maintainers | - Minimum number of software essential for a console system | 
+| Full               | All users    | Graphical environment, full software installation      | Libreoffice, Exaile, Midori, Pidgin
+| Basic              | Advanced users who would like to add their own choice of applications | Graphical environment | Midori, Gslapt
+| Core               | Advanced users who would like to run a console system, server maintainers | No graphical environment, minimal number of software essential for a console system | vi
 
 
 
@@ -177,7 +166,8 @@ Setup, configuring some partitions with Gparted, etc.
 
 +++Creating a Salix Live USB Key+++
 
-- Open the .iso file using a software archiver (file-roller, xarchiver, 7-zip, iso-master, …).
+- Open the .iso file using a software archiver (file-roller, xarchiver,
+  7-zip, isomaster, ...).
 - Extract all files and folders (boot, packages and Salix Live) to your USB root directory.
 - Go to the ``boot`` directory on the USB key.
 - If you're running on Unix (Linux, BSD, Mac OS X), just run the file
@@ -187,7 +177,7 @@ Setup, configuring some partitions with Gparted, etc.
 
 +++Booting from a Salix Installation CD/DVD/USB Key+++
 
-Your computer must be set to boot on the optical drive / USB port first
+Your computer must be set to boot on the optical drive/USB port first
 before defaulting to the internal hard disk drive.
 If that is not the case, you need to first modify the
 [BIOS http://en.wikipedia.org/wiki/BIOS] setting, usually by pressing the Del
@@ -195,7 +185,7 @@ key or the F2 key (or some other key combinations depending on your
 machine). Once in the BIOS, find the //boot menu// or similar and
 set the order of the boot devices properly, with your optical drive/USB
 port in the first position. Save your changes and reboot your computer.
-Insert the Salix (Live)CD/DVD or USB key, and start up your computer.
+Insert the Salix (Live) CD/DVD or USB key, and start up your computer.
 
 
 
@@ -209,7 +199,7 @@ wise to check the following points:
 
 - Have you backed-up all the important files you have?
 - Check if your computer comes with Linux-friendly/supported
-  hardware@star
+  hardware*
 - Recommended running specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
   HD space, or equivalent, though a lower spec machine may run
   without a problem)
@@ -218,7 +208,7 @@ wise to check the following points:
   dedicated for Salix on your computer
 
 
-//Although it is possible to install Linux on a Mac computer, you have to install a bootcamp software called rEFIt beforehand. Certain file systems, such as xfs, cannot be used with a Mac. The easiest way to check the compatibility of your computer is to use one of the available Salix Live editions.//
+//* Although it is possible to install Linux on a Mac computer, you have to install a bootcamp software called rEFIt beforehand. Certain file systems, such as xfs, cannot be used with a Mac. The easiest way to check the compatibility of your computer is to use one of the available Salix Live editions.//
 
 
 +++Partition Management+++
@@ -570,7 +560,7 @@ or
 should also help you with some configuration options.
 
 Although you should manage to install the software after the final
-command, it is essentially //untracked//and neither Gslapt nor slapt-get
+command, it is essentially //untracked// and neither Gslapt nor slapt-get
 can see that the software is installed. A better way is to create a
 Salix package using SLKBUILD, which is a build script you can prepare
 before issuing
@@ -1312,7 +1302,11 @@ $ su                  #change to root
 ```
 
 Apart from the //Vimprobable2// browser, the default applications include
+<<<<<<< HEAD
 //Alpine// as the mail client and //Gnome Commander// as the file manager.
+=======
+//Mutt// as the mail client and //Gnome Commander// as the file manager.
+>>>>>>> upstream/master
 //Music On Console// and //Whaaw Media Player// are the audio and video
 players, with //GVim// as text/code editor. //apvlv// can be used to view
 pdf files. As we have just seen, package management is console-based,
@@ -1322,6 +1316,7 @@ in the repository. //Firefox// may be installed adding the
 alternatively //Jumanji//, //XXXTerm// or //w3m//, a browser for the
 command line. //Thunderbird// can be used with the //Muttator// addon
 while //Claws-mail// works almost entirely from the keyboard;
+<<<<<<< HEAD
 //mcabber// and //irssi// are jabber and irc clients for the console.
 
 Note: To see how to edit Alpine's configuration file to access mail from
@@ -1331,11 +1326,21 @@ one popular provider via smtp, see the page in the
 Wordgrinder and sc are wordprocessing and spreadsheet applications.  Flash is not included, but is available from the
 repositories. Screen for managing multiple consoles works well with
 Ratpoison. Users are encouraged to tailor and expand the application selection according to taste; when it comes to text processing, for instance, //PyRoom// is
+=======
+//Alpine// is a friendly console email client.
+
+No office suite is included, and in this as in other respects, the user
+is encouraged to tailor the system by installing their preferred
+applications. Flash is not included, but is available from the
+repositories. Screen for managing multiple consoles works well with
+Ratpoison. //sc// is a console-based spreadsheet. For writers, //PyRoom// is
+>>>>>>> upstream/master
 an elegant choice for full-screen, distraction-free writing, and it
 might be complemented by //Antiword// to convert proprietary file
 formats into plain text.
 
 Note that the //Gslapt// and //Sourcery// graphical package management
+<<<<<<< HEAD
 tools (equivalent to //slapt-get// and //slapt-src//)  may also be used
 mouselessly, though this is perhaps more awkward than working on the
 command line. In either case, regular manual upgrading will still be
@@ -1346,6 +1351,19 @@ As an example, we will install //MPLayer//, the classic console media player.
 ```
 **#slapt-get -u**
 **#slapt-get -i MPlayer**
+=======
+tools (equivalent to //slapt-get// and //slapt-src//) may also be used
+mouse-lessly, though this is perhaps more awkward than working on the
+command line. In either case, regular manual upgrading will still be
+necessary.
+
+As an example, we will install //Alpine//, derived from the classic
+//Pine// mail client.
+
+```
+# slapt-get -u
+# slapt-get -i alpine
+>>>>>>> upstream/master
 ```
 
 
@@ -1604,7 +1622,7 @@ forums. Even if you just want to use core office, multimedia or network
 applications productively, over time the power that Linux gives users
 tends to promote self-reliance and an ability to configure and fix their
 computer setup independently. The same approach underlies the
-development of Linux as an operating system ̶ where there is room for
+development of Linux as an operating system; where there is room for
 improvement, someone will dive in and tinker. The cumulative result is
 that Linux today is highly usable out of the box.
 
@@ -1638,7 +1656,7 @@ be able to take Linux at your own pace.
 || Salix Edition      | Xfce                 | KDE                          | Ratpoison
 | Web Browser         | Midori               | QupZilla                     | Vimprobable2
 | Word Processor      | LibreOffice Writer   | KWord                        | Wordgrinder
-| Email Client        | Claws–mail           | KMail                        | Mutt
+| Email Client        | Claws-mail           | KMail                        | Mutt
 | Picture Viewer      | Viewnior             | Gwenview                     | Feh
 | Image Editing       | GIMP                 | Krita, Kolorpaint, Karbon14  | -
 | Video Editing       | PiTiVi               | -                            | -
@@ -1668,19 +1686,19 @@ be able to take Linux at your own pace.
 
 ====Abiword==== 
 
-[img/abiword.png]
-
 AbiWord is a word processing program suitable for a wide variety of word
 processing tasks.
+
+[img/abiword.png]
 
 
 ====Asunder==== 
 
-[img/asunder.png]
-
 Asunder is an Audio CD ripper and encoder for Linux. You can use Asunder
 to save tracks from an Audio CD as any of WAV, MP3, OGG, FLAC, WavPack,
 Musepack, AAC, and Monkey's Audio files.
+
+[img/asunder.png]
 
 
 ====Brasero==== 
@@ -1688,7 +1706,6 @@ Musepack, AAC, and Monkey's Audio files.
 Brasero is an application to burn CD/DVD. It is designed to be as simple
 as possible and has some unique features to enable users to create their
 discs easily and quickly.
-
 
 [img/brasero.png]
 
@@ -1702,22 +1719,20 @@ such as find, (s)locate, doodle, tracker and beagle.
 [img/catfish.png]
 
 
-
 ====Claws-mail==== 
 
 Claws Mail is an open source email and news client. It offers easy
 configuration and an abundance of features. It stores mail in the MH
 mailbox format as well as the Mbox mailbox format via a plugin.
 
-
 [img/claws.png]
+
 
 ====Document Viewer (Atril)==== 
 
 Document Viewer is a a very lightweight, simple PDF document viewer.
 
 [img/atril.png]
-
 
 
 ====ePDFview==== 
@@ -1729,24 +1744,19 @@ has support for printing using CUPS.
 [img/epdfview.png]
 
 
-
-
-
 ====Exaile==== 
-
-[img/exaile.png]
 
 Exaile is a music manager which incorporates automatic fetching of album
 art, lyrics fetching, Last.fm scrobbling, support for many portable
 media players, Internet radio such as Shoutcast, tabbed playlists, etc.
 
+[img/exaile.png]
 
 ====Engrampa====
 
 Engrampa is an archive manager. Supported archive types include gzip,
 bzip, bzip2, compress, lzop, zip, jar, lha, rar, zoo, arj, 7-zip,
 etc.
-
 
 [img/engrampa.png]
 
@@ -1758,9 +1768,6 @@ browsing, spell checking, incremental find, private browsing and
 numerous plugins.
 
 [img/firefox.png]
-
-
-
 
 
 ====Galculator====
@@ -1776,8 +1783,8 @@ Geany is a small and lightweight Integrated Development Environment
 which only has a few dependencies and is independent of any particular
 Desktop Environment.
 
-
 [img/geany.png]
+
 
 ====gFTP====
 
@@ -1787,17 +1794,14 @@ be simple to use yet powerful.
 [img/gftp.png]
 
 
-
-
-
 ====Gigolo==== 
 
 Gigolo is a frontend to easily manage connections to remote filesystems
 using GIO/GVfs. It allows you to quickly connect/mount a remote
 filesystem and browse local networks shares.
 
-
 [img/gigolo.png]
+
 
 ====Gimp==== 
 
@@ -1806,7 +1810,6 @@ tool. In addition to offering free form drawing, it can accomplish
 essential image workflow steps such as resizing, editing, and cropping
 photos, combining multiple images, converting between different image
 formats as well as create basic animated images in GIF.
-
 
 [img/gimp.png]
 
@@ -1817,7 +1820,6 @@ The goal of Gnumeric is to be the best possible spreadsheet. While not
 attempting to clone existing applications, Gnumeric can however read
 files saved with other spreadsheets and offers a customizable feel that
 attempts to minimize the costs of transition.
-
 
 [img/gnumeric.png]
 
@@ -1830,9 +1832,6 @@ with the original man command. The manual pages are displayed in simple
 text form using the default system monospace font.
 
 [img/gtkman.png]
-
-
-
 
 
 ====Ibus====[ibus]
@@ -1870,19 +1869,20 @@ Subversion, Bazaar-ng and Mercurial.
 
 ====Midori====
 
-[img/midori.png]
-
 Midori (Japanese for green) is a web browser that aims to be lightweight
 and fast. It uses the WebKit rendering engine.
 
+[img/midori.png]
+
 
 ====mtPaint==== 
+
 mtPaint is a painting program designed to easily create pixel art and
 manipulate digital photos. Due to its efficient design it can run on
 older PC hardware (e.g. a 200MHz CPU and 16MB of free RAM).
 
-
 [img/mtpaint.png]
+
 
 ====LibreOffice====
 
@@ -1891,7 +1891,6 @@ processing, spreadsheets, presentations, graphics, databases and more.
 It is available in many languages and works on all common computers. It
 stores all your data in an international open standard format and can
 also read and write files from other common office software packages.
-
 
 [img/libreoffice.png]
 
@@ -1905,16 +1904,15 @@ application for everyday use, it launches itself in the background and
 can be accessed using the Orage Clock plugin for the panel. Simply click
 on a date to display or set the agenda for the day.
 
-
 [img/orage.png]
 
 
 ====Parole Media Player==== 
 
-[img/parole.png]
-
 Parole Media Player is a media player (audio and video) which utilises
 the GStreamer framework for playback.
+
+[img/parole.png]
 
 
 ====Pidgin====
@@ -1927,9 +1925,6 @@ Jabber/XMPP, MSN Messenger, Yahoo, etc.
 [img/pidgin.png]
 
 
-
-
-
 ====PiTiVi Video Editor====
 
 PiTiVi is an easy to use video editor. The interface is intuitive to
@@ -1939,14 +1934,10 @@ film clips.
 [img/pitivi.png]
 
 
-
-
-
 ====Simple Scan====
 
 Simple Scan allows you to scan your documents/photos with your scanner
 or even with your webcam!
-
 
 [img/simple-scan.png]
 
@@ -1964,7 +1955,6 @@ simple, lean and powerful.
 
 Viewnior is a fast and lightweight picture viewer.
 
-
 [img/viewnior.png]
 
 
@@ -1974,7 +1964,6 @@ Whaaw! Media Player will play any audio/video files which GStreamer can
 manage. It supports fullscreen mode, seeking, changing video colour
 settings and more. It is intended to be a basic media player with few
 dependencies.
-
 
 [img/whaaw.png]
 

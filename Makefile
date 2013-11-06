@@ -1,8 +1,4 @@
 
-html: 
-	mkdir -p output
-	txt2tags -t html -o output/guide.html guide.t2t
-
 htmlsep: html
 	rm -rf output/htmlsep
 	rm -rf output/img
@@ -13,6 +9,7 @@ htmlsep: html
 	htmldoc -t htmlsep --outdir output/htmlsep output/guide.html
 	cp css/*.css output/htmlsep/
 	cp img-css/*.png output/htmlsep/
+	rm -rf output/img
 	sed -i "/<STYLE TYPE=/,/--><\/STYLE>/d" output/htmlsep/*.html
 	sed -i "s|^</HEAD>|<link rel=\"stylesheet\" href=\"default.css\" type=\"text/css\">\n</HEAD>|" \
 		output/htmlsep/*.html
@@ -22,8 +19,17 @@ htmlsep: html
 		output/htmlsep/*.html
 	sed -i "s|^<A HREF=\"\(.*\)\">Next</A>|<li class=\"Next\"><A HREF=\"\1\"><strong>Next</strong></A></li></ul>|" \
 		output/htmlsep/*.html
+	sed -i ':a;{N;s/Previous<\/strong><\/A><\/li>\n<HR NOSHADE>/Previous<\/strong><\/A><\/li><\/ul>\n<HR NOSHADE>/};ba' \
+		output/htmlsep/*.html
+	sed -i ':a;{N;s/Previous<\/strong><\/A><\/li>\n<\/BODY>/Previous<\/strong><\/A><\/li><\/ul>\n<\/BODY>/};ba' \
+		output/htmlsep/*.html
+
+html: 
+	mkdir -p output
+	txt2tags -t html -o output/guide.html guide.t2t
 
 epub: html
+	cp -r img output/
 	ebook-convert output/guide.html output/guide.epub \
 		--cover=img/screenshots_rotated.jpg \
 		--chapter "//h:h1" \
@@ -32,8 +38,10 @@ epub: html
 		--level1-toc "//h:h1" \
 		--level2-toc "//h:h2" \
 		--level3-toc "//h:h3"
+	rm -rf output/img
 
 mobi: html
+	cp -r img output/
 	ebook-convert output/guide.html output/guide.mobi \
 		--cover=img/screenshots_rotated.jpg \
 		--chapter "//h:h1" \
@@ -42,10 +50,15 @@ mobi: html
 		--level1-toc "//h:h1" \
 		--level2-toc "//h:h2" \
 		--level3-toc "//h:h3"
+	rm -rf output/img
 
 tex:
 	mkdir -p output
 	txt2tags --toc -t tex -o output/guide.tex guide.t2t
+	sed -i -e "/begin{tabular}/s/l/L/g" -e "/begin{tabuLar}/s/tabuLar/tabulary}{\\\textwidth/" \
+		output/guide.tex
+	sed -i "/end{tabular}/s/end{tabular}/end{tabulary}/" \
+		output/guide.tex
 
 pdf: tex
 	xelatex -output-directory=output output/guide.tex
@@ -55,6 +68,8 @@ pdf: tex
 	rm -f output/guide.out
 	rm -f output/guide.toc
 	@#rm -f output/guide.tex
+
+all: htmlsep pdf epub mobi
 
 help:
 	@echo 'Makefile for generating the Salix startup guide                        '
@@ -73,4 +88,4 @@ clean:
 upload: html
 	@echo "Not implemented yet"
 
-.PHONY: html htmlsep epub mobi tex pdf help clean upload
+.PHONY: all html htmlsep epub mobi tex pdf help clean upload
