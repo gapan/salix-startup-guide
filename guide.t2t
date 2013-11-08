@@ -29,7 +29,7 @@ up guide, please contact //tsuren// on the forum or write to:
 
 //**Acknowledgement**//
 My sincere thanks to all the people who have contributed to and worked on this start up guide, including translators.
-Many thanks especially to //**jrd**//, //**akuna**//, //**mimosa**// and //**maximus**// for their contributions in writing and thorough proof-reading.
+Many thanks especially to //**jrd**//, //**akuna**//, //**mimosa**// and //**maximus**// for their contributions in writing and thorough proof-reading; and above all, to //**tsuren**//, the original editor of the Guide.
 
 
 
@@ -166,8 +166,7 @@ Setup, configuring some partitions with Gparted, etc.
 
 +++Creating a Salix Live USB Key+++
 
-- Open the .iso file using a software archiver (file-roller, xarchiver,
-  7-zip, isomaster, ...).
+- Open the .iso file using a software archiver (file-roller, xarchiver, 7-zip, iso-master, …).
 - Extract all files and folders (boot, packages and Salix Live) to your USB root directory.
 - Go to the ``boot`` directory on the USB key.
 - If you're running on Unix (Linux, BSD, Mac OS X), just run the file
@@ -177,7 +176,7 @@ Setup, configuring some partitions with Gparted, etc.
 
 +++Booting from a Salix Installation CD/DVD/USB Key+++
 
-Your computer must be set to boot on the optical drive/USB port first
+Your computer must be set to boot on the optical drive / USB port first
 before defaulting to the internal hard disk drive.
 If that is not the case, you need to first modify the
 [BIOS http://en.wikipedia.org/wiki/BIOS] setting, usually by pressing the Del
@@ -185,7 +184,7 @@ key or the F2 key (or some other key combinations depending on your
 machine). Once in the BIOS, find the //boot menu// or similar and
 set the order of the boot devices properly, with your optical drive/USB
 port in the first position. Save your changes and reboot your computer.
-Insert the Salix (Live) CD/DVD or USB key, and start up your computer.
+Insert the Salix (Live)CD/DVD or USB key, and start up your computer.
 
 
 
@@ -199,7 +198,7 @@ wise to check the following points:
 
 - Have you backed-up all the important files you have?
 - Check if your computer comes with Linux-friendly/supported
-  hardware*
+  hardware@star
 - Recommended running specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
   HD space, or equivalent, though a lower spec machine may run
   without a problem)
@@ -208,7 +207,7 @@ wise to check the following points:
   dedicated for Salix on your computer
 
 
-//* Although it is possible to install Linux on a Mac computer, you have to install a bootcamp software called rEFIt beforehand. Certain file systems, such as xfs, cannot be used with a Mac. The easiest way to check the compatibility of your computer is to use one of the available Salix Live editions.//
+//Although it is possible to install Linux on a Mac computer, you have to install a bootcamp software called rEFIt beforehand. Certain file systems, such as xfs, cannot be used with a Mac. The easiest way to check the compatibility of your computer is to use one of the available Salix Live editions.//
 
 
 +++Partition Management+++
@@ -560,7 +559,7 @@ or
 should also help you with some configuration options.
 
 Although you should manage to install the software after the final
-command, it is essentially //untracked// and neither Gslapt nor slapt-get
+command, it is essentially //untracked//and neither Gslapt nor slapt-get
 can see that the software is installed. A better way is to create a
 Salix package using SLKBUILD, which is a build script you can prepare
 before issuing
@@ -1138,14 +1137,14 @@ although - or perhaps because - the interface is so very different from
 the conventional point-and-click approach, it can quickly become highly
 intuitive. Learning which actual keys do what takes far less time than
 might be imagined. Apart from its efficiency and lack of clutter,
-ratpoison is a good choice for anyone concerned about RSI
+Ratpoison is a good choice for anyone concerned about RSI
 (cumulative strain from long-term mouse use), or for netbook
 users, because "every pixel counts". It is also highly
 configurable - and fast!
 
 The applications present for the Ratpoison edition aim to fit in with
 its minimalist (but not spartan) approach. The majority use vim-style
-keybindings, even though ratpoison itself does not, so users will need
+keybindings, even though Ratpoison itself does not, so users will need
 to become comfortable with these if they are not already; cheatsheets
 are available online to help assimilate them, as well as guides (and
 manpages) for the individual applications. Common operations use
@@ -1187,7 +1186,7 @@ Some common options are available directly at the top. The
 //Vimprobable2// browser, for instance, can be found under Network but
 also by just selecting "Browser". Remember to use the keyboard and not
 the mouse! A third way to open it bypasses the menu altogether:
-``C-t v``.
+``` C-t v
 You can create more shortcuts like this for applications you use a
 lot by adding them to the configuration file, which we will look at
 below.
@@ -1212,7 +1211,8 @@ When the page has loaded, type
 
 [img/ratpoisonmanual.png]
 
-``Shift-h``* takes you back to where you were before. ``t`` works like
+``Shift-h``* takes you back to where you were before. 
+``t`` works like
 ``o`` but opens the URL in a new window, as does ``shift-f`` instead of
 ``f``. Pressing ``TAB`` after typing the beginning of a URL will suggest
 completions taken from the history; use ``TAB`` again to move through the
@@ -1242,7 +1242,7 @@ command mode.
 
 If you find your keystrokes are still being interpreted as browser
 commands, which may happen as a result of the way certain sites are
-designed, try ``C-z``. The converse problem may arise if you have
+designed, try pressing enter twice instead of just once after typing ``f`` and selecting the number; failing this, try ``C-z``. The converse problem may arise if you have
 inadvertently passed keystrokes to ``o`` or ``t``; they will appear at
 the very bottom right of the browser window. To ignore them and return
 to command mode, clearing the buffer, press ``ESC``.
@@ -1258,14 +1258,10 @@ though some of these may already be present.
 
 +++Window management+++
 
-Let's now see how ratpoison deals with several open windows. ``C-t e``
-reveals all of them:
-
-[img/ratpoison.png]
-
-Notice that each one is associated with a number: typing it focuses on
-that window and hides all the others. (``C-t w`` simply provides a list
-of open windows.) ``C-t`` ``C-t`` returns to the previous window.
+Let's now see how Ratpoison deals with several open windows. ``C-t w``
+generates a list showing all of them. 
+Notice that each one is associated with a number: ``C-t`` followed by the number changes to that one.
+``C-t`` ``C-t`` returns to the previous window.
 This is very useful indeed for switching rapidly back and forth between
 two apps - for instance, an editor and a browser - and is an example of
 how Ratpoison shines ergonomically. ``C-t k`` closes the current window,
@@ -1304,7 +1300,7 @@ $ su                  #change to root
 ```
 
 Apart from the //Vimprobable2// browser, the default applications include
-//Mutt// as the mail client and //Gnome Commander// as the file manager.
+//Alpine// as the mail client and //Gnome Commander// as the file manager.
 //Music On Console// and //Whaaw Media Player// are the audio and video
 players, with //GVim// as text/code editor. //apvlv// can be used to view
 pdf files. As we have just seen, package management is console-based,
@@ -1314,29 +1310,30 @@ in the repository. //Firefox// may be installed adding the
 alternatively //Jumanji//, //XXXTerm// or //w3m//, a browser for the
 command line. //Thunderbird// can be used with the //Muttator// addon
 while //Claws-mail// works almost entirely from the keyboard;
-//Alpine// is a friendly console email client.
+//mcabber// and //irssi// are jabber and irc clients for the console.
 
-No office suite is included, and in this as in other respects, the user
-is encouraged to tailor the system by installing their preferred
-applications. Flash is not included, but is available from the
+Note: To see how to edit Alpine's configuration file to access mail from
+one popular provider via smtp, see the page in the
+[Salix wiki http://www.salixos.org/wiki/index.php/How_to_set_up_Alpine_with_a_Gmail_account].
+
+Wordgrinder and sc are wordprocessing and spreadsheet applications.  Flash is not included, but is available from the
 repositories. Screen for managing multiple consoles works well with
-Ratpoison. //sc// is a console-based spreadsheet. For writers, //PyRoom// is
+Ratpoison. Users are encouraged to tailor and expand the application selection according to taste; when it comes to text processing, for instance, //PyRoom// is
 an elegant choice for full-screen, distraction-free writing, and it
 might be complemented by //Antiword// to convert proprietary file
 formats into plain text.
 
 Note that the //Gslapt// and //Sourcery// graphical package management
-tools (equivalent to //slapt-get// and //slapt-src//) may also be used
-mouse-lessly, though this is perhaps more awkward than working on the
+tools (equivalent to //slapt-get// and //slapt-src//)  may also be used
+mouselessly, though this is perhaps more awkward than working on the
 command line. In either case, regular manual upgrading will still be
 necessary.
 
-As an example, we will install //Alpine//, derived from the classic
-//Pine// mail client.
+As an example, we will install //mplayer2//, the classic console media player.
 
 ```
 # slapt-get -u
-# slapt-get -i alpine
+# slapt-get -i mplayer2
 ```
 
 Note: To see how to edit Alpine's configuration file to access mail from
@@ -1349,7 +1346,7 @@ For //Mutt//, see
 
 +++Editing the configuration file+++
 
-After using //Alpine//a little, one problem may become apparent. Its
+After using //Alpine// a little, one problem may become apparent. Its
 shortcut for selecting a file, for example to attach it, is ``C-t``. But
 that's Ratpoison's escape key combination! In fact, Ratpoison has a
 solution for such conflicts, referred to somewhat cryptically in the
@@ -1602,7 +1599,7 @@ forums. Even if you just want to use core office, multimedia or network
 applications productively, over time the power that Linux gives users
 tends to promote self-reliance and an ability to configure and fix their
 computer setup independently. The same approach underlies the
-development of Linux as an operating system; where there is room for
+development of Linux as an operating system ̶ where there is room for
 improvement, someone will dive in and tinker. The cumulative result is
 that Linux today is highly usable out of the box.
 
@@ -1636,7 +1633,7 @@ be able to take Linux at your own pace.
 || Salix Edition      | Xfce                 | KDE                          | Ratpoison
 | Web Browser         | Midori               | QupZilla                     | Vimprobable2
 | Word Processor      | LibreOffice Writer   | KWord                        | Wordgrinder
-| Email Client        | Claws-mail           | KMail                        | Mutt
+| Email Client        | Claws–mail           | KMail                        | Mutt
 | Picture Viewer      | Viewnior             | Gwenview                     | Feh
 | Image Editing       | GIMP                 | Krita, Kolorpaint, Karbon14  | -
 | Video Editing       | PiTiVi               | -                            | -
@@ -1731,6 +1728,7 @@ art, lyrics fetching, Last.fm scrobbling, support for many portable
 media players, Internet radio such as Shoutcast, tabbed playlists, etc.
 
 [img/exaile.png]
+
 
 ====Engrampa====
 
