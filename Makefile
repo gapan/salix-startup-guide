@@ -25,6 +25,21 @@ htmlsep: html
 		output/htmlsep/*.html
 	sed -i 's|<BODY>|<BODY>\n<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>|' \
 		output/htmlsep/*.html
+	sed -i \
+		's|NOTESTART \(.*\) NOTESTART|<div class="note"><div class="admonition_header"><h2>\1</h2></div><div class="admonition"><div class="para">|' \
+		output/htmlsep/*.html
+	sed -i 's|NOTEEND|</div></div></div>|' \
+		output/htmlsep/*.html
+	sed -i \
+		's|IMPORTANTSTART \(.*\) IMPORTANTSTART|<div class="important"><div class="admonition_header"><h2>\1</h2></div><div class="admonition"><div class="para">|' \
+		output/htmlsep/*.html
+	sed -i 's|IMPORTANTEND|</div></div></div>|' \
+		output/htmlsep/*.html
+	sed -i \
+		's|WARNINGSTART \(.*\) WARNINGSTART|<div class="warning"><div class="admonition_header"><h2>\1</h2></div><div class="admonition"><div class="para">|' \
+		output/htmlsep/*.html
+	sed -i 's|WARNINGEND|</div></div></div>|' \
+		output/htmlsep/*.html
 
 html: 
 	mkdir -p output
