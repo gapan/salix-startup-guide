@@ -1329,11 +1329,11 @@ mouselessly, though this is perhaps more awkward than working on the
 command line. In either case, regular manual upgrading will still be
 necessary.
 
-As an example, we will install //MPLayer//, the classic console media player.
+As an example, we will install //mplayer2//, the classic console media player.
 
 ```
-#slapt-get -u
-#slapt-get -i MPlayer
+# slapt-get -u
+# slapt-get -i mplayer2
 ```
 
 Note: To see how to edit Alpine's configuration file to access mail from
