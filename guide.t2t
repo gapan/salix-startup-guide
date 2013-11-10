@@ -1389,7 +1389,37 @@ using Ratpoison, you can open the file now (with //GVim// or //Vim//) and
 tile it horizontally with the window where you are reading this guide
 (``C-t shift-s``). Let's go through some items in the file.
 
-[img/ratpoisonrc.png]
+```
+# .ratpoisonrc
+
+banish
+
+set border 0
+set barpadding 0 0
+set font terminus
+set winfmt %n%s%a
+
+bind W exec rpallwin
+bind r exec ~/.ratmenu/main.sh
+
+bind F1 exec rpws move1
+bind F2 exec rpws move2
+bind F3 exec rpws move3
+bind F4 exec rpws move4
+bind F5 exec rpws move5
+bind F11 exec rpws moveprev
+bind F12 exec rpws movenext
+
+bind v exec vimprobable2
+
+# set default background
+exec feh --bg-scale /usr/share/xfce4/backdrops/StairWay.png
+
+# create 5 workspaces and create aliases (run: rpws help)
+exec rpws init 5 -k
+
+```
+
 
 //banish// sends the mouse pointer to bottom right (incidentally, you may
 wish to install //unclutter//, which makes it fade out altogether
