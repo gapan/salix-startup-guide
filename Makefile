@@ -23,6 +23,8 @@ htmlsep: html
 		output/htmlsep/*.html
 	sed -i ':a;{N;s/Previous<\/strong><\/A><\/li>\n<\/BODY>/Previous<\/strong><\/A><\/li><\/ul>\n<\/BODY>/};ba' \
 		output/htmlsep/*.html
+	sed -i 's|<BODY>|<BODY>\n<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>|' \
+		output/htmlsep/*.html
 
 html: 
 	mkdir -p output

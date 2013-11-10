@@ -166,8 +166,7 @@ Setup, configuring some partitions with Gparted, etc.
 
 +++Creating a Salix Live USB Key+++
 
-- Open the .iso file using a software archiver (file-roller, xarchiver,
-  7-zip, isomaster, ...).
+- Open the .iso file using a software archiver (file-roller, xarchiver, 7-zip, iso-master, …).
 - Extract all files and folders (boot, packages and Salix Live) to your USB root directory.
 - Go to the ``boot`` directory on the USB key.
 - If you're running on Unix (Linux, BSD, Mac OS X), just run the file
@@ -177,7 +176,7 @@ Setup, configuring some partitions with Gparted, etc.
 
 +++Booting from a Salix Installation CD/DVD/USB Key+++
 
-Your computer must be set to boot on the optical drive/USB port first
+Your computer must be set to boot on the optical drive / USB port first
 before defaulting to the internal hard disk drive.
 If that is not the case, you need to first modify the
 [BIOS http://en.wikipedia.org/wiki/BIOS] setting, usually by pressing the Del
@@ -185,7 +184,7 @@ key or the F2 key (or some other key combinations depending on your
 machine). Once in the BIOS, find the //boot menu// or similar and
 set the order of the boot devices properly, with your optical drive/USB
 port in the first position. Save your changes and reboot your computer.
-Insert the Salix (Live) CD/DVD or USB key, and start up your computer.
+Insert the Salix (Live)CD/DVD or USB key, and start up your computer.
 
 
 
@@ -199,7 +198,7 @@ wise to check the following points:
 
 - Have you backed-up all the important files you have?
 - Check if your computer comes with Linux-friendly/supported
-  hardware*
+  hardware@star
 - Recommended running specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
   HD space, or equivalent, though a lower spec machine may run
   without a problem)
@@ -208,7 +207,7 @@ wise to check the following points:
   dedicated for Salix on your computer
 
 
-//* Although it is possible to install Linux on a Mac computer, you have to install a bootcamp software called rEFIt beforehand. Certain file systems, such as xfs, cannot be used with a Mac. The easiest way to check the compatibility of your computer is to use one of the available Salix Live editions.//
+//Although it is possible to install Linux on a Mac computer, you have to install a bootcamp software called rEFIt beforehand. Certain file systems, such as xfs, cannot be used with a Mac. The easiest way to check the compatibility of your computer is to use one of the available Salix Live editions.//
 
 
 +++Partition Management+++
@@ -560,7 +559,7 @@ or
 should also help you with some configuration options.
 
 Although you should manage to install the software after the final
-command, it is essentially //untracked// and neither Gslapt nor slapt-get
+command, it is essentially //untracked//and neither Gslapt nor slapt-get
 can see that the software is installed. A better way is to create a
 Salix package using SLKBUILD, which is a build script you can prepare
 before issuing
@@ -1187,8 +1186,7 @@ Some common options are available directly at the top. The
 //Vimprobable2// browser, for instance, can be found under Network but
 also by just selecting "Browser". Remember to use the keyboard and not
 the mouse! A third way to open it bypasses the menu altogether:
-
-``C-t v``.
+``` C-t v
 You can create more shortcuts like this for applications you use a
 lot by adding them to the configuration file, which we will look at
 below.
@@ -1303,9 +1301,13 @@ $ su                  #change to root
 
 Apart from the //Vimprobable2// browser, the default applications include
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Alpine// as the mail client and //Gnome Commander// as the file manager.
 =======
 //Mutt// as the mail client and //Gnome Commander// as the file manager.
+>>>>>>> upstream/master
+=======
+//Alpine// as the mail client and //Gnome Commander// as the file manager.
 >>>>>>> upstream/master
 //Music On Console// and //Whaaw Media Player// are the audio and video
 players, with //GVim// as text/code editor. //apvlv// can be used to view
@@ -1317,6 +1319,9 @@ alternatively //Jumanji//, //XXXTerm// or //w3m//, a browser for the
 command line. //Thunderbird// can be used with the //Muttator// addon
 while //Claws-mail// works almost entirely from the keyboard;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master
 //mcabber// and //irssi// are jabber and irc clients for the console.
 
 Note: To see how to edit Alpine's configuration file to access mail from
@@ -1326,6 +1331,7 @@ one popular provider via smtp, see the page in the
 Wordgrinder and sc are wordprocessing and spreadsheet applications.  Flash is not included, but is available from the
 repositories. Screen for managing multiple consoles works well with
 Ratpoison. Users are encouraged to tailor and expand the application selection according to taste; when it comes to text processing, for instance, //PyRoom// is
+<<<<<<< HEAD
 =======
 //Alpine// is a friendly console email client.
 
@@ -1335,11 +1341,14 @@ applications. Flash is not included, but is available from the
 repositories. Screen for managing multiple consoles works well with
 Ratpoison. //sc// is a console-based spreadsheet. For writers, //PyRoom// is
 >>>>>>> upstream/master
+=======
+>>>>>>> upstream/master
 an elegant choice for full-screen, distraction-free writing, and it
 might be complemented by //Antiword// to convert proprietary file
 formats into plain text.
 
 Note that the //Gslapt// and //Sourcery// graphical package management
+<<<<<<< HEAD
 <<<<<<< HEAD
 tools (equivalent to //slapt-get// and //slapt-src//)  may also be used
 mouselessly, though this is perhaps more awkward than working on the
@@ -1364,7 +1373,26 @@ As an example, we will install //Alpine//, derived from the classic
 # slapt-get -u
 # slapt-get -i alpine
 >>>>>>> upstream/master
+=======
+tools (equivalent to //slapt-get// and //slapt-src//)  may also be used
+mouselessly, though this is perhaps more awkward than working on the
+command line. In either case, regular manual upgrading will still be
+necessary.
+
+As an example, we will install //mplayer2//, the classic console media player.
+
 ```
+# slapt-get -u
+# slapt-get -i mplayer2
+>>>>>>> upstream/master
+```
+
+Note: To see how to edit Alpine's configuration file to access mail from
+one popular provider via smtp, see the page in the
+[Salix wiki http://www.salixos.org/wiki/index.php/How20to20set20up20Alpine20with20a20Gmail20account].
+
+For //Mutt//, see
+[this wiki entry http://crunchbanglinux.org/wiki/howto/howto_setup_mutt_with_gmail_imap].
 
 
 +++Editing the configuration file+++
@@ -1622,7 +1650,7 @@ forums. Even if you just want to use core office, multimedia or network
 applications productively, over time the power that Linux gives users
 tends to promote self-reliance and an ability to configure and fix their
 computer setup independently. The same approach underlies the
-development of Linux as an operating system; where there is room for
+development of Linux as an operating system ̶ where there is room for
 improvement, someone will dive in and tinker. The cumulative result is
 that Linux today is highly usable out of the box.
 
@@ -1656,7 +1684,7 @@ be able to take Linux at your own pace.
 || Salix Edition      | Xfce                 | KDE                          | Ratpoison
 | Web Browser         | Midori               | QupZilla                     | Vimprobable2
 | Word Processor      | LibreOffice Writer   | KWord                        | Wordgrinder
-| Email Client        | Claws-mail           | KMail                        | Mutt
+| Email Client        | Claws–mail           | KMail                        | Mutt
 | Picture Viewer      | Viewnior             | Gwenview                     | Feh
 | Image Editing       | GIMP                 | Krita, Kolorpaint, Karbon14  | -
 | Video Editing       | PiTiVi               | -                            | -
@@ -1751,6 +1779,7 @@ art, lyrics fetching, Last.fm scrobbling, support for many portable
 media players, Internet radio such as Shoutcast, tabbed playlists, etc.
 
 [img/exaile.png]
+
 
 ====Engrampa====
 
