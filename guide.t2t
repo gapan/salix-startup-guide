@@ -1329,19 +1329,16 @@ mouselessly, though this is perhaps more awkward than working on the
 command line. In either case, regular manual upgrading will still be
 necessary.
 
-As an example, we will install //mplayer2//, the classic console media player.
+As an example, we will install //MPLayer//, the classic console media player.
 
 ```
-# slapt-get -u
-# slapt-get -i mplayer2
+#slapt-get -u
+#slapt-get -i MPlayer
 ```
 
 Note: To see how to edit Alpine's configuration file to access mail from
 one popular provider via smtp, see the page in the
 [Salix wiki http://www.salixos.org/wiki/index.php/How20to20set20up20Alpine20with20a20Gmail20account].
-
-For //Mutt//, see
-[this wiki entry http://crunchbanglinux.org/wiki/howto/howto_setup_mutt_with_gmail_imap].
 
 
 +++Editing the configuration file+++
