@@ -24,6 +24,7 @@ welcome.
 
 For any comments and submission of articles to be included in the start
 up guide, please contact //tsuren// on the forum or write to:
+
 //[salix-main@lists.sourceforge.net mailto:salix-main@lists.sourceforge.net]//
 
 
@@ -395,8 +396,10 @@ initially, but then in good time, you will gather enough experience
 and as you start to see the inner workings of Linux, you will
 become more confident.
 
+IMPORTANTSTART Reminder!
 You have to be the superuser in order to install an
 application.
+IMPORTANTEND
 
 
 +++Gslapt+++
@@ -413,7 +416,6 @@ automatically. Installation/uninstallation/reinstallation will take
 place once you click on the **Execute** button. You can blacklist
 packages by adding their names to the blacklist found in "Preferences"
 under "Edit".
-
 
 
 [img/gslapt.png]
