@@ -38,7 +38,6 @@ Many thanks especially to //**jrd**//, //**akuna**//, //**mimosa**// and //**max
 
 [img/desktop_rotated.png]
 
-
 Salix is a [Linux Distribution http://en.wikipedia.org/wiki/Linux_distro] based on
 [Slackware http://en.wikipedia.org/wiki/Slackware] that retains full backwards
 compatibility with its illustrious parent. However, while the
@@ -108,12 +107,11 @@ and **Core**, to meet your demands!
   the **largest** third party software package repositories for Slackware
   offered to date
 - The Salix repositories are offered for both the **32-bit** and **64-bit** architectures
+-
 
-
-**In Short, Salix is...**
-//Like a bonsai, Salix is small, light & the product of infinite care//
-
-
+NOTESTART In Short, Salix is...
+"Like a bonsai, Salix is small, light & the product of infinite care"
+NOTEEND
 
 
 +Starting Up Salix+
