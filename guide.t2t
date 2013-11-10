@@ -1300,15 +1300,7 @@ $ su                  #change to root
 ```
 
 Apart from the //Vimprobable2// browser, the default applications include
-<<<<<<< HEAD
-<<<<<<< HEAD
 //Alpine// as the mail client and //Gnome Commander// as the file manager.
-=======
-//Mutt// as the mail client and //Gnome Commander// as the file manager.
->>>>>>> upstream/master
-=======
-//Alpine// as the mail client and //Gnome Commander// as the file manager.
->>>>>>> upstream/master
 //Music On Console// and //Whaaw Media Player// are the audio and video
 players, with //GVim// as text/code editor. //apvlv// can be used to view
 pdf files. As we have just seen, package management is console-based,
@@ -1318,10 +1310,6 @@ in the repository. //Firefox// may be installed adding the
 alternatively //Jumanji//, //XXXTerm// or //w3m//, a browser for the
 command line. //Thunderbird// can be used with the //Muttator// addon
 while //Claws-mail// works almost entirely from the keyboard;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> upstream/master
 //mcabber// and //irssi// are jabber and irc clients for the console.
 
 Note: To see how to edit Alpine's configuration file to access mail from
@@ -1331,25 +1319,11 @@ one popular provider via smtp, see the page in the
 Wordgrinder and sc are wordprocessing and spreadsheet applications.  Flash is not included, but is available from the
 repositories. Screen for managing multiple consoles works well with
 Ratpoison. Users are encouraged to tailor and expand the application selection according to taste; when it comes to text processing, for instance, //PyRoom// is
-<<<<<<< HEAD
-=======
-//Alpine// is a friendly console email client.
-
-No office suite is included, and in this as in other respects, the user
-is encouraged to tailor the system by installing their preferred
-applications. Flash is not included, but is available from the
-repositories. Screen for managing multiple consoles works well with
-Ratpoison. //sc// is a console-based spreadsheet. For writers, //PyRoom// is
->>>>>>> upstream/master
-=======
->>>>>>> upstream/master
 an elegant choice for full-screen, distraction-free writing, and it
 might be complemented by //Antiword// to convert proprietary file
 formats into plain text.
 
 Note that the //Gslapt// and //Sourcery// graphical package management
-<<<<<<< HEAD
-<<<<<<< HEAD
 tools (equivalent to //slapt-get// and //slapt-src//)  may also be used
 mouselessly, though this is perhaps more awkward than working on the
 command line. In either case, regular manual upgrading will still be
@@ -1360,39 +1334,11 @@ As an example, we will install //MPLayer//, the classic console media player.
 ```
 **#slapt-get -u**
 **#slapt-get -i MPlayer**
-=======
-tools (equivalent to //slapt-get// and //slapt-src//) may also be used
-mouse-lessly, though this is perhaps more awkward than working on the
-command line. In either case, regular manual upgrading will still be
-necessary.
-
-As an example, we will install //Alpine//, derived from the classic
-//Pine// mail client.
-
-```
-# slapt-get -u
-# slapt-get -i alpine
->>>>>>> upstream/master
-=======
-tools (equivalent to //slapt-get// and //slapt-src//)  may also be used
-mouselessly, though this is perhaps more awkward than working on the
-command line. In either case, regular manual upgrading will still be
-necessary.
-
-As an example, we will install //mplayer2//, the classic console media player.
-
-```
-# slapt-get -u
-# slapt-get -i mplayer2
->>>>>>> upstream/master
 ```
 
 Note: To see how to edit Alpine's configuration file to access mail from
 one popular provider via smtp, see the page in the
 [Salix wiki http://www.salixos.org/wiki/index.php/How20to20set20up20Alpine20with20a20Gmail20account].
-
-For //Mutt//, see
-[this wiki entry http://crunchbanglinux.org/wiki/howto/howto_setup_mutt_with_gmail_imap].
 
 
 +++Editing the configuration file+++
