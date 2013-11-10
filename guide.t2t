@@ -1332,8 +1332,8 @@ necessary.
 As an example, we will install //MPLayer//, the classic console media player.
 
 ```
-**#slapt-get -u**
-**#slapt-get -i MPlayer**
+#slapt-get -u
+#slapt-get -i MPlayer
 ```
 
 Note: To see how to edit Alpine's configuration file to access mail from
