@@ -90,12 +90,10 @@ Salix offers three software installation options: **Full**, **Basic**
 and **Core**, to meet your demands!
 
 
-|| Installation Type | Target Users | Features                     | Examples of Available Applications
-| Full               | All users    | Graphical environment, full software installation      | Libreoffice, Exaile, Midori, Pidgin
-| Basic              | Advanced users who would like to add their own choice of applications | Graphical environment | Midori, Gslapt
-| Core               | Advanced users who would like to run a console system, server maintainers | No graphical environment, minimal number of software essential for a console system | vi
-
-
+|| Installation Type:  | Full  | Basic                   | Core |
+| Target Users:  | All   | Advanced users who would like to add their own choice of applications   | Advanced users who would like to run a console system, server maintainers  |
+| Features:      | Graphical environment, full software installation  | Graphical environment  | No graphical environment, minimal number of software essential for a console system  |
+| Examples of Available Applications:  | Libreoffice, Exaile, Midori, Pidgin  | Midori, Gslapt  | vim, slapt-get  |
 
 
 +++Salix Repositories & Package Management+++
@@ -1657,32 +1655,32 @@ be able to take Linux at your own pace.
 
 ===List of Applications===[list_of_applications]
 
-|| Salix Edition      | Xfce                 | KDE                          | Ratpoison
-| Web Browser         | Midori               | QupZilla                     | Vimprobable2
-| Word Processor      | LibreOffice Writer   | KWord                        | Wordgrinder
-| Email Client        | Claws-mail           | KMail                        | Mutt
-| Picture Viewer      | Viewnior             | Gwenview                     | Feh
-| Image Editing       | GIMP                 | Krita, Kolorpaint, Karbon14  | -
-| Video Editing       | PiTiVi               | -                            | -
-| File Manager        | Thunar               | Dolphin                      | Gnome-commander
-| Window Manager      | Xfce                 | KWin                         | Ratpoison
-| Instant Messaging   | Pidgin               | Kopete                       | Pidgin
-| Spreadsheet         | LibreOffice Calc     | KSpread                      | sc
-| Text Editor         | Leafpad              | KWriter                      | gvim
-| IDE                 | Geany                | -                            | gvim
-| PDF Reader          | Atril                | OKular                       | apvlv
-| Multimedia Player   | Parole Media Player  | Bangarang                    | Whaawmp
-| Music Player        | Exaile               | Clementine                   | Music On Console
-| Disk Burner         | Brasero              | K3b                          | cdrecord
-| CD Ripper           | Asunder              | K3b                          | -
-| Torrent Client      | Transmission         | KTorrent                     | rtorrent
-| Blogging Client     | -                    | Blogilo                      | -
-| Organiser           | Orage                | KOrganizer                   | -
-| PIM                 | -                    | Akonadi                      | -
-| Desktop Wiki        | Zim                  | KJots                        | -
-| Multilingual Input  | Ibus                 | Ibus                         | -
-| Terminal Emulator   | Xfce Terminal        | Konsole                      | xterm
-| Package Management  | Gslapt, Sourcery     | Gslapt, Sourcery             | Gslapt,Sourcery
+|| Salix Edition      | Xfce                 | KDE                          | Ratpoison |
+| Web Browser         | Midori               | QupZilla                     | Vimprobable2 |
+| Word Processor      | LibreOffice Writer   | KWord                        | Wordgrinder |
+| Email Client        | Claws-mail           | KMail                        | Mutt |
+| Picture Viewer      | Viewnior             | Gwenview                     | Feh |
+| Image Editing       | GIMP                 | Krita, Kolorpaint, Karbon14  | - |
+| Video Editing       | PiTiVi               | -                            | - |
+| File Manager        | Thunar               | Dolphin                      | Gnome-commander |
+| Window Manager      | Xfce                 | KWin                         | Ratpoison |
+| Instant Messaging   | Pidgin               | Kopete                       | Pidgin |
+| Spreadsheet         | LibreOffice Calc     | KSpread                      | sc |
+| Text Editor         | Leafpad              | KWriter                      | gvim |
+| IDE                 | Geany                | -                            | gvim |
+| PDF Reader          | Atril                | OKular                       | apvlv |
+| Multimedia Player   | Parole Media Player  | Bangarang                    | Whaawmp |
+| Music Player        | Exaile               | Clementine                   | Music On Console |
+| Disk Burner         | Brasero              | K3b                          | cdrecord |
+| CD Ripper           | Asunder              | K3b                          | - |
+| Torrent Client      | Transmission         | KTorrent                     | rtorrent |
+| Blogging Client     | -                    | Blogilo                      | - |
+| Organiser           | Orage                | KOrganizer                   | - |
+| PIM                 | -                    | Akonadi                      | - |
+| Desktop Wiki        | Zim                  | KJots                        | - |
+| Multilingual Input  | Ibus                 | Ibus                         | - |
+| Terminal Emulator   | Xfce Terminal        | Konsole                      | xterm |
+| Package Management  | Gslapt, Sourcery     | Gslapt, Sourcery             | Gslapt,Sourcery |
 
 
 ===Selected Applications found in Salix===
