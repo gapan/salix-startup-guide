@@ -29,7 +29,7 @@ up guide, please contact us through the
 
 //**Acknowledgement**//
 My sincere thanks to all the people who have contributed to and worked on this start up guide, including translators.
-Many thanks especially to //**jrd**//, //**akuna**//, //**mimosa**// and //**maximus**// for their contributions in writing and thorough proof-reading; and above all, to //**tsuren**//, the original editor of the Guide.
+Many thanks especially to //**jrd**//, //**akuna**//, and //**maximus**// for their contributions in writing and thorough proof-reading; and above all, to //**tsuren**//, the original editor of the Guide.
 
 
 
@@ -65,14 +65,13 @@ also applies it to the viewpoint of the end user.
 +++Salix Editions+++
 
 
-**Salix** comes in five different editions - **Xfce**, **LXDE**,
-**KDE**, **Fluxbox** and **Ratpoison**
+**Salix** comes in five different editions - **Xfce**,
+**KDE**, and **Ratpoison**
 
 
 The choice is yours: with a //streamlined// Xfce desktop environment,
 //elegant// KDE accompanied by a very rich collection of KDE centric
-software, //minimalistic// Fluxbox window manager, wickedly fast LXDE
-desktop or "say good-bye to the rodent" Ratpoison, all with the
+software, or "say good-bye to the rodent" Ratpoison, all with the
 Salix look and feel!
 
 [img/screenshots_rotated.jpg]
@@ -166,7 +165,7 @@ Setup, configuring some partitions with Gparted, etc.
 - Extract all files and folders (boot, packages and Salix Live) to your USB root directory.
 - Go to the ``boot`` directory on the USB key.
 - If you're running on Unix (Linux, BSD, Mac OS X), just run the file
-  called ``install-on-USB.sh``. If you're on Windows, just run the file
+  called ``install-on-USB.sh`` (if it refuses to execute, try ``sh install-on-USB.sh``). If you're on Windows, just run the file
   called ``install-on-USB.cmd`` instead.
 
 
@@ -202,7 +201,7 @@ wise to check the following points:
   [partition http://en.wikipedia.org/wiki/Disk_partitioning]
   dedicated for Salix on your computer
 
-
+% Is this info about rEFIt up to date?
 //Although it is possible to install Linux on a Mac computer, you have to install a bootcamp software called rEFIt beforehand. Certain file systems, such as xfs, cannot be used with a Mac. The easiest way to check the compatibility of your computer is to use one of the available Salix Live editions.//
 
 
@@ -217,17 +216,17 @@ installing Salix.
 
 //It is advisable to back up any important files before modifying the partition table.//
 
-Every Salix Live CD comes with
+Live CDs from pretty much any Linux distribution come with
 [Gparted http://gparted.sourceforge.net/docs/help-manual/C/gparted_manual.html],
 which will enable you to change the partition organisation on a disk
-device while preserving the contents of the partitions. You may with to
+device while preserving the contents of the partitions. You may wish to
 use this application to create/re-organise your partition table.
 
 Alternatively, if you have an unformatted partition, unallocated disk
 space, or an existing partition you do not use, you can create or
 rewrite a new partition table using
 [cfdisk http://en.wikipedia.org/wiki/Cfdisk]
-(which comes with the Salix installation CD).
+(which comes with the Salix installation CD). However, less experienced users may prefer the safeguards and graphical interface of //Gparted//.
 
 Both applications are simple to use and require no further explanation
 on how to use them, except for a small comment about "partition types".
@@ -246,7 +245,7 @@ difference between a logical and a primary partition except for that
 
 - Salix needs, at the very minimum, one partition which holds the root
 directory and must be assigned as ``/``.
-- It is highly recommended to have one swap partition. If you already
+- It is often recommended to have one swap partition, though modern RAM sizes now often mean it isn't needed. If you already
 have another Linux OS running on your machine, its swap partition can be
 shared, and you do not need to create another. A swap partition size is
 in essence used as an extra RAM to improve the performance of your
@@ -269,14 +268,16 @@ An advantage of having more than one partition to hold separate
 directories is that you can reformat one partition without affecting
 others. For example, you can re-install Salix on your machine (and this
 goes to the partition holding the "/" directory) while leaving
-the partition holding the /home directory intact.
+the partition holding the /home directory intact; however, be aware that /home 
+contains configuration specific to each distribution and release, so sharing it 
+between distros or reusing it when installing a new version of Salix is unlikely to work.
 
 
 Each partition can be formatted into one of several
 [file systems http://en.wikipedia.org/wiki/List_of_file_systems].
 Unless you have a
 particular favourite for a reason, we recommend you format your
-partitions with the ext4 file system.
+partitions with the xfs file system.
 
 
 ++Installing from a Salix Installation CD++
@@ -319,7 +320,7 @@ semi-graphical command line interface.
   detected partition corresponds to that.
 - You will then be asked to specify the partition for the root ``/``
   directory. Select the partition you have created for the ``/``, and
-  continue to format the partition. The ext4 file system is recommended
+  continue to format the partition. The xfs file system is recommended
   here.
 - If you have other partitions to mount, you can do so. As we have a
   partition for a ``/home`` directory, we select the partition and continue.
@@ -350,7 +351,11 @@ is to know the device name of your USB key. You may wish to issue the
 command ``fdisk -l`` as root to know which device is used for your USB
 key.
 
-- Create your USB stick with [unetbootin http://unetbootin.sourceforge.net/]
+- Format your USB to FAT32 - this will destroy all data
+- If the stick is already FAT32, you do not need to wipe existing data, but any old Salix-related directories should be removed
+- Copy the contents of the ISO to the stick
+- Alternatively, copy the ISO directly to the stick using *dd*; this will wipe all existing data. Be careful to choose the right device!
+- Reboot and boot from the stick; you may need to adjust your BIOS settings.
 - At Salix installation chose "Install from hard disk"
 - Enter the device of your USB stick: This probably is /dev/sdb1 if you
   only have one hard disk. Please note that a Few sticks are mounted by
