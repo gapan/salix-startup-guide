@@ -386,17 +386,28 @@ Alternatively, you can mount your USB key first.
 
 Installing applications (which roughly equates to "installing packages"
 as we say in Linux) is a fundamental part of the Linux
-experience. Superficially it is just an exercise using package managers
-such as Gslapt and its command line equivalent, slapt-get, for
-installing packages created by others. Soon you will start to see some
-packages you are interested in are not in the common repositories, and
-you will start creating your own packages. For some, this could be the
-very first time they see their build scripts working in the terminal,
-checking for configuration errors and chasing after some missing
-dependencies to compile a program. Some frustration may hit you
-initially, but then in good time, you will gather enough experience
-and as you start to see the inner workings of Linux, you will
-become more confident.
+experience. A Linux distribution, such as Salix (or Slackware, on which it is 
+based) could be said to consist of its repositories, where the software 
+available for that distribution is kept. These packages have been compiled
+with the kernel and build tools provided by the distribution and tested to ensure 
+they work together. Salix, like most distros (but not Salix) provides full
+dependency management, which means that any applications the package needs
+to run are installed too -- and also that they are guaranteed to be available.
+
+http://slackbuilds.org provides build scripts for further software not
+present in the repositories. This means the package will be built on your
+system before being installed. Salix provides a graphical tool, Sourcery,
+to manage this; its command-line equivalent is slapt-src. Both do have limited dependency management,
+but the build is not guaranteed to be successful and some manual tinkering may be needed.
+
+You can also create and install your own packages, for which Salix provides a suite
+of console scripts, especially ``slkbuild``; for further information, see the
+wiki pages on packaging. When installing packages from any other source, proceed with caution.
+
+In a nutshell, the first place to look for an application you'd like to use is the Salix repositories, which also access the core of Slackware packages around which Salix is built
+(``Gslapt``, ``slapt-get``); second port of call should generally be the slackbuild repo (``Sourcery``, ``slapt-src``).
+It is not recommended (especially for beginners) to reconfigure the package management tools to access any other repositories. Should you wishj to install any such package, it is 
+probably best to download it individually and install manually (for instance with ``pkgtool``).
 
 IMPORTANTSTART Reminder!
 You have to be the superuser in order to install an
@@ -418,6 +429,10 @@ automatically. Installation/uninstallation/reinstallation will take
 place once you click on the **Execute** button. You can blacklist
 packages by adding their names to the blacklist found in "Preferences"
 under "Edit".
+
+On first installing Salix, you should also do a general package upgrade
+to ensure your installed system is up to date with the repositories -- click on 
+"Mark all upgrades", then "Execute".
 
 
 [img/gslapt.png]
