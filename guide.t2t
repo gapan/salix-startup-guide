@@ -385,29 +385,39 @@ Alternatively, you can mount your USB key first.
 ++Package Management++ 
 
 Installing applications (which roughly equates to "installing packages"
-as we say in Linux) is a fundamental part of the Linux
-experience. A Linux distribution, such as Salix (or Slackware, on which it is 
-based) could be said to consist of its repositories, where the software 
-available for that distribution is kept. These packages have been compiled
-with the kernel and build tools provided by the distribution and tested to ensure 
-they work together. Salix, like most distros (but not Salix) provides full
-dependency management, which means that any applications the package needs
-to run are installed too -- and also that they are guaranteed to be available.
+as we say in Linux) is a fundamental part of the Linux experience.
+A Linux distribution, such as Salix (or Slackware, on which it is
+based) could be said to consist of its repositories, where the software
+available for that distribution is kept. These packages have been
+compiled with the kernel and build tools provided by the distribution
+and tested to ensure they work together. Salix, like most distros (but
+not Salix) provides full dependency management, which means that any
+items the package needs to run are installed too -- and also that
+they are guaranteed to be available.
 
 http://slackbuilds.org provides build scripts for further software not
-present in the repositories. This means the package will be built on your
-system before being installed. Salix provides a graphical tool, Sourcery,
-to manage this; its command-line equivalent is slapt-src. Both do have limited dependency management,
-but the build is not guaranteed to be successful and some manual tinkering may be needed.
+present in the repositories. This means the package will be built on
+your system before being installed. Salix provides a graphical tool,
+Sourcery, to manage this; its command-line equivalent is slapt-src. Both
+do have limited dependency management, but the build is not guaranteed
+to be successful and some manual tinkering may be needed.
 
-You can also create and install your own packages, for which Salix provides a suite
-of console scripts, especially ``slkbuild``; for further information, see the
-wiki pages on packaging. When installing packages from any other source, proceed with caution.
+You can also create and install your own packages, for which Salix
+provides a suite of console scripts, especially ``slkbuild``; for
+further information, see the wiki pages on packaging. When installing
+packages from any other source, proceed with caution.
 
-In a nutshell, the first place to look for an application you'd like to use is the Salix repositories, which also access the core of Slackware packages around which Salix is built
-(``Gslapt``, ``slapt-get``); second port of call should generally be the slackbuild repo (``Sourcery``, ``slapt-src``).
-It is not recommended (especially for beginners) to reconfigure the package management tools to access any other repositories. Should you wishj to install any such package, it is 
-probably best to download it individually and install manually (for instance with ``pkgtool``).
+In a nutshell, the first place to look for an application you'd like to
+use is the Salix repositories, which also access the core of Slackware
+packages around which Salix is built (``Gslapt``, ``slapt-get``); second
+port of call should generally be the slackbuild repo (``Sourcery``,
+``slapt-src``). It is not recommended (especially for beginners)
+to reconfigure the package management tools to access any other
+repositories. Should you wish to install any such package, it is
+probably best to download it individually and install manually (for
+instance with ``pkgtool`` or [spkg #spkg]). Finally, you can [make your own package #roll-your-own].
+
+Note that ``twapake`` is a useful tool available from the repos to keep track of installed packages, from whatever source.
 
 IMPORTANTSTART Reminder!
 You have to be the superuser in order to install an
@@ -418,7 +428,7 @@ IMPORTANTEND
 +++Gslapt+++
 
 Gslapt is the GUI version of [slapt-get #slapt-get]. It allows one to
-search Slackware/Salix mirrors and third party sources for packages.
+search Slackware/Salix mirrors for packages.
 Before use you should first click on the **Update** button to ensure that
 the latest updates from the software repositories are known to Gslapt.
 The search field is there for you to search for a particular package.
@@ -442,7 +452,7 @@ to ensure your installed system is up to date with the repositories -- click on
 
 [slapt-get http://software.jaos.org/git/slapt-get/plain/FAQ.html] is a
 command line tool for Slackware package management. It allows one to
-search Slackware/Salix mirrors and third party sources for packages,
+search Slackware/Salix mirrors for packages,
 compare them with installed packages, install new packages, or
 upgrade all installed packages.
 To use the application, open a Terminal window and first issue the
@@ -469,15 +479,15 @@ command line instructions, please refer to
 slapt-get --help
 ```
 
-Here is a little exercise for you. Try installing "w3m" which is a
+Here is a little exercise for you. Try installing ``w3m`` which is a
 terminal based web browser, by using slapt-get.
 
 
 +++Sourcery+++
 
-Sourcery is a new graphical frontend to [slapt-src #slapt-src], a
+Sourcery is a graphical frontend to [slapt-src #slapt-src], a
 utility to build and install packages from source using SlackBuilds
-and/or SLKBUILDs. Before use, you should first click on the
+or SLKBUILDs. Before use, you should first click on the
 **Update** button on the tool bar to ensure that the latest updates from
 the software repositories are known to Sourcery. The search field is
 there for you to search for a particular package, and installations,
@@ -528,17 +538,17 @@ Note that the skype is 32-bit only, so if you are running a
 64-bit system, please try out some other application).
 
 
-+++spkg+++
++++spkg+++[spkg]
 
 An alternative way to install a package (which for Salix and many other
-slackware based distribution ends with the .tgz, .tlz or .txz
+slackware based distributions ends with the .tgz, .tlz or .txz
 extension) is to use the command line input
 ```
 spkg -i [exact name of a package]
 ```
 This is a handy way of installing a package if
-you have just created your own package or if you have downloaded it from
-the Internet. Note that the name of the package must be exact to the
+you have just created your own package. 
+Note that the name of the package must be exact to the
 last extension (as in xxxxx-i486-tt.txz).
 Removing a package is somewhat similar. You can remove a package by
 issuing
@@ -548,7 +558,7 @@ spkg -d [software name]
 e.g. ``spkg -d skype``.
 
 
-+++Making a Package from a Source File with SLKBUILD+++
++++Making a Package from a Source File with SLKBUILD+++[roll-your-own]
 
 Installing a software from a source file is in most cases not difficult.
 You can compile a lot of software generally with the following
@@ -576,7 +586,7 @@ or
 should also help you with some configuration options.
 
 Although you should manage to install the software after the final
-command, it is essentially //untracked//and neither Gslapt nor slapt-get
+command, it is essentially //untracked// yypand neither Gslapt nor slapt-get
 can see that the software is installed. A better way is to create a
 Salix package using SLKBUILD, which is a build script you can prepare
 before issuing
@@ -606,6 +616,9 @@ latest, please refer to the following link for upgrading your Salix.
 
 - [Salix 13.0 to 13.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.0_to_13.1]
 - [Salix 13.1 to 13.37 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.1_to_13.37]
+- [Salix 13.37 to 14.0 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.37_to_14.0]
+%assuming this page will exist:
+- [Salix 14.0 to 14.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.0_to_14.1]
 
 
 
