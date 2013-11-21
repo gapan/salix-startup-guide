@@ -596,6 +596,7 @@ slkbuild -X
 to create a Salix compatible package.
 For more on SLKBULD, please consult
 [SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild].
+[New_to_Packaging http://docs.salixos.org/wiki/New_to_Packaging]
 
 
 +++Salix Packages that are different from Slackware+++
@@ -621,6 +622,22 @@ latest, please refer to the following link for upgrading your Salix.
 - [Salix 14.0 to 14.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.0_to_14.1]
 
 
++++Salix Package Installer+++
+
+//spi// is a command line tool that combines some basic functions of //slapt-get// and //slapt-src//. It
+installs from the Salix repositories if the package is available there, if not, it looks in src (http://slackbuild.org), and
+repeats the process recursively for any dependencies. This means all packages are automatically installed from the repositories 
+if they are available there, even if it is a dependency of a package that is not. For a summary of usage, see
+```
+spi --help
+```
+Note that the default action (if //spi// is called without specifying e.g. **--install**) is to search 
+for packages, reporting whether they are installed or where they are available.
+
++++reposetup+++
+
+//reposetup// is a command line tool to change the repository mirror, allowing you to choose a faster one
+or temporarily change mirrors if the one you normally use is down. Root privileges are needed.
 
 
 ++Configuring Your Salix++
