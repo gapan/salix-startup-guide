@@ -893,7 +893,7 @@ with Gslapt.
 
 This section deals with working in a console mode or with a terminal
 (such as xfce terminal, xterm, konsole and so forth), and serves merely
-as a light introduction to what we call "command line interface" (CLI).
+as a light introduction to the command line interface (CLI).
 The intended audience here is not seasoned travellers but new journeymen
 in the land of Linux, who are willing to discover more about what one
 can do with it. We will go through some examples in this section for you
@@ -908,21 +908,24 @@ applications have been steadily improving in Linux, and are probably now
 comparable to any OS in their ease of use. On the other hand, where
 Linux excels in particular is in the area of command line applications,
 its traditional strength. Without the CLI, you would be
-effectively missing out on half of what Linux can offer, if not
-more.
+effectively missing out on half of what Linux can offer.
 
 There is another reason. From time to time, you might have to work in
 console. For instance, if the machine fails to start up a graphical
 desktop environment during booting, then you are more or less forced to
-fix the problem without GUI.
+fix the problem without the graphical user interface (GUI).
 
 Of course, there are many other reasons to learn CLI commands, but for
 now we will start by learning how to move around directories.
 
-First, open up a terminal or move to a console (you can do this by
+First, open up a terminal or move to a console: you can do the latter by
 pressing **Ctrl+Alt+F2**, for example. To get back to the
-graphical desktop, press **Ctrl+Alt+F4**, for example. F number
-keys are used to switch between consoles.
+graphical desktop, press **Alt+F4**, for example. F number
+keys are used to switch between consoles; if F4 or F7 doesn't do the trick, try 
+others. 
+
+However, the simplest option is to open a terminal within the GUI: there is probably
+an option to do so in the panel, or if not, in the menu.
 
 
 +++Moving Around - cd+++
@@ -931,13 +934,14 @@ You should be in your user directory (denoted as ``~``), which is
 normally the same as ``/home/your_user_name`` (replace
 ``your_user_name`` with your own). In Salix, this directory contains
 ``Desktop``, ``Music``, ``Documents`` and so on. To see its
-content, type ``ls`` and press enter. You will see something like
+contents, type ``ls`` and press enter. You will see something like
 this:
 
 [img/ls.png]
 
 Now to move around directories, we use the command ``cd``. If you just type in
-``cd`` and enter, nothing will happen. ``cd`` must be followed
+``cd`` and enter, it will take you to your home directory, but as we are already there, in 
+this case, nothing will happen. ``cd`` must otherwise be followed
 either by a name of a directory which is within the directory you are in
 or by a full path to the directory you wish to move into. You can also
 go one directory up by typing
@@ -946,8 +950,7 @@ go one directory up by typing
 Remember on Linux,
 //arguments are separated by spaces//. So for now, let's move to the root directory.
 The root directory is, as the name suggests, the core of your
-directories - every directory stems from here. Once you wipe out the
-root directory, you will not see your machine booting up again.
+directories - every directory stems from here.
 
 To move to the root ``/``, type in
 ``` cd /
@@ -957,6 +960,8 @@ directory. You should see something like ``tmp/``, ``usr/``,
 ``home`` and so on. OK, not so interesting here. Let us move back to
 your home directory with
 ``` cd /home/your_user_name
+or just
+``` cd
 
 Now move into the ``Music`` directory by issuing
 ``` cd Music
@@ -964,6 +969,11 @@ Now move into the ``Music`` directory by issuing
 In fact, you do not have to type to the end. By pressing Tab after the
 first letter or two, you may complete the rest of the directory name
 automatically.
+
+The important thing to notice here is this is a //relative path//: unlike where the whole path 
+was specified above, starting from the root of the filesystem ``/``, if the path
+doesn't begin with ``/`` it is understood as starting from whatever the current directory
+is, in this case your user's home. So ``Music`` in this case means the same as ``/home/your_user_name/Music``.
 
 
 +++Creating a Folder - mkdir+++
@@ -1132,7 +1142,7 @@ after first updating the local database with
 ```
 slapt-src -u
 ```
-You will see that it is available from Slackbuild.org. To install
+You will see that it is available from slackbuilds.org. To install
 it, execute
 ```
 slapt-src -i cowsay
@@ -1158,17 +1168,17 @@ that you need to type in a ``[message]``. Try again with
 cowsay Hello Salix!
 ```
 
-To sum up, we have merely scratched the surface of the power of the
-command line. The best way to learn more is by using it, but remember to
+We have merely scratched the surface of the power of the
+command line here. The best way to learn more is by using it, but remember to
 use the help tools, and consult online documentation such as that listed
 in the Salix forum. [Linuxcommand.org http://linuxcommand.org/index.php]
-an be particularly recommended if you wish to gain a comprehensive
+can be particularly recommended if you wish to gain a comprehensive
 grounding. Proceed cautiously, but don't be afraid to experiment.
 
 A final tip - it can be difficult to copy longer commands accurately. If
-you select the text with the mouse, in Linux, clicking the middle button
+you select the text with the mouse, clicking the middle button
 or wheel will paste it accurately into the command line or wherever you
-wish.
+wish. This only works in a terminal running within a GUI.
 
 
 ++Getting started with Salix Ratpoison++ 
@@ -1462,6 +1472,7 @@ bind F12 exec rpws movenext
 bind v exec vimprobable2
 
 # set default background
+%this will need updating
 exec feh --bg-scale /usr/share/xfce4/backdrops/StairWay.png
 
 # create 5 workspaces and create aliases (run: rpws help)
@@ -1503,12 +1514,9 @@ some other applications, the number of windows may become unwieldy. To
 help with this, Ratpoison allows you to use workspaces. (In the online
 Ratpoison manual, these are referred to more precisely as
 "groups".) You might then put all browser windows in one
-workspace, so that ``C-t e`` has the same effect as tabs, but with
-thumbnails".
+workspace, for instance.
 
-Managing these is roughly analogous to how windows are managed within
-each workspace. As we saw, ``C-t e`` shows all windows in the current
-workspace; ``C-t w`` lists them. ``C-t W`` shows four more workspaces,
+``C-t w`` lists the windows in the current workspace; ``C-t W`` shows four more workspaces,
 which were set up in the last line of the configuration file. In a
 console, type ``rpws help`` .
 
@@ -1530,13 +1538,13 @@ the Network menu using //GVim//. //GVim// is in the menu, but try calling
 it using the colon
 
 ```
-C-t :exec gvim ~/.ratmenu/network.sh
+C-t :exec gvim ~/.ratmenu/multimedia.sh
 ```
 
 or simply
 
 ```
-C-t ! gvim ~/.ratmenu/network.sh
+C-t ! gvim ~/.ratmenu/multimedia.sh
 ```
 
 
@@ -1546,7 +1554,7 @@ Note that graphical applications are called directly, but command line
 programs need to be opened inside a terminal.
 
 Use ``j`` and ``k`` to navigate to where you want to add the entry for
-//Alpine//, type ``i`` to insert, ``ESC`` to return to command mode, and
+//Mplayer2//, type ``i`` to insert, ``ESC`` to return to command mode, and
 ``:wq`` to write and save. Test the change by typing
 ```
 C-t r
@@ -1597,7 +1605,7 @@ may also be called from the command line as //gmountman//. When needed,
 this deals with the mounting of removable devices, including DVDs. Also,
 //banish// may be called at any time by the shortcut ``C-t b``.
 
-Remember to check frequently for package updates using //slapt-get//.
+Remember to check frequently for package updates using //slapt-get// or //spi//.
 
 Finally, to shut down Ratpoison, there is an entry in the Exit submenu,
 from where it is also possible to reboot or shut down the computer.
