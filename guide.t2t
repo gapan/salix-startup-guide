@@ -596,6 +596,7 @@ slkbuild -X
 to create a Salix compatible package.
 For more on SLKBULD, please consult
 [SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild].
+[New_to_Packaging http://docs.salixos.org/wiki/New_to_Packaging]
 
 
 +++Salix Packages that are different from Slackware+++
@@ -621,6 +622,22 @@ latest, please refer to the following link for upgrading your Salix.
 - [Salix 14.0 to 14.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.0_to_14.1]
 
 
++++Salix Package Installer+++
+
+//spi// is a command line tool that combines some basic functions of //slapt-get// and //slapt-src//. It
+installs from the Salix repositories if the package is available there, if not, it looks in src (http://slackbuild.org), and
+repeats the process recursively for any dependencies. This means all packages are automatically installed from the repositories 
+if they are available there, even if it is a dependency of a package that is not. For a summary of usage, see
+```
+spi --help
+```
+Note that the default action (if //spi// is called without specifying e.g. **--install**) is to search 
+for packages, reporting whether they are installed or where they are available.
+
++++reposetup+++
+
+//reposetup// is a command line tool to change the repository mirror, allowing you to choose a faster one
+or temporarily change mirrors if the one you normally use is down. Root privileges are needed.
 
 
 ++Configuring Your Salix++
@@ -644,9 +661,11 @@ Note that **wicd** and **wireless** must be activated in the
 [system services #system_services] in order to make wireless networks visible on
 Wicd.
 
+To configure 3G connections, use sakis3g.
 
 +++Setting up a Printer+++
 
+% Is this still up to date?
 After writing a document, transferring photos from your camera, or
 creating your own images with GIMP, you would probably like to print
 them out with your printer. To do this, you need to have a printer
@@ -688,18 +707,18 @@ For setting up a network printer, please consult the Salix
 
 +++Salix Codecs Installer+++
 
-Salix only includes, by default, software that are legally free to use
+Salix only includes, by default, software that is legally free to use
 in any country, and that means that proprietary media formats are not
 configured "out of the box". Most commercial DVDs are encrypted, and
 that means that you need to install certain codecs to view them. This is
 legally permitted in most countries but not all. Please check and obtain
 legal advice if you are unsure whether a particular legal restriction
-applies to a media format and/or packages you wish to use in your
+applies to a media format or packages you wish to use in your
 country.
 
 Salix codecs installer can be found under "Multimedia" in the main
 application menu, and conveniently install those codecs to enhance your
-viewing experiences.
+viewing experience.
 
 For more information on what is actually installed, please see
 [here http://docs.salixos.org/wiki/What_gets_installed_with_the_%22Install_multimedia_codecs%22_application%3F].
@@ -721,7 +740,7 @@ management in Salix can also be done the usual
 ([manual http://www.slackbook.org/html/book.html])
 Slackware way.
 
-Please note that most Salix tools (except Lilo Setup) have an ncurses
+Please note that most Salix tools have an ncurses
 counterpart which can be used in a non-graphical environment
 ([runlevel 3 http://www.bilbos-stekkie.com/slack_init/en/init.html#SLACK-RUNLEVELS]).
 
@@ -779,7 +798,7 @@ To execute this utility in runlevel 3, simply type dotnew.
 [img/gtkkeyboardsetup.png]
 
 
-This utility will configure the keyboard disposition being used both in
+This utility will configure the keyboard layout being used both in
 the graphical and non-graphical environments. Modifications are applied
 instantly.
 
@@ -790,9 +809,9 @@ up, you can do so by ticking the optional box.
 To execute this utility in runlevel 3, simply type keyboardsetup.
 
 
-+++Lilo Setup+++
++++Bootsetup+++
 
-Lilo Setup will install a new LILO bootloader on your computer.
+Bootsetup will install a new LILO or GRUB bootloader on your computer.
 
 [img/lilosetup.png]
 
@@ -803,7 +822,7 @@ available on the same computer.
 It is necessary to (re)configure the bootloader each time you install a
 new operating system on your computer.
 
-Lilo Setup can also be useful in the process of a disaster recovery, in
+Bootsetup  can also be useful in the process of a disaster recovery, in
 which case you may have to launch it from a Live CD if you have lost all
 other means to boot into your system.
 
