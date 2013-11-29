@@ -184,7 +184,7 @@ wise to check the following points:
 
 [img/gparted.png]
 
-Before installing Salix (from the live CD or not), you need to have the
+Before installing Salix, you need to have the
 necessary partition space available on your system, and if the computer
 does not have a separate partition for Linux, you must create one before
 installing Salix.
