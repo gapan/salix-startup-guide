@@ -189,10 +189,10 @@ necessary partition space available on your system, and if the computer
 does not have a separate partition for Linux, you must create one before
 installing Salix.
 
-IMPORTANTSTART Backup your files!
+WARNINGSTART Backup your files!
 It is advisable to back up any important files before modifying the partition
 table.
-IMPORTANTEND
+WARNINGEND
 
 Live CDs from pretty much any Linux distribution come with
 [Gparted http://gparted.sourceforge.net/docs/help-manual/C/gparted_manual.html],
