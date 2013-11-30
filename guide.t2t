@@ -28,8 +28,11 @@ up guide, please contact us through the
 
 
 //**Acknowledgement**//
-My sincere thanks to all the people who have contributed to and worked on this start up guide, including translators.
-Many thanks especially to //**jrd**//, //**akuna**//, and //**maximus**// for their contributions in writing and thorough proof-reading; and above all, to //**tsuren**//, the original editor of the Guide.
+My sincere thanks to all the people who have contributed to and worked
+on this start up guide, including translators.
+Many thanks especially to //**jrd**//, //**akuna**//, and
+//**maximus**// for their contributions in writing and thorough
+proof-reading; and above all, to //**tsuren**//, the original editor of the Guide.
 
 
 
@@ -55,7 +58,6 @@ also applies it to the viewpoint of the end user.
 - High quality package repositories with dependency support
 - Simple & fully localised system administration tools
 - Salix artwork
-- Live CD / USB option
 - Supports 32-bit and 64-bit architectures
 - Comes with a complete development environment
 
@@ -65,7 +67,7 @@ also applies it to the viewpoint of the end user.
 +++Salix Editions+++
 
 
-**Salix** comes in five different editions - **Xfce**,
+**Salix** comes in three different editions - **Xfce**,
 **KDE**, and **Ratpoison**
 
 
@@ -119,7 +121,7 @@ NOTEEND
 
 +++Downloading Salix+++
 
-The latest Salix or Salix Live releases are freely and easily available
+The latest Salix releases are freely and easily available
 as ISO image files from the Salix
 [download page http://www.salixos.org/wiki/index.php?title=Download].
 
@@ -128,48 +130,20 @@ rendered or burned to a DVD or CD by using media authoring or disc
 burning software. The resulting CD must not contain the .iso file; if it
 does, you have made a mistake in the process.
 
-//It is recommended, if possible, to verify the integrity of your downloaded file by comparing its [md5sum http://en.wikipedia.org/wiki/Md5sum] file with the original one uploaded besides the corresponding ISO image file by Salix. This ensures that your downloaded image file matches exactly with the one provided on the Salix website, and minimises the possibility of installation errors later on.//
+NOTESTART Checking download integrity
+It is recommended, if possible, to verify the integrity of your downloaded
+file by comparing its [md5sum http://en.wikipedia.org/wiki/Md5sum] file
+with the original one uploaded besides the corresponding ISO image file
+by Salix. This ensures that your downloaded image file matches exactly
+with the one provided on the Salix website, and minimises the possibility
+of installation errors later on.
+NOTEEND
 
 
-
-+++What is a Live CD / USB?+++
-
-A Live CD is a CD-ROM holding a self-contained bootable and fully
-functional operating system. It loads into memory using only the data
-provided on the CD. It will not modify any operating system or data
-present on its host computer and will leave no trace after shutdown.
-
-A Live USB flash drive is similar to a Live CD, but it can have the
-added functionality of automatically and transparently writing changes
-back to its bootable medium.
-
-Salix Live is the Live CD version of [Salix http://www.salixos.org/].
-You can therefore safely use it to 'test drive' Salix without having to
-install anything on your computer. You will thus be able to determine
-whether and to what extent Salix is compatible with your particular
-hardware configuration and if it suits your personal taste.
-
-If you are fully satisfied with your Live experience of Salix, you can
-then proceed to install it with the help of the Salix Live Installer.
-
-Salix Live will also come in handy as a mobile solution if you wish to
-carry Salix everywhere you go, or if you need to perform some basic
-rescue operation such as fixing an ailing LILO bootloader with Lilo
-Setup, configuring some partitions with Gparted, etc.
+%live%!include: live-introduction.t2t
 
 
-
-+++Creating a Salix Live USB Key+++
-
-- Open the .iso file using a software archiver (file-roller, xarchiver, 7-zip, iso-master, …).
-- Extract all files and folders (boot, packages and Salix Live) to your USB root directory.
-- Go to the ``boot`` directory on the USB key.
-- If you're running on Unix (Linux, BSD, Mac OS X), just run the file
-  called ``install-on-USB.sh`` (if it refuses to execute, try ``sh install-on-USB.sh``). If you're on Windows, just run the file
-  called ``install-on-USB.cmd`` instead.
-
-
-+++Booting from a Salix Installation CD/DVD/USB Key+++
++++Booting from a Salix Installation medium+++
 
 Your computer must be set to boot on the optical drive / USB port first
 before defaulting to the internal hard disk drive.
@@ -179,7 +153,7 @@ key or the F2 key (or some other key combinations depending on your
 machine). Once in the BIOS, find the //boot menu// or similar and
 set the order of the boot devices properly, with your optical drive/USB
 port in the first position. Save your changes and reboot your computer.
-Insert the Salix (Live)CD/DVD or USB key, and start up your computer.
+Insert the Salix CD/DVD or USB key, and start up your computer.
 
 
 
@@ -193,7 +167,7 @@ wise to check the following points:
 
 - Have you backed-up all the important files you have?
 - Check if your computer comes with Linux-friendly/supported
-  hardware@star
+  hardware
 - Recommended running specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
   HD space, or equivalent, though a lower spec machine may run
   without a problem)
@@ -209,12 +183,15 @@ wise to check the following points:
 
 [img/gparted.png]
 
-Before installing Salix (from the live CD or not), you need to have the
+Before installing Salix, you need to have the
 necessary partition space available on your system, and if the computer
 does not have a separate partition for Linux, you must create one before
 installing Salix.
 
-//It is advisable to back up any important files before modifying the partition table.//
+WARNINGSTART Backup your files!
+It is advisable to back up any important files before modifying the partition
+table.
+WARNINGEND
 
 Live CDs from pretty much any Linux distribution come with
 [Gparted http://gparted.sourceforge.net/docs/help-manual/C/gparted_manual.html],
@@ -226,7 +203,8 @@ Alternatively, if you have an unformatted partition, unallocated disk
 space, or an existing partition you do not use, you can create or
 rewrite a new partition table using
 [cfdisk http://en.wikipedia.org/wiki/Cfdisk]
-(which comes with the Salix installation CD). However, less experienced users may prefer the safeguards and graphical interface of //Gparted//.
+(which comes with the Salix installation CD). However, less experienced
+users may prefer the safeguards and graphical interface of //Gparted//.
 
 Both applications are simple to use and require no further explanation
 on how to use them, except for a small comment about "partition types".
@@ -244,33 +222,35 @@ difference between a logical and a primary partition except for that
 +++So what kind of partitions do you need?+++
 
 - Salix needs, at the very minimum, one partition which holds the root
-directory and must be assigned as ``/``.
-- It is often recommended to have one swap partition, though modern RAM sizes now often mean it isn't needed. If you already
-have another Linux OS running on your machine, its swap partition can be
-shared, and you do not need to create another. A swap partition size is
-in essence used as an extra RAM to improve the performance of your
-machine. If, for example, your machine doesn't have a lot of physical
-RAM or you're performing memory-intensive operations (such as video
-editing) that use up most or all of the physical RAM. It is
-normally recommended to have 1.5-2 times the size of your RAM, but for a
-modern desktop computer with more than a couple Gb of RAM, swap may not
-be necessary.
+  directory and must be assigned as ``/``.
+- It is often recommended to have one swap partition, though modern RAM
+  sizes now often mean it isn't needed. If you already
+  have another Linux OS running on your machine, its swap partition can be
+  shared, and you do not need to create another. A swap partition size is
+  in essence used as an extra RAM to improve the performance of your
+  machine. If, for example, your machine doesn't have a lot of physical
+  RAM or you're performing memory-intensive operations (such as video
+  editing) that use up most or all of the physical RAM. It is
+  normally recommended to have 1.5-2 times the size of your RAM, but for a
+  modern desktop computer with more than a couple Gb of RAM, swap may not
+  be necessary.
 - It is also highly recommended to have one partition to hold your /home
-directory, where you can store all your personal data such as documents,
-photos, customised settings for the desktop environment etc.
+  directory, where you can store all your personal data such as documents,
+  photos, customised settings for the desktop environment etc.
 - It is optional to have one partition to hold the /usr directory, where
-application files are stored (similar to the "Program Files" directory
-in Windows or the "/Apps" in Mac OS X).
+  application files are stored (similar to the "Program Files" directory
+  in Windows or the "/Apps" in Mac OS X).
 - Optionally you can create one partition to hold the /var directory,
-where system log files are stored. But unless you are running a
-server machine, this is probably unnecessary.
-An advantage of having more than one partition to hold separate
-directories is that you can reformat one partition without affecting
-others. For example, you can re-install Salix on your machine (and this
-goes to the partition holding the "/" directory) while leaving
-the partition holding the /home directory intact; however, be aware that /home 
-contains configuration specific to each distribution and release, so sharing it 
-between distros or reusing it when installing a new version of Salix is unlikely to work.
+  where system log files are stored. But unless you are running a
+  server machine, this is probably unnecessary.
+  An advantage of having more than one partition to hold separate
+  directories is that you can reformat one partition without affecting
+  others. For example, you can re-install Salix on your machine (and this
+  goes to the partition holding the "/" directory) while leaving
+  the partition holding the /home directory intact; however, be aware that /home
+  contains configuration specific to each distribution and release, so sharing it
+  between distros or reusing it when installing a new version of Salix is
+  unlikely to work.
 
 
 Each partition can be formatted into one of several
@@ -287,8 +267,10 @@ installing Slackware. Everything will be done efficiently in a
 semi-graphical command line interface.
 
 - Select your keymap.
-- If you prefer to let Salix do everything including partition management, just select AUTOPARTITION. Note that this will delete everything on the hard drive.
-- Partition management with cfdisk - you can select the hard drive you would like to modify with the arrow keys and the space key.
+- If you prefer to let Salix do everything including partition management, just
+  select AUTOPARTITION. Note that this will delete everything on the hard drive.
+- Partition management with cfdisk - you can select the hard drive you would
+  like to modify with the arrow keys and the space key.
 - You can create a new partition by selecting a free disk space and
   choosing **New**. You will be asked to select "primary" partition /
   "extended" partition first and then set the size. Remember, you can have
@@ -332,9 +314,11 @@ semi-graphical command line interface.
 - The installer will start installing Salix. You will be asked first
   where the source files are. As you are installing from the CD, select
   "from the CD". Everything should be detected automatically.
-- You will be asked to choose an installation mode (**Full**, **Basic** or **Core**).
+- You will be asked to choose an installation mode (**Full**, **Basic** or
+  **Core**).
 - Installation of packages will start.
-- After the installation, LILO set up will start up. Unless you are **not** using LILO, choose the default options.
+- After the installation, LILO set up will start up. Unless you are **not**
+  using LILO, choose the default options.
 - You will be asked for some other questions regarding time-zone, user
   name and root password (superuser / administrator password). When all
   the basic questions are answered, the machine will restart itself.
@@ -345,22 +329,24 @@ semi-graphical command line interface.
 
 ++Installing from a Salix Installation USB++ 
 
-Installing Salix from a USB key is also possible (but consider
-installing from a Salix Live USB also). The most difficult part
+Installing Salix from a USB key is also possible. The most difficult part
 is to know the device name of your USB key. You may wish to issue the
 command ``fdisk -l`` as root to know which device is used for your USB
 key.
 
 - Format your USB to FAT32 - this will destroy all data
-- If the stick is already FAT32, you do not need to wipe existing data, but any old Salix-related directories should be removed
+- If the stick is already FAT32, you do not need to wipe existing data,
+  but any old Salix-related directories should be removed
 - Copy the contents of the ISO to the stick
-- Alternatively, copy the ISO directly to the stick using *dd*; this will wipe all existing data. Be careful to choose the right device!
+- Alternatively, copy the ISO directly to the stick using *dd*; this will
+  wipe all existing data. Be careful to choose the right device!
 - Reboot and boot from the stick; you may need to adjust your BIOS settings.
 - At Salix installation chose "Install from hard disk"
 - Enter the device of your USB stick: This probably is /dev/sdb1 if you
   only have one hard disk. Please note that a Few sticks are mounted by
   /dev/sdb instead of /dev/sdb1
-- The next dialog asks where the Salix packages are located on the USB stick. The correct answer here is /salix
+- The next dialog asks where the Salix packages are located on the USB stick.
+  The correct answer here is /salix
 - Installation should continue normally.
 
 
@@ -369,7 +355,8 @@ Alternatively, you can mount your USB key first.
 
 - After starting up the set up screen, select your keyboard type and exit the setup
 - Type ``mkdir /salix``
-- Type ``mount /dev/sdb /salix`` (sdb can be sdb1, depending on the assignment by your machine)
+- Type ``mount /dev/sdb /salix`` (sdb can be sdb1, depending on the assignment
+  by your machine)
 - Type setup to restart the installation process
 - When asked for the source file, select "from a local directory" and
   type in ``/salix/salix``
@@ -415,9 +402,11 @@ port of call should generally be the slackbuild repo (``Sourcery``,
 to reconfigure the package management tools to access any other
 repositories. Should you wish to install any such package, it is
 probably best to download it individually and install manually (for
-instance with ``pkgtool`` or [spkg #spkg]). Finally, you can [make your own package #roll-your-own].
+instance with ``pkgtool`` or [spkg #spkg]). Finally, you can
+[make your own package #roll-your-own].
 
-Note that ``twapake`` is a useful tool available from the repos to keep track of installed packages, from whatever source.
+Note that ``twapake`` is a useful tool available from the repos to keep
+track of installed packages, from whatever source.
 
 IMPORTANTSTART Reminder!
 You have to be the superuser in order to install an
@@ -441,7 +430,7 @@ packages by adding their names to the blacklist found in "Preferences"
 under "Edit".
 
 On first installing Salix, you should also do a general package upgrade
-to ensure your installed system is up to date with the repositories -- click on 
+to ensure your installed system is up to date with the repositories -- click on
 "Mark all upgrades", then "Execute".
 
 
@@ -624,20 +613,24 @@ latest, please refer to the following link for upgrading your Salix.
 
 +++Salix Package Installer+++
 
-//spi// is a command line tool that combines some basic functions of //slapt-get// and //slapt-src//. It
-installs from the Salix repositories if the package is available there, if not, it looks in src (http://slackbuild.org), and
-repeats the process recursively for any dependencies. This means all packages are automatically installed from the repositories 
-if they are available there, even if it is a dependency of a package that is not. For a summary of usage, see
+//spi// is a command line tool that combines some basic functions of
+//slapt-get// and //slapt-src//. It installs from the Salix repositories
+if the package is available there, if not, it looks in src (http://slackbuild.org),
+and repeats the process recursively for any dependencies. This means all packages
+are automatically installed from the repositories if they are available there,
+even if it is a dependency of a package that is not. For a summary of usage, see
 ```
 spi --help
 ```
-Note that the default action (if //spi// is called without specifying e.g. **--install**) is to search 
-for packages, reporting whether they are installed or where they are available.
+Note that the default action (if //spi// is called without specifying e.g.
+**--install**) is to search for packages, reporting whether they are installed
+or where they are available.
 
 +++reposetup+++
 
-//reposetup// is a command line tool to change the repository mirror, allowing you to choose a faster one
-or temporarily change mirrors if the one you normally use is down. Root privileges are needed.
+//reposetup// is a command line tool to change the repository mirror,
+allowing you to choose a faster one or temporarily change mirrors if
+the one you normally use is down. Root privileges are needed.
 
 
 ++Configuring Your Salix++
@@ -921,8 +914,8 @@ now we will start by learning how to move around directories.
 First, open up a terminal or move to a console: you can do the latter by
 pressing **Ctrl+Alt+F2**, for example. To get back to the
 graphical desktop, press **Alt+F4**, for example. F number
-keys are used to switch between consoles; if F4 or F7 doesn't do the trick, try 
-others. 
+keys are used to switch between consoles; if F4 or F7 doesn't do the trick, try
+others.
 
 However, the simplest option is to open a terminal within the GUI: there is probably
 an option to do so in the panel, or if not, in the menu.
@@ -940,7 +933,7 @@ this:
 [img/ls.png]
 
 Now to move around directories, we use the command ``cd``. If you just type in
-``cd`` and enter, it will take you to your home directory, but as we are already there, in 
+``cd`` and enter, it will take you to your home directory, but as we are already there, in
 this case, nothing will happen. ``cd`` must otherwise be followed
 either by a name of a directory which is within the directory you are in
 or by a full path to the directory you wish to move into. You can also
@@ -970,10 +963,11 @@ In fact, you do not have to type to the end. By pressing Tab after the
 first letter or two, you may complete the rest of the directory name
 automatically.
 
-The important thing to notice here is this is a //relative path//: unlike where the whole path 
-was specified above, starting from the root of the filesystem ``/``, if the path
-doesn't begin with ``/`` it is understood as starting from whatever the current directory
-is, in this case your user's home. So ``Music`` in this case means the same as ``/home/your_user_name/Music``.
+The important thing to notice here is this is a //relative path//: unlike
+where the whole path was specified above, starting from the root of the
+filesystem ``/``, if the path doesn't begin with ``/`` it is understood
+as starting from whatever the current directory is, in this case your
+user's home. So ``Music`` in this case means the same as ``/home/your_user_name/Music``.
 
 
 +++Creating a Folder - mkdir+++
@@ -1301,7 +1295,9 @@ command mode.
 
 If you find your keystrokes are still being interpreted as browser
 commands, which may happen as a result of the way certain sites are
-designed, try pressing enter twice instead of just once after typing ``f`` and selecting the number; failing this, try ``C-z``. The converse problem may arise if you have
+designed, try pressing enter twice instead of just once after typing
+``f`` and selecting the number; failing this, try ``C-z``. The
+converse problem may arise if you have
 inadvertently passed keystrokes to ``o`` or ``t``; they will appear at
 the very bottom right of the browser window. To ignore them and return
 to command mode, clearing the buffer, press ``ESC``.
@@ -1318,8 +1314,9 @@ though some of these may already be present.
 +++Window management+++
 
 Let's now see how Ratpoison deals with several open windows. ``C-t w``
-generates a list showing all of them. 
-Notice that each one is associated with a number: ``C-t`` followed by the number changes to that one.
+generates a list showing all of them.
+Notice that each one is associated with a number: ``C-t`` followed by
+the number changes to that one.
 ``C-t`` ``C-t`` returns to the previous window.
 This is very useful indeed for switching rapidly back and forth between
 two apps - for instance, an editor and a browser - and is an example of
@@ -1375,9 +1372,12 @@ Note: To see how to edit Alpine's configuration file to access mail from
 one popular provider via smtp, see the page in the
 [Salix wiki http://www.salixos.org/wiki/index.php/How_to_set_up_Alpine_with_a_Gmail_account].
 
-Wordgrinder and sc are wordprocessing and spreadsheet applications.  Flash is not included, but is available from the
+Wordgrinder and sc are wordprocessing and spreadsheet applications.
+Flash is not included, but is available from the
 repositories. Screen for managing multiple consoles works well with
-Ratpoison. Users are encouraged to tailor and expand the application selection according to taste; when it comes to text processing, for instance, //PyRoom// is
+Ratpoison. Users are encouraged to tailor and expand the application
+selection according to taste; when it comes to text processing, for
+instance, //PyRoom// is
 an elegant choice for full-screen, distraction-free writing, and it
 might be complemented by //Antiword// to convert proprietary file
 formats into plain text.
@@ -1516,9 +1516,9 @@ Ratpoison manual, these are referred to more precisely as
 "groups".) You might then put all browser windows in one
 workspace, for instance.
 
-``C-t w`` lists the windows in the current workspace; ``C-t W`` shows four more workspaces,
-which were set up in the last line of the configuration file. In a
-console, type ``rpws help`` .
+``C-t w`` lists the windows in the current workspace; ``C-t W`` shows
+four more workspaces, which were set up in the last line of the
+configuration file. In a console, type ``rpws help`` .
 
 
 [img/rpws.png]

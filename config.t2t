@@ -1,6 +1,9 @@
 
 %!encoding: UTF-8
 
+% Uncomment the following line to enable the live sections
+%%!preproc: "^%live" ""
+
 %!preproc(tex): "^NOTESTART (.*)" "NOTESTART [img-css/note.png] \1"
 %!postproc(tex): "^NOTESTART (.*)" "\\vspace{1em}\\colorbox{green}{\\hbox to 0.9\\textwidth{\1\\hfill}}\n\n\\emph{"
 %!postproc(tex): "^NOTEEND" "}\\vspace{1em}"
@@ -35,7 +38,6 @@
 %!postproc(tex): "\\section{" "\\chapter{"
 %!postproc(tex): "\\subsection{" "\\section{"
 %!postproc(tex): "\\subsubsection{" "\\subsection{"
-
 
 %!postproc(html): '<BODY BGCOLOR="white" TEXT="black">' '<BODY>'
 

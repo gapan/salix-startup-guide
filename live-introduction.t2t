@@ -1,0 +1,40 @@
+
++++What is a Live CD / USB?+++
+
+A Live CD is a CD-ROM holding a self-contained bootable and fully
+functional operating system. It loads into memory using only the data
+provided on the CD. It will not modify any operating system or data
+present on its host computer and will leave no trace after shutdown.
+
+A Live USB flash drive is similar to a Live CD, but it can have the
+added functionality of automatically and transparently writing changes
+back to its bootable medium.
+
+Salix Live is the Live CD version of [Salix http://www.salixos.org/].
+You can therefore safely use it to 'test drive' Salix without having to
+install anything on your computer. You will thus be able to determine
+whether and to what extent Salix is compatible with your particular
+hardware configuration and if it suits your personal taste.
+
+If you are fully satisfied with your Live experience of Salix, you can
+then proceed to install it with the help of the Salix Live Installer.
+
+Salix Live will also come in handy as a mobile solution if you wish to
+carry Salix everywhere you go, or if you need to perform some basic
+rescue operation such as fixing an ailing LILO bootloader with Lilo
+Setup, configuring some partitions with Gparted, etc.
+
+
+
++++Creating a Salix Live USB Key+++
+
+- Open the .iso file using a software archiver (file-roller, xarchiver, 7-zip, iso-master, …).
+- Extract all files and folders (boot, packages and Salix Live) to your USB root directory.
+- Go to the ``boot`` directory on the USB key.
+- If you're running on Unix (Linux, BSD, Mac OS X), just run the file
+  called ``install-on-USB.sh`` (if it refuses to execute, try
+  ``sh install-on-USB.sh``). If you're on Windows, just run the file
+  called ``install-on-USB.cmd`` instead.
+-
+
+
