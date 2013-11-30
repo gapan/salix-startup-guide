@@ -58,7 +58,6 @@ also applies it to the viewpoint of the end user.
 - High quality package repositories with dependency support
 - Simple & fully localised system administration tools
 - Salix artwork
-- Live CD / USB option
 - Supports 32-bit and 64-bit architectures
 - Comes with a complete development environment
 
@@ -141,10 +140,10 @@ of installation errors later on.
 NOTEEND
 
 
-%!include: live-introduction.t2t
+%live%!include: live-introduction.t2t
 
 
-+++Booting from a Salix Installation CD/DVD/USB Key+++
++++Booting from a Salix Installation medium+++
 
 Your computer must be set to boot on the optical drive / USB port first
 before defaulting to the internal hard disk drive.
@@ -154,7 +153,7 @@ key or the F2 key (or some other key combinations depending on your
 machine). Once in the BIOS, find the //boot menu// or similar and
 set the order of the boot devices properly, with your optical drive/USB
 port in the first position. Save your changes and reboot your computer.
-Insert the Salix (Live)CD/DVD or USB key, and start up your computer.
+Insert the Salix CD/DVD or USB key, and start up your computer.
 
 
 
@@ -330,8 +329,7 @@ semi-graphical command line interface.
 
 ++Installing from a Salix Installation USB++ 
 
-Installing Salix from a USB key is also possible (but consider
-installing from a Salix Live USB also). The most difficult part
+Installing Salix from a USB key is also possible. The most difficult part
 is to know the device name of your USB key. You may wish to issue the
 command ``fdisk -l`` as root to know which device is used for your USB
 key.
