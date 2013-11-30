@@ -227,6 +227,7 @@ space, or an existing partition you do not use, you can create or
 rewrite a new partition table using
 [cfdisk http://en.wikipedia.org/wiki/Cfdisk]
 (which comes with the Salix installation CD). However, less experienced users may prefer the safeguards and graphical interface of //Gparted//.
+%see http://www.absolutelinux.org/installing/cfdisk.shtml 
 
 Both applications are simple to use and require no further explanation
 on how to use them, except for a small comment about "partition types".
