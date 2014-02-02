@@ -254,8 +254,8 @@ difference between a logical and a primary partition except for that
   unlikely to work.
 
 
-Each partition can be formatted into one of several
-[file systems http://en.wikipedia.org/wiki/List_of_file_systems].
+Each partition can be formatted into one of several file systems,
+including xfs, ext4, ext3, ext2, btrfs, jfs and reiserfs.
 Unless you have a
 particular favourite for a reason, we recommend you format your
 partitions with the xfs file system.
