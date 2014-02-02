@@ -89,11 +89,37 @@ to the later section
 Salix offers three software installation options: **Full**, **Basic**
 and **Core**, to meet your demands!
 
+Performing a **Full** mode installation is the recommended way of
+installing Salix for most users. It includes a fully configured desktop
+environment with a complete selection of applications to fit the needs
+of most people, including office related software, multimedia
+applications, internet applications, all the Salix system configuration
+tools and more. Don't let the word "Full" fool you, this is in no way a
+bloated installation, since it adheres to the "one application per
+task" rational. We feel that the collection of software that accompanies
+each respective Desktop Environment is the best and that it will cover
+most user's needs, but of course any user
+can add more software through the Salix package management tools to fit
+his needs.
 
-|| Installation Type:  | Full  | Basic                   | Core |
-| Target Users:  | All   | Advanced users who would like to add their own choice of applications   | Advanced users who would like to run a console system, server maintainers  |
-| Features:      | Graphical environment, full software installation  | Graphical environment  | No graphical environment, minimal number of software essential for a console system  |
-| Examples of Available Applications:  | Libreoffice, Exaile, Midori, Pidgin  | Midori, Gslapt  | vim, slapt-get  |
+A **Basic** mode installation is mostly targetted at advanced users. It
+only includes the respective Desktop Environment of each edition, and a
+very minimal selection of software on top. The Salix system
+configuration tools are all there and you also get a web browser, but
+that is mostly it. Wi-fi connection tools or drivers are not present and
+only wired network connections are supported out of the box. The user is
+expected to know how to install extra software and tailor the
+installation to his/her needs.
+
+A **Core** mode installation does not provide any graphical environment.
+It only installs a command line system, including the Salix command line
+system and package management tools, but not much more than that. It is
+intended for expert users who know how to use command line tools to
+administer their systems. It is most commonly used to set up several
+kinds of servers like web servers, e-mail servers etc. The servers that
+the Salix websites are hosted on have Salix installed using a **Core**
+mode installation indeed. Expert desktop users can of course use this
+mode to install X and any graphical environment on top of it.
 
 
 +++Salix Repositories & Package Management+++
