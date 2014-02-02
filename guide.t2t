@@ -263,8 +263,9 @@ partitions with the xfs file system.
 
 ++Installing from a Salix Installation CD++
 
-Installing Salix from a Salix Installation CD is very similar to
-installing Slackware. Everything will be done efficiently in a
+Installing Salix from a Salix Installation CD is somewhat similar to
+installing Slackware, but the entire process is considerably shorter and
+less complicated. Everything will be done efficiently in a
 semi-graphical command line interface.
 
 - Select your keymap.
