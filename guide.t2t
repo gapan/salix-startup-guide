@@ -238,12 +238,12 @@ difference between a logical and a primary partition except for that
 - It is also highly recommended to have one partition to hold your /home
   directory, where you can store all your personal data such as documents,
   photos, customised settings for the desktop environment etc.
-- It is optional to have one partition to hold the /usr directory, where
-  application files are stored (similar to the "Program Files" directory
-  in Windows or the "/Apps" in Mac OS X).
 - Optionally you can create one partition to hold the /var directory,
   where system log files are stored. But unless you are running a
   server machine, this is probably unnecessary.
+  Many people also choose to create a partition to hold their /usr
+  directory, where application files are stored (similar to the "Program
+  Files" directory in Windows or "/Apps" in MacOSX.
   An advantage of having more than one partition to hold separate
   directories is that you can reformat one partition without affecting
   others. For example, you can re-install Salix on your machine (and this
