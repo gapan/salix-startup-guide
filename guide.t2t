@@ -406,7 +406,7 @@ based) could be said to consist of its repositories, where the software
 available for that distribution is kept. These packages have been
 compiled with the kernel and build tools provided by the distribution
 and tested to ensure they work together. Salix, like most distros (but
-not Salix) provides full dependency management, which means that any
+not Slackware) provides full dependency management, which means that any
 items the package needs to run are installed too -- and also that
 they are guaranteed to be available.
 
@@ -416,6 +416,14 @@ your system before being installed. Salix provides a graphical tool,
 Sourcery, to manage this; its command-line equivalent is slapt-src. Both
 do have limited dependency management, but the build is not guaranteed
 to be successful and some manual tinkering may be needed.
+
+Unlike the software provided in the repositories, these scripts are not  
+maintained by either Salix or Slackware, but by individual users, and as 
+such are not the responsibility of either distribution, although help may
+be found on the forum. If the build fails, the last ten lines or so of the 
+output usually provide an indication of the reason. Most commonly, this is
+a missing dependency, which may be a build dependency (needed to compile
+the package, but not to run it) such as ``cmake``.
 
 You can also create and install your own packages, for which Salix
 provides a suite of console scripts, especially ``slkbuild``; for
@@ -433,8 +441,8 @@ probably best to download it individually and install manually (for
 instance with ``pkgtool`` or [spkg #spkg]). Finally, you can
 [make your own package #roll-your-own].
 
-Note that ``twapake`` is a useful tool available from the repos to keep
-track of installed packages, from whatever source.
+Note that ``twapake`` is a useful tool available from the repositories to 
+keep track of installed packages, from whatever source.
 
 IMPORTANTSTART Reminder!
 You have to be the superuser in order to install an
@@ -463,6 +471,32 @@ to ensure your installed system is up to date with the repositories -- click on
 
 
 [img/gslapt.png]
+
+
++++Sourcery+++
+
+Sourcery is a graphical frontend to [slapt-src #slapt-src], a
+utility to build and install packages from source using SlackBuilds
+or SLKBUILDs. Before use, you should first click on the
+**Update** button on the tool bar to ensure that the latest updates from
+the software repositories are known to Sourcery. The search field is
+there for you to search for a particular package, and installations,
+uninstallations or reinstallations of selected packages are done
+by left or right clicking on their status boxes.
+
+Installation/uninstallation/reinstallation will take place once you
+click on the **Execute** button.
+
+Please be sure to look at the README file for the application, and any other 
+information, before installing. In Sourcery, these files can be accessed
+by clicking Get Information before selecting to install; you can also right-click
+on the tick box after you've selected it for installation. The readme file, in
+particular, often has information about dependencies or configuration steps
+required to make the build work; for example, privoxy needs a 'privoxy'
+group to be created of which your user is a member, and without this not 
+only will the application not work, the build will fail.
+
+[img/sourcery.png]
 
 
 +++slapt-get+++[slapt-get]
@@ -498,23 +532,6 @@ slapt-get --help
 
 Here is a little exercise for you. Try installing ``w3m`` which is a
 terminal based web browser, by using slapt-get.
-
-
-+++Sourcery+++
-
-Sourcery is a graphical frontend to [slapt-src #slapt-src], a
-utility to build and install packages from source using SlackBuilds
-or SLKBUILDs. Before use, you should first click on the
-**Update** button on the tool bar to ensure that the latest updates from
-the software repositories are known to Sourcery. The search field is
-there for you to search for a particular package, and installations,
-uninstallations or reinstallations of selected packages are done
-with right clicks on their status boxes.
-
-Installation/uninstallation/reinstallation will take place once you
-click on the **Execute** button.
-
-[img/sourcery.png]
 
 
 +++slapt-src+++[slapt-src]
