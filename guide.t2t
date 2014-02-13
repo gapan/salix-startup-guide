@@ -227,9 +227,8 @@ use this application to create/re-organise your partition table.
 
 Alternatively, if you have an unformatted partition, unallocated disk
 space, or an existing partition you do not use, you can create or
-rewrite a new partition table using
-[cfdisk http://en.wikipedia.org/wiki/Cfdisk]
-(which comes with the Salix installation CD). However, less experienced
+rewrite a new partition table using [cfdisk #cfdisk]
+(included within the Salix installation process). However, less experienced
 users may prefer the safeguards and graphical interface of //Gparted//.
 
 A hard drive space can be divided into no more than four "primary"
@@ -290,9 +289,9 @@ semi-graphical command line interface.
 - Select your keymap.
 - If you prefer to let Salix do everything including partition management, just
   select AUTOPARTITION. Note that this will delete everything on the hard drive.
-- Otherwise, the installer will run cfdisk to allow you to set up your desired
-  partitions. If they are already as you wish, type 'Q' to quit. See [below for 
-  a detailed guide to using cfdisk #cfdisk]
+- Otherwise, the installer will run //cfdisk// to allow you to set up your desired
+  partitions. If they are already as you wish, type 'Q' to quit. See below for 
+  a detailed guide to using [cfdisk #cfdisk]
 - Your swap partition, if any, will be automatically detected. Say ``yes`` if the
   detected partition corresponds to that.
 - You will then be asked to specify the partition for the root ``/``
@@ -361,10 +360,10 @@ Alternatively, you can mount your USB key first.
 
 
 
-++Partition management with cfdisk++ [cfdisk]
+++Partition management with cfdisk++[cfdisk]
 
 These instructions assume that you will create a single partition to hold Salix,
-plus a swap partition, as an illustration; however, cfdisk can create any
+plus a swap partition, as an illustration; however, //cfdisk// can create any
 partitioning scheme required. Note that you can also delete partitions 
 (which will irrevocably destroy their contents). New partitions can be created in free 
 space. For the purposes of this example, it is assumed the entire disk is free. Swap, if
@@ -429,7 +428,7 @@ cfdisk /dev/sda
 ```			
 IMPORTANTSTART However, please note that a disk can only be partitioned when no partitions
 on it are mounted, in practice normally from a Live CD or USB, unless your machine has two
-hard disks. 
+hard disks. For this reason, it may be convenient to use cfdisk during the installation.
 IMPORTANTEND
 
 
@@ -438,7 +437,7 @@ IMPORTANTEND
 
 - The user interface
 
-After you have started cfdisk you'll get an interface where the current partition 
+After you have started //cfdisk// you'll get an interface where the current partition 
 table is listed with the names and some data about each partition, and some command 
 buttons on the bottom of the screen. To change between partitions, use the up and down 
 arrow keys. To change between commands, use the left and right arrow keys.
@@ -458,15 +457,15 @@ in MB, return to the main screen with the Esc key, and select MB with the Units 
 
 - Set the type of a partition
 
-To set the type of a partition, for bootable PReP, Linux swap or Linux ext2, highlight 
-the actual partition, and select the Type command. You'll get a list of different types. 
+To set the type of a partition, highlight 
+the desired partition, and select the Type command. You'll get a list of different types. 
 Press space, and you'll get even more. Find what type you need, and enter the number at 
-the prompt.
+the prompt. Linux is 83, Linux swap is 82.
 
 - Make a partition bootable
 
 To be able to boot from a primary partition, you need to make it bootable. Highlight 
-the actual partition and select the Bootable command.
+the partition and select the Bootable command.
 
 - Write the result to disk and quit
 
@@ -484,10 +483,9 @@ To exit the program, select the Quit command.
 
 ++Package Management++ 
 
-Installing applications (which roughly equates to "installing packages"
-as we say in Linux) is a fundamental part of the Linux experience.
-A Linux distribution, such as Salix (or Slackware, on which it is
-based) could be said to consist of its repositories, where the software
+Installing applications (which roughly equates to "installing packages") is a 
+fundamental part of the Linux experience. A Linux distribution, such as Salix 
+(or Slackware, on which it is based) could be said to consist of its repositories, where the software
 available for that distribution is kept. These packages have been
 compiled with the kernel and build tools provided by the distribution
 and tested to ensure they work together. Salix, like most distros (but
@@ -508,7 +506,7 @@ such are not the responsibility of either distribution, although help may
 be found on the forum. If the build fails, the last ten lines or so of the 
 output usually provide an indication of the reason. Most commonly, this is
 a missing dependency, which may be a build dependency (needed to compile
-the package, but not to run it) such as ``cmake``.
+the package, but not to run it) such as //cmake//.
 
 You can also create and install your own packages, for which Salix
 provides a suite of console scripts, especially ``slkbuild``; for
@@ -523,7 +521,7 @@ port of call should generally be the slackbuild repo (//Sourcery//,
 to reconfigure the package management tools to access any other
 repositories. Should you wish to install any such package, it is
 probably best to download it individually and install manually (for
-instance with //pkgtool// or [//spkg// #spkg]). Finally, you can
+instance with //pkgtool// or [spkg #spkg]). Finally, you can
 [make your own package #roll-your-own].
 
 Note that ``twapake`` is a useful tool available from the repositories to 
@@ -535,7 +533,7 @@ application.
 IMPORTANTEND
 
 
-+++[Gslapt #Gslapt]+++
++++Gslapt+++[Gslapt]
 
 ``Gslapt`` is the GUI version of [``slapt-get`` #slapt-get]. It allows one to
 search Slackware/Salix mirrors for packages.
@@ -560,11 +558,11 @@ to ensure your installed system is up to date with the repositories -- click on
 
 +++Sourcery+++
 
-``Sourcery`` is a graphical frontend to [slapt-src #slapt-src], a
+//Sourcery// is a graphical frontend to [slapt-src #slapt-src], a
 utility to build and install packages from source using SlackBuilds
 or SLKBUILDs. Before use, you should first click on the
 **Update** button on the tool bar to ensure that the latest updates from
-the software repositories are known to ``Sourcery``. The search field is
+the software repositories are known to //Sourcery//. The search field is
 there for you to search for a particular package, and installations,
 uninstallations or reinstallations of selected packages are done
 by left or right clicking on their status boxes.
@@ -606,9 +604,9 @@ spi --help
 Note that the default action (if //spi// is called without specifying e.g.
 **--install**) is to search for packages, reporting whether they are installed
 or where they are available. ``spi -u`` will update package data for both //slapt-get// 
-and //slapt-src//, and ``spi -U`` installs any upgrades available. ``spi -i [package]``
+and //slapt-src//, and ``spi -U`` installs any upgrades available. ``spi -i foo``
 installs a specific package and its dependencies, always preferring packages 
-in the repositories. ``spi -s -i [package]`` simulates installation, and ``spi --show``
+in the repositories. ``spi -s -i foo`` simulates installation, and ``spi --show``
 gives detailed information about a particular package.
 
 NOTESTART Root privileges are required for actual installation and updating, but 
@@ -711,7 +709,7 @@ spkg -d [software name]
 e.g. ``spkg -d skype``; and if another version of the package is already installed
 use ``spkg -u`` to replace it. If this is a repository package, you will need to
 blacklist it in /etc/slapt-get/slapt-getrc to prevent it being "downgraded" when 
-you next carry out a general package upgrade. (See above for how to do this in [Gslapt]
+you next carry out a general package upgrade. (See above for how to do this in [Gslapt #Gslapt]
 
 
 +++Making a Package from a Source File with SLKBUILD+++[roll-your-own]
@@ -742,7 +740,7 @@ or
 should also help you with some configuration options.
 
 Although you should manage to install the software after the final
-command, it is essentially //untracked// yypand neither Gslapt nor slapt-get
+command, it is essentially **untracked**, and neither Gslapt nor slapt-get
 can see that the software is installed. A better way is to create a
 Salix package using SLKBUILD, which is a build script you can prepare
 before issuing
@@ -868,10 +866,10 @@ For more information on what is actually installed, please see
 [here http://docs.salixos.org/wiki/What_gets_installed_with_the_%22Install_multimedia_codecs%22_application%3F].
 
 
-++Salix Tools++[salixtools]
+++Salix Tools++
 
 
-+++What are the Salix Tools?+++
++++What are the Salix Tools?+++[salixtools]
 
 
 [img/salixtools-gtk.png]
