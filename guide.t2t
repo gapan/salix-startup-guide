@@ -102,7 +102,7 @@ most user's needs, but of course any user
 can add more software through the Salix package management tools to fit
 his needs.
 
-A **Basic** mode installation is mostly targetted at advanced users. It
+A **Basic** mode installation is mostly targeted at advanced users. It
 only includes the respective Desktop Environment of each edition, and a
 very minimal selection of software on top. The Salix system
 configuration tools are all there and you also get a web browser, but
@@ -231,10 +231,7 @@ rewrite a new partition table using
 [cfdisk http://en.wikipedia.org/wiki/Cfdisk]
 (which comes with the Salix installation CD). However, less experienced
 users may prefer the safeguards and graphical interface of //Gparted//.
-%http://www.absolutelinux.org/installing/cfdisk.shtml
 
-Both applications are simple to use and require no further explanation
-on how to use them, except for a small comment about "partition types".
 A hard drive space can be divided into no more than four "primary"
 partitions, which can be problematic if you are hosting more than one
 operating system on the same hard drive. A hard drive can, however, be
@@ -242,7 +239,7 @@ divided into three "primary" partitions and one "extended" partition.
 The extended partition can then be subdivided into "logical" partitions
 and hence overcome the limitation set by the "primary partition" (i.e.
 no more than four partitions). In practice, there is no
-difference between a logical and a primary partition except for that
+difference between a logical and a primary partition except that
 "Windows" OS cannot be installed on a logical partition.
 
 
@@ -261,15 +258,13 @@ difference between a logical and a primary partition except for that
   normally recommended to have 1.5-2 times the size of your RAM, but for a
   modern desktop computer with more than a couple Gb of RAM, swap may not
   be necessary.
-- It is also highly recommended to have one partition to hold your /home
+- Many users like to have a separate partition to hold the /home
   directory, where you can store all your personal data such as documents,
-  photos, customised settings for the desktop environment etc.
+  photos, customised settings for the desktop environment etc; but this is
+  by no means necessary.
 - Optionally you can create one partition to hold the /var directory,
   where system log files are stored. But unless you are running a
   server machine, this is probably unnecessary.
-  Many people also choose to create a partition to hold their /usr
-  directory, where application files are stored (similar to the "Program
-  Files" directory in Windows or "/Apps" in MacOSX.
   An advantage of having more than one partition to hold separate
   directories is that you can reformat one partition without affecting
   others. For example, you can re-install Salix on your machine (and this
@@ -281,10 +276,8 @@ difference between a logical and a primary partition except for that
 
 
 Each partition can be formatted into one of several file systems,
-including xfs, ext4, ext3, ext2, btrfs, jfs and reiserfs.
-Unless you have a
-particular favourite for a reason, we recommend you format your
-partitions with the xfs file system.
+including xfs, ext4, ext3, ext2, btrfs, jfs and reiserfs. The default
+is xfs.
 
 
 ++Installing from a Salix Installation CD++
@@ -297,36 +290,10 @@ semi-graphical command line interface.
 - Select your keymap.
 - If you prefer to let Salix do everything including partition management, just
   select AUTOPARTITION. Note that this will delete everything on the hard drive.
-- Partition management with cfdisk - you can select the hard drive you would
-  like to modify with the arrow keys and the space key.
-- You can create a new partition by selecting a free disk space and
-  choosing **New**. You will be asked to select "primary" partition /
-  "extended" partition first and then set the size. Remember, you can have
-  up to four primary partitions or three primary partition with one
-  extended partition for more partitions. Let's say we want to create one
-  swap partition and partitions for the ``/`` and ``/home`` directories.
-  To create a swap partition, for example, select "primary" partition. Hit
-  enter (for the default starting cylinder), and then type in "+1024M" for
-  1024 Mb. Choose Type to specify the file system type. Enter **82**
-  (Linux swap).
-  Let's assume that you have already used up the first three primary
-  partitions, the last one should be made into an "extended" partition as
-  you would still like to create the partitions for ``/`` and for
-  ``/home``.
-  To create an extended partition, select "extended" partition. Hit enter
-  and again hit enter for the default value. This will create an extended
-  partition out of the remaining disk space.
-  Now select Free disk space from the extended partition, and create
-  **New**. Create a "logical" partition as you did for the primary
-  partition. Set the size to "+10240M" for roughly 10 Gb. This will be
-  your partition for the root directory (``/``). Select **Type**, and type
-  "**83**" (Linux partition).
-  Create again a new partition and this time, accept all the default
-  selections. The remaing disk space will be put in this partition. This
-  will be your partition for the ``/home`` directory. Select **Type**, and
-  type "**83**".
-  Select **Write**, and then **Quit** to exit the partition management.
-- Your swap partition will be automatically detected. Say ``yes`` if the
+- Otherwise, the installer will run cfdisk to allow you to set up your desired
+  partitions. If they are already as you wish, type 'Q' to quit. See [below for 
+  a detailed guide to using cfdisk #cfdisk]
+- Your swap partition, if any, will be automatically detected. Say ``yes`` if the
   detected partition corresponds to that.
 - You will then be asked to specify the partition for the root ``/``
   directory. Select the partition you have created for the ``/``, and
@@ -346,7 +313,9 @@ semi-graphical command line interface.
   **Core**).
 - Installation of packages will start.
 - After the installation, LILO set up will start up. Unless you are **not**
-  using LILO, choose the default options.
+  using LILO, choose the default options. You can refine the bootloader
+  configuration (for example, in a multi-boot scenario) after booting into
+  your new Salix installation.
 - You will be asked for some other questions regarding time-zone, user
   name and root password (superuser / administrator password). When all
   the basic questions are answered, the machine will restart itself.
@@ -391,6 +360,122 @@ Alternatively, you can mount your USB key first.
 - Installation should continue normally
 
 
+
+++Partition management with cfdisk++ [cfdisk]
+
+These instructions assume that you will create a single partition to hold Salix,
+plus a swap partition, as an illustration; however, cfdisk can create any
+partitioning scheme required. Note that you can also delete partitions 
+(which will irrevocably destroy their contents). New partitions can be created in free 
+space. For the purposes of this example, it is assumed the entire disk is free. Swap, if
+you need it, should normally be twice your RAM, so if that is 250 MB, swap should be 500 MB. If
+RAM is bigger than 1 GB, swap is probably not needed.
+
+You can move between the commands listed at the bottom of the screen with the arrow keys, or
+select the command by typing the first letter, such as 'Q' to **Quit**.
+
+- Make a **New** partition, taking up all but 1GB of the disk (this will be used for 
+swap space). Note that you can choose whether to create a Primary or Extended partition; the
+former is what is needed in this example, but an extended partition will allow for
+the creation of logical partitions within it, when a more complex setup is needed.
+
+- Make this partition **Bootable** (with 'B'). Use the up and down arrow keys to select a 
+particular partition, if there is more than one. The default partition type is 'Linux', so 
+that partition is done.
+
+- Next, make another new partition, taking up the rest of the drive.
+
+- Change its **Type** to 82, Linux Swap.
+
+- When you are happy with it, **Write** the partition table to disk.
+
+- **Quit** to continue with Salix installation.
+
+[img/cfdisk_bp.png]
+
+
++++ cfdisk usage details +++
+
+
+++++Hard disk names++++
+
+SCSI harddisks are named with sdx, where x is a hardisk letter. The disk with the 
+lowest SCSI ID on the first controller will become sda, the next lower sdb, and so on.
+
+If you have IDE harddisks, they are called hda, hdb, hdc, and so on instead, where 
+hda is the master disk on the first controller, hdb is the slave disk on the first 
+controller, hdc is the master disk on the second controller, and so on.
+
+++++Harddisk partitions++++
+
+GNU/Linux systems often uses a partition scheme inherited from MS-DOS. With this, 
+a harddisk can have up to four primary partitions. If you want more, you have to make 
+one of these an extended partition where you can make several logical partitions. The 
+partitions are named with the disk they belong to, and a number. The first primary 
+partition on the first SCSI disk is therefore sda1, the second primary partition is 
+sda2, and so on. The first and second logical partition on an extended partition on 
+the first SCSI disk is sda5 and sda6, and so on.
+
+++++Starting cfdisk++++
+
+To use //cfdisk// other than in the insataller, start it from the command line with the command
+```
+cfdisk /dev/sdx
+```
+where x is the SCSI hardisk letter, like a, b, c, d, etc. So if I want to partition 
+the first harddisk on the SCSI controller, I'll enter the command
+```
+cfdisk /dev/sda
+```			
+IMPORTANTSTART However, please note that a disk can only be partitioned when no partitions
+on it are mounted, in practice normally from a Live CD or USB, unless your machine has two
+hard disks. 
+IMPORTANTEND
+
+
+
+++++Using cfdisk++++
+
+- The user interface
+
+After you have started cfdisk you'll get an interface where the current partition 
+table is listed with the names and some data about each partition, and some command 
+buttons on the bottom of the screen. To change between partitions, use the up and down 
+arrow keys. To change between commands, use the left and right arrow keys.
+
+- Deleting a partition
+
+To delete an existing partition, highlight it with the up and down keys, select the 
+Delete command with the left and right arrow keys, and press Enter; or just press 'D'.
+
+- Making a new partition
+
+To make a new partition, select the New command with the left and right arrow keys, and 
+press enter. You'll get the choice between a primary and a logical partition. If you 
+want a logical partition, the program will automatically make an extended partition for 
+you. Then you must choose the size of the partition (in MB). If you can't enter a value 
+in MB, return to the main screen with the Esc key, and select MB with the Units command.
+
+- Set the type of a partition
+
+To set the type of a partition, for bootable PReP, Linux swap or Linux ext2, highlight 
+the actual partition, and select the Type command. You'll get a list of different types. 
+Press space, and you'll get even more. Find what type you need, and enter the number at 
+the prompt.
+
+- Make a partition bootable
+
+To be able to boot from a primary partition, you need to make it bootable. Highlight 
+the actual partition and select the Bootable command.
+
+- Write the result to disk and quit
+
+When you are content with the layout of the disk, select the Write command. The partition 
+table will be written to disk. Remember that this will destroy all data on partitions you 
+have deleted or changed. You should therefore be very sure that you want to do this before 
+actually pressing the Return key.
+
+To exit the program, select the Quit command.
 
 
 +Your Salix+
