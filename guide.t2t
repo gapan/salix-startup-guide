@@ -69,6 +69,7 @@ also applies it to the viewpoint of the end user.
 +++Salix Editions+++
 
 
+%! What to do about this ...
 **Salix** comes in three different editions - **Xfce**,
 **KDE**, and **Ratpoison**
 
@@ -874,6 +875,8 @@ For more information on what is actually installed, please see
 +++What are the Salix Tools?+++[salixtools]
 
 
+% ### = check image
+% ### this image probably needs updating
 [img/salixtools-gtk.png]
 
 
@@ -954,9 +957,11 @@ To execute this utility in runlevel 3, simply type keyboardsetup.
 
 
 +++Bootsetup+++
+% Decide what to do about Lilosetup versus Bootsetup
 
 Bootsetup will install a new LILO or GRUB bootloader on your computer.
 
+% ### change this image when bootsetup's ready
 [img/lilosetup.png]
 
 A bootloader is required to load the main operating system of a computer
@@ -1002,6 +1007,7 @@ To execute it in runlevel 3, simply type clocksetup.
 
 +++Users Profile+++
 
+% ### background is wrong # but never mind
 [img/gtkusersetup.png]
 
 In Unix/Linux, all users and groups of users are given certain
