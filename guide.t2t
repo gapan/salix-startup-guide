@@ -156,15 +156,16 @@ The latest Salix releases are freely and easily available
 as torrents ISO image files from the Salix
 [download page http://www.salixos.org/download.html].
 
-NOTESTART Please use the torrents if it is convenient for you to do so ...
-and please seed if you can. These torrents are hosted by Salix's torrent server,
+NOTESTART Please use the torrents...
+if it is convenient for you to do so and please seed if you can.
+These torrents are hosted by Salix's torrent server,
 made possible by generous donations from users.
 NOTEEND
 
 An ISO image is an archive file of an optical disc. It can be easily
 rendered or burned to a DVD or CD by using media authoring or disc
 burning software. The resulting CD must not contain the .iso file; if it
-does, you have made a mistake in the process. Alternatively, a USB stick may 
+does, you have made a mistake in the process. Alternatively, a USB stick may
 be used.
 % Link to below?
 
@@ -450,7 +451,9 @@ the first harddisk on the SCSI controller, I'll enter the command
 ```
 cfdisk /dev/sda
 ```			
-IMPORTANTSTART However, please note that a disk can only be partitioned when no partitions
+
+IMPORTANTSTART Mounted partitions
+However, please note that a disk can only be partitioned when no partitions
 on it are mounted, in practice normally from a Live CD or USB, unless your machine has two
 hard disks. For this reason, it may be convenient to use cfdisk during the installation.
 IMPORTANTEND
@@ -594,13 +597,13 @@ by left or right clicking on their status boxes.
 Installation/uninstallation/reinstallation will take place once you
 click on the **Execute** button.
 
-Please be sure to look at the README file for the application, and any other 
+Please be sure to look at the README file for the application, and any other
 information, before installing. In //Sourcery//, these files can be accessed
 by clicking **Get Information** before selecting to install; you can also right-click
 on the tick box after you've selected it for installation. The readme file, in
 particular, often has information about dependencies or configuration steps
 required to make the build work; for example, //privoxy// needs a 'privoxy'
-group to be created of which your user is a member, and without this not 
+group to be created of which your user is a member, and without this not
 only will the application not work, the build will fail.
 
 [img/sourcery.png]
@@ -609,8 +612,8 @@ only will the application not work, the build will fail.
 ++Package management from the command line++
 
 //slapt-get// and //slapt-src// are the command-line tools for which //Gslapt// and //Sourcery//
-provide a GUI. This section describes their use from the command line, where there is also 
-a tool that combines their most common functions, //spi//. //spkg// is a tool to install 
+provide a GUI. This section describes their use from the command line, where there is also
+a tool that combines their most common functions, //spi//. //spkg// is a tool to install
 packages manually, while still making them known to the package management system.
 
 
@@ -627,17 +630,20 @@ spi --help
 ```
 Note that the default action (if //spi// is called without specifying e.g.
 **--install**) is to search for packages, reporting whether they are installed
-or where they are available. ``spi -u`` will update package data for both //slapt-get// 
+or where they are available. ``spi -u`` will update package data for both //slapt-get//
 and //slapt-src//, and ``spi -U`` installs any upgrades available. ``spi -i foo``
-installs a specific package and its dependencies, always preferring packages 
+installs a specific package and its dependencies, always preferring packages
 in the repositories. ``spi --simulate -i foo`` simulates installation, and ``spi --show``
 gives detailed information about a particular package.
 
-NOTESTART Root privileges are required for actual installation and updating, but 
-not commands that just provide information. While //spi// brings basic package 
-management together in one all-purpose tool, //slapt-get// and //slapt-src// 
-provide a number of other powerful features.
+NOTESTART Superuser privileges
+Superuser privileges are required for actual installation and updating
+of packages but not actions that just provide information.
 NOTEEND
+
+While //spi// brings basic package
+management together in one all-purpose tool, //slapt-get// and //slapt-src//
+provide a number of other powerful features.
 
 
 +++slapt-get+++[slapt-get]
