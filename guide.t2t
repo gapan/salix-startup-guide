@@ -33,7 +33,7 @@ on this start up guide, including translators.
 Many thanks especially to //**jrd**//, //**akuna**//, and
 //**maximus**// for their contributions in writing and thorough
 proof-reading; and above all, to //**tsuren**//, the original editor of the Guide.
-The section on partitioning with cfdisk is adapted from the guide for
+The section on partitioning with //cfdisk// is adapted from the guide for
 Absolute Linux, with thanks to Paul Sherman.
 
 
@@ -79,6 +79,8 @@ The choice is yours: with a //streamlined// Xfce desktop environment,
 software, or "say good-bye to the rodent" Ratpoison, all with the
 Salix look and feel!
 
+% ###
+
 [img/screenshots_rotated.jpg]
 
 
@@ -100,7 +102,7 @@ applications, internet applications, all the Salix system configuration
 tools and more. Don't let the word "Full" fool you, this is in no way a
 bloated installation, since it adheres to the "one application per
 task" rationale. We feel that the collection of software that accompanies
-each respective Desktop Environment is the best and that it will cover
+each respective Desktop Environment will cover
 most user's needs, but of course any user
 can add more software through the Salix package management tools to fit
 his needs.
@@ -151,13 +153,20 @@ NOTEEND
 +++Downloading Salix+++
 
 The latest Salix releases are freely and easily available
-as ISO image files from the Salix
+as torrents ISO image files from the Salix
 [download page http://www.salixos.org/download.html].
+
+NOTESTART Please use the torrents if it is convenient for you to do so ...
+and please seed if you can. These torrents are hosted by Salix's torrent server,
+made possible by generous donations from users.
+NOTEEND
 
 An ISO image is an archive file of an optical disc. It can be easily
 rendered or burned to a DVD or CD by using media authoring or disc
 burning software. The resulting CD must not contain the .iso file; if it
-does, you have made a mistake in the process.
+does, you have made a mistake in the process. Alternatively, a USB stick may 
+be used.
+% Link to below?
 
 NOTESTART Checking download integrity
 It is recommended, if possible, to verify the integrity of your downloaded
@@ -301,7 +310,7 @@ semi-graphical command line interface.
   directory. Select the partition you have created for the ``/``, and
   continue to format the partition. The xfs file system is recommended
   here.
-- If you have other partitions to mount, you can do so. As we have a
+- If you have other partitions to mount, you can do so. If we have a
   partition for a ``/home`` directory, we select the partition and continue.
   Unless the partition is new or you would like to erase the content of
   this partition, select not to format.
@@ -309,7 +318,7 @@ semi-graphical command line interface.
   automatically. If you would like to make those partitions automatically
   usable during your Salix session, include them all to mount.
 - The installer will start installing Salix. You will be asked first
-  where the source files are. As you are installing from the CD, select
+  where the source files are. If you are installing from the CD, select
   "from the CD". Everything should be detected automatically.
 - You will be asked to choose an installation mode (**Full**, **Basic** or
   **Core**).
@@ -318,10 +327,15 @@ semi-graphical command line interface.
   using LILO, choose the default options. You can refine the bootloader
   configuration (for example, in a multi-boot scenario) after booting into
   your new Salix installation.
-- You will be asked for some other questions regarding time-zone, user
-  name and root password (superuser / administrator password). When all
+- You will be asked some other questions regarding time-zone, user
+  name and password. When all
   the basic questions are answered, the machine will restart itself.
 - That's all. The computer is good to go! Enjoy Salix!
+
+NOTESTART Salix now uses sudo!
+By default, the first user created has access to sudo, any others do not; to
+allow them access as well, they need to be added to the wheel group.
+NOTEEND
 
 
 
@@ -337,7 +351,7 @@ key.
 - If the stick is already FAT32, you do not need to wipe existing data,
   but any old Salix-related directories should be removed
 - Copy the contents of the ISO to the stick
-- Alternatively, copy the ISO directly to the stick using *dd*; this will
+- Alternatively, copy the ISO directly to the stick using //dd//; this will
   wipe all existing data. Be careful to choose the right device!
 - Reboot and boot from the stick; you may need to adjust your BIOS settings.
 - At Salix installation chose "Install from hard disk"
@@ -347,6 +361,13 @@ key.
 - The next dialog asks where the Salix packages are located on the USB stick.
   The correct answer here is /salix
 - Installation should continue normally.
+
+IMPORTANTSTART dd is very dangerous!
+It is not recommended to use this method unless you are confident that you
+know what you are doing. A small mistake and you may destroy a partition
+unintentionally and irrevocoverably. Always double check which partition and
+device you are reading from and writing to, e.g. using ``fdisk -l``
+IMPORTANTEND
 
 
 Alternatively, you can mount your USB key first.
@@ -408,7 +429,7 @@ If you have IDE harddisks, they are called hda, hdb, hdc, and so on instead, whe
 hda is the master disk on the first controller, hdb is the slave disk on the first 
 controller, hdc is the master disk on the second controller, and so on.
 
-++++Harddisk partitions++++
+++++Hard disk partitions++++
 
 GNU/Linux systems often uses a partition scheme inherited from MS-DOS. With this, 
 a harddisk can have up to four primary partitions. If you want more, you have to make 
@@ -527,7 +548,7 @@ probably best to download it individually and install manually (for
 instance with //pkgtool// or [spkg #spkg]). Finally, you can
 [make your own package #roll-your-own].
 
-Note that ``twapake`` is a useful tool available from the repositories to 
+Note that //twapake// is a useful tool available from the repositories to 
 keep track of installed packages, from whatever source.
 
 IMPORTANTSTART Reminder!
@@ -538,13 +559,13 @@ IMPORTANTEND
 
 +++Gslapt+++[Gslapt]
 
-``Gslapt`` is the GUI version of [``slapt-get`` #slapt-get]. It allows one to
+//Gslapt// is the GUI version of [//slapt-get// #slapt-get]. It allows one to
 search Slackware/Salix mirrors for packages.
 Before use you should first click on the **Update** button to ensure that
-the latest updates from the software repositories are known to ``Gslapt``.
+the latest updates from the software repositories are known to //Gslapt//.
 The search field is there for you to search for a particular package.
 You can highlight with your left click and choose to
-install/uninstall/reinstall packages with a right click. ``Gslapt`` detects
+install/uninstall/reinstall packages with a right click. //Gslapt// detects
 dependencies and will install all the dependency files for a package
 automatically. Installation/uninstallation/reinstallation will take
 place once you click on the **Execute** button. You can blacklist
@@ -609,7 +630,7 @@ Note that the default action (if //spi// is called without specifying e.g.
 or where they are available. ``spi -u`` will update package data for both //slapt-get// 
 and //slapt-src//, and ``spi -U`` installs any upgrades available. ``spi -i foo``
 installs a specific package and its dependencies, always preferring packages 
-in the repositories. ``spi -s -i foo`` simulates installation, and ``spi --show``
+in the repositories. ``spi --simulate -i foo`` simulates installation, and ``spi --show``
 gives detailed information about a particular package.
 
 NOTESTART Root privileges are required for actual installation and updating, but 
@@ -717,7 +738,7 @@ you next carry out a general package upgrade. (See above for how to do this in [
 
 +++Making a Package from a Source File with SLKBUILD+++[roll-your-own]
 
-Installing a software from a source file is in most cases not difficult.
+Installing software from a source file is in most cases not difficult.
 You can compile a lot of software generally with the following
 commands.
 
@@ -750,8 +771,8 @@ before issuing
 ```
 slkbuild -X
 ```
-to create a Salix compatible package.
-For more on SLKBULD, please consult
+to create a Salix compatible package which can then be installed with [//spkg// #spkg].
+For more on SLKBUILD, please consult
 [SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild].
 [New_to_Packaging http://docs.salixos.org/wiki/New_to_Packaging]
 
@@ -806,7 +827,9 @@ Note that **wicd** and **wireless** must be activated in the
 [system services #system_services] in order to make wireless networks visible on
 Wicd.
 
+NOTESTART 3G modems
 To configure 3G connections, use sakis3g.
+NOTEEND
 
 +++Setting up a Printer+++
 
@@ -956,10 +979,10 @@ up, you can do so by ticking the optional box.
 To execute this utility in runlevel 3, simply type keyboardsetup.
 
 
-+++Bootsetup+++
++++Lilosetup+++
 % Decide what to do about Lilosetup versus Bootsetup
 
-Bootsetup will install a new LILO or GRUB bootloader on your computer.
+Lilosetup will install a new LILO bootloader on your computer.
 
 % ### change this image when bootsetup's ready
 [img/lilosetup.png]
@@ -971,7 +994,7 @@ available on the same computer.
 It is necessary to (re)configure the bootloader each time you install a
 new operating system on your computer.
 
-Bootsetup  can also be useful in the process of a disaster recovery, in
+Lilosetup  can also be useful in the process of a disaster recovery, in
 which case you may have to launch it from a Live CD if you have lost all
 other means to boot into your system.
 
@@ -1097,7 +1120,7 @@ or by a full path to the directory you wish to move into. You can also
 go one directory up by typing
 ``` cd ..
 (be careful, there is a space between ``cd`` and ``..``).
-Remember on Linux,
+Remember in Linux,
 //arguments are separated by spaces//. So for now, let's move to the root directory.
 The root directory is, as the name suggests, the core of your
 directories - every directory stems from here.
@@ -1259,7 +1282,7 @@ rm -r photo/
 +++Installing a Program - slapt-get and slapt-src+++
 
 Maybe a little bird has told you that there is a wonderful application
-called ``cowsay`` in Linux, and now you would like to see what this
+called //cowsay// in Linux, and now you would like to see what this
 program can do.
 
 In order to install a program, one needs to be logged in as root (=
@@ -1337,8 +1360,8 @@ wish. This only works in a terminal running within a GUI.
 
 +++Overview+++
 
-Ratpoison is a tiling window manager, somewhat like //xmonad// or
-//scrotwm//. Its two main features are that applications fill the whole
+//Ratpoison// is a tiling window manager, somewhat like //xmonad// or
+//spectrwm//. Its two main features are that applications fill the whole
 screen, with no bars or buttons; and the user interface can be
 controlled entirely from the keyboard, with no mouse. If needed, any
 number of windows may be shown simultaneously, and rearranged at will -
@@ -1370,7 +1393,7 @@ just follow the instructions.
 
 When you boot Salix Ratpoison, there is no graphical login screen: when
 you log in, you enter the linux terminal. Log in as your normal user
-(not root) and type
+and type
 ```
 startx
 ```
@@ -1507,9 +1530,8 @@ management in the Ratpoison edition, so you will need to make regular
 manual checks for updates:
 
 ```
-$ su                  #change to root
-# slapt-get --update  #update the package list
-# slapt-get --upgrade #upgrade to reflect any changes
+sudo spi --update  #update the package list
+sudo spi --upgrade #upgrade to reflect any changes
 ```
 
 Apart from the //Vimprobable2// browser, the default applications include
@@ -1548,8 +1570,8 @@ necessary.
 As an example, we will install //mplayer2//, the classic console media player.
 
 ```
-# slapt-get -u
-# slapt-get -i mplayer2
+sudo spi -u
+sudo spi -i mplayer2
 ```
 
 Note: To see how to edit Alpine's configuration file to access mail from
@@ -1609,6 +1631,7 @@ tile it horizontally with the window where you are reading this guide
 # .ratpoisonrc
 
 banish
+% !! there is no such application in the repositories
 
 set border 0
 set barpadding 0 0
@@ -1840,7 +1863,7 @@ forums. Even if you just want to use core office, multimedia or network
 applications productively, over time the power that Linux gives users
 tends to promote self-reliance and an ability to configure and fix their
 computer setup independently. The same approach underlies the
-development of Linux as an operating system ̶ where there is room for
+development of Linux as an operating system  ̶ where there is room for
 improvement, someone will dive in and tinker. The cumulative result is
 that Linux today is highly usable out of the box.
 
