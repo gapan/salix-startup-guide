@@ -1,5 +1,4 @@
-
-htmlsep: html
+html: htmltmp
 	rm -rf output/htmlsep
 	rm -rf output/img
 	mkdir -p output/htmlsep
@@ -41,11 +40,11 @@ htmlsep: html
 	sed -i 's|WARNINGEND|</div></div></div>|' \
 		output/htmlsep/*.html
 
-html: 
+htmltmp: 
 	mkdir -p output
 	txt2tags -t html -o output/guide.html guide.t2t
 
-epub: html
+epub: htmltmp
 	cp -r img output/
 	ebook-convert output/guide.html output/guide.epub \
 		--cover=img/screenshots_rotated.jpg \
@@ -57,7 +56,7 @@ epub: html
 		--level3-toc "//h:h3"
 	rm -rf output/img
 
-mobi: html
+mobi: htmltmp
 	cp -r img output/
 	ebook-convert output/guide.html output/guide.mobi \
 		--cover=img/screenshots_rotated.jpg \
@@ -86,7 +85,7 @@ pdf: tex
 	rm -f output/guide.toc
 	@#rm -f output/guide.tex
 
-all: htmlsep pdf epub mobi
+all: html pdf epub mobi
 
 help:
 	@echo 'Makefile for generating the Salix startup guide                        '
@@ -94,6 +93,9 @@ help:
 	@echo 'Usage:                                                                 '
 	@echo '   make                             (re)generate the web site          '
 	@echo '   make html                        same as make                       '
+	@echo '   make pdf                         generate pdf file                  '
+	@echo '   make epub                        generate epub file                 '
+	@echo '   make mobi                        generate mobi file                 '
 	@echo '   make clean                       remove the generated files         '
 	@echo '   upload                           upload the web site via rsync+ssh  '
 	@echo '                                                                       '
@@ -105,4 +107,4 @@ clean:
 upload: html
 	@echo "Not implemented yet"
 
-.PHONY: all html htmlsep epub mobi tex pdf help clean upload
+.PHONY: all html htmltmp epub mobi tex pdf help clean upload
