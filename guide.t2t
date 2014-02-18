@@ -629,7 +629,7 @@ even if it is a dependency of a package that is not. For a summary of usage, see
 spi --help
 ```
 Note that the default action (if //spi// is called without specifying e.g.
-**--install**) is to search for packages, reporting whether they are installed
+``--install``) is to search for packages, reporting whether they are installed
 or where they are available. ``spi -u`` will update package data for both //slapt-get//
 and //slapt-src//, and ``spi -U`` installs any upgrades available. ``spi -i foo``
 installs a specific package and its dependencies, always preferring packages
