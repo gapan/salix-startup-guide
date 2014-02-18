@@ -39,6 +39,7 @@ html: htmltmp
 		output/htmlsep/*.html
 	sed -i 's|WARNINGEND|</div></div></div>|' \
 		output/htmlsep/*.html
+	rm -f output/guide.html
 
 htmltmp: 
 	mkdir -p output
