@@ -10,7 +10,7 @@ Last updated on %%mtime(%Y-%m-%d %H:%M)
 ===About this manual===
 
 The purpose of this manual is to enable you to take full advantage of
-the many functionalities of Salix. The latest version of this document
+the many features of Salix. The latest version of this document
 is available from [our website http://www.salixos.org].
 
 
@@ -56,7 +56,7 @@ also applies it to the viewpoint of the end user.
 - One application per task rationale
 - Fully backwards compatible with Slackware
 - Optimised for desktop usage
-- With Salix tools to assist [system management #salixtools]
+- With Salix Tools to assist [system management #salixtools]
 - High quality package repositories with dependency support
 - Simple & fully localised system administration tools
 - Salix artwork
@@ -78,6 +78,9 @@ The choice is yours: with a //streamlined// Xfce desktop environment,
 //elegant// KDE accompanied by a very rich collection of KDE centric
 software, or "say good-bye to the rodent" Ratpoison, all with the
 Salix look and feel!
+
+For now, Salix 14.1 only offers Xfce, but other editions will follow in due 
+course. Meanwhile, older versions continue to be supported.
 
 % ###
 
@@ -102,36 +105,35 @@ applications, internet applications, all the Salix system configuration
 tools and more. Don't let the word "Full" fool you, this is in no way a
 bloated installation, since it adheres to the "one application per
 task" rationale. We feel that the collection of software that accompanies
-each respective Desktop Environment will cover
+each respective desktop environment will cover
 most user's needs, but of course any user
-can add more software through the Salix package management tools to fit
-his needs.
+can tailor the software selection through the Salix package management tools 
+as required.
 
 A **Basic** mode installation is mostly targeted at advanced users. It
-only includes the respective Desktop Environment of each edition, and a
-very minimal selection of software on top. The Salix system
-configuration tools are all there and you also get a web browser, but
-that is mostly it. Wi-fi connection tools or drivers are not present and
+includes the respective desktop environment of each edition, and a
+very minimal selection of software on top, namely the Salix system
+configuration tools and a web browser. Wi-fi connection tools or drivers are not present and
 only wired network connections are supported out of the box. The user is
 expected to know how to install extra software and tailor the
 installation to his/her needs.
 
 A **Core** mode installation does not provide any graphical environment.
 It only installs a command line system, including the Salix command line
-system and package management tools, but not much more than that. It is
+system and package management tools. It is
 intended for expert users who know how to use command line tools to
-administer their systems. It is most commonly used to set up several
-kinds of servers like web servers, e-mail servers etc. The servers that
-the Salix websites are hosted on have Salix installed using a **Core**
-mode installation indeed. Expert desktop users can of course use this
-mode to install X and any graphical environment on top of it.
+administer their systems. It is most commonly used to set up
+types of server such as web servers, and e-mail servers. The servers that host
+the Salix websites are hosted on run Salix installed using the **Core**
+mode method. Expert users can of course use this
+mode to install the X window system and any graphical environment on top of it if desired.
 
 
 +++Salix Repositories & Package Management+++
 
-- //slapt-get// and its graphical interface //Gslapt// are used for
-  package management, including //slapt-src// and //Sourcery// for even
-  wider selection of software to choose from!
+- //slapt-get// and its graphical interface //Gslapt// are the primary tools used for
+  package management, while //slapt-src// and //Sourcery// are included to allow the easy installation
+ of an even wider selection of software!
 - A wide range of packages from Slackware, Slackbuild and Salix repositories
 - The Salix repositories offer **dependency resolution support** and are
   the **largest** third party software package repositories for Slackware
@@ -153,8 +155,9 @@ NOTEEND
 +++Downloading Salix+++
 
 The latest Salix releases are freely and easily available
-as torrents ISO image files from the Salix
-[download page http://www.salixos.org/download.html].
+as ISO image files from the Salix
+[download page http://www.salixos.org/download.html], via direct download link 
+or torrent file.
 
 NOTESTART Please use the torrents...
 if it is convenient for you to do so and please seed if you can.
@@ -164,9 +167,10 @@ NOTEEND
 
 An ISO image is an archive file of an optical disc. It can be easily
 rendered or burned to a DVD or CD by using media authoring or disc
-burning software. The resulting CD must not contain the .iso file; if it
-does, you have made a mistake in the process. Alternatively, a USB stick may
-be used.
+burning software. The resulting CD should contain the contents of the .iso 
+file, but not the .iso file itself; if it
+does, you have made a mistake in the process. Alternatively, if your system 
+supports booting from USB, a USB stick may be used.
 % Link to below?
 
 NOTESTART Checking download integrity
@@ -239,7 +243,8 @@ device while preserving the contents of the partitions. You may wish to
 use this application to create/re-organise your partition table.
 
 Alternatively, if you have an unformatted partition, unallocated disk
-space, or an existing partition you do not use, you can create or
+space, an existing partition you do not use, or you are happy to 
+completely erase and reformat your hard drive, you can create or
 rewrite a new partition table using [cfdisk #cfdisk]
 (included within the Salix installation process). However, less experienced
 users may prefer the safeguards and graphical interface of //Gparted//.
@@ -262,29 +267,29 @@ difference between a logical and a primary partition except that
 - It is often recommended to have one swap partition, though modern RAM
   sizes now often mean it isn't needed. If you already
   have another Linux OS running on your machine, its swap partition can be
-  shared, and you do not need to create another. A swap partition size is
-  in essence used as an extra RAM to improve the performance of your
-  machine. If, for example, your machine doesn't have a lot of physical
+  shared, and you do not need to create another. A swap partition is
+  in essence used as extra RAM to improve the performance of your
+  machine when, for example, your machine doesn't have a lot of physical
   RAM or you're performing memory-intensive operations (such as video
   editing) that use up most or all of the physical RAM. It is
-  normally recommended to have 1.5-2 times the size of your RAM, but for a
-  modern desktop computer with more than a couple Gb of RAM, swap may not
-  be necessary.
+  normally recommended to have 1.5-2 times the size of your RAM as swap 
+  space, but for a modern desktop computer with several GB of RAM, a swap 
+  partition may not be strictly necessary.
 - Many users like to have a separate partition to hold the /home
   directory, where you can store all your personal data such as documents,
   photos, customised settings for the desktop environment etc; but this is
   by no means necessary.
-- Optionally you can create one partition to hold the /var directory,
-  where system log files are stored. But unless you are running a
-  server machine, this is probably unnecessary.
+- Optionally you can create separate partitions to hold different directories
+  such as the /var directory, where system log files are stored. But unless 
+  you are running a server machine, this is probably unnecessary.
   An advantage of having more than one partition to hold separate
   directories is that you can reformat one partition without affecting
-  others. For example, you can re-install Salix on your machine (and this
+  others. For example, you can re-install Salix on your machine (this
   goes to the partition holding the "/" directory) while leaving
   the partition holding the /home directory intact; however, be aware that /home
-  contains configuration specific to each distribution and release, so sharing it
+  can contain configuration specific to each distribution and release, so sharing it
   between distros or reusing it when installing a new version of Salix is
-  unlikely to work.
+  liable to lead to problems.
 
 
 Each partition can be formatted into one of several file systems,
@@ -296,7 +301,7 @@ is xfs.
 
 Installing Salix from a Salix Installation CD is somewhat similar to
 installing Slackware, but the entire process is considerably shorter and
-less complicated. Everything will be done efficiently in a
+less complicated. Everything is done efficiently in a
 semi-graphical command line interface.
 
 - Select your keymap.
@@ -309,10 +314,10 @@ semi-graphical command line interface.
   detected partition corresponds to that.
 - You will then be asked to specify the partition for the root ``/``
   directory. Select the partition you have created for the ``/``, and
-  continue to format the partition. The xfs file system is recommended
-  here.
-- If you have other partitions to mount, you can do so. If we have a
-  partition for a ``/home`` directory, we select the partition and continue.
+  continue to format the partition. Unless you prefer otherwise, the xfs file 
+  system is recommended here.
+- If you have other partitions to mount, you can do so. If you have a
+  partition for a ``/home`` directory, select the partition and continue.
   Unless the partition is new or you would like to erase the content of
   this partition, select not to format.
 - Other partitions such as Windows partitions will be detected
@@ -328,6 +333,7 @@ semi-graphical command line interface.
   using LILO, choose the default options. You can refine the bootloader
   configuration (for example, in a multi-boot scenario) after booting into
   your new Salix installation.
+% see Max's commments on  whether install to MBR is the  default, p. 11
 - You will be asked some other questions regarding time-zone, user
   name and password. When all
   the basic questions are answered, the machine will restart itself.
@@ -357,8 +363,9 @@ key.
 - Reboot and boot from the stick; you may need to adjust your BIOS settings.
 - At Salix installation chose "Install from hard disk"
 - Enter the device of your USB stick: This probably is /dev/sdb1 if you
-  only have one hard disk. Please note that a Few sticks are mounted by
-  /dev/sdb instead of /dev/sdb1
+  only have one hard disk. Please note that a few sticks are mounted by
+  /dev/sdb instead of /dev/sdb1. If you have any other USB drives plugged 
+  into the machine, removing them may make finding the correct drive easier.
 - The next dialog asks where the Salix packages are located on the USB stick.
   The correct answer here is /salix
 - Installation should continue normally.
@@ -392,8 +399,7 @@ plus a swap partition, as an illustration; however, //cfdisk// can create any
 partitioning scheme required. Note that you can also delete partitions 
 (which will irrevocably destroy their contents). New partitions can be created in free 
 space. For the purposes of this example, it is assumed the entire disk is free. Swap, if
-you need it, should normally be twice your RAM, so if that is 250 MB, swap should be 500 MB. If
-RAM is bigger than 1 GB, swap is probably not needed.
+you need it, should normally be twice your RAM, so if that is 250 MB, swap should be 500 MB.
 
 You can move between the commands listed at the bottom of the screen with the arrow keys, or
 select the command by typing the first letter, such as 'Q' to **Quit**.
@@ -432,7 +438,7 @@ controller, hdc is the master disk on the second controller, and so on.
 
 ++++Hard disk partitions++++
 
-GNU/Linux systems often uses a partition scheme inherited from MS-DOS. With this, 
+GNU/Linux systems often use a partition scheme inherited from MS-DOS. With this, 
 a harddisk can have up to four primary partitions. If you want more, you have to make 
 one of these an extended partition where you can make several logical partitions. The 
 partitions are named with the disk they belong to, and a number. The first primary 
@@ -728,7 +734,7 @@ extension) is to use the command line input
 spkg -i [exact name of a package]
 ```
 This is a handy way of installing a package if
-you have just created your own package. 
+you have just created your own. 
 Note that the name of the package must be exact to the
 last extension (as in xxxxx-i486-tt.txz).
 Removing a package is somewhat similar. You can remove a package by
@@ -751,9 +757,8 @@ commands.
 - unpack a source file, move inside the folder
 - type in ``./configure`` on the terminal
 - type in ``make``
-- type in ``su``
-- type your root password
-- type in ``make install``
+- type in ``sudo make install``
+- type your password
 
 
 Make sure to read accompanying files such as "README", "INSTALL" and so
@@ -811,7 +816,7 @@ latest, please refer to the following link for upgrading your Salix.
 ++Configuring Your Salix++
 
 
-+++Setting up the Internet+++
++++Setting up an internet connection+++
 
 Network connections are managed by Wicd in Salix. It is an open source
 wired and wireless network manager for Linux which aims to provide a
@@ -830,7 +835,8 @@ Note that **wicd** and **wireless** must be activated in the
 Wicd.
 
 NOTESTART 3G modems
-To configure 3G connections, use sakis3g.
+To configure 3G connections, use sakis3g (installed automatically when using the "Full" installation method).
+% Is this true? If not, probably should be
 NOTEEND
 
 +++Setting up a Printer+++
@@ -849,9 +855,9 @@ If you are buying a new printer, it is recommended to check the
 availability of Linux drivers beforehand from the
 [Open Printing database http://www.linuxfoundation.org/collaborate/workgroups/openprinting/database/databaseintro]
 (or search on the Internet). Some companies offer printer drivers for Linux,
-but this is less common than desired, and often involves a
+but this is less common than desired, and could involve a
 lengthy installation process. For most Linux friendly printers,
-you have to install drivers such as gutenprint and HPIJS, both of
+you have to install drivers such as gutenprint or HPIJS, both of
 which are available from the repositories.
 
 - Select "Add Printers and Classes"
@@ -887,8 +893,8 @@ applies to a media format or packages you wish to use in your
 country.
 
 Salix codecs installer can be found under "Multimedia" in the main
-application menu, and conveniently install those codecs to enhance your
-viewing experience.
+application menu, and will conveniently install those codecs which
+enable the viewing of the vast majority of commercial media formats.
 
 For more information on what is actually installed, please see
 [here http://docs.salixos.org/wiki/What_gets_installed_with_the_%22Install_multimedia_codecs%22_application%3F].
@@ -993,8 +999,8 @@ A bootloader is required to load the main operating system of a computer
 and will initially display a boot menu if several operating systems are
 available on the same computer.
 
-It is necessary to (re)configure the bootloader each time you install a
-new operating system on your computer.
+It is necessary to (re)configure the bootloader each time you upgrade the
+kernel or install a new operating system on your computer.
 
 Lilosetup  can also be useful in the process of a disaster recovery, in
 which case you may have to launch it from a Live CD if you have lost all
@@ -1030,7 +1036,7 @@ This utility will configure your computer clock.
 To execute it in runlevel 3, simply type clocksetup.
 
 
-+++Users Profile+++
++++User Profiles+++
 
 % ### background is wrong # but never mind
 [img/gtkusersetup.png]
@@ -1293,6 +1299,7 @@ Maybe a little bird has told you that there is a wonderful application
 called //cowsay// in Linux, and now you would like to see what this
 program can do.
 
+% change for sudo 
 In order to install a program, one needs to be logged in as root (=
 superuser = administrator), because it is a system wide action.
 Alternatively, you can acquire the superuser rights by issuing ``su``.
@@ -1312,8 +1319,8 @@ search for an application (in this case, "cowsay"), type in
 slapt-get --search cowsay
 ```
 Unfortunately, cowsay is not in the official
-repositories neither of Salix nor of Slackware. But it is still too
-early to give up. Slackbuild.org maintains extra packages for Slackware,
+repositories of Salix or Slackware. But 
+don't give up! Slackbuild.org maintains extra packages for Slackware,
 which of course can be utilised by Salix users.
 
 Search for "cowsay" with slapt-src by typing
@@ -1373,7 +1380,7 @@ wish. This only works in a terminal running within a GUI.
 screen, with no bars or buttons; and the user interface can be
 controlled entirely from the keyboard, with no mouse. If needed, any
 number of windows may be shown simultaneously, and rearranged at will -
-whence the term "tiling" WM. All this may take some getting used to, but
+hence the term "tiling" WM. All this may take some getting used to, but
 although - or perhaps because - the interface is so very different from
 the conventional point-and-click approach, it can quickly become highly
 intuitive. Learning which actual keys do what takes far less time than
