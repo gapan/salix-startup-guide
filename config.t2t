@@ -29,7 +29,7 @@
 %!postproc(tex): "\\usepackage{graphicx}" "\\usepackage{graphicx}\n\\usepackage[export]{adjustbox}"
 %!postproc(tex): "\\usepackage{graphicx}" "\\usepackage[Bjornstrup]{fncychap}\n\\usepackage{graphicx}"
 %!postproc(tex): "^\\includegraphics(.*)" "\\vspace{1em}\n\\includegraphics[max width=0.9\\textwidth]\1\n\\vspace{1em}"
-%!postproc(tex): "\\usepackage\[urlcolor=blue," "\\usepackage[linkcolor=blue,urlcolor=red,"
+%!postproc(tex): "\\usepackage\[urlcolor=blue," "\\usepackage[linkcolor=blue,urlcolor=blue,"
 %!postproc(tex): "\\tableofcontents" "\\pagenumbering{roman}\n\\tableofcontents"
 %!postproc(tex): "\\hypertarget{toc1}{}" "\\pagenumbering{arabic}\n\n\\hypertarget{toc1}{}"
 %!postproc(tex): "\\title" "\\setmainfont[Mapping=tex-text]{CMU Sans Serif}\n\\title"
