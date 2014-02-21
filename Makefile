@@ -1,3 +1,8 @@
+SSH_HOST=salixos.org
+SSH_PORT=22
+SSH_USER=web
+SSH_TARGET_DIR=/srv/www/guide.salixos.org
+
 html: htmltmp
 	rm -rf output/htmlsep
 	rm -rf output/img
@@ -40,6 +45,7 @@ html: htmltmp
 	sed -i 's|WARNINGEND|</div></div></div>|' \
 		output/htmlsep/*.html
 	rm -f output/guide.html
+	cp -f output/htmlsep/toc.html output/htmlsep/index.html
 
 htmltmp: 
 	mkdir -p output
@@ -106,6 +112,12 @@ clean:
 	rm -f guide.html
 
 upload: html
-	@echo "Not implemented yet"
+	rsync -e "ssh -p $(SSH_PORT)" \
+		-avz \
+		--exclude "*.t2t" \
+		--exclude ".git" \
+		--exclude ".gitignore" \
+		--exclude Makefile \
+		--delete ./output/htmlsep/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 .PHONY: all html htmltmp epub mobi tex pdf help clean upload
