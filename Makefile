@@ -10,6 +10,8 @@ html: htmltmp
 	cp -r img output/
 	mogrify -resize '600>' output/img/*.png
 	mogrify -resize '600>' output/img/*.jpg
+	perl -i -p -e 's/<\/A>\n/<\/A>/' output/guide.html
+	sed -i 's/^\(<A NAME=.*<\/A>\)\(<H.*<\/H[0-9]>\)/\2\n\1/' output/guide.html
 	htmldoc -t htmlsep --outdir output/htmlsep output/guide.html
 	cp css/*.css output/htmlsep/
 	cp img-css/*.png output/htmlsep/
