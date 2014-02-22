@@ -58,30 +58,26 @@ also applies it to the viewpoint of the end user.
 - Salix artwork
 - Supports 32-bit and 64-bit architectures
 - Comes with a complete development environment
-
-
+-
 
 
 +++Salix Editions+++
 
-
 %! What to do about this ...
 **Salix** comes in three different editions - **Xfce**,
 **KDE**, and **Ratpoison**
-
 
 The choice is yours: with a //streamlined// Xfce desktop environment,
 //elegant// KDE accompanied by a very rich collection of KDE centric
 software, or "say good-bye to the rodent" Ratpoison, all with the
 Salix look and feel!
 
-For now, Salix 14.1 only offers Xfce, but other editions will follow in due 
+For now, Salix 14.1 only offers Xfce, but other editions will follow in due
 course. Meanwhile, older versions continue to be supported.
 
 % ###
 
 [img/screenshots_rotated.jpg]
-
 
 For a list of applications available in each Edition, please refer
 to the later section
@@ -178,7 +174,6 @@ with the one provided on the Salix website, and minimises the possibility
 of installation errors later on.
 NOTEEND
 
-
 %live%!include: live-introduction.t2t
 
 
@@ -193,7 +188,6 @@ machine). Once in the BIOS, find the //boot menu// or similar and
 set the order of the boot devices properly, with your optical drive/USB
 port in the first position. Save your changes and reboot your computer.
 Insert the Salix CD/DVD or USB key, and start up your computer.
-
 
 
 ++Installing Salix++ 
@@ -304,6 +298,7 @@ On (U)EFI systems, it is mandatory to have a separate partition allocated for
 cgdisk. This partition should be formatted using the **FAT32**
 filesystem.
 IMPORTANTEND
+
 
 +++Installing from a Salix Installation CD+++
 
@@ -457,7 +452,6 @@ hard disks. For this reason, it may be convenient to use cfdisk during the insta
 IMPORTANTEND
 
 
-
 ++++Using cfdisk++++
 
 +++++The user interface+++++
@@ -503,7 +497,6 @@ To exit the program, select the Quit command.
 
 
 +Your Salix+
-
 
 
 ++Package Management++ 
@@ -576,7 +569,6 @@ under "Edit".
 On first installing Salix, you should also do a general package upgrade
 to ensure your installed system is up to date with the repositories -- click on
 "Mark all upgrades", then "Execute".
-
 
 [img/gslapt.png]
 
@@ -744,7 +736,7 @@ commands.
 - type in ``make``
 - type in ``sudo make install``
 - type your password
-
+-
 
 Make sure to read accompanying files such as "README", "INSTALL" and so
 on for installation instructions before compiling. These files may list
@@ -791,8 +783,7 @@ latest, please refer to the following link for upgrading your Salix.
 - [Salix 13.37 to 14.0 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.37_to_14.0]
 %assuming this page will exist:
 - [Salix 14.0 to 14.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.0_to_14.1]
-
-
+-
 
 
 ++Configuring Your Salix++
@@ -805,9 +796,7 @@ wired and wireless network manager for Linux which aims to provide a
 simple interface to connect to networks with a wide variety of
 settings.
 
-
 [img/wicd.png]
-
 
 It will connect to wired (Ethernet only, no PPPoE/DSL support yet) and
 wireless networks.
@@ -820,6 +809,7 @@ NOTESTART 3G modems
 To configure 3G connections, use sakis3g (installed automatically when using the "Full" installation method).
 % Is this true? If not, probably should be
 NOTEEND
+
 
 +++Setting up a Printer+++
 
@@ -854,8 +844,6 @@ instead, you can load it here.
 
 [img/addprinter.png]
 
-
-
 - Select Add Printer, and finish the process by configuring details of the printer.
 - Now the printer should be usable on your computer
 -
@@ -888,7 +876,6 @@ For more information on what is actually installed, please see
 
 +++What are the Salix Tools?+++[salixtools]
 
-
 % ### = check image
 % ### this image probably needs updating
 [img/salixtools-gtk.png]
@@ -914,10 +901,7 @@ multiple sound cards in your system, and you would like to assign a
 sound card for your system other than the one automatically picked
 during installation/start-up.
 
-
 [img/gtkalsasetup.png]
-
-
 
 
 +++Rebuild Icon Cache+++
@@ -933,10 +917,7 @@ Hostnames manages the host names used by your computer. This tool
 facilitates defining/overviewing host names used while setting up your
 machine as a server.
 
-
-
 [img/gtkhostsetup.png]
-
 
 
 +++Dotnew+++
@@ -945,9 +926,7 @@ Dotnew manages the system configuration upgrades used by Slackware. It
 will display a possible course of action for each new configuration file
 found in the system.
 
-
 [img/dotnew.jpg]
-
 
 To execute this utility in a terminal, simply type
 ``` sudo dotnew
@@ -955,14 +934,11 @@ To execute this utility in a terminal, simply type
 
 +++Keyboard Layout+++
 
-
 [img/gtkkeyboardsetup.png]
-
 
 This utility will configure the keyboard layout being used both in
 the graphical and non-graphical environments. Modifications are applied
 instantly.
-
 
 Note that if you would like to activate [Ibus #ibus] during the start
 up, you can do so by ticking the optional box.
@@ -991,7 +967,6 @@ which case you may have to launch it from a Live CD if you have lost all
 other means to boot into your system.
 
 
-
 +++System Services+++[system_services]
 
 Here you will be able to select the services that should or shouldn't be
@@ -1004,9 +979,6 @@ To execute this utility in a terminal, simply type
 ``` sudo servicesetup
 
 [img/gtkservicesetup.png]
-
-
-
 
 
 +++System Language+++
@@ -1040,8 +1012,6 @@ To execute it in a terminal, simply type
 ``` sudo usersetup
 
 
-
-
 +++Salix-Update-Notifier+++
 
 [img/salix-update-notifier.png]
@@ -1060,9 +1030,7 @@ the one you normally use is down. You can run it from a terminal with:
 ``` sudo reposetup
 
 
-
 +Salix Mini Walkthroughs+
-
 
 
 ++Working with the Command Line Interface++[working_with_cli]
@@ -1237,7 +1205,6 @@ and execute the command. Now
 the file name has been changed back to ``log``.
 
 
-
 +++Copying & Moving & Removing a Folder - cp & mv & rm+++
 
 So now you have the folder called ``photo`` and a log file in the
@@ -1254,7 +1221,6 @@ remember that ``..`` refers to the
 folder one level up) will give an error like this.
 
 [img/cp.png]
-
 
 Let's see what we can do here. The first thing when encountering such a
 problem is to check the corresponding help file. This can normally be
@@ -1280,7 +1246,6 @@ from the ``Music`` directory:
 ```
 rm -r photo/
 ```
-
 
 +++Installing a Program - slapt-get and slapt-src+++
 
@@ -1435,7 +1400,6 @@ scales, such as time, weight, or currency, including some quite
 unusual ones.
 
 
-
 +++Vimprobable browsing+++
 
 Notice that there are no menus, toolbars, buttons, or scrolling - just a
@@ -1494,7 +1458,6 @@ touch ~/.config/vimprobable/history
 though some of these may already be present.
 
 
-
 +++Window management+++
 
 Let's now see how Ratpoison deals with several open windows. ``C-t w``
@@ -1524,7 +1487,6 @@ and allows the currently focused window to fill the screen. In practice,
 it's rarely useful to have more than one or two windows visible:
 
 [img/vimprobable.png]
-
 
 
 +++The console and package management+++
@@ -1664,7 +1626,6 @@ exec rpws init 5 -k
 
 ```
 
-
 //banish// sends the mouse pointer to bottom right (incidentally, you may
 wish to install //unclutter//, which makes it fade out altogether
 after a few seconds' stillness; place the line
@@ -1690,7 +1651,6 @@ The final item, together with the bindings to function keys, sets up
 workspaces; we'll look at these next - including ``C-t W``.
 
 
-
 +++Using workspaces+++
 
 If you have several terminals open, and various browser windows, and
@@ -1703,7 +1663,6 @@ workspace, for instance.
 ``C-t w`` lists the windows in the current workspace; ``C-t W`` shows
 four more workspaces, which were set up in the last line of the
 configuration file. In a console, type ``rpws help`` .
-
 
 [img/rpws.png]
 
@@ -1730,7 +1689,6 @@ or simply
 ```
 C-t ! gvim ~/.ratmenu/multimedia.sh
 ```
-
 
 [img/ratmenu_edit.png]
 
@@ -1795,9 +1753,7 @@ Finally, to shut down Ratpoison, there is an entry in the Exit submenu,
 from where it is also possible to reboot or shut down the computer.
 
 
-
 +Support+
-
 
 If you are still quite new to either Salix, Slackware or even Linux in
 general, then you should first of all take some time to study Salix
@@ -1813,7 +1769,6 @@ the default //qwebircxxx// login to something more personal and human
 readable.
 
 [img/salix-online.png]
-
 
 We hope that the information here will allow you to get Salix up and
 running fairly straightforwardly, to begin exploring its potential, and
@@ -2221,7 +2176,4 @@ allows you a great deal of flexibility regarding what you can do with
 it. For instance, one can use it to keep track of TODO lists of ideas,
 to take notes in a meeting, as a drafting tool for blog entries,
 mails and so on.
-
-
-
 
