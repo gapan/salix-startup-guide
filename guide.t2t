@@ -1459,7 +1459,7 @@ When the page has loaded, type
 
 [img/ratpoisonmanual.png]
 
-``Shift-h``* takes you back to where you were before. 
+``Shift-h`` takes you back to where you were before. 
 ``t`` works like
 ``o`` but opens the URL in a new window, as does ``shift-f`` instead of
 ``f``. Pressing ``TAB`` after typing the beginning of a URL will suggest
