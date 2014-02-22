@@ -304,8 +304,8 @@ is xfs.
 
 IMPORTANTSTART EFI
 On (U)EFI systems, it is mandatory to have a separate partition allocated for
-///boot//. This partition should have a type of **ef00**, when created in
-//cgdisk//. This partition should be formatted using the //FAT32//
+**/boot**. This partition should have a type of **ef00**, when created in
+cgdisk. This partition should be formatted using the **FAT32**
 filesystem.
 IMPORTANTEND
 
@@ -435,10 +435,10 @@ that partition is done.
 
 NOTESTART GPT
 If your hard drive is partitioned using the GPT scheme, instead of the
-older MBR scheme, instead of //cfdisk//, you get //cgdisk//. While there
+older MBR scheme, instead of cfdisk, you get cgdisk. While there
 are some differences between them, you'll find out that they are mostly
-the same, so the instructions provided for //cfdisk// apply to
-//cgdisk// for the most part.
+the same, so the instructions provided for cfdisk apply to
+cgdisk for the most part.
 NOTEEND
 
 
