@@ -211,7 +211,7 @@ wise to check the following points:
 - Have you backed-up all the important files you have?
 - Check if your computer comes with Linux-friendly/supported
   hardware
-- Recommended running specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
+- Minimum recommended specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
   HD space, or equivalent, though a lower spec machine may run
   without a problem)
 - At least one separate
@@ -225,30 +225,30 @@ wise to check the following points:
 
 +++Partition Management+++
 
-[img/gparted.png]
-
 Before installing Salix, you need to have the
 necessary partition space available on your system, and if the computer
 does not have a separate partition for Linux, you must create one before
 installing Salix.
 
-WARNINGSTART Backup your files!
-It is advisable to back up any important files before modifying the partition
-table.
-WARNINGEND
+If you have an unformatted partition, unallocated disk
+space, an existing partition you do not use, or you are happy to
+completely erase and reformat your hard drive, you can create or
+rewrite a new partition table using //cfdisk// (or //cgdisk// for EFI
+systems), which is available through the Salix installer. A short
+[tutorial #cfdisk] on using cfdisk is available in a later section
+in this guide. //cfdisk// and //cgdisk// are capable of removing and
+creating partitions, but they lack the functionality to resize
+partitions. While using //cfdisk// or //cgdisk// is easy, less experienced
+users may prefer the safeguards and graphical interface of //Gparted//,
+which can also resize and move partitions.
+
+[img/gparted.png]
 
 Live CDs from pretty much any Linux distribution come with
 [Gparted http://gparted.sourceforge.net/docs/help-manual/C/gparted_manual.html],
 which will enable you to change the partition organisation on a disk
 device while preserving the contents of the partitions. You may wish to
 use this application to create/re-organise your partition table.
-
-Alternatively, if you have an unformatted partition, unallocated disk
-space, an existing partition you do not use, or you are happy to 
-completely erase and reformat your hard drive, you can create or
-rewrite a new partition table using [cfdisk #cfdisk]
-(included within the Salix installation process). However, less experienced
-users may prefer the safeguards and graphical interface of //Gparted//.
 
 A hard drive space can be divided into no more than four "primary"
 partitions, which can be problematic if you are hosting more than one
@@ -259,6 +259,11 @@ and hence overcome the limitation set by the "primary partition" (i.e.
 no more than four partitions). In practice, there is no
 difference between a logical and a primary partition except that
 "Windows" OS cannot be installed on a logical partition.
+
+WARNINGSTART Backup your files!
+It is advisable to back up any important files before modifying the partition
+table.
+WARNINGEND
 
 
 +++So what kind of partitions do you need?+++
