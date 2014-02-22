@@ -549,7 +549,8 @@ The search field is there for you to search for a particular package.
 You can highlight with your left click and choose to
 install/uninstall/reinstall packages with a right click. //Gslapt// detects
 dependencies and will install all the dependency files for a package
-automatically. Installation/uninstallation/reinstallation will take
+automatically. Installation, uninstallation or reinstallation of
+packages (whichever applies) will take
 place once you click on the **Execute** button. You can blacklist
 packages by adding their names to the blacklist found in "Preferences"
 under "Edit".
