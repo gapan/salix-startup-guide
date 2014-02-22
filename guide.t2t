@@ -730,24 +730,30 @@ Note that the skype is 32-bit only, so if you are running a
 
 +++spkg+++[spkg]
 
-An alternative way to install a package (which for Salix and many other
-Slackware based distributions ends with the .tgz, .tlz or .txz
-extension) is to use the command line input
-``` sudo spkg -i [exact name of a package]
+If you would like to install or upgrade a package that you have manually
+downloaded or have built yourself, you can use //spkg//. Salix packages
+(just as Slackware packages) have filenames that end with the //.tgz//,
+or //.txz// extensions (there are also //.tlz// and //.tbz// but they
+are very rarely used). To either install a new package, or upgrade a
+package you can use the following command:
+``` sudo spkg [exact path to package]
 
-This is a handy way of installing a package if
-you have just created your own. 
-Note that the name of the package must be exact to the
-last extension (as in xxxxx-i486-tt.txz).
+Note that the name of the package must be exact to the last character in
+the extension, e.g. //mozilla-firefox-24.3.0esr-x86_64-2gv.txz//
+(command line auto-complete using the TAB key helps in this respect).
 Removing a package is somewhat similar. You can remove a package by
 issuing
 ``` sudo spkg -d [software name]
 
-e.g. ``spkg -d skype``; and if another version of the package is already installed
-use ``spkg -u`` to replace it. If this is a repository package, you will need to
-blacklist it in /etc/slapt-get/slapt-getrc to prevent it being "downgraded" when 
-you next carry out a general package upgrade. (See above for how to do this in [Gslapt #Gslapt]
+e.g. ``sudo spkg -d skype``
 
+NOTESTART Blacklisting packages
+If you are replacing a package that is available in the repositories,
+you will need to blacklist this package
+in ///etc/slapt-get/slapt-getrc// to prevent it from being "downgraded" when
+you next carry out a general package upgrade. (See above for how to do
+this in [Gslapt #Gslapt]
+NOTEEND
 
 +++Making a Package from a Source File with SLKBUILD+++[roll-your-own]
 
