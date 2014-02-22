@@ -266,7 +266,7 @@ table.
 WARNINGEND
 
 
-+++So what kind of partitions do you need?+++
+++++So what kind of partitions do you need?++++
 
 - Salix needs, at the very minimum, one partition which holds the root
   directory and must be assigned as ``/``.
@@ -303,7 +303,7 @@ including xfs, ext4, ext3, ext2, btrfs, jfs and reiserfs. The default
 is xfs.
 
 
-++Installing from a Salix Installation CD++
++++Installing from a Salix Installation CD+++
 
 Installing Salix from a Salix Installation CD is somewhat similar to
 installing Slackware, but the entire process is considerably shorter and
@@ -354,7 +354,7 @@ NOTEEND
 
 
 
-++Installing from a Salix Installation USB++ 
++++Installing from a Salix Installation USB+++
 
 Installing Salix from a USB key is also possible. The most difficult part
 is to know the device name of your USB key. You may wish to issue the
@@ -400,7 +400,7 @@ Alternatively, you can mount your USB key first.
 -
 
 
-++Partition management with cfdisk++[cfdisk]
++++Partition management with cfdisk+++[cfdisk]
 
 These instructions assume that you will create a single partition to hold Salix,
 plus a swap partition, as an illustration; however, //cfdisk// can create any
@@ -428,10 +428,10 @@ that partition is done.
 [img/cfdisk_bp.png]
 
 
-+++ cfdisk usage details +++
+++++ cfdisk usage details++++
 
 
-++++Hard disk names++++
++++++Hard disk names+++++
 
 SCSI harddisks are named with sdx, where x is a hardisk letter. The disk with the 
 lowest SCSI ID on the first controller will become sda, the next lower sdb, and so on.
@@ -440,7 +440,7 @@ If you have IDE harddisks, they are called hda, hdb, hdc, and so on instead, whe
 hda is the master disk on the first controller, hdb is the slave disk on the first 
 controller, hdc is the master disk on the second controller, and so on.
 
-++++Hard disk partitions++++
++++++Hard disk partitions+++++
 
 GNU/Linux systems often use a partition scheme inherited from MS-DOS. With this, 
 a harddisk can have up to four primary partitions. If you want more, you have to make 
@@ -450,7 +450,7 @@ partition on the first SCSI disk is therefore sda1, the second primary partition
 sda2, and so on. The first and second logical partition on an extended partition on 
 the first SCSI disk is sda5 and sda6, and so on.
 
-++++Starting cfdisk++++
++++++Starting cfdisk+++++
 
 To use //cfdisk// other than in the insataller, start it from the command line with the command
 ``` cfdisk /dev/sdx
