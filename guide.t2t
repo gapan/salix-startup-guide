@@ -436,21 +436,6 @@ partition on the first SCSI disk is therefore sda1, the second primary partition
 sda2, and so on. The first and second logical partition on an extended partition on 
 the first SCSI disk is sda5 and sda6, and so on.
 
-+++++Starting cfdisk+++++
-
-To use //cfdisk// other than in the insataller, start it from the command line with the command
-``` cfdisk /dev/sdx
-
-where x is the SCSI hardisk letter, like a, b, c, d, etc. So if I want to partition 
-the first harddisk on the SCSI controller, I'll enter the command
-``` cfdisk /dev/sda
-
-IMPORTANTSTART Mounted partitions
-However, please note that a disk can only be partitioned when no partitions
-on it are mounted, in practice normally from a Live CD or USB, unless your machine has two
-hard disks. For this reason, it may be convenient to use cfdisk during the installation.
-IMPORTANTEND
-
 
 ++++Using cfdisk++++
 
