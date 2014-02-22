@@ -496,12 +496,12 @@ not Slackware) provides full dependency management, which means that any
 items the package needs to run are installed too -- and also that
 they are guaranteed to be available.
 
-http://slackbuilds.org provides build scripts for further software not
-present in the repositories. This means the package will be built on
-your system before being installed. Salix provides a graphical tool,
-Sourcery, to manage this; its command-line equivalent is slapt-src. Both
-do have limited dependency management, but the build is not guaranteed
-to be successful and some manual tinkering may be needed.
+[slackbuilds.org http://slackbuilds.org] provides build scripts for further
+software not present in the repositories. This means the package will be
+built on your system before being installed. Salix provides a graphical tool,
+//Sourcery//, to manage this; its command-line equivalent is
+////slapt-src//. Both do have limited dependency management, but the build
+is not guaranteed to be successful and some manual tinkering may be needed.
 
 Unlike the software provided in the repositories, these scripts are not  
 maintained by either Salix or Slackware, but by individual users, and as 
@@ -509,7 +509,10 @@ such are not the responsibility of either distribution, although help may
 be found on the forum. If the build fails, the last ten lines or so of the 
 output usually provide an indication of the reason. Most commonly, this is
 a missing dependency, which may be a build dependency (needed to compile
-the package, but not to run it) such as //cmake//.
+the package, but not to run it). Common packages that are required by
+several SlackBuilds, but not included as part of a standard Salix
+installation are //cmake// and //linuxdoc-tools//, so first make sure
+you have these installed if you encounter any problems.
 
 You can also create and install your own packages, for which Salix
 provides a suite of console scripts, especially ``slkbuild``; for
@@ -531,8 +534,8 @@ Note that //twapake// is a useful tool available from the repositories to
 keep track of installed packages, from whatever source.
 
 IMPORTANTSTART Reminder!
-You have to be the superuser in order to install an
-application.
+You need to have superuser privileges in order to install or upgrade
+packages.
 IMPORTANTEND
 
 
