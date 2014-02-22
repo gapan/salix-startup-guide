@@ -302,6 +302,12 @@ Each partition can be formatted into one of several file systems,
 including xfs, ext4, ext3, ext2, btrfs, jfs and reiserfs. The default
 is xfs.
 
+IMPORTANTSTART EFI
+On (U)EFI systems, it is mandatory to have a separate partition allocated for
+///boot//. This partition should have a type of **ef00**, when created in
+//cgdisk//. This partition should be formatted using the //FAT32//
+filesystem.
+IMPORTANTEND
 
 +++Installing from a Salix Installation CD+++
 
@@ -435,11 +441,6 @@ the same, so the instructions provided for //cfdisk// apply to
 //cgdisk// for the most part.
 NOTEEND
 
-IMPORTANTSTART EFI
-On (U)EFI systems, it is mandatory to have a separate partition allocated for
-///boot//. This partition should have a type of **ef00**, when created in
-//cgdisk//.
-IMPORTANTEND
 
 ++++ cfdisk usage details++++
 
