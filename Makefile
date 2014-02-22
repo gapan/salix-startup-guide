@@ -92,7 +92,8 @@ pdf: tex
 	rm -f output/guide.log
 	rm -f output/guide.out
 	rm -f output/guide.toc
-	@#rm -f output/guide.tex
+	rm -f output/guide.tex
+	mv output/guide.pdf output/SalixStartupGuide.pdf
 
 all: html pdf epub mobi
 
