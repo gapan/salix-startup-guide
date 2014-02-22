@@ -5,8 +5,6 @@ Last updated on %%mtime(%Y-%m-%d %H:%M)
 %!includeconf: config.t2t
 
 
-
-
 ===About this manual===
 
 The purpose of this manual is to enable you to take full advantage of
@@ -34,9 +32,7 @@ Many thanks especially to //**jrd**//, //**akuna**//, and
 //**maximus**// for their contributions in writing and thorough
 proof-reading; and above all, to //**tsuren**//, the original editor of the Guide.
 The section on partitioning with //cfdisk// is adapted from the guide for
-Absolute Linux, with thanks to Paul Sherman.
-
-
+[Absolute Linux http://absolutelinux.org], with thanks to Paul Sherman.
 
 
 +Salix at a Glance+
