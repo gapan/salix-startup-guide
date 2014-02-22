@@ -1422,7 +1422,7 @@ nothing to see (apart from the beautiful Salix wallpaper)! But it's just
 as easy to set Ratpoison to work as with any more conventional desktop.
 
 To select an application from the menu, type ``C-t r``, and use the arrow
-keys to navigate(Vim's ``hjkl`` keys also work). Right arrow (or ``l``)
+keys to navigate (Vim's ``hjkl`` keys also work). Right arrow (or ``l``)
 accesses submenus (such as "Network"), and left arrow (or ``h``) goes
 back up a level. Right arrow or enter runs the application (if you open
 one by mistake, don't worry, just type ``C-t r`` again - we will
