@@ -448,14 +448,11 @@ the first SCSI disk is sda5 and sda6, and so on.
 ++++Starting cfdisk++++
 
 To use //cfdisk// other than in the insataller, start it from the command line with the command
-```
-cfdisk /dev/sdx
-```
+``` cfdisk /dev/sdx
+
 where x is the SCSI hardisk letter, like a, b, c, d, etc. So if I want to partition 
 the first harddisk on the SCSI controller, I'll enter the command
-```
-cfdisk /dev/sda
-```			
+``` cfdisk /dev/sda
 
 IMPORTANTSTART Mounted partitions
 However, please note that a disk can only be partitioned when no partitions
@@ -630,13 +627,13 @@ if the package is available there, if not, it looks in src (http://slackbuild.or
 and repeats the process recursively for any dependencies. This means all packages
 are automatically installed from the repositories if they are available there,
 even if it is a dependency of a package that is not. For a summary of usage, see
-```
-spi --help
-```
+``` spi --help
+
 Note that the default action (if //spi// is called without specifying e.g.
 ``--install``) is to search for packages, reporting whether they are installed
-or where they are available. ``spi -u`` will update package data for both //slapt-get//
-and //slapt-src//, and ``spi -U`` installs any upgrades available. ``spi -i foo``
+or where they are available. ``sudo spi -u`` will update package data for both //slapt-get//
+and //slapt-src//, and ``sudo spi -U`` installs any upgrades available.
+``sudo spi -i foo``
 installs a specific package and its dependencies, always preferring packages
 in the repositories. ``spi --simulate -i foo`` simulates installation, and ``spi --show``
 gives detailed information about a particular package.
@@ -660,27 +657,21 @@ compare them with installed packages, install new packages, or
 upgrade all installed packages.
 To use the application, open a Terminal window and first issue the
 command
-```
-slapt-get -u
-```
+``` sudo slapt-get -u
+
 in order to update the package database on your
 computer. Then
-```
-slapt-get -l
-```
+``` slapt-get -l
+
 to list all the available packages,
-```
-slapt-get --search [package name]
-```
+``` slapt-get --search [package name]
+
 to search for a package, and
-```
-slapt-get -i [package name]
-```
+``` sudo slapt-get -i [package name]
+
 to install a package. For more
 command line instructions, please refer to
-```
-slapt-get --help
-```
+``` slapt-get --help
 
 Here is a little exercise for you. Try installing //w3m// which is a
 terminal based web browser, by using slapt-get.
@@ -696,24 +687,19 @@ Slackware repositories. Thousands of extra packages are now available to
 users through this tool.
 
 To use the application, type in
-```
-slapt-src -u
-```
+``` sudo slapt-src -u
+
 first to update on
 your computer the list of build scripts available from Slackbuild.org.
-```
-slapt-src -l
-```
+``` slapt-src -l
+
 shows you a list of available packages, and as in
 slapt-get,
-```
-slapt-src -i [package name]
-```
+``` sudo slapt-src -i [package name]
+
 will build and install a package. For
 more command line instructions, please refer to
-```
-slapt-src -help
-```
+``` slapt-src --help
 
 Another small exercise for you! Skype is a commonly used application to
 make voice calls over the Internet. It is not available from the common
@@ -729,18 +715,16 @@ Note that the skype is 32-bit only, so if you are running a
 An alternative way to install a package (which for Salix and many other
 Slackware based distributions ends with the .tgz, .tlz or .txz
 extension) is to use the command line input
-```
-spkg -i [exact name of a package]
-```
+``` sudo spkg -i [exact name of a package]
+
 This is a handy way of installing a package if
 you have just created your own. 
 Note that the name of the package must be exact to the
 last extension (as in xxxxx-i486-tt.txz).
 Removing a package is somewhat similar. You can remove a package by
 issuing
-```
-spkg -d [software name]
-```
+``` sudo spkg -d [software name]
+
 e.g. ``spkg -d skype``; and if another version of the package is already installed
 use ``spkg -u`` to replace it. If this is a repository package, you will need to
 blacklist it in /etc/slapt-get/slapt-getrc to prevent it being "downgraded" when 
@@ -764,13 +748,10 @@ Make sure to read accompanying files such as "README", "INSTALL" and so
 on for installation instructions before compiling. These files may list
 dependency packages which you need to install prior to the
 configuration.
-```
-./configure --help
-```
+``` ./configure --help
 or
-```
-./configure --help=short output
-```
+``` ./configure --help=short output
+
 should also help you with some configuration options.
 
 Although you should manage to install the software after the final
@@ -778,10 +759,10 @@ command, it is essentially **untracked**, and neither Gslapt nor slapt-get
 can see that the software is installed. A better way is to create a
 Salix package using SLKBUILD, which is a build script you can prepare
 before issuing
-```
-slkbuild -X
-```
-to create a Salix compatible package which can then be installed with [spkg #spkg].
+``` fakeroot slkbuild -X
+
+to create a Salix compatible package which can then be installed with [spkg #spkg]
+(the //fakeroot// package should also be installed).
 For more on SLKBUILD, please consult
 [SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild].
 [New_to_Packaging http://docs.salixos.org/wiki/New_to_Packaging]
@@ -919,8 +900,7 @@ management in Salix can also be done the usual
 Slackware way.
 
 Please note that most Salix tools have an ncurses
-counterpart which can be used in a non-graphical environment
-([runlevel 3 http://www.bilbos-stekkie.com/slack_init/en/init.html#SLACK-RUNLEVELS]).
+counterpart which can be used in a linux terminal or console. 
 
 
 +++ALSA Sound Card+++
@@ -967,7 +947,8 @@ found in the system.
 [img/dotnew.jpg]
 
 
-To execute this utility in runlevel 3, simply type dotnew.
+To execute this utility in a terminal, simply type
+``` sudo dotnew
 
 
 +++Keyboard Layout+++
@@ -984,7 +965,8 @@ instantly.
 Note that if you would like to activate [Ibus #ibus] during the start
 up, you can do so by ticking the optional box.
 
-To execute this utility in runlevel 3, simply type keyboardsetup.
+To execute this utility in a terminal, simply type
+``` sudo keyboardsetup
 
 
 +++Lilosetup+++
@@ -1016,7 +998,8 @@ activated in the background when your system starts.
 All your modifications will be applied instantly if you press on the OK
 button and will not necessitate a reboot.
 
-To execute this utility in runlevel 3, simply type servicesetup.
+To execute this utility in a terminal, simply type
+``` sudo servicesetup
 
 [img/gtkservicesetup.png]
 
@@ -1027,13 +1010,15 @@ To execute this utility in runlevel 3, simply type servicesetup.
 +++System Language+++
 
 This utility will configure the language of your system.
-To execute it in runlevel 3, simply type localesetup.
+To execute it in a terminal, simply type
+``` sudo localesetup
 
 
 +++System Clock+++
 
 This utility will configure your computer clock.
-To execute it in runlevel 3, simply type clocksetup.
+To execute it in a terminal, simply type
+``` sudo clocksetup
 
 
 +++User Profiles+++
@@ -1049,7 +1034,8 @@ and change it.
 This utility manages the creation, deletion and properties of all the
 system users and groups of users.
 
-To execute it in runlevel 3, simply type usersetup.
+To execute it in a terminal, simply type
+``` sudo usersetup
 
 
 
@@ -1068,7 +1054,8 @@ with Gslapt.
 
 //reposetup// is a command line tool to change the repository mirror,
 allowing you to choose a faster one or temporarily change mirrors if
-the one you normally use is down. Root privileges are needed.
+the one you normally use is down. You can run it from a terminal with:
+``` sudo reposetup
 
 
 
