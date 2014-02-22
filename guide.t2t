@@ -500,7 +500,7 @@ they are guaranteed to be available.
 software not present in the repositories. This means the package will be
 built on your system before being installed. Salix provides a graphical tool,
 //Sourcery//, to manage this; its command-line equivalent is
-////slapt-src//. Both do have limited dependency management, but the build
+//slapt-src//. Both do have limited dependency management, but the build
 is not guaranteed to be successful and some manual tinkering may be needed.
 
 Unlike the software provided in the repositories, these scripts are not  
