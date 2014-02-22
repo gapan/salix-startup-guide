@@ -291,7 +291,7 @@ difference between a logical and a primary partition except that
   can contain configuration specific to each distribution and release, so sharing it
   between distros or reusing it when installing a new version of Salix is
   liable to lead to problems.
-
+-
 
 Each partition can be formatted into one of several file systems,
 including xfs, ext4, ext3, ext2, btrfs, jfs and reiserfs. The default
@@ -339,6 +339,7 @@ semi-graphical command line interface.
   name and password. When all
   the basic questions are answered, the machine will restart itself.
 - That's all. The computer is good to go! Enjoy Salix!
+-
 
 NOTESTART Salix now uses sudo!
 By default, the first user created has access to sudo, any others do not; to
@@ -370,6 +371,7 @@ key.
 - The next dialog asks where the Salix packages are located on the USB stick.
   The correct answer here is /salix
 - Installation should continue normally.
+-
 
 IMPORTANTSTART dd is very dangerous!
 It is not recommended to use this method unless you are confident that you
@@ -390,7 +392,7 @@ Alternatively, you can mount your USB key first.
 - When asked for the source file, select "from a local directory" and
   type in ``/salix/salix``
 - Installation should continue normally
-
+-
 
 
 ++Partition management with cfdisk++[cfdisk]
@@ -409,18 +411,14 @@ select the command by typing the first letter, such as 'Q' to **Quit**.
 swap space). Note that you can choose whether to create a Primary or Extended partition; the
 former is what is needed in this example, but an extended partition will allow for
 the creation of logical partitions within it, when a more complex setup is needed.
-
 - Make this partition **Bootable** (with 'B'). Use the up and down arrow keys to select a 
 particular partition, if there is more than one. The default partition type is 'Linux', so 
 that partition is done.
-
 - Next, make another new partition, taking up the rest of the drive.
-
 - Change its **Type** to 82, Linux Swap.
-
 - When you are happy with it, **Write** the partition table to disk.
-
 - **Quit** to continue with Salix installation.
+-
 
 [img/cfdisk_bp.png]
 
@@ -469,19 +467,19 @@ IMPORTANTEND
 
 ++++Using cfdisk++++
 
-- The user interface
++++++The user interface+++++
 
 After you have started //cfdisk// you'll get an interface where the current partition 
 table is listed with the names and some data about each partition, and some command 
 buttons on the bottom of the screen. To change between partitions, use the up and down 
 arrow keys. To change between commands, use the left and right arrow keys.
 
-- Deleting a partition
++++++Deleting a partition+++++
 
 To delete an existing partition, highlight it with the up and down keys, select the 
 Delete command with the left and right arrow keys, and press Enter; or just press 'D'.
 
-- Making a new partition
++++++Making a new partition+++++
 
 To make a new partition, select the New command with the left and right arrow keys, and 
 press enter. You'll get the choice between a primary and a logical partition. If you 
@@ -489,19 +487,19 @@ want a logical partition, the program will automatically make an extended partit
 you. Then you must choose the size of the partition (in MB). If you can't enter a value 
 in MB, return to the main screen with the Esc key, and select MB with the Units command.
 
-- Set the type of a partition
++++++Set the type of a partition+++++
 
 To set the type of a partition, highlight 
 the desired partition, and select the Type command. You'll get a list of different types. 
 Press space, and you'll get even more. Find what type you need, and enter the number at 
 the prompt. Linux is 83, Linux swap is 82.
 
-- Make a partition bootable
++++++Make a partition bootable+++++
 
 To be able to boot from a primary partition, you need to make it bootable. Highlight 
 the partition and select the Bootable command.
 
-- Write the result to disk and quit
++++++Write the result to disk and quit+++++
 
 When you are content with the layout of the disk, select the Write command. The partition 
 table will be written to disk. Remember that this will destroy all data on partitions you 
@@ -869,7 +867,7 @@ which are available from the repositories.
 below. This is the important part. Or if you have a
 [PPD http://en.wikipedia.org/wiki/PostScript_Printer_Description] file
 instead, you can load it here.
-
+-
 
 [img/addprinter.png]
 
@@ -877,6 +875,7 @@ instead, you can load it here.
 
 - Select Add Printer, and finish the process by configuring details of the printer.
 - Now the printer should be usable on your computer
+-
 
 For setting up a network printer, please consult the Salix
 [wiki http://www.salixos.org/wiki/index.php/How_to_share_a_printer_via_CUPS].
