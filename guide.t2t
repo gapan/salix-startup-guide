@@ -1841,7 +1841,7 @@ you if the question you have in mind has already been posted by a member
 of the community and if it has been answered. For the same reason,
 please also search the internet. If you are working on the command
 line ([Working with the Command Line Interface #working_with_cli]), remember to
-consult ``man`` (and try ``man salix``* for a summary of key points
+consult ``man`` (and try ``man salix`` for a summary of key points
 specific to this distribution). There are several online
 forums devoted to Linux, such as
 [linuxquestions.org http://www.linuxquestions.org/].
