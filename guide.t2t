@@ -358,52 +358,30 @@ allow them access as well, they need to be added to the wheel group.
 NOTEEND
 
 
-
-
 +++Installing from a Salix Installation USB+++
 
-Installing Salix from a USB key is also possible. The most difficult part
-is to know the device name of your USB key. You may wish to issue the
-command ``fdisk -l`` as root to know which device is used for your USB
-key.
+Installing Salix from a USB key is also possible. You can use //dd// to
+transfer the contents of the Salix iso image to your USB stick, using
+a command line like this:
+``` dd if=salix_image_file.iso of=/dev/sdb
 
-- Format your USB to FAT32 - this will destroy all data
-- If the stick is already FAT32, you do not need to wipe existing data,
-  but any old Salix-related directories should be removed
-- Copy the contents of the ISO to the stick
-- Alternatively, copy the ISO directly to the stick using //dd//; this will
-  wipe all existing data. Be careful to choose the right device!
-- Reboot and boot from the stick; you may need to adjust your BIOS settings.
-- At Salix installation chose "Install from hard disk"
-- Enter the device of your USB stick: This probably is /dev/sdb1 if you
-  only have one hard disk. Please note that a few sticks are mounted by
-  /dev/sdb instead of /dev/sdb1. If you have any other USB drives plugged 
-  into the machine, removing them may make finding the correct drive easier.
-- The next dialog asks where the Salix packages are located on the USB stick.
-  The correct answer here is /salix
-- Installation should continue normally.
--
+Of course you'll have to replace //salix_image_file.iso// with the exact
+path and name to the iso file you would like to use.
 
-IMPORTANTSTART dd is very dangerous!
-It is not recommended to use this method unless you are confident that you
-know what you are doing. A small mistake and you may destroy a partition
-unintentionally and irrevocoverably. Always double check which partition and
-device you are reading from and writing to, e.g. using ``fdisk -l``
-IMPORTANTEND
+WARNINGSTART dd is very dangerous!
+The dd command wipes all the data from the specified target device. In
+the example given above that device is /dev/sdb, but it could very well
+be a different one in your case. Always double check which partition and
+device you are reading from and writing to, e.g. using
+``sudo fdisk -l``. If you are not 100% certain, then do not proceed as
+this could permanently destroy the contents of an entire hard drive.
+WARNINGEND
 
-
-Alternatively, you can mount your USB key first.
-
-
-- After starting up the set up screen, select your keyboard type and exit the setup
-- Type ``mkdir /salix``
-- Type ``mount /dev/sdb /salix`` (sdb can be sdb1, depending on the assignment
-  by your machine)
-- Type setup to restart the installation process
-- When asked for the source file, select "from a local directory" and
-  type in ``/salix/salix``
-- Installation should continue normally
--
+After writing the iso image to your USB stick and setting your BIOS to
+boot from it, the installer works exactly as described above when
+booting from a CDROM. The only difference is that when you are asked for
+the medium to use as a source for the packages installation, you should
+select the //"Install from a Salix USB"// option.
 
 
 +++Partition management with cfdisk+++[cfdisk]
@@ -413,12 +391,15 @@ plus a swap partition, as an illustration; however, //cfdisk// can create any
 partitioning scheme required. Note that you can also delete partitions 
 (which will irrevocably destroy their contents). New partitions can be created in free 
 space. For the purposes of this example, it is assumed the entire disk is free. Swap, if
-you need it, should normally be twice your RAM, so if that is 250 MB, swap should be 500 MB.
+you need it, should normally be twice your RAM, so if that is 250 MB,
+swap should be 500 MB. If you have more than 2 GB of RAM, you needn't
+take this rule too strictly and you can have smaller sized swap
+partitions.
 
 You can move between the commands listed at the bottom of the screen with the arrow keys, or
 select the command by typing the first letter, such as 'Q' to **Quit**.
 
-- Make a **New** partition, taking up all but 1GB of the disk (this will be used for 
+- Make a **New** partition, taking up all but 1 GB of the disk (this will be used for 
 swap space). Note that you can choose whether to create a Primary or Extended partition; the
 former is what is needed in this example, but an extended partition will allow for
 the creation of logical partitions within it, when a more complex setup is needed.
