@@ -93,7 +93,7 @@ pdf: tex
 	rm -f output/guide.out
 	rm -f output/guide.toc
 	rm -f output/guide.tex
-	mv output/guide.pdf output/SalixStartupGuide.pdf
+	pdftk A=1stpage.pdf B=output/guide.pdf cat A B output output/SalixStartupGuide.pdf
 
 all: html pdf epub mobi
 
@@ -120,7 +120,11 @@ upload: html
 		--exclude "*.t2t" \
 		--exclude ".git" \
 		--exclude ".gitignore" \
-		--exclude Makefile \
+		--exclude "files" \
 		--delete ./output/htmlsep/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
-.PHONY: all html htmltmp epub mobi tex pdf help clean upload
+upload-pdf: pdf
+	scp output/SalixStartupGuide.pdf $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)/files/
+ 
+
+.PHONY: all html htmltmp epub mobi tex pdf help clean upload upload-pdf
