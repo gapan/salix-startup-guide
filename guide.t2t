@@ -843,6 +843,8 @@ For setting up a network printer, please consult the Salix
 
 +++Salix Codecs Installer+++
 
+[img/salix-codecs-installer.png]
+
 Salix only includes, by default, software that is legally free to use
 in any country, and that means that proprietary media formats are not
 configured "out of the box". Most commercial DVDs are encrypted, and
