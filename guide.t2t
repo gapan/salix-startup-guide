@@ -975,6 +975,8 @@ This utility will configure the language of your system.
 To execute it in a terminal, simply type
 ``` sudo localesetup
 
+[img/gtklocalesetup.png]
+
 
 +++System Clock+++
 
