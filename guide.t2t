@@ -1073,7 +1073,11 @@ normally the same as ``/home/your_user_name`` (replace
 contents, type ``ls`` and press enter. You will see something like
 this:
 
-[img/ls.png]
+```
+george[~]$ ls
+Desktop      Download    Pictures    Templates    salix
+Documents    Music       Music       Videos
+```
 
 Now to move around directories, we use the command ``cd``. If you just type in
 ``cd`` and enter, it will take you to your home directory, but as we are already there, in
