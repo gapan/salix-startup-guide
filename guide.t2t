@@ -784,8 +784,7 @@ Note that **wicd** and **wireless** must be activated in the
 Wicd.
 
 NOTESTART 3G modems
-To configure 3G connections, use sakis3g (installed automatically when using the "Full" installation method).
-% Is this true? If not, probably should be
+To configure 3G connections, use **sakis3g** (installed automatically when using the "Full" installation method).
 NOTEEND
 
 
