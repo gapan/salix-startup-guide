@@ -1141,18 +1141,16 @@ directory, let us move it inside the ``photo`` directory. You can do
 so by issuing ``cp log photo/`` but perhaps it is better to call the
 log file not just ``log`` but ``log.txt``, so that it would be
 obvious to a Windows user that it is a text file. Type in
-```
-cp log photo/log.txt
-```
+``` cp log photo/log.txt
+
 and enter to execute the command.
 
 You can go inside the ``photo`` directory and check if the copying has
 been done properly. ``cd photo`` and then ``ls``. The file should be
 there. Let's add to the log file by saying that it has been moved from
 ``Music`` to ``photo``. Issuing
-```
-nano log.txt
-```
+``` nano log.txt
+
 will bring up the
 text. Add a line to say it has been moved, and then save and quit the
 application by ``Ctrl+x``.
@@ -1163,9 +1161,8 @@ using ``cd ..`` and remove the ``log`` file by issuing ``rm log``.
 The ``rm`` command removes a file or files. For example, if you would
 like to remove all photos with .jpg extension but not with .png, you can
 issue a command something like:
-```
-rm *.jpg
-```
+``` rm *.jpg
+
 This will remove all
 the files with .jpg extension within the directory you are in. Note that
 the ``rm`` command will not ask you to confirm your order. It will
@@ -1175,16 +1172,14 @@ bin.
 
 In this example, we used ``cp`` to copy the log file and then later on
 deleted it. Normally, this would be done by issuing a ``mv`` command;
-```
-mv log photo/
-```
+``` mv log photo/
+
 You can also use the ``mv`` command to rename a
 file. Let's say that you did not like the earlier decision to call the
 log file ``log.txt`` and you now want to rename it as ``log`` again.
 Type in
-```
-mv photo/log.txt photo/log
-```
+``` mv photo/log.txt photo/log
+
 and execute the command. Now
 the file name has been changed back to ``log``.
 
@@ -1198,9 +1193,8 @@ know how to move a file, perhaps the same command will work for moving a
 folder?
 
 But...
-```
-cp photo ../Pictures
-```
+``` cp photo ../Pictures
+
 remember that ``..`` refers to the
 folder one level up) will give an error like this.
 
@@ -1215,25 +1209,22 @@ problem is to check the corresponding help file. This can normally be
 done by issuing a command with an option like ``cp --help``. It is
 possible that ``--help`` will just be ``-h``, and there may be no help
 at all. ``man`` is another command if this is the case.
-```
-man cp
-```
+``` man cp
+
 will give a more indepth explanation of this command. (To get out of the
 manual, press ``q``).
 
 If you read the help carefully, you will see that you need to give an
 extra option ``-r`` if you wish to copy a folder to another location.
 So now
-```
-cp -r photo ../Pictures
-```
+``` cp -r photo ../Pictures
+
 should copy the ``photo`` folder
 inside the correct ``Pictures`` directory. After checking that the
 folder has been safely copied, you can remove the ``photo`` folder
 from the ``Music`` directory:
-```
-rm -r photo/
-```
+``` rm -r photo/
+
 
 +++Installing a Program - spi+++
 
@@ -1244,14 +1235,12 @@ program can do.
 So "cowsay". If this is the first time you are installing an application
 on Salix, the first thing you should do is to update the package
 database on your computer by executing
-```
-sudo spi -u
-```
+``` sudo spi -u
+
 Then to
 search for an application (in this case, "cowsay"), type in
-```
-spi cowsay
-```
+``` spi cowsay
+
 Notice that you don't need to type ``sudo`` just for searching for a
 package. The output you will get should be similar to this:
 ```
@@ -1262,7 +1251,6 @@ None
 Available SlackBuilds:
 cowsay [Not installed]: cowsay (A Configurable Speaking/Thinking Cow)
 xcowsay [Not installed]: xcowsay (displays a cute cow and message on your desktop)
-
 ```
 
 You can see that there is no available package for cowsay in the official
@@ -1365,9 +1353,8 @@ just follow the instructions.
 When you boot Salix Ratpoison, there is no graphical login screen: when
 you log in, you enter the linux terminal. Log in as your normal user
 and type
-```
-startx
-```
+``` startx
+
 to start Ratpoison itself.
 
 You should then see the Salix wallpaper, and a message will appear
@@ -1454,9 +1441,8 @@ to command mode, clearing the buffer, press ``ESC``.
 
 As described in Vimprobable's man page, it is necessary to create some
 files for all its features to work:
-```
-touch ~/.config/vimprobable/history
-```
+``` touch ~/.config/vimprobable/history
+
 though some of these may already be present.
 
 
@@ -1472,9 +1458,8 @@ two apps - for instance, an editor and a browser - and is an example of
 how Ratpoison shines ergonomically. ``C-t k`` closes the current window,
 and ``C-t shift-k`` kills the current application. To see a list
 of commands, type ``C-t ?`` for further detail, see also
-```
-man ratpoison
-```
+``` man ratpoison
+
 and the online manual, which we opened above with
 //Vimprobable2//.
 
@@ -1501,6 +1486,8 @@ manual checks for updates:
 sudo spi --update  #update the package list
 sudo spi --upgrade #upgrade to reflect any changes
 ```
+
+//(the parts including the # symbol and after them are comments and you don't need to type them).//
 
 Apart from the //Vimprobable2// browser, the default applications include
 //Alpine// as the mail client and //Gnome Commander// as the file manager.
@@ -1564,21 +1551,18 @@ using Ratpoison's command input feature. ``C-t :`` conjures up an input
 line at the top right of the screen. This can be used for passing
 instructions to Ratpoison. For instance, one way of opening an
 application in a new console is:
-```
-C-t :exec xterm -e alpine
-```
+``` C-t :exec xterm -e alpine
+
 which starts the program we
 just installed. The colon command can be used to pass a number of
 instructions to Ratpoison; see
-```
-man ratpoison
-```
+``` man ratpoison
+
 for a full list
 together with shortcuts where they have been defined. In fact, there is
 a shortcut for ``exec``. Just type
-```
-C-t ! [application]
-```
+``` C-t ! [application]
+
 ``C-t C-!`` opens it in a console.
 
 To change the ``C-t`` default, do: ``C-t :escape Super_L``,
@@ -1631,9 +1615,8 @@ exec rpws init 5 -k
 //banish// sends the mouse pointer to bottom right (incidentally, you may
 wish to install //unclutter//, which makes it fade out altogether
 after a few seconds' stillness; place the line
-```
-unclutter &
-```
+``` unclutter &
+
 in your
 //~/.xinitrc// to run it automatically when X is started). We've seen
 all but one of the custom keybindings in the "bind" statements. To
@@ -1643,9 +1626,7 @@ up workspaces, which we'll look at next - including ``C-t W``.
 Before editing the file, create a backup copy in case anything goes
 wrong. To change the ``C-t`` default, simply add a line:
 
-```
-escape Menu
-```
+``` escape Menu
 
 We've seen many of the custom keybindings in the "bind" statements.
 
@@ -1682,15 +1663,11 @@ the submenus it calls; all these are editable scripts. We will now edit
 the Network menu using //GVim//. //GVim// is in the menu, but try calling
 it using the colon
 
-```
-C-t :exec gvim ~/.ratmenu/multimedia.sh
-```
+``` C-t :exec gvim ~/.ratmenu/multimedia.sh
 
 or simply
 
-```
-C-t ! gvim ~/.ratmenu/multimedia.sh
-```
+``` C-t ! gvim ~/.ratmenu/multimedia.sh
 
 [img/ratmenu_edit.png]
 
@@ -1700,9 +1677,8 @@ programs need to be opened inside a terminal.
 Use ``j`` and ``k`` to navigate to where you want to add the entry for
 //Mplayer2//, type ``i`` to insert, ``ESC`` to return to command mode, and
 ``:wq`` to write and save. Test the change by typing
-```
-C-t r
-```
+``` C-t r
+
 The new
 item should already appear. If all is well, you may close the editor.
 
