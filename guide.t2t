@@ -1296,7 +1296,7 @@ george[Desktop]$
 ```
 
 So what was going wrong? Check
-```cowsay -h``
+``` cowsay -h
 You will see
 that you need to type in a ``[message]``. Try again with
 ``` cowsay Hello Salix!
