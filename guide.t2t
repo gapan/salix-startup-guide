@@ -1247,50 +1247,61 @@ from the ``Music`` directory:
 rm -r photo/
 ```
 
-+++Installing a Program - slapt-get and slapt-src+++
++++Installing a Program - spi+++
 
 Maybe a little bird has told you that there is a wonderful application
 called //cowsay// in Linux, and now you would like to see what this
 program can do.
 
-In order to install a program, one needs to be logged in as root (=
-superuser = administrator), because it is a system wide action.
-Alternatively, you can acquire the superuser rights by issuing ``su``.
-You will be asked to enter the root password. After providing the
-correct password, you are now free to do whatever you wish to do on your
-system (even to make the machine unworkable).
-
 So "cowsay". If this is the first time you are installing an application
 on Salix, the first thing you should do is to update the package
 database on your computer by executing
 ```
-sudo slapt-get -u
+sudo spi -u
 ```
 Then to
 search for an application (in this case, "cowsay"), type in
 ```
-slapt-get --search cowsay
+spi cowsay
 ```
-Unfortunately, cowsay is not in the official
-repositories of Salix or Slackware. But 
-don't give up! Slackbuild.org maintains extra packages for Slackware,
-which of course can be utilised by Salix users.
+Notice that you don't need to type ``sudo`` just for searching for a
+package. The output you will get should be similar to this:
+```
+george[~]$ spi cowsay
+Available packages:
+None
 
-Search for "cowsay" with slapt-src by typing
+Available SlackBuilds:
+cowsay [Not installed]: cowsay (A Configurable Speaking/Thinking Cow)
+xcowsay [Not installed]: xcowsay (displays a cute cow and message on your desktop)
+
 ```
-slapt-src --search cowsay
-```
-after first updating the local database with
-```
-sudo slapt-src -u
-```
-You will see that it is available from slackbuilds.org. To install
-it, execute
-```
-sudo slapt-src -i cowsay
-```
+
+You can see that there is no available package for cowsay in the official
+repositories of Salix or Slackware. Instead, a SlackBuild is available.
+[slackbuilds.org http://slackbuilds.org/] maintains extra packages for Slackware,
+which of course can be utilised by Salix users. These SlackBuilds
+however are not maintained by Salix or Slackware, but rather from
+individual Slackware users and are not guaranteed to work 100%
+of the time. Packages on the other hand, should work perfectly fine all
+the time, with no exceptions.
+
+To install cowsay using the SlackBuild, you simply must run:
+``` sudo spi -i cowsay
+
+Actually this is not different at all from what you would have done if
+cowsay was available as a package. Installing any of the available
+packages involves downloading the package and actually installing it,
+while installing something using a SlackBuild, involves downloading the
+SlackBuild script and all required source files, compiling the source
+code, packaging it up and installing the package that has been created.
+All that of course is done automatically. It's only just that installing
+something using a SlackBuild is generally a bit (or a lot) slower, since
+it includes the extra step for compiling the source code.
+
 If you are not sure what this
-``-i`` is, you can check it with the ``--help`` option. You will see a
+``-i`` is in the above command, you can check it with ``spi --help``.
+You will see a
 lot of lines running up the terminal quickly until the application is
 installed.
 
@@ -1308,11 +1319,11 @@ george[Desktop]$ cowsay
 george[Desktop]$
 ```
 
-So what was going wrong? Check ``cowsay`` with ``-h``. You will see
+So what was going wrong? Check
+```cowsay -h``
+You will see
 that you need to type in a ``[message]``. Try again with
-```
-cowsay Hello Salix!
-```
+``` cowsay Hello Salix!
 
 We have merely scratched the surface of the power of the
 command line here. The best way to learn more is by using it, but remember to
