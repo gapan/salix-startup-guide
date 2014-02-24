@@ -16,6 +16,7 @@ is available from [our website http://www.salixos.org].
 
 
 //**Your contribution is important!**//
+
 We would like to improve the quality of the manual and to provide more
 documents translated in your mother tongue. Your help is always
 welcome.
@@ -26,14 +27,19 @@ up guide, please contact us through the
 
 
 //**Acknowledgement**//
+
 My sincere thanks to all the people who have contributed to and worked
-on this start up guide, including translators.
-Many thanks especially to //**jrd**//, //**akuna**//, and
-//**maximus**// for their contributions in writing and thorough
-proof-reading; and above all, to //**tsuren**//, the original editor of the Guide.
+on this start up guide, especially //**mimosa**//, who did a lot of work
+rewriting big parts of this guide and helped cleaning it up.
+
+Many thanks also to //**tsuren**//, //**jrd**//, //**akuna**//, and
+//**maximus**// for all their hard work in the previous versions of this
+guide.
+
 The section on partitioning with //cfdisk// is adapted from the guide for
 [Absolute Linux http://absolutelinux.org], with thanks to Paul Sherman.
 
+//~gapan//
 
 +Salix at a Glance+
 
