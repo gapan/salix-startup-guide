@@ -984,6 +984,8 @@ This utility will configure your computer clock.
 To execute it in a terminal, simply type
 ``` sudo clocksetup
 
+[img/gtkclocksetup.png]
+
 
 +++User Profiles+++
 
@@ -991,7 +993,7 @@ To execute it in a terminal, simply type
 [img/gtkusersetup.png]
 
 In Unix/Linux, all users and groups of users are given certain
-[permissions and access rights http://en.wikibooks.org/wiki/UNIX_Computing_Security/Access_authorization]
+[permissions and access rights http://en.wikibooks.org/wiki/UNIX_Computing_Security/Access_authorization] 
 to some part of the system in order to control their ability to access
 and change it.
 
