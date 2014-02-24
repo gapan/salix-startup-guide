@@ -744,7 +744,7 @@ Salix package using SLKBUILD, which is a build script you can prepare
 before issuing
 ``` fakeroot slkbuild -X
 
-to create a Salix compatible package which can then be installed with [spkg #spkg]
+to create a Salix compatible package which can then be installed with [spkg #spkg] 
 (the //fakeroot// package should also be installed).
 For more on SLKBUILD, please consult
 [SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild].
