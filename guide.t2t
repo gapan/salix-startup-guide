@@ -1216,7 +1216,11 @@ cp photo ../Pictures
 remember that ``..`` refers to the
 folder one level up) will give an error like this.
 
-[img/cp.png]
+```
+george[Music]$ cp photo ../Pictures
+cp: omitting directory 'photo/'
+george[Music]$
+```
 
 Let's see what we can do here. The first thing when encountering such a
 problem is to check the corresponding help file. This can normally be
@@ -1249,7 +1253,6 @@ Maybe a little bird has told you that there is a wonderful application
 called //cowsay// in Linux, and now you would like to see what this
 program can do.
 
-% change for sudo 
 In order to install a program, one needs to be logged in as root (=
 superuser = administrator), because it is a system wide action.
 Alternatively, you can acquire the superuser rights by issuing ``su``.
@@ -1261,7 +1264,7 @@ So "cowsay". If this is the first time you are installing an application
 on Salix, the first thing you should do is to update the package
 database on your computer by executing
 ```
-slapt-get -u
+sudo slapt-get -u
 ```
 Then to
 search for an application (in this case, "cowsay"), type in
@@ -1279,12 +1282,12 @@ slapt-src --search cowsay
 ```
 after first updating the local database with
 ```
-slapt-src -u
+sudo slapt-src -u
 ```
 You will see that it is available from slackbuilds.org. To install
 it, execute
 ```
-slapt-src -i cowsay
+sudo slapt-src -i cowsay
 ```
 If you are not sure what this
 ``-i`` is, you can check it with the ``--help`` option. You will see a
