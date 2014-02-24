@@ -1302,7 +1302,11 @@ still running, but as you don't see anything, perhaps it is not running
 properly. To terminate the process, press ``Ctrl+c``. You will get
 back the normal input line back on your terminal.
 
-[img/cowsay.png]
+```
+george[Desktop]$ cowsay
+^C
+george[Desktop]$
+```
 
 So what was going wrong? Check ``cowsay`` with ``-h``. You will see
 that you need to type in a ``[message]``. Try again with
