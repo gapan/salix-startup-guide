@@ -607,7 +607,7 @@ even if it is a dependency of a package that is not. For a summary of usage, see
 ``` spi --help
 
 Note that the default action (if //spi// is called without specifying e.g.
-``--install``) is to search for packages, reporting whether they are installed
+``-i``) is to search for packages, reporting whether they are installed
 or where they are available. ``sudo spi -u`` will update package data for both //slapt-get//
 and //slapt-src//, and ``sudo spi -U`` installs any upgrades available.
 ``sudo spi -i packagename``
