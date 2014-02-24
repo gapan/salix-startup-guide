@@ -751,17 +751,6 @@ For more on SLKBUILD, please consult
 [New_to_Packaging http://docs.salixos.org/wiki/New_to_Packaging]
 
 
-+++Salix Packages that are different from Slackware+++
-
-Although the vast majority of packages found in the Salix repositories
-are complementary to the Slackware repositories, you will find that some
-packages are present both in the Salix repositories and in the Slackware
-repositories. These packages have been rebuilt for Salix for a number of
-good reasons, and a list of the packages as well as brief explanations
-as to why are found in
-[this wiki entry http://www.salixos.org/wiki/index.php/Packages,_that_are_different_from_Slackware].
-
-
 +++Upgrading Salix to a Newer Version+++
 
 If you wish to upgrade an older version of Salix on your machine to the
