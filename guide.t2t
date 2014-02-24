@@ -1232,7 +1232,7 @@ Maybe a little bird has told you that there is a wonderful application
 called //cowsay// in Linux, and now you would like to see what this
 program can do.
 
-So "cowsay". If this is the first time you are installing an application
+If this is the first time you are installing an application
 on Salix, the first thing you should do is to update the package
 database on your computer by executing
 ``` sudo spi -u
