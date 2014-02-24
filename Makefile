@@ -3,15 +3,13 @@ SSH_PORT=22
 SSH_USER=web
 SSH_TARGET_DIR=/srv/www/guide.salixos.org
 
-html: htmltmp
+html: htmltmp fix-anchors
 	rm -rf output/htmlsep
 	rm -rf output/img
 	mkdir -p output/htmlsep
 	cp -r img output/
 	mogrify -resize '600>' output/img/*.png
 	mogrify -resize '600>' output/img/*.jpg
-	perl -i -p -e 's/<\/A>\n/<\/A>/' output/guide.html
-	sed -i 's/^\(<A NAME=.*<\/A>\)\(<H.*<\/H[0-9]>\)/\2\n\1/' output/guide.html
 	htmldoc -t htmlsep --outdir output/htmlsep output/guide.html
 	cp css/*.css output/htmlsep/
 	cp img-css/*.png output/htmlsep/
@@ -49,12 +47,27 @@ html: htmltmp
 	rm -f output/guide.html
 	cp -f output/htmlsep/toc.html output/htmlsep/index.html
 
+fix-anchors:
+	perl -i -p -e 's/<\/A>\n/<\/A>/' output/guide.html
+	sed -i 's/^\(<A NAME=.*<\/A>\)\(<H.*<\/H[0-9]>\)/\2\n\1/' output/guide.html
+
 htmltmp: 
 	mkdir -p output
 	txt2tags -t html -o output/guide.html guide.t2t
 
-epub: htmltmp
+ebook-prepare: htmltmp fix-anchors
+	sed -i 's/^NOTESTART/<B><I>/' output/guide.html
+	sed -i 's/ NOTESTART$$/<\/B>/' output/guide.html
+	sed -i 's/NOTEEND/<\/I>/' output/guide.html
+	sed -i 's/^IMPORTANTSTART/<B><I>/' output/guide.html
+	sed -i 's/ IMPORTANTSTART$$/<\/B>/' output/guide.html
+	sed -i 's/IMPORTANTEND/<\/I>/' output/guide.html
+	sed -i 's/^WARNINGSTART/<B><I>/' output/guide.html
+	sed -i 's/ WARNINGSTART$$/<\/B>/' output/guide.html
+	sed -i 's/WARNINGEND/<\/I>/' output/guide.html
 	cp -r img output/
+
+epub: ebook-prepare
 	ebook-convert output/guide.html output/guide.epub \
 		--cover=img/screenshots_rotated.jpg \
 		--chapter "//h:h1" \
@@ -65,8 +78,7 @@ epub: htmltmp
 		--level3-toc "//h:h3"
 	rm -rf output/img
 
-mobi: htmltmp
-	cp -r img output/
+mobi: ebook-prepare
 	ebook-convert output/guide.html output/guide.mobi \
 		--cover=img/screenshots_rotated.jpg \
 		--chapter "//h:h1" \
@@ -127,4 +139,4 @@ upload-pdf: pdf
 	scp output/SalixStartupGuide.pdf $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)/files/
  
 
-.PHONY: all html htmltmp epub mobi tex pdf help clean upload upload-pdf
+.PHONY: all html htmltmp epub mobi tex pdf help clean upload upload-pdf ebook-prepare fix-anchors
