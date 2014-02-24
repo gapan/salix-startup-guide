@@ -747,7 +747,7 @@ before issuing
 to create a Salix compatible package which can then be installed with [spkg #spkg] 
 (the //fakeroot// package should also be installed).
 For more on SLKBUILD, please consult
-[SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild].
+[SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild]. 
 [New_to_Packaging http://docs.salixos.org/wiki/New_to_Packaging]
 
 
