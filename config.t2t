@@ -41,4 +41,9 @@
 
 %!postproc(html): '<BODY BGCOLOR="white" TEXT="black">' '<BODY>'
 
+% Link bank
+%!preproc: URLSITE     http://www.salixos.org
+%!preproc: URLFORUM    http://forum.salixos.org
+%!preproc: URLWIKI     http://docs.salixos.org
+%!preproc: URLSBO      http://slackbuilds.org
 

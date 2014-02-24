@@ -9,7 +9,7 @@ Last updated on %%mtime(%Y-%m-%d %H:%M)
 
 The purpose of this manual is to enable you to take full advantage of
 the many features of Salix. The latest version of this document
-is available from [our website http://www.salixos.org].
+is available from [our website URLSITE].
 
 
 **The Salix start up guide is released under the [CC-BY-SA 3.0 http://creativecommons.org/licenses/by-sa/3.0/] license.**
@@ -23,7 +23,7 @@ welcome.
 
 For any comments and submission of articles to be included in the start
 up guide, please contact us through the
-[Salix mailing list http://salixos.org/mailinglists.html].
+[Salix mailing list URLSITE/mailinglists.html].
 
 
 //**Acknowledgement**//
@@ -154,7 +154,7 @@ NOTEEND
 
 The latest Salix releases are freely and easily available
 as ISO image files from the Salix
-[download page http://www.salixos.org/download.html], via direct download link 
+[download page URLSITE/download.html], via direct download link 
 or torrent file.
 
 NOTESTART Please use the torrents...
@@ -502,7 +502,7 @@ not Slackware) provides full dependency management, which means that any
 items the package needs to run are installed too -- and also that
 they are guaranteed to be available.
 
-[slackbuilds.org http://slackbuilds.org] provides build scripts for further
+[slackbuilds.org URLSBO] provides build scripts for further
 software not present in the repositories. This means the package will be
 built on your system before being installed. Salix provides a graphical tool,
 //Sourcery//, to manage this; its command-line equivalent is
@@ -606,7 +606,7 @@ packages manually, while still making them known to the package management syste
 
 //spi// is a command line tool that combines some basic functions of
 //slapt-get// and //slapt-src//. It installs from the Salix repositories
-if the package is available there, if not, it looks in src (http://slackbuild.org),
+if the package is available there, if not, it looks in [SlackBuilds URLSBO],
 and repeats the process recursively for any dependencies. This means all packages
 are automatically installed from the repositories if they are available there,
 even if it is a dependency of a package that is not. For a summary of usage, see
@@ -663,8 +663,8 @@ terminal based web browser, by using slapt-get.
 +++slapt-src+++[slapt-src]
 
 //slapt-src// is a command line tool that makes the process of downloading
-and building software packages from slackbuilds.org simple and easy.
-Slackbuilds.org keeps a large collection of build scripts for extra
+and building software packages from URLSBO simple and easy.
+URLSBO keeps a large collection of build scripts for extra
 packages that are still not available from the official Salix /
 Slackware repositories. Thousands of extra packages are now available to
 users through this tool.
@@ -1261,7 +1261,7 @@ xcowsay [Not installed]: xcowsay (displays a cute cow and message on your deskto
 
 You can see that there is no available package for cowsay in the official
 repositories of Salix or Slackware. Instead, a SlackBuild is available.
-[slackbuilds.org http://slackbuilds.org/] maintains extra packages for Slackware,
+[slackbuilds.org URLSBO] maintains extra packages for Slackware,
 which of course can be utilised by Salix users. These SlackBuilds
 however are not maintained by Salix or Slackware, but rather from
 individual Slackware users and are not guaranteed to work 100%
@@ -1772,9 +1772,9 @@ If you are still quite new to either Salix, Slackware or even Linux in
 general, then you should first of all take some time to study Salix
 Startup Guide, as it is specifically intended to be accessible to
 newcomers. The desktop link, Salix Online, will bring you to the Salix
-[Homepage http://www.salixos.org/wiki/index.php/Home]. You could also
+[Homepage URLSITE]. You could also
 use the
-[IRC link http://webchat.freenode.net/?randomnick=1&channels=salix&prompt=1]
+[IRC link http://webchat.freenode.net/?randomnick=1&channels=salix&prompt=1] 
 above
 to be in live communication with members of the community and get
 instant help if necessary. If you do however, you might want to modify
@@ -1804,8 +1804,8 @@ similar look and feel to those found on other operating systems, such as
 the office suite LibreOffice, which offers full compatibility with
 common file formats.
 
-Our [Wiki http://www.salixos.org/wiki/index.php?title=Documentation] and
-[Forum http://www.salixos.org/forum/] will be two other important
+Our [Wiki URLWIKI] and
+[Forum URLFORUM] will be two other important
 sources of information. The search option of the forum will quickly show
 you if the question you have in mind has already been posted by a member
 of the community and if it has been answered. For the same reason,
@@ -1818,7 +1818,7 @@ forums devoted to Linux, such as
 It should be noted that each forum
 has its own subculture, and sometimes explicit posting guidelines. If
 you post a query to a forum, bear
-[Paul Grice's conversational maxims http://www.sas.upenn.edu/~haroldfs/dravling/grice.html]
+[Paul Grice's conversational maxims http://www.sas.upenn.edu/~haroldfs/dravling/grice.html] 
 in mind: for instance, be as specific as possible and mention any
 information you
 have already found out. To put it another way, remember you are
@@ -1844,7 +1844,7 @@ the process how to make it do exactly what you want. After a while,
 though, it may be helpful to supplement this experience with some
 more systematic background. As mentioned in the section introducing
 the command line, the
-[Documentation http://www.salixos.org/forum/viewforum.php?f=30&sid=8007ff0fe74d8ba139ecb29032db24d2]
+[Documentation http://www.salixos.org/forum/viewforum.php?f=30&sid=8007ff0fe74d8ba139ecb29032db24d2] 
 board on the Salix forums contains a useful post on
 [tutorials and guides http://www.salixos.org/forum/viewtopic.php?f=30&t=852].
 Wherever you find problems recur, it may be worth reading up on the
