@@ -70,17 +70,17 @@ also applies it to the viewpoint of the end user.
 +++Salix Editions+++
 
 %! What to do about this ...
-**Salix** comes in four different editions - **MATE**, **Xfce**,
-**KDE**, and **Ratpoison**
+**Salix** comes in six different editions - **MATE**, **Xfce**,
+**Fluxbox**,**Openbox**, **KDE**, and **Ratpoison**
 
-The choice is yours: the //intuitive// MATE desktop,
-a //streamlined// Xfce desktop environment,
-//elegant// KDE accompanied by a very rich collection of KDE centric
-software, or "say good-bye to the rodent" Ratpoison, all with the
-Salix look and feel!
+The choice is yours: the //intuitive// MATE desktop, a //streamlined// Xfce
+desktop environment, the //lightness// and //high customizability// offered by
+Fluxbox and Openbox as window managers, an //elegant// KDE accompanied by a
+very rich collection of KDE centric software, or "say good-bye to the rodent"
+Ratpoison, all with the Salix look and feel!
 
-For now, Salix 14.1 offers MATE and Xfce, but other editions will follow in due
-course. Meanwhile, older versions continue to be supported.
+For now, Salix 14.1 offers MATE, Xfce, Fluxbox and Openbox, but other editions
+will follow in due course. Meanwhile, older versions continue to be supported.
 
 % ###
 
