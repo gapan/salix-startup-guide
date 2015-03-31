@@ -21,15 +21,15 @@ We would like to improve the quality of the manual and to provide more
 documents translated in your mother tongue. Your help is always
 welcome.
 
-For any comments and submission of articles to be included in the start
-up guide, please contact us through the
+For any comments and submission of articles to be included in the start-up
+guide, please contact us through the
 [Salix mailing list URLSITE/mailinglists.html].
 
 
 //**Acknowledgement**//
 
 My sincere thanks to all the people who have contributed to and worked
-on this start up guide, especially //**mimosa**//, who did a lot of work
+on this start-up guide, especially //**mimosa**//, who did a lot of work
 rewriting big parts of this guide and helped cleaning it up.
 
 Many thanks also to //**tsuren**//, //**jrd**//, //**akuna**//, and
@@ -59,7 +59,7 @@ also applies it to the viewpoint of the end user.
 - Fully backwards compatible with Slackware
 - Optimised for desktop usage
 - With Salix Tools to assist [system management #salixtools]
-- High quality package repositories with dependency support
+- High-quality package repositories with dependency support
 - Simple & fully localized system administration tools
 - Salix artwork
 - Supports 32-bit and 64-bit architectures
@@ -75,8 +75,8 @@ also applies it to the viewpoint of the end user.
 
 The choice is yours: the //intuitive// MATE desktop, a //streamlined// Xfce
 desktop environment, the //lightness// and //high customizability// offered by
-Fluxbox and Openbox as window managers, an //elegant// KDE accompanied by a
-very rich collection of KDE centric software, or "say good-bye to the rodent"
+Fluxbox or Openbox as window manager, an //elegant// KDE accompanied by a
+very rich collection of KDE centric software, or "say goodbye to the rodent"
 Ratpoison, all with the Salix look and feel!
 
 For now, Salix 14.1 offers MATE, Xfce, Fluxbox and Openbox, but other editions
@@ -102,10 +102,10 @@ environment with a complete selection of applications to fit the needs
 of most people, including office related software, multimedia
 applications, internet applications, all the Salix system configuration
 tools and more. Don't let the word "Full" fool you, this is in no way a
-bloated installation, since it adheres to the "one application per
+bloated installation since it adheres to the "one application per
 task" rationale. We feel that the collection of software that accompanies
 each respective desktop environment will cover
-most user's needs, but of course any user
+most user's needs but, of course, any user
 can tailor the software selection through the Salix package management tools 
 as required.
 
@@ -120,9 +120,9 @@ installation to his/her needs.
 A **Core** mode installation does not provide any graphical environment.
 It only installs a command line system, including the Salix command line
 system and package management tools. It is
-intended for expert users who know how to use command line tools to
+intended for expert users who know how to use the command line tools to
 administer their systems. It is most commonly used to set up
-types of server such as web servers, and e-mail servers. The servers that host
+types of server such as web-servers and e-mail servers. The servers that host
 the Salix websites are hosted on, run Salix installed using the **Core**
 mode method. Expert users can of course use this
 mode to install the X window system and any graphical environment on top of it if desired.
@@ -131,7 +131,7 @@ mode to install the X window system and any graphical environment on top of it i
 +++Salix Repositories & Package Management+++
 
 - //slapt-get// and its graphical interface //Gslapt// are the primary tools used for
-  package management, while //slapt-src// and //Sourcery// are included to allow the easy installation
+  package management while //slapt-src// and //Sourcery// are included to allow the easy installation
  of an even wider selection of software!
 - A wide range of packages from Slackware, Slackbuild and Salix repositories
 - The Salix repositories offer **dependency resolution support** and are
@@ -141,7 +141,7 @@ mode to install the X window system and any graphical environment on top of it i
 -
 
 NOTESTART In Short, Salix is...
-"Like a bonsai, Salix is small, light & the product of infinite care"
+"Like a bonsai, Salix is small, light & the product of infinite care."
 NOTEEND
 
 
