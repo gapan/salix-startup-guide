@@ -173,11 +173,11 @@ supports booting from USB, a USB stick may be used.
 % Link to below?
 
 NOTESTART Checking download integrity
-It is recommended, if possible, to verify the integrity of your downloaded
+It is recommended if possible, to verify the integrity of your downloaded
 file by comparing its [md5sum http://en.wikipedia.org/wiki/Md5sum] file
 with the original one uploaded besides the corresponding ISO image file
 by Salix. This ensures that your downloaded image file matches exactly
-with the one provided on the Salix website, and minimises the possibility
+with the one provided on the Salix website and minimises the possibility
 of installation errors later on.
 NOTEEND
 
@@ -205,7 +205,7 @@ Insert the Salix CD/DVD or USB key, and start up your computer.
 Installing Salix on your computer is simple. But before starting, it is
 wise to check the following points:
 
-- Have you backed-up all the important files you have?
+- Have you backed up all the important files you have?
 - Check if your computer comes with Linux-friendly/supported
   hardware
 - Minimum recommended specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
@@ -267,7 +267,7 @@ WARNINGEND
 
 - Salix needs, at the very minimum, one partition which holds the root
   directory and must be assigned as ``/``.
-- It is often recommended to have one swap partition, though modern RAM
+- It is often recommended to have one swap partition though modern RAM
   sizes now often mean it isn't needed. If you already
   have another Linux OS running on your machine, its swap partition can be
   shared, and you do not need to create another. A swap partition is
@@ -295,7 +295,7 @@ WARNINGEND
   liable to lead to problems.
 -
 
-Each partition can be formatted into one of several file systems,
+Each partition can be formatted into one of the several file systems,
 including xfs, ext4, ext3, ext2, btrfs, jfs and reiserfs. The default
 is xfs.
 
@@ -339,14 +339,14 @@ semi-graphical command line interface.
 - You will be asked to choose an installation mode (**Full**, **Basic** or
   **Core**).
 - Installation of packages will start.
-- After the installation, LILO set up will start up. Unless you are **not**
+- After the installation, LILO setup will start up. Unless you are **not**
   using LILO, choose the default options. You can refine the bootloader
   configuration (for example, in a multi-boot scenario) after booting into
   your new Salix installation.
 % see Max's commments on  whether install to MBR is the  default, p. 11
-- You will be asked some other questions regarding time-zone, user
-  name and password. When all
-  the basic questions are answered, the machine will restart itself.
+- You will be asked some other questions regarding time-zone, username and
+  password. When all the basic questions are answered, the machine will restart
+  itself.
 - That's all. The computer is good to go! Enjoy Salix!
 -
 
@@ -363,7 +363,7 @@ transfer the contents of the Salix iso image to your USB stick, using
 a command line like this:
 ``` dd if=salix_image_file.iso of=/dev/sdb
 
-Of course you'll have to replace //salix_image_file.iso// with the exact
+Of course, you'll have to replace //salix_image_file.iso// with the exact
 path and name to the iso file you would like to use.
 
 WARNINGSTART dd is very dangerous!
@@ -402,7 +402,7 @@ swap space). Note that you can choose whether to create a Primary or Extended pa
 former is what is needed in this example, but an extended partition will allow for
 the creation of logical partitions within it, when a more complex setup is needed.
 - Make this partition **Bootable** (with 'B'). Use the up and down arrow keys to select a 
-particular partition, if there is more than one. The default partition type is 'Linux', so 
+particular partition, if there is more than one. The default partition type is 'Linux' so 
 that partition is done.
 - Next, make another new partition, taking up the rest of the drive.
 - Change its **Type** to 82, Linux Swap.
@@ -417,7 +417,7 @@ If your hard drive is partitioned using the GPT scheme, instead of the
 older MBR scheme, instead of cfdisk, you get cgdisk. While there
 are some differences between them, you'll find out that they are mostly
 the same, so the instructions provided for cfdisk apply to
-cgdisk for the most part.
+cgdisk, for the most part.
 NOTEEND
 
 
@@ -426,7 +426,7 @@ NOTEEND
 
 +++++Hard disk names+++++
 
-SCSI harddisks are named with //sdx//, where //x// is a hardisk letter. The disk with the 
+SCSI harddisks are named with //sdx//, where //x// is a harddisk letter. The disk with the 
 lowest SCSI ID on the first controller will become //sda//, the next
 after that, sdb, and so on.
 
@@ -446,14 +446,14 @@ the first disk is //sda5// and //sda6//, and so on.
 +++++The user interface+++++
 
 After //cfdisk// is started you'll get an interface where the current partition 
-table is listed with the names and some data about each partition, and some command 
+table is listed with the names and some data about each partition and some command 
 buttons on the bottom of the screen. To change between partitions, use the up and down 
 arrow keys. To change between commands, use the left and right arrow keys.
 
 +++++Deleting a partition+++++
 
 To delete an existing partition, highlight it with the up and down keys, select the 
-Delete command with the left and right arrow keys, and press //Enter//;
+Delete command with the left and right arrow keys and press //Enter//
 or just press ``D``.
 
 +++++Making a new partition+++++
@@ -462,12 +462,12 @@ To make a new partition, select the New command with the left and right arrow ke
 press //Enter//. You'll get the choice between a primary and a logical partition. If you 
 want a logical partition, the program will automatically make an extended partition for 
 you. Then you must choose the size of the partition (in MB). If you can't enter a value 
-in MB, return to the main screen with the ``Esc`` key, and select MB with the Units command.
+in MB, return to the main screen with the ``Esc`` key and select MB with the Units command.
 
 +++++Set the type of a partition+++++
 
 To set the type of a partition, highlight 
-the desired partition, and select the //Type// command. You'll get a list of different types. 
+the desired partition and select the //Type// command. You'll get a list of different types. 
 Press //space//, and you'll get even more. Find what type you need, and enter the number at 
 the prompt. Linux is ``83``, Linux swap is ``82``.
 
@@ -480,12 +480,12 @@ the partition and select the //Bootable// command.
 
 When you are content with the layout of the disk, select the //Write// command. The partition 
 table will be written to disk. Remember that this will destroy all data on partitions you 
-have deleted or changed. You should therefore be very sure that you want to do this before 
+have deleted or changed. You should, therefore, be very sure that you want to do this before 
 actually pressing the Return key.
 
 To exit the program, select the //Quit// command. The installer will
 then detect any partitions you have created and offer you the option to
-assign mountpoints to them.
+assign mount points to them.
 
 
 +Your Salix+
