@@ -1328,9 +1328,9 @@ wish. This only works in a terminal running within a GUI.
 
 //Ratpoison// is a tiling window manager, somewhat like //xmonad// or
 //spectrwm//. Its two main features are that applications fill the whole
-screen, with no bars or buttons; and the user interface can be
+screen, with no bars or buttons, and the user interface can be
 controlled entirely from the keyboard, with no mouse. If needed, any
-number of windows may be shown simultaneously, and rearranged at will -
+number of windows may be shown simultaneously and rearranged at will -
 hence the term "tiling" WM. All this may take some getting used to, but
 although - or perhaps because - the interface is so very different from
 the conventional point-and-click approach, it can quickly become highly
@@ -1344,7 +1344,7 @@ configurable - and fast!
 The applications present for the Ratpoison edition aim to fit in with
 its minimalist (but not spartan) approach. The majority use vim-style
 keybindings, even though Ratpoison itself does not, so users will need
-to become comfortable with these if they are not already; cheatsheets
+to become comfortable with these if they are not already; cheat sheets
 are available online to help assimilate them, as well as guides (and
 manpages) for the individual applications. Common operations use
 only a small subset of keys, which makes the learning curve smoother:
@@ -1358,7 +1358,7 @@ just follow the instructions.
 +++Starting Ratpoison and running applications+++
 
 When you boot Salix Ratpoison, there is no graphical login screen: when
-you log in, you enter the linux terminal. Log in as your normal user
+you log in, you enter the Linux terminal. Log in as your normal user
 and type
 ``` startx
 
@@ -1373,7 +1373,7 @@ as easy to set Ratpoison to work as with any more conventional desktop.
 
 To select an application from the menu, type ``C-t r``, and use the arrow
 keys to navigate (Vim's ``hjkl`` keys also work). Right arrow (or ``l``)
-accesses submenus (such as "Network"), and left arrow (or ``h``) goes
+accesses submenus (such as "Network") and left arrow (or ``h``) goes
 back up a level. Right arrow or enter runs the application (if you open
 one by mistake, don't worry, just type ``C-t r`` again - we will
 see how to close windows and applications later).
@@ -1417,8 +1417,8 @@ choices (``shift-TAB`` to go back up) and ``Enter`` to select. ``O`` rather
 than ``o`` (and ``T`` rather than ``t``) allows you to edit the URL of the
 current page - try it. ``j`` and ``k`` scroll down and up.
 ``Shift-l`` moves one page forward in your browsing history. ``d`` closes
-the current window. For more details, consult ``man vimprobable2`` as
-well as the Vimprobable website; see also ``man vimprobablerc`` for
+the current window. For more details, consult ``man vimprobable2``, as
+well as the Vimprobable website, see also ``man vimprobablerc`` for
 configuration options. Note that ``.`` and ``,`` are handy alternatives to
 ``f`` and ``shift-f``.
 
@@ -1426,10 +1426,10 @@ There are no tabs. In the next section, we will see how Ratpoison allows
 you to use windows to do the work of tabs, but more informatively.
 
 Note that if the input received by ``o`` or ``t`` can't be resolved into a
-URL, it will be sent to a search engine; the default is //duckduckgo//.
+URL, it will be sent to a search engine; the default is //DuckDuckGo//.
 If the first item is ``i``, ``s``, ``w``, ``wd``, or ``y``, a different
-search engine is used in each case. These shorcuts are described in the
-Vimprobable man page, and may also be customised in the .vimprobablerc
+search engine is used in each case. These shortcuts are described in the
+Vimprobable man page and may also be customized in the .vimprobablerc
 configuration file.
 
 To insert data in forms (for instance, login and password) use tab till
@@ -1507,14 +1507,14 @@ in the repository. //Firefox// may be installed adding the
 alternatively //Jumanji//, //XXXTerm// or //w3m//, a browser for the
 command line. //Thunderbird// can be used with the //Muttator// addon
 while //Claws-mail// works almost entirely from the keyboard;
-//mcabber// and //irssi// are jabber and irc clients for the console.
+//mcabber// and //irssi// are Jabber and IRC clients for the console.
 
 Note: To see how to edit Alpine's configuration file to access mail from
-one popular provider via smtp, see the page in the
+one popular provider via SMTP, see the page in the
 [Salix wiki http://www.salixos.org/wiki/index.php/How_to_set_up_Alpine_with_a_Gmail_account].
 
-Wordgrinder and sc are wordprocessing and spreadsheet applications.
-Flash is not included, but is available from the
+Wordgrinder and sc are word processing and spreadsheet applications.
+Flash is not included but is available from the
 repositories. Screen for managing multiple consoles works well with
 Ratpoison. Users are encouraged to tailor and expand the application
 selection according to taste; when it comes to text processing, for
@@ -1525,7 +1525,7 @@ formats into plain text.
 
 Note that the //Gslapt// and //Sourcery// graphical package management
 tools (equivalent to //slapt-get// and //slapt-src//)  may also be used
-mouselessly, though this is perhaps more awkward than working on the
+mouseless, though this is perhaps more awkward than working on the
 command line. In either case, regular manual upgrading will still be
 necessary.
 
@@ -1537,7 +1537,7 @@ sudo spi -i mplayer2
 ```
 
 Note: To see how to edit Alpine's configuration file to access mail from
-one popular provider via smtp, see the page in the
+one popular provider via SMTP, see the page in the
 [Salix wiki http://www.salixos.org/wiki/index.php/How20to20set20up20Alpine20with20a20Gmail20account].
 
 
@@ -1549,7 +1549,7 @@ that's Ratpoison's escape key combination! In fact, Ratpoison has a
 solution for such conflicts, referred to somewhat cryptically in the
 shortcut list as //meta//: ``C-t t`` should send ``C-t`` to the
 application in the active window. However, this does not work in the
-terminal, which does not recognise the character if it receives it in
+terminal, which does not recognize the character if it receives it in
 this form.
 
 Everything in Ratpoison is configurable, and the ``C-t`` combination
@@ -1576,7 +1576,7 @@ To change the ``C-t`` default, do: ``C-t :escape Super_L``,
 which is the so-called "Windows key" to the left of the keyboard. As
 well as resolving the conflict with //Alpine//, this has the great
 benefit of being just one keystroke. Some functions may not work
-correctly, in particular the very useful ``C-t C-t`` to go back to where
+correctly, in particular, the very useful ``C-t C-t`` to go back to where
 you just were, and performance varies from one keyboard to another, so
 it's worth experimenting. Another possibility is the "Menu" key. To
 return to the default: ``C-t :escape C-t``.
@@ -1584,7 +1584,7 @@ return to the default: ``C-t :escape C-t``.
 To make such a change permanent, edit //~/.ratpoisonrc//. If you are
 using Ratpoison, you can open the file now (with //GVim// or //Vim//) and
 tile it horizontally with the window where you are reading this guide
-(``C-t shift-s``). Let's go through some items in the file.
+(``C-t Shift-s``). Let's go through some items in the file.
 
 ```
 # .ratpoisonrc
