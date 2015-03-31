@@ -1643,7 +1643,7 @@ workspaces; we'll look at these next - including ``C-t W``.
 
 +++Using workspaces+++
 
-If you have several terminals open, and various browser windows, and
+If you have several terminals open, and various browser windows and
 some other applications, the number of windows may become unwieldy. To
 help with this, Ratpoison allows you to use workspaces. (In the online
 Ratpoison manual, these are referred to more precisely as
@@ -1778,15 +1778,15 @@ use the
 [IRC link http://webchat.freenode.net/?randomnick=1&channels=salix&prompt=1] 
 above
 to be in live communication with members of the community and get
-instant help if necessary. If you do however, you might want to modify
+instant help if necessary. If you do, however, you might want to modify
 the default //qwebircxxx// login to something more personal and human
 readable.
 
 [img/salix-online.png]
 
 We hope that the information here will allow you to get Salix up and
-running fairly straightforwardly, to begin exploring its potential, and
-above all to use it for what you want to do. Nonetheless, sometimes you
+running fairly straightforwardly, to begin exploring its potential, and,
+above all, to use it for what you want to do. Nonetheless, sometimes you
 may not know how to do something or be able to make it work.
 
 While Salix aims to be elegant and intuitive, every operating system has
@@ -1827,7 +1827,7 @@ consulting a human community, not an interactive online encyclopedia;
 it is a conversation, something which can be easily lost sight of
 online.
 
-Forums are a concrete example of one of the qualities at the heart of
+Forums are a concrete example of one of the qualities of the heart of
 Linux, which is that it is community-based. Rather than being a
 commercial product, in almost all cases it is developed by enthusiasts
 collaborating together for the sheer delight of making good software.
@@ -1942,7 +1942,7 @@ mailbox format as well as the Mbox mailbox format via a plugin.
 
 ====Document Viewer (Atril)==== 
 
-Document Viewer is a a very lightweight, simple PDF document viewer.
+Document Viewer is a very lightweight, simple PDF document viewer.
 
 [img/atril.png]
 
@@ -2019,7 +2019,7 @@ filesystem and browse local networks shares.
 ====Gimp==== 
 
 GIMP (GNU Image Manipulation Program) is an image retouching and editing
-tool. In addition to offering free form drawing, it can accomplish
+tool. In addition to offering free-form drawing, it can accomplish
 essential image workflow steps such as resizing, editing, and cropping
 photos, combining multiple images, converting between different image
 formats as well as create basic animated images in GIF.
@@ -2030,7 +2030,7 @@ formats as well as create basic animated images in GIF.
 ====Gnumeric====
 
 The goal of Gnumeric is to be the best possible spreadsheet. While not
-attempting to clone existing applications, Gnumeric can however read
+attempting to clone existing applications, Gnumeric can, however, read
 files saved with other spreadsheets and offers a customizable feel that
 attempts to minimize the costs of transition.
 
@@ -2051,19 +2051,19 @@ text form using the default system monospace font.
 
 Ibus is a new generation of input method editors after SCIM. It supports
 for more than thirty languages (Chinese, Japanese, Korean and other
-languages) on both qt and non-qt environments. (You may have to
+languages) in both qt and non-qt environments. (You may have to
 go to qtconfig and select "ibus" instead of "xim" in
 "Interface" -> "Default Input Method").
 
 
 ====ISO Master====
 
-[img/isomaster.png]
-
 ISO Master is an application for creating and modifying ISO9660 files
 (ISO images). Its functionalities include: creating an ISO image from
 scratch, adding or removing files and directories to/from a CD image,
 and creating bootable CDs using various boot record types.
+
+[img/isomaster.png]
 
 
 ====Leafpad====
@@ -2076,7 +2076,7 @@ Leafpad is a very light simple text editor with printing support.
 Meld is a visual diff and merge tool. You can compare two or three files
 and edit them in place (diffs update dynamically). You can compare two
 or three folders and launch file comparisons. You can browse and view a
-working copy from popular version control systems such such as CVS,
+working copy from popular version control systems such as CVS,
 Subversion, Bazaar-ng and Mercurial.
 
 
@@ -2112,7 +2112,7 @@ also read and write files from other common office software packages.
 
 Orage provides a calendar which integrates nicely into the Xfce Desktop
 Environment. It is highly configurable and supports alerts based on
-dates. It warns you with pop up or audible alarms. As it is an
+dates. It warns you with pop-up or audible alarms. As it is an
 application for everyday use, it launches itself in the background and
 can be accessed using the Orage Clock plugin for the panel. Simply click
 on a date to display or set the agenda for the day.
@@ -2122,7 +2122,7 @@ on a date to display or set the agenda for the day.
 
 ====Parole Media Player==== 
 
-Parole Media Player is a media player (audio and video) which utilises
+Parole Media Player is a media player (audio and video) which utilizes
 the GStreamer framework for playback.
 
 [img/parole.png]
@@ -2130,7 +2130,7 @@ the GStreamer framework for playback.
 
 ====Pidgin====
 
-Pidgin is an easy to use and free chat client which lets you log in to
+Pidgin is easy to use and free chat client which lets you log in to
 accounts on multiple chat networks simultaneously. Pidgin is compatible
 with numerous chat networks out of the box: AIM, ICQ, Google Talk,
 Jabber/XMPP, MSN Messenger, Yahoo, etc.
@@ -2140,7 +2140,7 @@ Jabber/XMPP, MSN Messenger, Yahoo, etc.
 
 ====PiTiVi Video Editor====
 
-PiTiVi is an easy to use video editor. The interface is intuitive to
+PiTiVi is easy to use video editor. The interface is intuitive to
 most users. Just by dragging your video clips, you can create your own
 film clips.
 
@@ -2159,7 +2159,7 @@ or even with your webcam!
 
 Transmission is a
 [BitTorrent https://en.wikipedia.org/wiki/BitTorrent] client that is
-simple, lean and powerful.
+simple, lightweight and powerful.
 
 [img/transmission.png]
 
@@ -2174,7 +2174,7 @@ Viewnior is a fast and lightweight picture viewer.
 ====Whaaw! MediaPlayer==== 
 
 Whaaw! Media Player will play any audio/video files which GStreamer can
-manage. It supports fullscreen mode, seeking, changing video colour
+manage. It supports full-screen mode, seeking, changing video color
 settings and more. It is intended to be a basic media player with few
 dependencies.
 
@@ -2187,5 +2187,5 @@ Zim is a bit of everything. In essence, it is a desktop wiki, and it
 allows you a great deal of flexibility regarding what you can do with
 it. For instance, one can use it to keep track of TODO lists of ideas,
 to take notes in a meeting, as a drafting tool for blog entries,
-mails and so on.
+emails and so on.
 
