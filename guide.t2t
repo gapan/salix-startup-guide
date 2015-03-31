@@ -511,7 +511,7 @@ built on your system before being installed. Salix provides a graphical tool,
 is not guaranteed to be successful and some manual tinkering may be needed.
 
 Unlike the software provided in the repositories, these scripts are not  
-maintained by either Salix or Slackware, but by individual users, and as 
+maintained by either Salix or Slackware but by individual users, and as 
 such are not the responsibility of either distribution, although help may
 be found on the forum. If the build fails, the last ten lines or so of the 
 output usually provide an indication of the reason. Most commonly, this is
@@ -574,7 +574,7 @@ to ensure your installed system is up to date with the repositories -- click on
 //Sourcery// is a graphical frontend to [slapt-src #slapt-src], a
 utility to build and install packages from source using SlackBuilds
 or SLKBUILDs. Before use, you should first click on the
-**Update** button on the tool bar to ensure that the latest updates from
+**Update** button on the toolbar to ensure that the latest updates from
 the software repositories are known to //Sourcery//. The search field is
 there for you to search for a particular package, and installations,
 uninstallations or reinstallations of selected packages are done
@@ -600,14 +600,14 @@ only will the application not work, the build will fail.
 //slapt-get// and //slapt-src// are the command-line tools for which //Gslapt// and //Sourcery//
 provide a GUI. This section describes their use from the command line, where there is also
 a tool that combines their most common functions, //spi//. //spkg// is a tool to install
-packages manually, while still making them known to the package management system.
+packages manually while still making them known to the package management system.
 
 
 +++Salix Package Installer+++
 
 //spi// is a command line tool that combines some basic functions of
 //slapt-get// and //slapt-src//. It installs from the Salix repositories
-if the package is available there, if not, it looks in [SlackBuilds URLSBO],
+if the package is available there, if not, it looks in [SlackBuilds URLSBO]
 and repeats the process recursively for any dependencies. This means all packages
 are automatically installed from the repositories if they are available there,
 even if it is a dependency of a package that is not. For a summary of usage, see
@@ -700,7 +700,7 @@ If you would like to install or upgrade a package that you have manually
 downloaded or have built yourself, you can use //spkg//. Salix packages
 (just as Slackware packages) have filenames that end with the //.tgz//,
 or //.txz// extensions (there are also //.tlz// and //.tbz// but they
-are very rarely used). To either install a new package, or upgrade a
+are very rarely used). To either install a new package or upgrade a
 package you can use the following command:
 ``` sudo spkg [exact path to package]
 
@@ -718,7 +718,7 @@ If you are replacing a package that is available in the repositories,
 you will need to blacklist this package
 in ///etc/slapt-get/slapt-getrc// to prevent it from being "downgraded" when
 you next carry out a general package upgrade. (See above for how to do
-this in [Gslapt #Gslapt]
+this in [Gslapt #Gslapt])
 NOTEEND
 
 +++Making a Package from a Source File with SLKBUILD+++[roll-your-own]
@@ -802,7 +802,7 @@ After writing a document, transferring photos from your camera, or
 creating your own images with GIMP, you would probably like to print
 them out with your printer. To do this, you need to have a printer
 already installed on your system. "**Manage Printing**", which is found
-under "System" in the main application menu, handles the installation
+in "System" in the main application menu, handles the installation
 and general management of your printers. (Ensure that "CUPS" is enabled
 in the [system services #system_services], or Manage Printing
 will not start properly).
@@ -811,7 +811,7 @@ If you are buying a new printer, it is recommended to check the
 availability of Linux drivers beforehand from the
 [Open Printing database http://www.linuxfoundation.org/collaborate/workgroups/openprinting/database/databaseintro]
 (or search on the Internet). Some companies offer printer drivers for Linux,
-but this is less common than desired, and could involve a
+but this is less common than desired and could involve a
 lengthy installation process. For most Linux friendly printers,
 you have to install drivers such as gutenprint or HPIJS, both of
 which are available from the repositories.
@@ -871,8 +871,8 @@ management in Salix can also be done the usual
 ([manual http://www.slackbook.org/html/book.html])
 Slackware way.
 
-Please note that most Salix tools have an ncurses
-counterpart which can be used in a linux terminal or console. 
+Please note that most Salix tools have a ncurses
+counterpart which can be used in a Linux terminal or console. 
 
 
 +++ALSA Sound Card+++
@@ -891,12 +891,12 @@ during installation/start-up.
 
 As the name indicates, Rebuild Icon Cache reconnects some icons that may
 have become lost after updating your system / installing some new
-program, and makes them appear again in the application menu.
+program and makes them appear again in the application menu.
 
 
 +++Hostnames+++
 
-Hostnames manages the host names used by your computer. This tool
+Hostnames manage the host names used by your computer. This tool
 facilitates defining/overviewing host names used while setting up your
 machine as a server.
 
@@ -955,7 +955,7 @@ other means to boot into your system.
 Here you will be able to select the services that should or shouldn't be
 activated in the background when your system starts.
 
-All your modifications will be applied instantly if you press on the OK
+All your modifications will be applied instantly if you press the OK
 button and will not necessitate a reboot.
 
 To execute this utility in a terminal, simply type
@@ -1023,26 +1023,26 @@ the one you normally use is down. You can run it from a terminal with:
 ++Working with the Command Line Interface++[working_with_cli]
 
 This section deals with working in a console mode or with a terminal
-(such as xfce terminal, xterm, konsole and so forth), and serves merely
+(such as Xfce terminal, xterm, konsole and so forth), and serves merely
 as a light introduction to the command line interface (CLI).
-The intended audience here is not seasoned travellers but new journeymen
+The intended audience here is not seasoned travelers but new journeymen
 in the land of Linux, who are willing to discover more about what one
 can do with it. We will go through some examples in this section for you
 to follow, and hopefully by the end of this walkthrough, you will have
-no problem working in the "black screen". For those who would like to
-know more about CLI, there are a couple of useful resources available on
+no problem working with the "black screen". For those who would like to
+know more about CLI, there is a couple of useful resources available on
 the net, and some are listed in the
 [Salix Forum http://forum.salixos.org].
 
 So why learn CLI commands at all? Graphical user interfaces for
-applications have been steadily improving in Linux, and are probably now
+applications have been steadily improving in Linux and are probably now
 comparable to any OS in their ease of use. On the other hand, where
-Linux excels in particular is in the area of command line applications,
+Linux excels, in particular, is in the area of command line applications,
 its traditional strength. Without the CLI, you would be
 effectively missing out on half of what Linux can offer.
 
 There is another reason. From time to time, you might have to work in
-console. For instance, if the machine fails to start up a graphical
+the console. For instance, if the machine fails to start up a graphical
 desktop environment during booting, then you are more or less forced to
 fix the problem without the graphical user interface (GUI).
 
@@ -1108,8 +1108,8 @@ automatically.
 The important thing to notice here is this is a //relative path//: unlike
 where the whole path was specified above, starting from the root of the
 filesystem ``/``, if the path doesn't begin with ``/`` it is understood
-as starting from whatever the current directory is, in this case your
-user's home. So ``Music`` in this case means the same as ``/home/your_user_name/Music``.
+as starting from whatever the current directory is, in this case, your
+user's home. So ``Music``, in this case, means the same as ``/home/your_user_name/Music``.
 
 
 +++Creating a Folder - mkdir+++
@@ -1120,19 +1120,19 @@ You can create a folder by issuing
 For example, let's say we are going to create a photo folder.
 ``` mkdir photo
 
-will place the new folder in the
+Will place the new folder in the
 current directory. You can check this by typing
 ``` ls
 
 Next, let's create a log file for the photo folder. ``nano`` is a
-command line application for reading and writing texts. To bring up the
+command-line application for reading and writing texts. To bring up the
 program, type in
 ``` nano
 
 [img/nano.png]
 
 The application is simple to use, and you can see command options shown
-at the buttom. Type
+at the bottom. Type
 ``` log file created
 
 and with ``Ctrl+x``, save
@@ -1218,7 +1218,7 @@ possible that ``--help`` will just be ``-h``, and there may be no help
 at all. ``man`` is another command if this is the case.
 ``` man cp
 
-will give a more indepth explanation of this command. (To get out of the
+Will give a more in-depth explanation of this command. (To get out of the
 manual, press ``q``).
 
 If you read the help carefully, you will see that you need to give an
@@ -1263,10 +1263,10 @@ xcowsay [Not installed]: xcowsay (displays a cute cow and message on your deskto
 You can see that there is no available package for cowsay in the official
 repositories of Salix or Slackware. Instead, a SlackBuild is available.
 [slackbuilds.org URLSBO] maintains extra packages for Slackware,
-which of course can be utilised by Salix users. These SlackBuilds
-however are not maintained by Salix or Slackware, but rather from
+which, of course, can be utilized by Salix users. These SlackBuilds,
+however, are not maintained by Salix or Slackware, but rather from
 individual Slackware users and are not guaranteed to work 100%
-of the time. Packages on the other hand, should work perfectly fine all
+of the time. Packages, on the other hand, should work perfectly fine all
 the time, with no exceptions.
 
 To install cowsay using the SlackBuild, you simply must run:
@@ -1278,8 +1278,8 @@ packages involves downloading the package and actually installing it,
 while installing something using a SlackBuild, involves downloading the
 SlackBuild script and all required source files, compiling the source
 code, packaging it up and installing the package that has been created.
-All that of course is done automatically. It's only just that installing
-something using a SlackBuild is generally a bit (or a lot) slower, since
+All that, of course, is done automatically. It's only just that installing
+something using a SlackBuild is generally a bit (or a lot) slower since
 it includes the extra step for compiling the source code.
 
 If you are not sure what this
@@ -1290,7 +1290,7 @@ installed.
 
 Once it is installed, you might want to test it. First get out of the
 superuser mode by typing ``exit``. Then type in ``cowsay``. Nothing
-happens, and in fact, you will see that you are now in a strange mode
+happens, and, in fact, you will see that you are now in a strange mode
 that you cannot execute any commands. This is because the application is
 still running, but as you don't see anything, perhaps it is not running
 properly. To terminate the process, press ``Ctrl+c``. You will get
