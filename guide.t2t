@@ -756,8 +756,8 @@ before issuing
 to create a Salix compatible package which can then be installed with [spkg #spkg] 
 (the //fakeroot// package should also be installed).
 For more on SLKBUILD, please consult
-[SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild]. 
-[New_to_Packaging http://docs.salixos.org/wiki/New_to_Packaging]
+[SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild] 
+and [New to Packaging http://docs.salixos.org/wiki/New_to_Packaging].
 
 
 +++Upgrading Salix to a Newer Version+++
@@ -765,11 +765,11 @@ For more on SLKBUILD, please consult
 If you wish to upgrade an older version of Salix on your machine to the
 latest, please refer to the following link for upgrading your Salix.
 
-- [Salix 13.0 to 13.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.0_to_13.1]
-- [Salix 13.1 to 13.37 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.1_to_13.37]
-- [Salix 13.37 to 14.0 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.37_to_14.0]
+- [Salix 13.0 to 13.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.0_to_13.1].
+- [Salix 13.1 to 13.37 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.1_to_13.37].
+- [Salix 13.37 to 14.0 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.37_to_14.0].
 %assuming this page will exist:
-- [Salix 14.0 to 14.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.0_to_14.1]
+- [Salix 14.0 to 14.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.0_to_14.1].
 -
 
 
@@ -818,10 +818,10 @@ lengthy installation process. For most Linux friendly printers,
 you have to install drivers such as gutenprint or HPIJS, both of
 which are available from the repositories.
 
-- Select "Add Printers and Classes"
-- Under "Printers", select "Add Printer"
-- Enter "root" as a username and your superuser password
-- Select your printer description and choose if you would like to share the printer
+- Select "Add Printers and Classes".
+- Under "Printers", select "Add Printer".
+- Enter "root" as a username and your superuser password.
+- Select your printer description and choose if you would like to share the printer.
 - Select the correct driver from the list (Model) - see an example
 below. This is the important part. Or if you have a
 [PPD http://en.wikipedia.org/wiki/PostScript_Printer_Description] file
@@ -831,7 +831,7 @@ instead, you can load it here.
 [img/addprinter.png]
 
 - Select Add Printer, and finish the process by configuring details of the printer.
-- Now the printer should be usable on your computer
+- Now the printer should be usable on your computer.
 -
 
 For setting up a network printer, please consult the Salix
@@ -839,8 +839,6 @@ For setting up a network printer, please consult the Salix
 
 
 +++Salix Codecs Installer+++
-
-[img/salix-codecs-installer.png]
 
 Salix only includes, by default, software that is legally free to use
 in any country, and that means that proprietary media formats are not
@@ -855,16 +853,13 @@ Salix codecs installer can be found under "Multimedia" in the main
 application menu, and will conveniently install those codecs which
 enable the viewing of the vast majority of commercial media formats.
 
+[img/salix-codecs-installer.png]
+
 
 ++Salix Tools++
 
 
 +++What are the Salix Tools?+++[salixtools]
-
-% ### = check image
-% ### this image probably needs updating
-[img/salixtools-gtk.png]
-
 
 Salix tools are a collection of utilities that are designed to manage
 every aspect of Salix configuration easily. You can find these tools
@@ -872,6 +867,10 @@ under the System section of the application menu. Of course, system
 management in Salix can also be done the usual
 ([manual http://www.slackbook.org/html/book.html])
 Slackware way.
+
+% ### = check image
+% ### this image probably needs updating
+[img/salixtools-gtk.png]
 
 Please note that most Salix tools have a ncurses
 counterpart which can be used in a Linux terminal or console. 
@@ -892,7 +891,7 @@ during installation/start-up.
 +++Rebuild Icon Cache+++
 
 As the name indicates, Rebuild Icon Cache reconnects some icons that may
-have become lost after updating your system / installing some new
+have become lost after updating your system/installing some new
 program and makes them appear again in the application menu.
 
 
@@ -919,11 +918,11 @@ To execute this utility in a terminal, simply type
 
 +++Keyboard Layout+++
 
-[img/gtkkeyboardsetup.png]
-
 This utility will configure the keyboard layout being used both in
 the graphical and non-graphical environments. Modifications are applied
 instantly.
+
+[img/gtkkeyboardsetup.png]
 
 Note that if you would like to activate [Ibus #ibus] during the start
 up, you can do so by ticking the optional box.
@@ -986,9 +985,6 @@ To execute it in a terminal, simply type
 
 +++User Profiles+++
 
-% ### background is wrong # but never mind
-[img/gtkusersetup.png]
-
 In Unix/Linux, all users and groups of users are given certain
 [permissions and access rights http://en.wikibooks.org/wiki/UNIX_Computing_Security/Access_authorization] 
 to some part of the system in order to control their ability to access
@@ -997,18 +993,21 @@ and change it.
 This utility manages the creation, deletion and properties of all the
 system users and groups of users.
 
+% ### background is wrong # but never mind
+[img/gtkusersetup.png]
+
 To execute it in a terminal, simply type
 ``` sudo usersetup
 
 
 +++Salix-Update-Notifier+++
 
-[img/salix-update-notifier.png]
-
 Salix update notifier is a tool that periodically checks for available
 package updates and informs the user about them with the display of a
 non-intrusive tray icon, which can be used to launch the upgrade process
 with Gslapt.
+
+[img/salix-update-notifier.png]
 
 
 +++reposetup+++
@@ -1392,7 +1391,7 @@ lot by adding them to the configuration file, which we will look at
 below.
 
 //apvlv//, under Accessories, can be used to read pdf documents such as
-this guide. Also under accessories, 'Unit conversion' starts the
+this guide. Also under accessories, "Unit conversion" starts the
 console application units, which will convert between a large range of
 scales, such as time, weight, or currency, including some quite
 unusual ones.
@@ -1623,7 +1622,7 @@ exec rpws init 5 -k
 
 //banish// sends the mouse pointer to bottom right (incidentally, you may
 wish to install //unclutter//, which makes it fade out altogether
-after a few seconds' stillness; place the line
+after a few seconds stillness; place the line
 ``` unclutter &
 
 in your
