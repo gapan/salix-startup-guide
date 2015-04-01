@@ -1,6 +1,8 @@
 Salix Start-Up Guide
 Getting familiar with your new operating System.
-Last updated on %%mtime(%Y-%m-%d %H:%M)
+
+
+//Last updated on %%mtime(%Y-%m-%d %H:%M)//.
 
 %!includeconf: config.t2t
 
@@ -55,15 +57,15 @@ also applies it to the viewpoint of the end user.
 
 +++Salix Features+++
 
-- One application per task rationale
-- Fully backwards compatible with Slackware
-- Optimised for desktop usage
-- With Salix Tools to assist [system management #salixtools]
-- High-quality package repositories with dependency support
-- Simple & fully localized system administration tools
-- Salix artwork
-- Supports 32-bit and 64-bit architectures
-- Comes with a complete development environment
+- One application per task rationale.
+- Fully backwards compatible with Slackware.
+- Optimised for desktop usage.
+- With Salix Tools to assist [system management #salixtools].
+- High-quality package repositories with dependency support.
+- Simple & fully localized system administration tools.
+- Salix artwork.
+- Supports 32-bit and 64-bit architectures.
+- Comes with a complete development environment.
 -
 
 
@@ -88,7 +90,7 @@ will follow in due course. Meanwhile, older versions continue to be supported.
 
 For a list of applications available in each Edition, please refer
 to the later section
-([List of Applications #list_of_applications])
+([List of Applications #list_of_applications]).
 
 
 +++Installation Modes+++
@@ -133,11 +135,11 @@ mode to install the X window system and any graphical environment on top of it i
 - //slapt-get// and its graphical interface //Gslapt// are the primary tools used for
   package management while //slapt-src// and //Sourcery// are included to allow the easy installation
  of an even wider selection of software!
-- A wide range of packages from Slackware, Slackbuild and Salix repositories
+- A wide range of packages from Slackware, Slackbuild and Salix repositories.
 - The Salix repositories offer **dependency resolution support** and are
   the **largest** third party software package repositories for Slackware
-  offered to date
-- The Salix repositories are offered for both the **32-bit** and **64-bit** architectures
+  offered to date.
+- The Salix repositories are offered for both the **32-bit** and **64-bit** architectures.
 -
 
 NOTESTART In Short, Salix is...
@@ -186,7 +188,7 @@ NOTEEND
 
 +++Booting from a Salix Installation medium+++
 
-Your computer must be set to boot on the optical drive / USB port first
+Your computer must be set to boot on the optical drive/USB port first
 before defaulting to the internal hard disk drive.
 If that is not the case, you need to first modify the
 [BIOS http://en.wikipedia.org/wiki/BIOS] setting, usually by pressing the Del
@@ -207,13 +209,13 @@ wise to check the following points:
 
 - Have you backed up all the important files you have?
 - Check if your computer comes with Linux-friendly/supported
-  hardware
+  hardware.
 - Minimum recommended specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
   HD space, or equivalent, though a lower spec machine may run
-  without a problem)
-- At least one separate
+  without a problem).
+- At least one separate.
   [partition http://en.wikipedia.org/wiki/Disk_partitioning]
-  dedicated for Salix on your computer
+  dedicated for Salix on your computer.
 -
 
 % Is this info about rEFIt up to date?
@@ -319,7 +321,7 @@ semi-graphical command line interface.
   select AUTOPARTITION. Note that this will delete everything on the hard drive.
 - Otherwise, the installer will run //cfdisk// to allow you to set up your desired
   partitions. If they are already as you wish, type 'Q' to quit. See below for 
-  a detailed guide to using [cfdisk #cfdisk]
+  a detailed guide to using [cfdisk #cfdisk].
 - Your swap partition, if any, will be automatically detected. Say ``yes`` if the
   detected partition corresponds to that.
 - You will then be asked to specify the partition for the root ``/``
@@ -718,7 +720,7 @@ If you are replacing a package that is available in the repositories,
 you will need to blacklist this package
 in ///etc/slapt-get/slapt-getrc// to prevent it from being "downgraded" when
 you next carry out a general package upgrade. (See above for how to do
-this in [Gslapt #Gslapt])
+this in [Gslapt #Gslapt]).
 NOTEEND
 
 +++Making a Package from a Source File with SLKBUILD+++[roll-your-own]
@@ -727,11 +729,11 @@ Installing software from a source file is in most cases not difficult.
 You can compile a lot of software generally with the following
 commands.
 
-- unpack a source file, move inside the folder
-- type in ``./configure`` on the terminal
-- type in ``make``
-- type in ``sudo make install``
-- type your password
+- unpack a source file, move inside the folder.
+- type in ``./configure`` on the terminal.
+- type in ``make``.
+- type in ``sudo make install``.
+- type your password.
 -
 
 Make sure to read accompanying files such as "README", "INSTALL" and so
