@@ -4,14 +4,14 @@
 }
 
 body, h1, h2, h3, h4, h5, h6, pre, li, div {
-	line-height: 1.29em;
+	line-height: 1.5em;
 }
 
 body {
 	background-color: white;
 	margin:0 auto;
 	font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
-	font-size:12px;
+	font-size:14px;
 	max-width:55em;
 	color:black;
 }
