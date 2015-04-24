@@ -297,7 +297,7 @@ WARNINGEND
   liable to lead to problems.
 -
 
-Each partition can be formatted into one of the several file systems,
+Each partition can be formatted into one of several file systems,
 including xfs, ext4, ext3, ext2, btrfs, jfs and reiserfs. The default
 is xfs.
 
@@ -804,7 +804,7 @@ After writing a document, transferring photos from your camera, or
 creating your own images with GIMP, you would probably like to print
 them out with your printer. To do this, you need to have a printer
 already installed on your system. "**Manage Printing**", which is found
-in "System" in the main application menu, handles the installation
+under "System" in the main application menu, handles the installation
 and general management of your printers. (Ensure that "CUPS" is enabled
 in the [system services #system_services], or Manage Printing
 will not start properly).
@@ -872,7 +872,7 @@ Slackware way.
 % ### this image probably needs updating
 [img/salixtools-gtk.png]
 
-Please note that most Salix tools have a ncurses
+Please note that most Salix tools have an ncurses
 counterpart which can be used in a Linux terminal or console. 
 
 
@@ -897,7 +897,7 @@ program and makes them appear again in the application menu.
 
 +++Hostnames+++
 
-Hostnames manage the host names used by your computer. This tool
+Hostnames manages the host names used by your computer. This tool
 facilitates defining/overviewing host names used while setting up your
 machine as a server.
 
@@ -1031,7 +1031,7 @@ in the land of Linux, who are willing to discover more about what one
 can do with it. We will go through some examples in this section for you
 to follow, and hopefully by the end of this walkthrough, you will have
 no problem working with the "black screen". For those who would like to
-know more about CLI, there is a couple of useful resources available on
+know more about CLI, there are a couple of useful resources available on
 the net, and some are listed in the
 [Salix Forum http://forum.salixos.org].
 
@@ -1121,7 +1121,7 @@ You can create a folder by issuing
 For example, let's say we are going to create a photo folder.
 ``` mkdir photo
 
-Will place the new folder in the
+will place the new folder in the
 current directory. You can check this by typing
 ``` ls
 
@@ -1219,7 +1219,7 @@ possible that ``--help`` will just be ``-h``, and there may be no help
 at all. ``man`` is another command if this is the case.
 ``` man cp
 
-Will give a more in-depth explanation of this command. (To get out of the
+will give a more in-depth explanation of this command. (To get out of the
 manual, press ``q``).
 
 If you read the help carefully, you will see that you need to give an
@@ -1526,7 +1526,7 @@ formats into plain text.
 
 Note that the //Gslapt// and //Sourcery// graphical package management
 tools (equivalent to //slapt-get// and //slapt-src//)  may also be used
-mouseless, though this is perhaps more awkward than working on the
+with out mouse, though this is perhaps more awkward than working on the
 command line. In either case, regular manual upgrading will still be
 necessary.
 
@@ -1622,7 +1622,7 @@ exec rpws init 5 -k
 
 //banish// sends the mouse pointer to bottom right (incidentally, you may
 wish to install //unclutter//, which makes it fade out altogether
-after a few seconds stillness; place the line
+after a few seconds of stillness; place the line
 ``` unclutter &
 
 in your
@@ -1828,7 +1828,7 @@ consulting a human community, not an interactive online encyclopedia;
 it is a conversation, something which can be easily lost sight of
 online.
 
-Forums are a concrete example of one of the qualities of the heart of
+Forums are a concrete example of one of the qualities at the heart of
 Linux, which is that it is community-based. Rather than being a
 commercial product, in almost all cases it is developed by enthusiasts
 collaborating together for the sheer delight of making good software.
@@ -2131,7 +2131,7 @@ the GStreamer framework for playback.
 
 ====Pidgin====
 
-Pidgin is easy to use and free chat client which lets you log in to
+Pidgin is an easy to use and free chat client which lets you log in to
 accounts on multiple chat networks simultaneously. Pidgin is compatible
 with numerous chat networks out of the box: AIM, ICQ, Google Talk,
 Jabber/XMPP, MSN Messenger, Yahoo, etc.
@@ -2141,7 +2141,7 @@ Jabber/XMPP, MSN Messenger, Yahoo, etc.
 
 ====PiTiVi Video Editor====
 
-PiTiVi is easy to use video editor. The interface is intuitive to
+PiTiVi is an easy to use video editor. The interface is intuitive to
 most users. Just by dragging your video clips, you can create your own
 film clips.
 
