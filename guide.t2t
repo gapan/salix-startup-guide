@@ -1,6 +1,8 @@
 Salix Start-Up Guide
 Getting familiar with your new operating System.
-Last updated on %%mtime(%Y-%m-%d %H:%M)
+
+
+//Last updated on %%mtime(%Y-%m-%d %H:%M)//.
 
 %!includeconf: config.t2t
 
@@ -21,15 +23,15 @@ We would like to improve the quality of the manual and to provide more
 documents translated in your mother tongue. Your help is always
 welcome.
 
-For any comments and submission of articles to be included in the start
-up guide, please contact us through the
+For any comments and submission of articles to be included in the start-up
+guide, please contact us through the
 [Salix mailing list URLSITE/mailinglists.html].
 
 
 //**Acknowledgement**//
 
 My sincere thanks to all the people who have contributed to and worked
-on this start up guide, especially //**mimosa**//, who did a lot of work
+on this start-up guide, especially //**mimosa**//, who did a lot of work
 rewriting big parts of this guide and helped cleaning it up.
 
 Many thanks also to //**tsuren**//, //**jrd**//, //**akuna**//, and
@@ -55,15 +57,15 @@ also applies it to the viewpoint of the end user.
 
 +++Salix Features+++
 
-- One application per task rationale
-- Fully backwards compatible with Slackware
-- Optimised for desktop usage
-- With Salix Tools to assist [system management #salixtools]
-- High quality package repositories with dependency support
-- Simple & fully localized system administration tools
-- Salix artwork
-- Supports 32-bit and 64-bit architectures
-- Comes with a complete development environment
+- One application per task rationale.
+- Fully backwards compatible with Slackware.
+- Optimised for desktop usage.
+- With Salix Tools to assist [system management #salixtools].
+- High-quality package repositories with dependency support.
+- Simple & fully localized system administration tools.
+- Salix artwork.
+- Supports 32-bit and 64-bit architectures.
+- Comes with a complete development environment.
 -
 
 
@@ -75,8 +77,8 @@ also applies it to the viewpoint of the end user.
 
 The choice is yours: the //intuitive// MATE desktop, a //streamlined// Xfce
 desktop environment, the //lightness// and //high customizability// offered by
-Fluxbox and Openbox as window managers, an //elegant// KDE accompanied by a
-very rich collection of KDE centric software, or "say good-bye to the rodent"
+Fluxbox or Openbox as window manager, an //elegant// KDE accompanied by a
+very rich collection of KDE centric software, or "say goodbye to the rodent"
 Ratpoison, all with the Salix look and feel!
 
 For now, Salix 14.1 offers MATE, Xfce, Fluxbox and Openbox, but other editions
@@ -88,7 +90,7 @@ will follow in due course. Meanwhile, older versions continue to be supported.
 
 For a list of applications available in each Edition, please refer
 to the later section
-([List of Applications #list_of_applications])
+([List of Applications #list_of_applications]).
 
 
 +++Installation Modes+++
@@ -102,10 +104,10 @@ environment with a complete selection of applications to fit the needs
 of most people, including office related software, multimedia
 applications, internet applications, all the Salix system configuration
 tools and more. Don't let the word "Full" fool you, this is in no way a
-bloated installation, since it adheres to the "one application per
+bloated installation since it adheres to the "one application per
 task" rationale. We feel that the collection of software that accompanies
 each respective desktop environment will cover
-most user's needs, but of course any user
+most user's needs but, of course, any user
 can tailor the software selection through the Salix package management tools 
 as required.
 
@@ -120,9 +122,9 @@ installation to his/her needs.
 A **Core** mode installation does not provide any graphical environment.
 It only installs a command line system, including the Salix command line
 system and package management tools. It is
-intended for expert users who know how to use command line tools to
+intended for expert users who know how to use the command line tools to
 administer their systems. It is most commonly used to set up
-types of server such as web servers, and e-mail servers. The servers that host
+types of server such as web-servers and e-mail servers. The servers that host
 the Salix websites are hosted on, run Salix installed using the **Core**
 mode method. Expert users can of course use this
 mode to install the X window system and any graphical environment on top of it if desired.
@@ -131,17 +133,17 @@ mode to install the X window system and any graphical environment on top of it i
 +++Salix Repositories & Package Management+++
 
 - //slapt-get// and its graphical interface //Gslapt// are the primary tools used for
-  package management, while //slapt-src// and //Sourcery// are included to allow the easy installation
+  package management while //slapt-src// and //Sourcery// are included to allow the easy installation
  of an even wider selection of software!
-- A wide range of packages from Slackware, Slackbuild and Salix repositories
+- A wide range of packages from Slackware, Slackbuild and Salix repositories.
 - The Salix repositories offer **dependency resolution support** and are
   the **largest** third party software package repositories for Slackware
-  offered to date
-- The Salix repositories are offered for both the **32-bit** and **64-bit** architectures
+  offered to date.
+- The Salix repositories are offered for both the **32-bit** and **64-bit** architectures.
 -
 
 NOTESTART In Short, Salix is...
-"Like a bonsai, Salix is small, light & the product of infinite care"
+"Like a bonsai, Salix is small, light & the product of infinite care."
 NOTEEND
 
 
@@ -173,11 +175,11 @@ supports booting from USB, a USB stick may be used.
 % Link to below?
 
 NOTESTART Checking download integrity
-It is recommended, if possible, to verify the integrity of your downloaded
+It is recommended if possible, to verify the integrity of your downloaded
 file by comparing its [md5sum http://en.wikipedia.org/wiki/Md5sum] file
 with the original one uploaded besides the corresponding ISO image file
 by Salix. This ensures that your downloaded image file matches exactly
-with the one provided on the Salix website, and minimises the possibility
+with the one provided on the Salix website and minimises the possibility
 of installation errors later on.
 NOTEEND
 
@@ -186,7 +188,7 @@ NOTEEND
 
 +++Booting from a Salix Installation medium+++
 
-Your computer must be set to boot on the optical drive / USB port first
+Your computer must be set to boot on the optical drive/USB port first
 before defaulting to the internal hard disk drive.
 If that is not the case, you need to first modify the
 [BIOS http://en.wikipedia.org/wiki/BIOS] setting, usually by pressing the Del
@@ -205,15 +207,15 @@ Insert the Salix CD/DVD or USB key, and start up your computer.
 Installing Salix on your computer is simple. But before starting, it is
 wise to check the following points:
 
-- Have you backed-up all the important files you have?
+- Have you backed up all the important files you have?
 - Check if your computer comes with Linux-friendly/supported
-  hardware
+  hardware.
 - Minimum recommended specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
   HD space, or equivalent, though a lower spec machine may run
-  without a problem)
-- At least one separate
+  without a problem).
+- At least one separate.
   [partition http://en.wikipedia.org/wiki/Disk_partitioning]
-  dedicated for Salix on your computer
+  dedicated for Salix on your computer.
 -
 
 % Is this info about rEFIt up to date?
@@ -267,7 +269,7 @@ WARNINGEND
 
 - Salix needs, at the very minimum, one partition which holds the root
   directory and must be assigned as ``/``.
-- It is often recommended to have one swap partition, though modern RAM
+- It is often recommended to have one swap partition though modern RAM
   sizes now often mean it isn't needed. If you already
   have another Linux OS running on your machine, its swap partition can be
   shared, and you do not need to create another. A swap partition is
@@ -319,7 +321,7 @@ semi-graphical command line interface.
   select AUTOPARTITION. Note that this will delete everything on the hard drive.
 - Otherwise, the installer will run //cfdisk// to allow you to set up your desired
   partitions. If they are already as you wish, type 'Q' to quit. See below for 
-  a detailed guide to using [cfdisk #cfdisk]
+  a detailed guide to using [cfdisk #cfdisk].
 - Your swap partition, if any, will be automatically detected. Say ``yes`` if the
   detected partition corresponds to that.
 - You will then be asked to specify the partition for the root ``/``
@@ -339,14 +341,14 @@ semi-graphical command line interface.
 - You will be asked to choose an installation mode (**Full**, **Basic** or
   **Core**).
 - Installation of packages will start.
-- After the installation, LILO set up will start up. Unless you are **not**
+- After the installation, LILO setup will start up. Unless you are **not**
   using LILO, choose the default options. You can refine the bootloader
   configuration (for example, in a multi-boot scenario) after booting into
   your new Salix installation.
 % see Max's commments on  whether install to MBR is the  default, p. 11
-- You will be asked some other questions regarding time-zone, user
-  name and password. When all
-  the basic questions are answered, the machine will restart itself.
+- You will be asked some other questions regarding time-zone, username and
+  password. When all the basic questions are answered, the machine will restart
+  itself.
 - That's all. The computer is good to go! Enjoy Salix!
 -
 
@@ -363,7 +365,7 @@ transfer the contents of the Salix iso image to your USB stick, using
 a command line like this:
 ``` dd if=salix_image_file.iso of=/dev/sdb
 
-Of course you'll have to replace //salix_image_file.iso// with the exact
+Of course, you'll have to replace //salix_image_file.iso// with the exact
 path and name to the iso file you would like to use.
 
 WARNINGSTART dd is very dangerous!
@@ -402,7 +404,7 @@ swap space). Note that you can choose whether to create a Primary or Extended pa
 former is what is needed in this example, but an extended partition will allow for
 the creation of logical partitions within it, when a more complex setup is needed.
 - Make this partition **Bootable** (with 'B'). Use the up and down arrow keys to select a 
-particular partition, if there is more than one. The default partition type is 'Linux', so 
+particular partition, if there is more than one. The default partition type is 'Linux' so 
 that partition is done.
 - Next, make another new partition, taking up the rest of the drive.
 - Change its **Type** to 82, Linux Swap.
@@ -417,7 +419,7 @@ If your hard drive is partitioned using the GPT scheme, instead of the
 older MBR scheme, instead of cfdisk, you get cgdisk. While there
 are some differences between them, you'll find out that they are mostly
 the same, so the instructions provided for cfdisk apply to
-cgdisk for the most part.
+cgdisk, for the most part.
 NOTEEND
 
 
@@ -426,7 +428,7 @@ NOTEEND
 
 +++++Hard disk names+++++
 
-SCSI harddisks are named with //sdx//, where //x// is a hardisk letter. The disk with the 
+SCSI harddisks are named with //sdx//, where //x// is a harddisk letter. The disk with the 
 lowest SCSI ID on the first controller will become //sda//, the next
 after that, sdb, and so on.
 
@@ -446,14 +448,14 @@ the first disk is //sda5// and //sda6//, and so on.
 +++++The user interface+++++
 
 After //cfdisk// is started you'll get an interface where the current partition 
-table is listed with the names and some data about each partition, and some command 
+table is listed with the names and some data about each partition and some command 
 buttons on the bottom of the screen. To change between partitions, use the up and down 
 arrow keys. To change between commands, use the left and right arrow keys.
 
 +++++Deleting a partition+++++
 
 To delete an existing partition, highlight it with the up and down keys, select the 
-Delete command with the left and right arrow keys, and press //Enter//;
+Delete command with the left and right arrow keys and press //Enter//
 or just press ``D``.
 
 +++++Making a new partition+++++
@@ -462,12 +464,12 @@ To make a new partition, select the New command with the left and right arrow ke
 press //Enter//. You'll get the choice between a primary and a logical partition. If you 
 want a logical partition, the program will automatically make an extended partition for 
 you. Then you must choose the size of the partition (in MB). If you can't enter a value 
-in MB, return to the main screen with the ``Esc`` key, and select MB with the Units command.
+in MB, return to the main screen with the ``Esc`` key and select MB with the Units command.
 
 +++++Set the type of a partition+++++
 
 To set the type of a partition, highlight 
-the desired partition, and select the //Type// command. You'll get a list of different types. 
+the desired partition and select the //Type// command. You'll get a list of different types. 
 Press //space//, and you'll get even more. Find what type you need, and enter the number at 
 the prompt. Linux is ``83``, Linux swap is ``82``.
 
@@ -480,12 +482,12 @@ the partition and select the //Bootable// command.
 
 When you are content with the layout of the disk, select the //Write// command. The partition 
 table will be written to disk. Remember that this will destroy all data on partitions you 
-have deleted or changed. You should therefore be very sure that you want to do this before 
+have deleted or changed. You should, therefore, be very sure that you want to do this before 
 actually pressing the Return key.
 
 To exit the program, select the //Quit// command. The installer will
 then detect any partitions you have created and offer you the option to
-assign mountpoints to them.
+assign mount points to them.
 
 
 +Your Salix+
@@ -511,7 +513,7 @@ built on your system before being installed. Salix provides a graphical tool,
 is not guaranteed to be successful and some manual tinkering may be needed.
 
 Unlike the software provided in the repositories, these scripts are not  
-maintained by either Salix or Slackware, but by individual users, and as 
+maintained by either Salix or Slackware but by individual users, and as 
 such are not the responsibility of either distribution, although help may
 be found on the forum. If the build fails, the last ten lines or so of the 
 output usually provide an indication of the reason. Most commonly, this is
@@ -574,7 +576,7 @@ to ensure your installed system is up to date with the repositories -- click on
 //Sourcery// is a graphical frontend to [slapt-src #slapt-src], a
 utility to build and install packages from source using SlackBuilds
 or SLKBUILDs. Before use, you should first click on the
-**Update** button on the tool bar to ensure that the latest updates from
+**Update** button on the toolbar to ensure that the latest updates from
 the software repositories are known to //Sourcery//. The search field is
 there for you to search for a particular package, and installations,
 uninstallations or reinstallations of selected packages are done
@@ -600,14 +602,14 @@ only will the application not work, the build will fail.
 //slapt-get// and //slapt-src// are the command-line tools for which //Gslapt// and //Sourcery//
 provide a GUI. This section describes their use from the command line, where there is also
 a tool that combines their most common functions, //spi//. //spkg// is a tool to install
-packages manually, while still making them known to the package management system.
+packages manually while still making them known to the package management system.
 
 
 +++Salix Package Installer+++
 
 //spi// is a command line tool that combines some basic functions of
 //slapt-get// and //slapt-src//. It installs from the Salix repositories
-if the package is available there, if not, it looks in [SlackBuilds URLSBO],
+if the package is available there, if not, it looks in [SlackBuilds URLSBO]
 and repeats the process recursively for any dependencies. This means all packages
 are automatically installed from the repositories if they are available there,
 even if it is a dependency of a package that is not. For a summary of usage, see
@@ -700,7 +702,7 @@ If you would like to install or upgrade a package that you have manually
 downloaded or have built yourself, you can use //spkg//. Salix packages
 (just as Slackware packages) have filenames that end with the //.tgz//,
 or //.txz// extensions (there are also //.tlz// and //.tbz// but they
-are very rarely used). To either install a new package, or upgrade a
+are very rarely used). To either install a new package or upgrade a
 package you can use the following command:
 ``` sudo spkg [exact path to package]
 
@@ -718,7 +720,7 @@ If you are replacing a package that is available in the repositories,
 you will need to blacklist this package
 in ///etc/slapt-get/slapt-getrc// to prevent it from being "downgraded" when
 you next carry out a general package upgrade. (See above for how to do
-this in [Gslapt #Gslapt]
+this in [Gslapt #Gslapt]).
 NOTEEND
 
 +++Making a Package from a Source File with SLKBUILD+++[roll-your-own]
@@ -727,11 +729,11 @@ Installing software from a source file is in most cases not difficult.
 You can compile a lot of software generally with the following
 commands.
 
-- unpack a source file, move inside the folder
-- type in ``./configure`` on the terminal
-- type in ``make``
-- type in ``sudo make install``
-- type your password
+- unpack a source file, move inside the folder.
+- type in ``./configure`` on the terminal.
+- type in ``make``.
+- type in ``sudo make install``.
+- type your password.
 -
 
 Make sure to read accompanying files such as "README", "INSTALL" and so
@@ -754,8 +756,8 @@ before issuing
 to create a Salix compatible package which can then be installed with [spkg #spkg] 
 (the //fakeroot// package should also be installed).
 For more on SLKBUILD, please consult
-[SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild]. 
-[New_to_Packaging http://docs.salixos.org/wiki/New_to_Packaging]
+[SLKBUILD http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild] 
+and [New to Packaging http://docs.salixos.org/wiki/New_to_Packaging].
 
 
 +++Upgrading Salix to a Newer Version+++
@@ -763,11 +765,11 @@ For more on SLKBUILD, please consult
 If you wish to upgrade an older version of Salix on your machine to the
 latest, please refer to the following link for upgrading your Salix.
 
-- [Salix 13.0 to 13.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.0_to_13.1]
-- [Salix 13.1 to 13.37 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.1_to_13.37]
-- [Salix 13.37 to 14.0 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.37_to_14.0]
+- [Salix 13.0 to 13.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.0_to_13.1].
+- [Salix 13.1 to 13.37 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.1_to_13.37].
+- [Salix 13.37 to 14.0 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.37_to_14.0].
 %assuming this page will exist:
-- [Salix 14.0 to 14.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.0_to_14.1]
+- [Salix 14.0 to 14.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.0_to_14.1].
 -
 
 
@@ -811,15 +813,15 @@ If you are buying a new printer, it is recommended to check the
 availability of Linux drivers beforehand from the
 [Open Printing database http://www.linuxfoundation.org/collaborate/workgroups/openprinting/database/databaseintro]
 (or search on the Internet). Some companies offer printer drivers for Linux,
-but this is less common than desired, and could involve a
+but this is less common than desired and could involve a
 lengthy installation process. For most Linux friendly printers,
 you have to install drivers such as gutenprint or HPIJS, both of
 which are available from the repositories.
 
-- Select "Add Printers and Classes"
-- Under "Printers", select "Add Printer"
-- Enter "root" as a username and your superuser password
-- Select your printer description and choose if you would like to share the printer
+- Select "Add Printers and Classes".
+- Under "Printers", select "Add Printer".
+- Enter "root" as a username and your superuser password.
+- Select your printer description and choose if you would like to share the printer.
 - Select the correct driver from the list (Model) - see an example
 below. This is the important part. Or if you have a
 [PPD http://en.wikipedia.org/wiki/PostScript_Printer_Description] file
@@ -829,7 +831,7 @@ instead, you can load it here.
 [img/addprinter.png]
 
 - Select Add Printer, and finish the process by configuring details of the printer.
-- Now the printer should be usable on your computer
+- Now the printer should be usable on your computer.
 -
 
 For setting up a network printer, please consult the Salix
@@ -837,8 +839,6 @@ For setting up a network printer, please consult the Salix
 
 
 +++Salix Codecs Installer+++
-
-[img/salix-codecs-installer.png]
 
 Salix only includes, by default, software that is legally free to use
 in any country, and that means that proprietary media formats are not
@@ -853,16 +853,13 @@ Salix codecs installer can be found under "Multimedia" in the main
 application menu, and will conveniently install those codecs which
 enable the viewing of the vast majority of commercial media formats.
 
+[img/salix-codecs-installer.png]
+
 
 ++Salix Tools++
 
 
 +++What are the Salix Tools?+++[salixtools]
-
-% ### = check image
-% ### this image probably needs updating
-[img/salixtools-gtk.png]
-
 
 Salix tools are a collection of utilities that are designed to manage
 every aspect of Salix configuration easily. You can find these tools
@@ -871,8 +868,12 @@ management in Salix can also be done the usual
 ([manual http://www.slackbook.org/html/book.html])
 Slackware way.
 
+% ### = check image
+% ### this image probably needs updating
+[img/salixtools-gtk.png]
+
 Please note that most Salix tools have an ncurses
-counterpart which can be used in a linux terminal or console. 
+counterpart which can be used in a Linux terminal or console. 
 
 
 +++ALSA Sound Card+++
@@ -890,8 +891,8 @@ during installation/start-up.
 +++Rebuild Icon Cache+++
 
 As the name indicates, Rebuild Icon Cache reconnects some icons that may
-have become lost after updating your system / installing some new
-program, and makes them appear again in the application menu.
+have become lost after updating your system/installing some new
+program and makes them appear again in the application menu.
 
 
 +++Hostnames+++
@@ -917,11 +918,11 @@ To execute this utility in a terminal, simply type
 
 +++Keyboard Layout+++
 
-[img/gtkkeyboardsetup.png]
-
 This utility will configure the keyboard layout being used both in
 the graphical and non-graphical environments. Modifications are applied
 instantly.
+
+[img/gtkkeyboardsetup.png]
 
 Note that if you would like to activate [Ibus #ibus] during the start
 up, you can do so by ticking the optional box.
@@ -955,7 +956,7 @@ other means to boot into your system.
 Here you will be able to select the services that should or shouldn't be
 activated in the background when your system starts.
 
-All your modifications will be applied instantly if you press on the OK
+All your modifications will be applied instantly if you press the OK
 button and will not necessitate a reboot.
 
 To execute this utility in a terminal, simply type
@@ -984,9 +985,6 @@ To execute it in a terminal, simply type
 
 +++User Profiles+++
 
-% ### background is wrong # but never mind
-[img/gtkusersetup.png]
-
 In Unix/Linux, all users and groups of users are given certain
 [permissions and access rights http://en.wikibooks.org/wiki/UNIX_Computing_Security/Access_authorization] 
 to some part of the system in order to control their ability to access
@@ -995,18 +993,21 @@ and change it.
 This utility manages the creation, deletion and properties of all the
 system users and groups of users.
 
+% ### background is wrong # but never mind
+[img/gtkusersetup.png]
+
 To execute it in a terminal, simply type
 ``` sudo usersetup
 
 
 +++Salix-Update-Notifier+++
 
-[img/salix-update-notifier.png]
-
 Salix update notifier is a tool that periodically checks for available
 package updates and informs the user about them with the display of a
 non-intrusive tray icon, which can be used to launch the upgrade process
 with Gslapt.
+
+[img/salix-update-notifier.png]
 
 
 +++reposetup+++
@@ -1023,26 +1024,26 @@ the one you normally use is down. You can run it from a terminal with:
 ++Working with the Command Line Interface++[working_with_cli]
 
 This section deals with working in a console mode or with a terminal
-(such as xfce terminal, xterm, konsole and so forth), and serves merely
+(such as Xfce terminal, xterm, konsole and so forth), and serves merely
 as a light introduction to the command line interface (CLI).
-The intended audience here is not seasoned travellers but new journeymen
+The intended audience here is not seasoned travelers but new journeymen
 in the land of Linux, who are willing to discover more about what one
 can do with it. We will go through some examples in this section for you
 to follow, and hopefully by the end of this walkthrough, you will have
-no problem working in the "black screen". For those who would like to
+no problem working with the "black screen". For those who would like to
 know more about CLI, there are a couple of useful resources available on
 the net, and some are listed in the
 [Salix Forum http://forum.salixos.org].
 
 So why learn CLI commands at all? Graphical user interfaces for
-applications have been steadily improving in Linux, and are probably now
+applications have been steadily improving in Linux and are probably now
 comparable to any OS in their ease of use. On the other hand, where
-Linux excels in particular is in the area of command line applications,
+Linux excels, in particular, is in the area of command line applications,
 its traditional strength. Without the CLI, you would be
 effectively missing out on half of what Linux can offer.
 
 There is another reason. From time to time, you might have to work in
-console. For instance, if the machine fails to start up a graphical
+the console. For instance, if the machine fails to start up a graphical
 desktop environment during booting, then you are more or less forced to
 fix the problem without the graphical user interface (GUI).
 
@@ -1108,8 +1109,8 @@ automatically.
 The important thing to notice here is this is a //relative path//: unlike
 where the whole path was specified above, starting from the root of the
 filesystem ``/``, if the path doesn't begin with ``/`` it is understood
-as starting from whatever the current directory is, in this case your
-user's home. So ``Music`` in this case means the same as ``/home/your_user_name/Music``.
+as starting from whatever the current directory is, in this case, your
+user's home. So ``Music``, in this case, means the same as ``/home/your_user_name/Music``.
 
 
 +++Creating a Folder - mkdir+++
@@ -1125,14 +1126,14 @@ current directory. You can check this by typing
 ``` ls
 
 Next, let's create a log file for the photo folder. ``nano`` is a
-command line application for reading and writing texts. To bring up the
+command-line application for reading and writing texts. To bring up the
 program, type in
 ``` nano
 
 [img/nano.png]
 
 The application is simple to use, and you can see command options shown
-at the buttom. Type
+at the bottom. Type
 ``` log file created
 
 and with ``Ctrl+x``, save
@@ -1218,7 +1219,7 @@ possible that ``--help`` will just be ``-h``, and there may be no help
 at all. ``man`` is another command if this is the case.
 ``` man cp
 
-will give a more indepth explanation of this command. (To get out of the
+will give a more in-depth explanation of this command. (To get out of the
 manual, press ``q``).
 
 If you read the help carefully, you will see that you need to give an
@@ -1263,10 +1264,10 @@ xcowsay [Not installed]: xcowsay (displays a cute cow and message on your deskto
 You can see that there is no available package for cowsay in the official
 repositories of Salix or Slackware. Instead, a SlackBuild is available.
 [slackbuilds.org URLSBO] maintains extra packages for Slackware,
-which of course can be utilised by Salix users. These SlackBuilds
-however are not maintained by Salix or Slackware, but rather from
+which, of course, can be utilized by Salix users. These SlackBuilds,
+however, are not maintained by Salix or Slackware, but rather from
 individual Slackware users and are not guaranteed to work 100%
-of the time. Packages on the other hand, should work perfectly fine all
+of the time. Packages, on the other hand, should work perfectly fine all
 the time, with no exceptions.
 
 To install cowsay using the SlackBuild, you simply must run:
@@ -1278,8 +1279,8 @@ packages involves downloading the package and actually installing it,
 while installing something using a SlackBuild, involves downloading the
 SlackBuild script and all required source files, compiling the source
 code, packaging it up and installing the package that has been created.
-All that of course is done automatically. It's only just that installing
-something using a SlackBuild is generally a bit (or a lot) slower, since
+All that, of course, is done automatically. It's only just that installing
+something using a SlackBuild is generally a bit (or a lot) slower since
 it includes the extra step for compiling the source code.
 
 If you are not sure what this
@@ -1290,7 +1291,7 @@ installed.
 
 Once it is installed, you might want to test it. First get out of the
 superuser mode by typing ``exit``. Then type in ``cowsay``. Nothing
-happens, and in fact, you will see that you are now in a strange mode
+happens, and, in fact, you will see that you are now in a strange mode
 that you cannot execute any commands. This is because the application is
 still running, but as you don't see anything, perhaps it is not running
 properly. To terminate the process, press ``Ctrl+c``. You will get
@@ -1328,9 +1329,9 @@ wish. This only works in a terminal running within a GUI.
 
 //Ratpoison// is a tiling window manager, somewhat like //xmonad// or
 //spectrwm//. Its two main features are that applications fill the whole
-screen, with no bars or buttons; and the user interface can be
+screen, with no bars or buttons, and the user interface can be
 controlled entirely from the keyboard, with no mouse. If needed, any
-number of windows may be shown simultaneously, and rearranged at will -
+number of windows may be shown simultaneously and rearranged at will -
 hence the term "tiling" WM. All this may take some getting used to, but
 although - or perhaps because - the interface is so very different from
 the conventional point-and-click approach, it can quickly become highly
@@ -1344,7 +1345,7 @@ configurable - and fast!
 The applications present for the Ratpoison edition aim to fit in with
 its minimalist (but not spartan) approach. The majority use vim-style
 keybindings, even though Ratpoison itself does not, so users will need
-to become comfortable with these if they are not already; cheatsheets
+to become comfortable with these if they are not already; cheat sheets
 are available online to help assimilate them, as well as guides (and
 manpages) for the individual applications. Common operations use
 only a small subset of keys, which makes the learning curve smoother:
@@ -1358,7 +1359,7 @@ just follow the instructions.
 +++Starting Ratpoison and running applications+++
 
 When you boot Salix Ratpoison, there is no graphical login screen: when
-you log in, you enter the linux terminal. Log in as your normal user
+you log in, you enter the Linux terminal. Log in as your normal user
 and type
 ``` startx
 
@@ -1373,7 +1374,7 @@ as easy to set Ratpoison to work as with any more conventional desktop.
 
 To select an application from the menu, type ``C-t r``, and use the arrow
 keys to navigate (Vim's ``hjkl`` keys also work). Right arrow (or ``l``)
-accesses submenus (such as "Network"), and left arrow (or ``h``) goes
+accesses submenus (such as "Network") and left arrow (or ``h``) goes
 back up a level. Right arrow or enter runs the application (if you open
 one by mistake, don't worry, just type ``C-t r`` again - we will
 see how to close windows and applications later).
@@ -1390,7 +1391,7 @@ lot by adding them to the configuration file, which we will look at
 below.
 
 //apvlv//, under Accessories, can be used to read pdf documents such as
-this guide. Also under accessories, 'Unit conversion' starts the
+this guide. Also under accessories, "Unit conversion" starts the
 console application units, which will convert between a large range of
 scales, such as time, weight, or currency, including some quite
 unusual ones.
@@ -1417,8 +1418,8 @@ choices (``shift-TAB`` to go back up) and ``Enter`` to select. ``O`` rather
 than ``o`` (and ``T`` rather than ``t``) allows you to edit the URL of the
 current page - try it. ``j`` and ``k`` scroll down and up.
 ``Shift-l`` moves one page forward in your browsing history. ``d`` closes
-the current window. For more details, consult ``man vimprobable2`` as
-well as the Vimprobable website; see also ``man vimprobablerc`` for
+the current window. For more details, consult ``man vimprobable2``, as
+well as the Vimprobable website, see also ``man vimprobablerc`` for
 configuration options. Note that ``.`` and ``,`` are handy alternatives to
 ``f`` and ``shift-f``.
 
@@ -1426,10 +1427,10 @@ There are no tabs. In the next section, we will see how Ratpoison allows
 you to use windows to do the work of tabs, but more informatively.
 
 Note that if the input received by ``o`` or ``t`` can't be resolved into a
-URL, it will be sent to a search engine; the default is //duckduckgo//.
+URL, it will be sent to a search engine; the default is //DuckDuckGo//.
 If the first item is ``i``, ``s``, ``w``, ``wd``, or ``y``, a different
-search engine is used in each case. These shorcuts are described in the
-Vimprobable man page, and may also be customised in the .vimprobablerc
+search engine is used in each case. These shortcuts are described in the
+Vimprobable man page and may also be customized in the .vimprobablerc
 configuration file.
 
 To insert data in forms (for instance, login and password) use tab till
@@ -1507,14 +1508,14 @@ in the repository. //Firefox// may be installed adding the
 alternatively //Jumanji//, //XXXTerm// or //w3m//, a browser for the
 command line. //Thunderbird// can be used with the //Muttator// addon
 while //Claws-mail// works almost entirely from the keyboard;
-//mcabber// and //irssi// are jabber and irc clients for the console.
+//mcabber// and //irssi// are Jabber and IRC clients for the console.
 
 Note: To see how to edit Alpine's configuration file to access mail from
-one popular provider via smtp, see the page in the
+one popular provider via SMTP, see the page in the
 [Salix wiki http://www.salixos.org/wiki/index.php/How_to_set_up_Alpine_with_a_Gmail_account].
 
-Wordgrinder and sc are wordprocessing and spreadsheet applications.
-Flash is not included, but is available from the
+Wordgrinder and sc are word processing and spreadsheet applications.
+Flash is not included but is available from the
 repositories. Screen for managing multiple consoles works well with
 Ratpoison. Users are encouraged to tailor and expand the application
 selection according to taste; when it comes to text processing, for
@@ -1525,7 +1526,7 @@ formats into plain text.
 
 Note that the //Gslapt// and //Sourcery// graphical package management
 tools (equivalent to //slapt-get// and //slapt-src//)  may also be used
-mouselessly, though this is perhaps more awkward than working on the
+with out mouse, though this is perhaps more awkward than working on the
 command line. In either case, regular manual upgrading will still be
 necessary.
 
@@ -1537,7 +1538,7 @@ sudo spi -i mplayer2
 ```
 
 Note: To see how to edit Alpine's configuration file to access mail from
-one popular provider via smtp, see the page in the
+one popular provider via SMTP, see the page in the
 [Salix wiki http://www.salixos.org/wiki/index.php/How20to20set20up20Alpine20with20a20Gmail20account].
 
 
@@ -1549,7 +1550,7 @@ that's Ratpoison's escape key combination! In fact, Ratpoison has a
 solution for such conflicts, referred to somewhat cryptically in the
 shortcut list as //meta//: ``C-t t`` should send ``C-t`` to the
 application in the active window. However, this does not work in the
-terminal, which does not recognise the character if it receives it in
+terminal, which does not recognize the character if it receives it in
 this form.
 
 Everything in Ratpoison is configurable, and the ``C-t`` combination
@@ -1576,7 +1577,7 @@ To change the ``C-t`` default, do: ``C-t :escape Super_L``,
 which is the so-called "Windows key" to the left of the keyboard. As
 well as resolving the conflict with //Alpine//, this has the great
 benefit of being just one keystroke. Some functions may not work
-correctly, in particular the very useful ``C-t C-t`` to go back to where
+correctly, in particular, the very useful ``C-t C-t`` to go back to where
 you just were, and performance varies from one keyboard to another, so
 it's worth experimenting. Another possibility is the "Menu" key. To
 return to the default: ``C-t :escape C-t``.
@@ -1584,7 +1585,7 @@ return to the default: ``C-t :escape C-t``.
 To make such a change permanent, edit //~/.ratpoisonrc//. If you are
 using Ratpoison, you can open the file now (with //GVim// or //Vim//) and
 tile it horizontally with the window where you are reading this guide
-(``C-t shift-s``). Let's go through some items in the file.
+(``C-t Shift-s``). Let's go through some items in the file.
 
 ```
 # .ratpoisonrc
@@ -1621,7 +1622,7 @@ exec rpws init 5 -k
 
 //banish// sends the mouse pointer to bottom right (incidentally, you may
 wish to install //unclutter//, which makes it fade out altogether
-after a few seconds' stillness; place the line
+after a few seconds of stillness; place the line
 ``` unclutter &
 
 in your
@@ -1643,7 +1644,7 @@ workspaces; we'll look at these next - including ``C-t W``.
 
 +++Using workspaces+++
 
-If you have several terminals open, and various browser windows, and
+If you have several terminals open, and various browser windows and
 some other applications, the number of windows may become unwieldy. To
 help with this, Ratpoison allows you to use workspaces. (In the online
 Ratpoison manual, these are referred to more precisely as
@@ -1778,15 +1779,15 @@ use the
 [IRC link http://webchat.freenode.net/?randomnick=1&channels=salix&prompt=1] 
 above
 to be in live communication with members of the community and get
-instant help if necessary. If you do however, you might want to modify
+instant help if necessary. If you do, however, you might want to modify
 the default //qwebircxxx// login to something more personal and human
 readable.
 
 [img/salix-online.png]
 
 We hope that the information here will allow you to get Salix up and
-running fairly straightforwardly, to begin exploring its potential, and
-above all to use it for what you want to do. Nonetheless, sometimes you
+running fairly straightforwardly, to begin exploring its potential, and,
+above all, to use it for what you want to do. Nonetheless, sometimes you
 may not know how to do something or be able to make it work.
 
 While Salix aims to be elegant and intuitive, every operating system has
@@ -1942,7 +1943,7 @@ mailbox format as well as the Mbox mailbox format via a plugin.
 
 ====Document Viewer (Atril)==== 
 
-Document Viewer is a a very lightweight, simple PDF document viewer.
+Document Viewer is a very lightweight, simple PDF document viewer.
 
 [img/atril.png]
 
@@ -2019,7 +2020,7 @@ filesystem and browse local networks shares.
 ====Gimp==== 
 
 GIMP (GNU Image Manipulation Program) is an image retouching and editing
-tool. In addition to offering free form drawing, it can accomplish
+tool. In addition to offering free-form drawing, it can accomplish
 essential image workflow steps such as resizing, editing, and cropping
 photos, combining multiple images, converting between different image
 formats as well as create basic animated images in GIF.
@@ -2030,7 +2031,7 @@ formats as well as create basic animated images in GIF.
 ====Gnumeric====
 
 The goal of Gnumeric is to be the best possible spreadsheet. While not
-attempting to clone existing applications, Gnumeric can however read
+attempting to clone existing applications, Gnumeric can, however, read
 files saved with other spreadsheets and offers a customizable feel that
 attempts to minimize the costs of transition.
 
@@ -2051,19 +2052,19 @@ text form using the default system monospace font.
 
 Ibus is a new generation of input method editors after SCIM. It supports
 for more than thirty languages (Chinese, Japanese, Korean and other
-languages) on both qt and non-qt environments. (You may have to
+languages) in both qt and non-qt environments. (You may have to
 go to qtconfig and select "ibus" instead of "xim" in
 "Interface" -> "Default Input Method").
 
 
 ====ISO Master====
 
-[img/isomaster.png]
-
 ISO Master is an application for creating and modifying ISO9660 files
 (ISO images). Its functionalities include: creating an ISO image from
 scratch, adding or removing files and directories to/from a CD image,
 and creating bootable CDs using various boot record types.
+
+[img/isomaster.png]
 
 
 ====Leafpad====
@@ -2076,7 +2077,7 @@ Leafpad is a very light simple text editor with printing support.
 Meld is a visual diff and merge tool. You can compare two or three files
 and edit them in place (diffs update dynamically). You can compare two
 or three folders and launch file comparisons. You can browse and view a
-working copy from popular version control systems such such as CVS,
+working copy from popular version control systems such as CVS,
 Subversion, Bazaar-ng and Mercurial.
 
 
@@ -2112,7 +2113,7 @@ also read and write files from other common office software packages.
 
 Orage provides a calendar which integrates nicely into the Xfce Desktop
 Environment. It is highly configurable and supports alerts based on
-dates. It warns you with pop up or audible alarms. As it is an
+dates. It warns you with pop-up or audible alarms. As it is an
 application for everyday use, it launches itself in the background and
 can be accessed using the Orage Clock plugin for the panel. Simply click
 on a date to display or set the agenda for the day.
@@ -2122,7 +2123,7 @@ on a date to display or set the agenda for the day.
 
 ====Parole Media Player==== 
 
-Parole Media Player is a media player (audio and video) which utilises
+Parole Media Player is a media player (audio and video) which utilizes
 the GStreamer framework for playback.
 
 [img/parole.png]
@@ -2159,7 +2160,7 @@ or even with your webcam!
 
 Transmission is a
 [BitTorrent https://en.wikipedia.org/wiki/BitTorrent] client that is
-simple, lean and powerful.
+simple, lightweight and powerful.
 
 [img/transmission.png]
 
@@ -2174,7 +2175,7 @@ Viewnior is a fast and lightweight picture viewer.
 ====Whaaw! MediaPlayer==== 
 
 Whaaw! Media Player will play any audio/video files which GStreamer can
-manage. It supports fullscreen mode, seeking, changing video colour
+manage. It supports full-screen mode, seeking, changing video color
 settings and more. It is intended to be a basic media player with few
 dependencies.
 
@@ -2187,5 +2188,5 @@ Zim is a bit of everything. In essence, it is a desktop wiki, and it
 allows you a great deal of flexibility regarding what you can do with
 it. For instance, one can use it to keep track of TODO lists of ideas,
 to take notes in a meeting, as a drafting tool for blog entries,
-mails and so on.
+emails and so on.
 
