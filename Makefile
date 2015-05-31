@@ -53,7 +53,7 @@ fix-anchors:
 
 htmltmp: 
 	mkdir -p output
-	txt2tags -t html -o output/guide.html guide.t2t
+	txt2tags -t html -C config.t2t -o output/guide.html guide.t2t
 
 ebook-prepare: htmltmp fix-anchors
 	sed -i 's/^NOTESTART/<B><I>/' output/guide.html
@@ -91,7 +91,7 @@ mobi: ebook-prepare
 
 tex:
 	mkdir -p output
-	txt2tags --toc -t tex -o output/guide.tex guide.t2t
+	txt2tags --toc -t tex -C config.t2t -o output/guide.tex guide.t2t
 	sed -i -e "/begin{tabular}/s/l/L/g" -e "/begin{tabuLar}/s/tabuLar/tabulary}{\\\textwidth/" \
 		output/guide.tex
 	sed -i "/end{tabular}/s/end{tabular}/end{tabulary}/" \
