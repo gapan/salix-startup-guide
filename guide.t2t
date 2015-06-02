@@ -503,7 +503,7 @@ not Slackware) provides full dependency management, which means that any
 items the package needs to run are installed too -- and also that
 they are guaranteed to be available.
 
-[slackbuilds.org URLSBO] provides build scripts for further
+[slackbuilds.org URLSBO] (SBo) provides build scripts for further
 software not present in the repositories. This means the package will be
 built on your system before being installed. Salix provides a graphical tool,
 //Sourcery//, to manage this; its command-line equivalent is
@@ -608,7 +608,7 @@ packages manually while still making them known to the package management system
 
 //spi// is a command line tool that combines some basic functions of
 //slapt-get// and //slapt-src//. It installs from the Salix repositories
-if the package is available there, if not, it looks in [SlackBuilds URLSBO]
+if the package is available there, if not, it looks in [SBo URLSBO]
 and repeats the process recursively for any dependencies. This means all packages
 are automatically installed from the repositories if they are available there,
 even if it is a dependency of a package that is not. For a summary of usage, see
@@ -665,8 +665,8 @@ terminal based web browser, by using slapt-get.
 +++slapt-src+++[slapt-src]
 
 //slapt-src// is a command line tool that makes the process of downloading
-and building software packages from URLSBO simple and easy.
-URLSBO keeps a large collection of build scripts for extra
+and building software packages from [SBo URLSBO] simple and easy.
+[SBo URLSBO] keeps a large collection of build scripts for extra
 packages that are still not available from the official Salix /
 Slackware repositories. Thousands of extra packages are now available to
 users through this tool.
@@ -1265,13 +1265,15 @@ Available packages:
 None
 
 Available SlackBuilds:
-cowsay [Not installed]: cowsay (A Configurable Speaking/Thinking Cow)
-xcowsay [Not installed]: xcowsay (displays a cute cow and message on your desktop)
+cowsay [Not installed]: cowsay (A Configurable Speaking/Thinking
+                        Cow)
+xcowsay [Not installed]: xcowsay (displays a cute cow and message
+                         on your desktop)
 ```
 
 You can see that there is no available package for cowsay in the official
 repositories of Salix or Slackware. Instead, a SlackBuild is available.
-[slackbuilds.org URLSBO] maintains extra packages for Slackware,
+[SBo URLSBO] maintains extra packages for Slackware,
 which, of course, can be utilized by Salix users. These SlackBuilds,
 however, are not maintained by Salix or Slackware, but rather from
 individual Slackware users and are not guaranteed to work 100%
@@ -1411,14 +1413,18 @@ unusual ones.
 Notice that there are no menus, toolbars, buttons, or scrolling - just a
 line at the bottom containing the URL. To open a different page, type
 ``o``, and ``:open`` should appear at the very bottom left of the screen.
-Type
-[http://www.nongnu.org/ratpoison/doc/ http://www.nongnu.org/ratpoison/doc/].
+Type:
+
+```
+http://www.nongnu.org/ratpoison/doc/
+```
+
 When the page has loaded, type
 ``f`` and then select a number to follow a link:
 
 [img/ratpoisonmanual.png]
 
-``Shift-h`` takes you back to where you were before. 
+``Shift-h`` takes you back to where you were before.
 ``t`` works like
 ``o`` but opens the URL in a new window, as does ``shift-f`` instead of
 ``f``. Pressing ``TAB`` after typing the beginning of a URL will suggest
@@ -1680,10 +1686,10 @@ Usage:
 
          exec /path/to/rpws init 6 -k
 
-    This creates 6 aliases rpws1, rpws2, etc. It also binds the keys M-F1,
-    M-F2, etc to each rpwsN alias. Moreover, rpwsn (Next) and rpwsp (Prev)
-    are created, and C-M-{Right,Left} are bound to rpws{n,p}. Full list of
-    keybindings created are:
+    This creates 6 aliases rpws1, rpws2, etc. It also binds the keys
+    M-F1, M-F2, etc to each rpwsN alias. Moreover, rpwsn (Next) and
+    rpwsp (Prev) are created, and C-M-{Right,Left} are bound to
+    rpws{n,p}. Full list of keybindings created are:
 
         M-F$i           Goto workspace $i
         C-M-Right       Goto Next workspace
@@ -1901,7 +1907,7 @@ be able to take Linux at your own pace.
 | PIM                 | -                    | -                    | Akonadi                      | - |
 | Desktop Wiki        | Zim                  | Zim                  | KJots                        | - |
 | Terminal Emulator   | MATE Terminal        | Xfce Terminal        | Konsole                      | xterm |
-| Package Management  | Gslapt, Sourcery     | Gslapt, Sourcery     | Gslapt, Sourcery             | Gslapt,Sourcery |
+| Package Management  | Gslapt, Sourcery     | Gslapt, Sourcery     | Gslapt, Sourcery             | Gslapt, Sourcery |
 
 
 ===Selected Applications found in Salix===
