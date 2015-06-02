@@ -545,7 +545,7 @@ You need to have superuser privileges in order to install or upgrade
 packages.
 IMPORTANTEND
 
-
+CLEARPAGE
 +++Gslapt+++[Gslapt]
 
 //Gslapt// is the GUI version of [slapt-get #slapt-get]. It allows one to
@@ -569,6 +569,7 @@ to ensure your installed system is up to date with the repositories -- click on
 [img/gslapt.png]
 
 
+CLEARPAGE
 +++Sourcery+++
 
 //Sourcery// is a graphical frontend to [slapt-src #slapt-src], a
@@ -771,6 +772,7 @@ latest, please refer to the following link for upgrading your Salix.
 -
 
 
+CLEARPAGE
 ++Configuring Your Salix++
 
 
@@ -893,6 +895,7 @@ have become lost after updating your system/installing some new
 program and makes them appear again in the application menu.
 
 
+CLEARPAGE
 +++Hostnames+++
 
 Hostnames manages the host names used by your computer. This tool
@@ -902,18 +905,20 @@ machine as a server.
 [img/gtkhostsetup.png]
 
 
+CLEARPAGE
 +++Dotnew+++
 
 Dotnew manages the system configuration upgrades used by Slackware. It
 will display a possible course of action for each new configuration file
 found in the system.
 
-[img/dotnew.jpg]
+[img/dotnew.png]
 
 To execute this utility in a terminal, simply type
 ``` sudo dotnew
 
 
+CLEARPAGE
 +++Keyboard Layout+++
 
 This utility will configure the keyboard layout being used both in
@@ -929,6 +934,7 @@ To execute this utility in a terminal, simply type
 ``` sudo keyboardsetup
 
 
+CLEARPAGE
 +++Lilosetup+++
 % Decide what to do about Lilosetup versus Bootsetup
 
@@ -949,6 +955,7 @@ which case you may have to launch it from a Live CD if you have lost all
 other means to boot into your system.
 
 
+CLEARPAGE
 +++System Services+++[system_services]
 
 Here you will be able to select the services that should or shouldn't be
@@ -963,6 +970,7 @@ To execute this utility in a terminal, simply type
 [img/gtkservicesetup.png]
 
 
+CLEARPAGE
 +++System Language+++
 
 This utility will configure the language of your system.
@@ -972,6 +980,7 @@ To execute it in a terminal, simply type
 [img/gtklocalesetup.png]
 
 
+CLEARPAGE
 +++System Clock+++
 
 This utility will configure your computer clock.
@@ -981,6 +990,7 @@ To execute it in a terminal, simply type
 [img/gtkclocksetup.png]
 
 
+CLEARPAGE
 +++User Profiles+++
 
 In Unix/Linux, all users and groups of users are given certain
@@ -1320,6 +1330,7 @@ or wheel will paste it accurately into the command line or wherever you
 wish. This only works in a terminal running within a GUI.
 
 
+CLEARPAGE
 ++Getting started with Salix Ratpoison++ 
 
 
@@ -1718,6 +1729,7 @@ The new
 item should already appear. If all is well, you may close the editor.
 
 
+CLEARPAGE
 +++Summary+++
 
 Here is a short list of key bindings common to many of the Salix
@@ -1903,6 +1915,7 @@ processing tasks.
 [img/abiword.png]
 
 
+CLEARPAGE
 ====Asunder==== 
 
 Asunder is an Audio CD ripper and encoder for Linux. You can use Asunder
@@ -1912,6 +1925,7 @@ Musepack, AAC, and Monkey's Audio files.
 [img/asunder.png]
 
 
+CLEARPAGE
 ====Brasero==== 
 
 Brasero is an application to burn CD/DVD. It is designed to be as simple
@@ -1921,6 +1935,7 @@ discs easily and quickly.
 [img/brasero.png]
 
 
+CLEARPAGE
 ====Catfish====
 
 Catfish is a handy file searching tool which provides a unified,
@@ -1930,6 +1945,7 @@ such as find, (s)locate, doodle, tracker and beagle.
 [img/catfish.png]
 
 
+CLEARPAGE
 ====Claws-mail==== 
 
 Claws Mail is an open source email and news client. It offers easy
@@ -1939,6 +1955,7 @@ mailbox format as well as the Mbox mailbox format via a plugin.
 [img/claws.png]
 
 
+CLEARPAGE
 ====Document Viewer (Atril)==== 
 
 Document Viewer is a very lightweight, simple PDF document viewer.
@@ -1946,6 +1963,7 @@ Document Viewer is a very lightweight, simple PDF document viewer.
 [img/atril.png]
 
 
+CLEARPAGE
 ====ePDFview==== 
 
 ePDFView is a lightweight PDF document viewer that only uses the GTK+
@@ -1955,6 +1973,7 @@ has support for printing using CUPS.
 [img/epdfview.png]
 
 
+CLEARPAGE
 ====Exaile==== 
 
 Exaile is a music manager which incorporates automatic fetching of album
@@ -1964,6 +1983,7 @@ media players, Internet radio such as Shoutcast, tabbed playlists, etc.
 [img/exaile.png]
 
 
+CLEARPAGE
 ====Engrampa====
 
 Engrampa is an archive manager. Supported archive types include gzip,
@@ -1973,6 +1993,7 @@ etc.
 [img/engrampa.png]
 
 
+CLEARPAGE
 ====Firefox====
 
 Mozilla Firefox is a free and open source web browser with tabbed
@@ -1982,6 +2003,7 @@ numerous plugins.
 [img/firefox.png]
 
 
+CLEARPAGE
 ====Galculator====
 
 Galculator is a calculator featuring two user modes: basic and
@@ -1998,6 +2020,7 @@ Desktop Environment.
 [img/geany.png]
 
 
+CLEARPAGE
 ====gFTP====
 
 gFTP is an FTP client with both a text and a GUI interface. gFTP aims to
@@ -2006,6 +2029,7 @@ be simple to use yet powerful.
 [img/gftp.png]
 
 
+CLEARPAGE
 ====Gigolo==== 
 
 Gigolo is a frontend to easily manage connections to remote filesystems
@@ -2015,6 +2039,7 @@ filesystem and browse local networks shares.
 [img/gigolo.png]
 
 
+CLEARPAGE
 ====Gimp==== 
 
 GIMP (GNU Image Manipulation Program) is an image retouching and editing
@@ -2026,6 +2051,7 @@ formats as well as create basic animated images in GIF.
 [img/gimp.png]
 
 
+CLEARPAGE
 ====Gnumeric====
 
 The goal of Gnumeric is to be the best possible spreadsheet. While not
@@ -2036,6 +2062,7 @@ attempts to minimize the costs of transition.
 [img/gnumeric.png]
 
 
+CLEARPAGE
 ====Gtkman====
 
 GTKMan is a simple manual page viewer. Manual pages are viewed by
@@ -2055,6 +2082,7 @@ go to qtconfig and select "ibus" instead of "xim" in
 "Interface" -> "Default Input Method").
 
 
+CLEARPAGE
 ====ISO Master====
 
 ISO Master is an application for creating and modifying ISO9660 files
@@ -2065,6 +2093,7 @@ and creating bootable CDs using various boot record types.
 [img/isomaster.png]
 
 
+CLEARPAGE
 ====Leafpad====
 
 Leafpad is a very light simple text editor with printing support.
@@ -2087,6 +2116,7 @@ and fast. It uses the WebKit rendering engine.
 [img/midori.png]
 
 
+CLEARPAGE
 ====mtPaint==== 
 
 mtPaint is a painting program designed to easily create pixel art and
@@ -2096,6 +2126,7 @@ older PC hardware (e.g. a 200MHz CPU and 16MB of free RAM).
 [img/mtpaint.png]
 
 
+CLEARPAGE
 ====LibreOffice====
 
 LibreOffice is the leading open-source office software suite for word
@@ -2107,6 +2138,7 @@ also read and write files from other common office software packages.
 [img/libreoffice.png]
 
 
+CLEARPAGE
 ====Orage====
 
 Orage provides a calendar which integrates nicely into the Xfce Desktop
@@ -2119,6 +2151,7 @@ on a date to display or set the agenda for the day.
 [img/orage.png]
 
 
+CLEARPAGE
 ====Parole Media Player==== 
 
 Parole Media Player is a media player (audio and video) which utilizes
@@ -2127,6 +2160,7 @@ the GStreamer framework for playback.
 [img/parole.png]
 
 
+CLEARPAGE
 ====Pidgin====
 
 Pidgin is an easy to use and free chat client which lets you log in to
@@ -2137,6 +2171,7 @@ Jabber/XMPP, MSN Messenger, Yahoo, etc.
 [img/pidgin.png]
 
 
+CLEARPAGE
 ====PiTiVi Video Editor====
 
 PiTiVi is an easy to use video editor. The interface is intuitive to
@@ -2146,6 +2181,7 @@ film clips.
 [img/pitivi.png]
 
 
+CLEARPAGE
 ====Simple Scan====
 
 Simple Scan allows you to scan your documents/photos with your scanner
@@ -2163,6 +2199,7 @@ simple, lightweight and powerful.
 [img/transmission.png]
 
 
+CLEARPAGE
 ====Viewnior==== 
 
 Viewnior is a fast and lightweight picture viewer.

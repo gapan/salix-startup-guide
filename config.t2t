@@ -28,6 +28,9 @@
 
 %!postproc(tex): "\\documentclass{article}" "\\documentclass[a4paper,12pt]{book}"
 
+%!postproc(tex): "CLEARPAGE" "\\clearpage"
+%!postproc: "CLEARPAGE" ""
+
 %%!postproc(tex): "\\maketitle" ""
 %!postproc(tex): "\\usepackage{graphicx}" "\\usepackage{graphicx}\n\\usepackage[export]{adjustbox}"
 %!postproc(tex): "\\usepackage{graphicx}" "\\usepackage[Bjornstrup]{fncychap}\n\\usepackage{graphicx}"
