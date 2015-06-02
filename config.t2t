@@ -4,16 +4,20 @@
 % Uncomment the following line to enable the live sections
 %%!preproc: "^%live" ""
 
+%!style(tex): xltxtra,
+%!style(tex): xcolor
+%!style(tex): tabulary
+%!postproc(tex): "{xcolor}" "[usenames,dvipsnames,svgnames,table]{xcolor}"
 %!preproc(tex): "^NOTESTART (.*)" "NOTESTART [img-css/note.png] \1"
-%!postproc(tex): "^NOTESTART (.*)" "\\vspace{1em}\\colorbox{green}{\\hbox to 0.9\\textwidth{\1\\hfill}}\n\n\\emph{"
+%!postproc(tex): "^NOTESTART (.*)" "\\vspace{1em}\\colorbox{YellowGreen}{\\hbox to 0.9\\textwidth{\1\\hfill}}\n\n\\emph{"
 %!postproc(tex): "^NOTEEND" "}\\vspace{1em}"
 
 %!preproc(tex): "^IMPORTANTSTART (.*)" "IMPORTANTSTART [img-css/important.png] \1"
-%!postproc(tex): "^IMPORTANTSTART (.*)" "\\vspace{1em}\\colorbox{orange}{\\hbox to 0.9\\textwidth{\1\\hfill}}\n\n\\emph{"
+%!postproc(tex): "^IMPORTANTSTART (.*)" "\\vspace{1em}\\colorbox{SkyBlue}{\\hbox to 0.9\\textwidth{\1\\hfill}}\n\n\\emph{"
 %!postproc(tex): "^IMPORTANTEND" "}\\vspace{1em}"
 
 %!preproc(tex): "^WARNINGSTART (.*)" "WARNINGSTART [img-css/warning.png] \1"
-%!postproc(tex): "^WARNINGSTART (.*)" "\\vspace{1em}\\colorbox{red}{\\hbox to 0.9\\textwidth{\1\\hfill}}\n\n\\emph{"
+%!postproc(tex): "^WARNINGSTART (.*)" "\\vspace{1em}\\colorbox{Dandelion}{\\hbox to 0.9\\textwidth{\1\\hfill}}\n\n\\emph{"
 %!postproc(tex): "^WARNINGEND" "}\\vspace{1em}"
 
 %!postproc(html): "NOTESTART (.*)" "NOTESTART \1 NOTESTART"
@@ -24,7 +28,6 @@
 
 %!postproc(tex): "\\documentclass{article}" "\\documentclass[a4paper,12pt]{book}"
 
-%!style(tex): xltxtra,tabulary,xcolor
 %%!postproc(tex): "\\maketitle" ""
 %!postproc(tex): "\\usepackage{graphicx}" "\\usepackage{graphicx}\n\\usepackage[export]{adjustbox}"
 %!postproc(tex): "\\usepackage{graphicx}" "\\usepackage[Bjornstrup]{fncychap}\n\\usepackage{graphicx}"
