@@ -5,42 +5,10 @@ Getting familiar with your new operating System.
 //Last updated on %%mtime(%Y-%m-%d %H:%M)//.
 
 
-===About this manual===
+% About this manual
+%!Include: about.t2t
 
-The purpose of this manual is to enable you to take full advantage of
-the many features of Salix. The latest version of this document
-is available from [our website URLSITE].
-
-
-**The Salix start up guide is released under the [CC-BY-SA 3.0 http://creativecommons.org/licenses/by-sa/3.0/] license.**
-
-
-//**Your contribution is important!**//
-
-We would like to improve the quality of the manual and to provide more
-documents translated in your mother tongue. Your help is always
-welcome.
-
-For any comments and submission of articles to be included in the start-up
-guide, please contact us through the
-[Salix mailing list URLSITE/mailinglists.html].
-
-
-//**Acknowledgement**//
-
-My sincere thanks to all the people who have contributed to and worked
-on this start-up guide, especially //**mimosa**//, who did a lot of work
-rewriting big parts of this guide and helped cleaning it up.
-
-Many thanks also to //**tsuren**//, //**jrd**//, //**akuna**//, and
-//**maximus**// for all their hard work in the previous versions of this
-guide.
-
-The section on partitioning with //cfdisk// is adapted from the guide for
-[Absolute Linux http://absolutelinux.org], with thanks to Paul Sherman.
-
-//~gapan//
-
+% Salix at a Glance
 %!Include: at_a_glance.t2t
 
 +Starting Up Salix+
@@ -63,7 +31,7 @@ made possible by generous donations from users.
 NOTEEND
 
 An ISO image is an archive file of an optical disc. It can be easily
-rendered or burned to a DVD or CD by using media authoring or disc
+eendered or burned to a DVD or CD by using media authoring or disc
 burning software. The resulting CD should contain the contents of the .iso 
 file, but not the .iso file itself; if it
 does, you have made a mistake in the process. Alternatively, if your system 
