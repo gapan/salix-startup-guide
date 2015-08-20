@@ -70,6 +70,9 @@ ebook-prepare: htmltmp fix-anchors
 
 epub: ebook-prepare
 	ebook-convert output/guide.html output/guide.epub \
+		--title="Salix Startup Guide" \
+		--authors="Salix" \
+		--language=en \
 		--cover=1stpage.jpg \
 		--chapter "//h:h1" \
 		--chapter "//h:h2" \
@@ -81,6 +84,9 @@ epub: ebook-prepare
 
 mobi: ebook-prepare
 	ebook-convert output/guide.html output/guide.mobi \
+		--title="Salix Startup Guide" \
+		--authors="Salix" \
+		--language=en \
 		--cover=1stpage.jpg \
 		--chapter "//h:h1" \
 		--chapter "//h:h2" \
