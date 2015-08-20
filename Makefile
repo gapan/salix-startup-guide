@@ -146,7 +146,7 @@ upload: html
 upload-pdf: pdf
 	scp output/SalixStartupGuide.pdf $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)/files/
 
-upload-ebooks: epub mobi
+upload-ebooks:
 	scp output/guide.epub $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)/files/SalixStartupGuide.epub
 	scp output/guide.mobi $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)/files/SalixStartupGuide.mobi
 
