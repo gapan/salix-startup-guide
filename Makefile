@@ -66,10 +66,11 @@ ebook-prepare: htmltmp fix-anchors
 	sed -i 's/ WARNINGSTART$$/<\/B>/' output/guide.html
 	sed -i 's/WARNINGEND/<\/I>/' output/guide.html
 	cp -r img output/
+	convert -density 150 -resize 600 1stpage.pdf 1stpage.jpg
 
 epub: ebook-prepare
 	ebook-convert output/guide.html output/guide.epub \
-		--cover=img/screenshots_rotated.jpg \
+		--cover=1stpage.jpg \
 		--chapter "//h:h1" \
 		--chapter "//h:h2" \
 		--chapter "//h:h3" \
@@ -80,7 +81,7 @@ epub: ebook-prepare
 
 mobi: ebook-prepare
 	ebook-convert output/guide.html output/guide.mobi \
-		--cover=img/screenshots_rotated.jpg \
+		--cover=1stpage.jpg \
 		--chapter "//h:h1" \
 		--chapter "//h:h2" \
 		--chapter "//h:h3" \
