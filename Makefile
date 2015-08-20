@@ -126,6 +126,7 @@ help:
 clean:
 	rm -rf output
 	rm -f guide.html
+	rm -f 1stpage.jpg
 
 upload: html
 	rsync -e "ssh -p $(SSH_PORT)" \
