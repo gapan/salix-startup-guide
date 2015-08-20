@@ -139,6 +139,9 @@ upload: html
 
 upload-pdf: pdf
 	scp output/SalixStartupGuide.pdf $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)/files/
- 
 
-.PHONY: all html htmltmp epub mobi tex pdf help clean upload upload-pdf ebook-prepare fix-anchors
+upload-ebooks: epub mobi
+	scp output/guide.epub $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)/files/SalixStartupGuide.epub
+	scp output/guide.mobi $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)/files/SalixStartupGuide.mobi
+
+.PHONY: all html htmltmp epub mobi tex pdf help clean upload upload-pdf upload-ebooks ebook-prepare fix-anchors
