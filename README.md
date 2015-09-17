@@ -9,7 +9,7 @@ post-processed with [htmldoc](https://www.msweet.org/projects.php?Z1).
 Both need to be installed to create the HTML documentation. Once you do
 have them installed, you can create the HTML documentation with:
 
-  make html
+    make html
 
 To output
 the guide as a PDF file a [TeXLive](https://www.tug.org/texlive/)
@@ -17,16 +17,16 @@ installation is required as well as
 [pdftk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/).
 You can then create the PDF file by running:
 
-  make pdf
+    make pdf
 
 To output the guide as EPUB and MOBI e-book
 files, ebook-convert from the
 [Calibre](http://calibre-ebook.com/) project is needed. You can run:
 
-  make epub
+    make epub
 
 and
 
-  make mobi
+    make mobi
 
 to create the EPUB and MOBI files respectively.
