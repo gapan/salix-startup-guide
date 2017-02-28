@@ -17,6 +17,8 @@ html: htmltmp fix-anchors
 	sed -i "/<STYLE TYPE=/,/--><\/STYLE>/d" output/htmlsep/*.html
 	sed -i "s|^</HEAD>|<link rel=\"stylesheet\" href=\"default.css\" type=\"text/css\">\n</HEAD>|" \
 		output/htmlsep/*.html
+	sed -i "s|^</HEAD>|<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n</HEAD>|" \
+		output/htmlsep/*.html
 	sed -i "s|^<A HREF=\"toc.html\">Contents</A>|<ul class=\"docnav\"><li class=\"home\"><A HREF=\"toc.html\"><strong>Contents</strong></A></li>|" \
 		output/htmlsep/*.html
 	sed -i "s|^<A HREF=\"\(.*\)\">Previous</A>|<li class=\"previous\"><A HREF=\"\1\"><strong>Previous</strong></A></li>|" \
