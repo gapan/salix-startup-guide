@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="221Beforestarting.html">
+<LINK REL="Next" HREF="223InstallingfromaSalixInstallationCD.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="221Beforestarting.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="223InstallingfromaSalixInstallationCD.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="3_2_2">2.2.2. Partition Management</A></H3>
+<P> Before installing Salix, you need to have the necessary partition
+ space available on your system, and if the computer does not have a
+ separate partition for Linux, you must create one before installing
+ Salix.</P>
+<P> If you have an unformatted partition, unallocated disk space, an
+ existing partition you do not use, or you are happy to completely erase
+ and reformat your hard drive, you can create or rewrite a new partition
+ table using<I> cfdisk</I> (or<I> cgdisk</I> for EFI systems), which is
+ available through the Salix installer. A short <A HREF="#cfdisk">
+tutorial</A> on using cfdisk is available in a later section in this
+ guide.<I> cfdisk</I> and<I> cgdisk</I> are capable of removing and
+ creating partitions, but they lack the functionality to resize
+ partitions. While using<I> cfdisk</I> or<I> cgdisk</I> is easy, less
+ experienced users may prefer the safeguards and graphical interface of<I>
+ Gparted</I>, which can also resize and move partitions.</P>
+<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="412" SRC="gparted.png" WIDTH="600">
+</P>
+<P> Live CDs from pretty much any Linux distribution come with <A HREF="http://gparted.sourceforge.net/docs/help-manual/C/gparted_manual.html">
+Gparted</A>, which will enable you to change the partition organisation
+ on a disk device while preserving the contents of the partitions. You
+ may wish to use this application to create/re-organise your partition
+ table.</P>
+<P> A hard drive space can be divided into no more than four &quot;primary&quot;
+ partitions, which can be problematic if you are hosting more than one
+ operating system on the same hard drive. A hard drive can, however, be
+ divided into three &quot;primary&quot; partitions and one &quot;extended&quot; partition.
+ The extended partition can then be subdivided into &quot;logical&quot; partitions
+ and hence overcome the limitation set by the &quot;primary partition&quot; (i.e.
+ no more than four partitions). In practice, there is no difference
+ between a logical and a primary partition except that &quot;Windows&quot; OS
+ cannot be installed on a logical partition.</P>
+<P> <div class="warning"><div class="admonition_header"><h2>Backup your files!</h2></div><div class="admonition"><div class="para"> It is advisable to back
+ up any important files before modifying the partition table. </div></div></div></P>
+<H4>2.2.2.1. So what kind of partitions do you need?</H4>
+<UL>
+<LI>Salix needs, at the very minimum, one partition which holds the root
+ directory and must be assigned as <CODE>/</CODE>.</LI>
+<LI>It is often recommended to have one swap partition though modern RAM
+ sizes now often mean it isn't needed. If you already have another Linux
+ OS running on your machine, its swap partition can be shared, and you
+ do not need to create another. A swap partition is in essence used as
+ extra RAM to improve the performance of your machine when, for example,
+ your machine doesn't have a lot of physical RAM or you're performing
+ memory-intensive operations (such as video editing) that use up most or
+ all of the physical RAM. It is normally recommended to have 1.5-2 times
+ the size of your RAM as swap space, but for a modern desktop computer
+ with several GB of RAM, a swap partition may not be strictly necessary.</LI>
+<LI>Many users like to have a separate partition to hold the /home
+ directory, where you can store all your personal data such as
+ documents, photos, customised settings for the desktop environment etc;
+ but this is by no means necessary.</LI>
+<LI>Optionally you can create separate partitions to hold different
+ directories such as the /var directory, where system log files are
+ stored. But unless you are running a server machine, this is probably
+ unnecessary. An advantage of having more than one partition to hold
+ separate directories is that you can reformat one partition without
+ affecting others. For example, you can re-install Salix on your machine
+ (this goes to the partition holding the &quot;/&quot; directory) while leaving
+ the partition holding the /home directory intact; however, be aware
+ that /home can contain configuration specific to each distribution and
+ release, so sharing it between distros or reusing it when installing a
+ new version of Salix is liable to lead to problems.</LI>
+</UL>
+<P> Each partition can be formatted into one of several file systems,
+ including xfs, ext4, ext3, ext2, btrfs, jfs and reiserfs. The default
+ is xfs.</P>
+<P> <div class="important"><div class="admonition_header"><h2>EFI</h2></div><div class="admonition"><div class="para"> On (U)EFI systems, it is mandatory
+ to have a separate partition allocated for<B> /boot</B>. This partition
+ should have a type of<B> ef00</B>, when created in cgdisk. This
+ partition should be formatted using the<B> FAT32</B> filesystem.
+ </div></div></div></P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="221Beforestarting.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="223InstallingfromaSalixInstallationCD.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

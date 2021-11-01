@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="32Packagemanagementfromthecommandline.html">
+<LINK REL="Next" HREF="322slaptget.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="32Packagemanagementfromthecommandline.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="322slaptget.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="4_2_1">3.2.1. Salix Package Installer</A></H3>
+<P><I> spi</I> is a command line tool that combines some basic functions
+ of<I> slapt-get</I> and<I> slapt-src</I>. It installs from the Salix
+ repositories if the package is available there, if not, it looks in <A HREF="http://slackbuilds.org">
+SBo</A>and repeats the process recursively for any dependencies. This
+ means all packages are automatically installed from the repositories if
+ they are available there, even if it is a dependency of a package that
+ is not. For a summary of usage, see</P>
+<PRE>
+  spi --help
+</PRE>
+<P> Note that the default action (if<I> spi</I> is called without
+ specifying e.g. <CODE>-i</CODE>) is to search for packages, reporting
+ whether they are installed or where they are available. <CODE>sudo spi
+ -u</CODE> will update package data for both<I> slapt-get</I> and<I>
+ slapt-src</I>, and <CODE>sudo spi -U</CODE> installs any upgrades
+ available. <CODE>sudo spi -i packagename</CODE> installs a specific
+ package and its dependencies, always preferring packages in the
+ repositories. <CODE>spi --simulate -i packagename</CODE> simulates
+ installation, and <CODE>spi --show</CODE> gives detailed information
+ about a particular package.</P>
+<P> <div class="note"><div class="admonition_header"><h2>Superuser privileges</h2></div><div class="admonition"><div class="para"> Superuser privileges are
+ required for actual installation and updating of packages but not
+ actions that just provide information. </div></div></div></P>
+<P> While<I> spi</I> brings basic package management together in one
+ all-purpose tool,<I> slapt-get</I> and<I> slapt-src</I> provide a
+ number of other powerful features.</P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="32Packagemanagementfromthecommandline.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="322slaptget.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

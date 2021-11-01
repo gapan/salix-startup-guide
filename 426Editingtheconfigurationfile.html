@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="425Theconsoleandpackagemanagement.html">
+<LINK REL="Next" HREF="427Usingworkspaces.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="425Theconsoleandpackagemanagement.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="427Usingworkspaces.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="5_2_6">4.2.6. Editing the configuration file</A></H3>
+<P> After using<I> Alpine</I> a little, one problem may become apparent.
+ Its shortcut for selecting a file, for example to attach it, is <CODE>
+C-t</CODE>. But that's Ratpoison's escape key combination! In fact,
+ Ratpoison has a solution for such conflicts, referred to somewhat
+ cryptically in the shortcut list as<I> meta</I>: <CODE>C-t t</CODE>
+ should send <CODE>C-t</CODE> to the application in the active window.
+ However, this does not work in the terminal, which does not recognize
+ the character if it receives it in this form.</P>
+<P> Everything in Ratpoison is configurable, and the <CODE>C-t</CODE>
+ combination itself is no exception. A temporary solution is to reassign
+ the binding using Ratpoison's command input feature. <CODE>C-t :</CODE>
+ conjures up an input line at the top right of the screen. This can be
+ used for passing instructions to Ratpoison. For instance, one way of
+ opening an application in a new console is:</P>
+<PRE>
+  C-t :exec xterm -e alpine
+</PRE>
+<P> which starts the program we just installed. The colon command can be
+ used to pass a number of instructions to Ratpoison; see</P>
+<PRE>
+  man ratpoison
+</PRE>
+<P> for a full list together with shortcuts where they have been
+ defined. In fact, there is a shortcut for <CODE>exec</CODE>. Just type</P>
+<PRE>
+  C-t ! [application]
+</PRE>
+<P> <CODE>C-t C-!</CODE> opens it in a console.</P>
+<P> To change the <CODE>C-t</CODE> default, do: <CODE>C-t :escape
+ Super_L</CODE>, which is the so-called &quot;Windows key&quot; to the left of the
+ keyboard. As well as resolving the conflict with<I> Alpine</I>, this
+ has the great benefit of being just one keystroke. Some functions may
+ not work correctly, in particular, the very useful <CODE>C-t C-t</CODE>
+ to go back to where you just were, and performance varies from one
+ keyboard to another, so it's worth experimenting. Another possibility
+ is the &quot;Menu&quot; key. To return to the default: <CODE>C-t :escape C-t</CODE>
+.</P>
+<P> To make such a change permanent, edit<I> ~/.ratpoisonrc</I>. If you
+ are using Ratpoison, you can open the file now (with<I> GVim</I> or<I>
+ Vim</I>) and tile it horizontally with the window where you are reading
+ this guide (<CODE>C-t Shift-s</CODE>). Let's go through some items in
+ the file.</P>
+<PRE>
+  # .ratpoisonrc
+  
+  banish
+  % !! there is no such application in the repositories
+  
+  set border 0
+  set barpadding 0 0
+  set font terminus
+  set winfmt %n%s%a
+  
+  bind W exec rpallwin
+  bind r exec ~/.ratmenu/main.sh
+  
+  bind F1 exec rpws move1
+  bind F2 exec rpws move2
+  bind F3 exec rpws move3
+  bind F4 exec rpws move4
+  bind F5 exec rpws move5
+  bind F11 exec rpws moveprev
+  bind F12 exec rpws movenext
+  
+  bind v exec vimprobable2
+  
+  # set default background
+  %this will need updating
+  exec feh --bg-scale /usr/share/xfce4/backdrops/StairWay.png
+  
+  # create 5 workspaces and create aliases (run: rpws help)
+  exec rpws init 5 -k
+  
+</PRE>
+<P><I> banish</I> sends the mouse pointer to bottom right (incidentally,
+ you may wish to install<I> unclutter</I>, which makes it fade out
+ altogether after a few seconds of stillness; place the line</P>
+<PRE>
+  unclutter &amp;
+</PRE>
+<P> in your<I> ~/.xinitrc</I> to run it automatically when X is
+ started). We've seen all but one of the custom keybindings in the
+ &quot;bind&quot; statements. To change the wallpaper, point to a different image.
+ The final item sets up workspaces, which we'll look at next - including
+ <CODE>C-t W</CODE>.</P>
+<P> Before editing the file, create a backup copy in case anything goes
+ wrong. To change the <CODE>C-t</CODE> default, simply add a line:</P>
+<PRE>
+  escape Menu
+</PRE>
+<P> We've seen many of the custom keybindings in the &quot;bind&quot; statements.</P>
+<P> The final item, together with the bindings to function keys, sets up
+ workspaces; we'll look at these next - including <CODE>C-t W</CODE>.</P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="425Theconsoleandpackagemanagement.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="427Usingworkspaces.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

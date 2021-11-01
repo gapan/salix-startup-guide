@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="323slaptsrc.html">
+<LINK REL="Next" HREF="325MakingaPackagefromaSourceFilewithSLKBUILD.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="323slaptsrc.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="325MakingaPackagefromaSourceFilewithSLKBUILD.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3 ID="spkg"><A NAME="4_2_4">3.2.4. spkg</A></H3>
+<P> If you would like to install or upgrade a package that you have
+ manually downloaded or have built yourself, you can use<I> spkg</I>.
+ Salix packages (just as Slackware packages) have filenames that end
+ with the<I> .tgz</I>, or<I> .txz</I> extensions (there are also<I> .tlz</I>
+ and<I> .tbz</I> but they are very rarely used). To either install a new
+ package or upgrade a package you can use the following command:</P>
+<PRE>
+  sudo spkg [exact path to package]
+</PRE>
+<P> Note that the name of the package must be exact to the last
+ character in the extension, e.g.<I>
+ mozilla-firefox-24.3.0esr-x86_64-2gv.txz</I> (command line
+ auto-complete using the TAB key helps in this respect). Removing a
+ package is somewhat similar. You can remove a package by issuing</P>
+<PRE>
+  sudo spkg -d [software name]
+</PRE>
+<P> e.g. <CODE>sudo spkg -d skype</CODE></P>
+<P> <div class="note"><div class="admonition_header"><h2>Blacklisting packages</h2></div><div class="admonition"><div class="para"> If you are replacing a
+ package that is available in the repositories, you will need to
+ blacklist this package in<I> /etc/slapt-get/slapt-getrc</I> to prevent
+ it from being &quot;downgraded&quot; when you next carry out a general package
+ upgrade. (See above for how to do this in <A HREF="#Gslapt">Gslapt</A>
+). </div></div></div></P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="323slaptsrc.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="325MakingaPackagefromaSourceFilewithSLKBUILD.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

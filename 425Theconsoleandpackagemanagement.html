@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="424Windowmanagement.html">
+<LINK REL="Next" HREF="426Editingtheconfigurationfile.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="424Windowmanagement.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="426Editingtheconfigurationfile.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="5_2_5">4.2.5. The console and package management</A></H3>
+<P> To open the command line, type <CODE>C-t c</CODE>. There is no
+ automatic package management in the Ratpoison edition, so you will need
+ to make regular manual checks for updates:</P>
+<PRE>
+  sudo spi --update  #update the package list
+  sudo spi --upgrade #upgrade to reflect any changes
+</PRE>
+<P><I> (the parts including the # symbol and after them are comments and
+ you don't need to type them).</I></P>
+<P> Apart from the<I> Vimprobable2</I> browser, the default applications
+ include<I> Alpine</I> as the mail client and<I> Gnome Commander</I> as
+ the file manager.<I> Music On Console</I> and<I> Whaaw Media Player</I>
+ are the audio and video players, with<I> GVim</I> as text/code editor.<I>
+ apvlv</I> can be used to view pdf files. As we have just seen, package
+ management is console-based, using<I> slapt-get</I> and<I> slapt-src</I>
+. Further options are available in the repository.<I> Firefox</I> may be
+ installed adding the<I> pentadactyl</I> or<I> vimperator</I> addon for
+ mouse-free browsing, or alternatively<I> Jumanji</I>,<I> XXXTerm</I> or<I>
+ w3m</I>, a browser for the command line.<I> Thunderbird</I> can be used
+ with the<I> Muttator</I> addon while<I> Claws-mail</I> works almost
+ entirely from the keyboard;<I> mcabber</I> and<I> irssi</I> are Jabber
+ and IRC clients for the console.</P>
+<P> Note: To see how to edit Alpine's configuration file to access mail
+ from one popular provider via SMTP, see the page in the <A HREF="http://www.salixos.org/wiki/index.php/How_to_set_up_Alpine_with_a_Gmail_account">
+Salix wiki</A>.</P>
+<P> Wordgrinder and sc are word processing and spreadsheet applications.
+ Flash is not included but is available from the repositories. Screen
+ for managing multiple consoles works well with Ratpoison. Users are
+ encouraged to tailor and expand the application selection according to
+ taste; when it comes to text processing, for instance,<I> PyRoom</I> is
+ an elegant choice for full-screen, distraction-free writing, and it
+ might be complemented by<I> Antiword</I> to convert proprietary file
+ formats into plain text.</P>
+<P> Note that the<I> Gslapt</I> and<I> Sourcery</I> graphical package
+ management tools (equivalent to<I> slapt-get</I> and<I> slapt-src</I>)
+ may also be used with out mouse, though this is perhaps more awkward
+ than working on the command line. In either case, regular manual
+ upgrading will still be necessary.</P>
+<P> As an example, we will install<I> mplayer2</I>, the classic console
+ media player.</P>
+<PRE>
+  sudo spi -u
+  sudo spi -i mplayer2
+</PRE>
+<P> Note: To see how to edit Alpine's configuration file to access mail
+ from one popular provider via SMTP, see the page in the <A HREF="http://www.salixos.org/wiki/index.php/How20to20set20up20Alpine20with20a20Gmail20account">
+Salix wiki</A>.</P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="424Windowmanagement.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="426Editingtheconfigurationfile.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

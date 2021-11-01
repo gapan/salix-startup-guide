@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="427Usingworkspaces.html">
+<LINK REL="Next" HREF="429Summary.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="427Usingworkspaces.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="429Summary.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="5_2_8">4.2.8. Adding an item to the menu</A></H3>
+<P> The directory <CODE>~/.ratmenu</CODE> contains the main menu file<I>
+ menu.sh</I>, and the submenus it calls; all these are editable scripts.
+ We will now edit the Network menu using<I> GVim</I>.<I> GVim</I> is in
+ the menu, but try calling it using the colon</P>
+<PRE>
+  C-t :exec gvim ~/.ratmenu/multimedia.sh
+</PRE>
+<P> or simply</P>
+<PRE>
+  C-t ! gvim ~/.ratmenu/multimedia.sh
+</PRE>
+<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="328" SRC="ratmenu_edit.png"
+WIDTH="600"></P>
+<P> Note that graphical applications are called directly, but command
+ line programs need to be opened inside a terminal.</P>
+<P> Use <CODE>j</CODE> and <CODE>k</CODE> to navigate to where you want
+ to add the entry for<I> Mplayer2</I>, type <CODE>i</CODE> to insert, <CODE>
+ESC</CODE> to return to command mode, and <CODE>:wq</CODE> to write and
+ save. Test the change by typing</P>
+<PRE>
+  C-t r
+</PRE>
+<P> The new item should already appear. If all is well, you may close
+ the editor.</P>
+<P></P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="427Usingworkspaces.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="429Summary.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

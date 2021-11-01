@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="41WorkingwiththeCommandLineInterface.html">
+<LINK REL="Next" HREF="412CreatingaFoldermkdir.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="41WorkingwiththeCommandLineInterface.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="412CreatingaFoldermkdir.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="5_1_1">4.1.1. Moving Around - cd</A></H3>
+<P> You should be in your user directory (denoted as <CODE>~</CODE>),
+ which is normally the same as <CODE>/home/your_user_name</CODE>
+ (replace <CODE>your_user_name</CODE> with your own). In Salix, this
+ directory contains <CODE>Desktop</CODE>, <CODE>Music</CODE>, <CODE>
+Documents</CODE> and so on. To see its contents, type <CODE>ls</CODE>
+ and press enter. You will see something like this:</P>
+<PRE>
+  george[~]$ ls
+  Desktop      Download    Pictures    Templates    salix
+  Documents    Music       Music       Videos
+</PRE>
+<P> Now to move around directories, we use the command <CODE>cd</CODE>.
+ If you just type in <CODE>cd</CODE> and enter, it will take you to your
+ home directory, but as we are already there, in this case, nothing will
+ happen. <CODE>cd</CODE> must otherwise be followed either by a name of
+ a directory which is within the directory you are in or by a full path
+ to the directory you wish to move into. You can also go one directory
+ up by typing</P>
+<PRE>
+  cd ..
+</PRE>
+<P> (be careful, there is a space between <CODE>cd</CODE> and <CODE>..</CODE>
+). Remember in Linux,<I> arguments are separated by spaces</I>. So for
+ now, let's move to the root directory. The root directory is, as the
+ name suggests, the core of your directories - every directory stems
+ from here.</P>
+<P> To move to the root <CODE>/</CODE>, type in</P>
+<PRE>
+  cd /
+</PRE>
+<P> Type in <CODE>ls</CODE> to see the list of files and directories in
+ the directory. You should see something like <CODE>tmp/</CODE>, <CODE>
+usr/</CODE>, <CODE>home</CODE> and so on. OK, not so interesting here.
+ Let us move back to your home directory with</P>
+<PRE>
+  cd /home/your_user_name
+</PRE>
+<P> or just</P>
+<PRE>
+  cd
+</PRE>
+<P> Now move into the <CODE>Music</CODE> directory by issuing</P>
+<PRE>
+  cd Music
+</PRE>
+<P> In fact, you do not have to type to the end. By pressing Tab after
+ the first letter or two, you may complete the rest of the directory
+ name automatically.</P>
+<P> The important thing to notice here is this is a<I> relative path</I>
+: unlike where the whole path was specified above, starting from the
+ root of the filesystem <CODE>/</CODE>, if the path doesn't begin with <CODE>
+/</CODE> it is understood as starting from whatever the current
+ directory is, in this case, your user's home. So <CODE>Music</CODE>, in
+ this case, means the same as <CODE>/home/your_user_name/Music</CODE>.</P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="41WorkingwiththeCommandLineInterface.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="412CreatingaFoldermkdir.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

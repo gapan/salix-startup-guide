@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="222PartitionManagement.html">
+<LINK REL="Next" HREF="224InstallingfromaSalixInstallationUSB.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="222PartitionManagement.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="224InstallingfromaSalixInstallationUSB.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="3_2_3">2.2.3. Installing from a Salix Installation CD</A></H3>
+<P> Installing Salix from a Salix Installation CD is somewhat similar to
+ installing Slackware, but the entire process is considerably shorter
+ and less complicated. Everything is done efficiently in a
+ semi-graphical command line interface.</P>
+<UL>
+<LI>Select your keymap.</LI>
+<LI>If you prefer to let Salix do everything including partition
+ management, just select AUTOPARTITION. Note that this will delete
+ everything on the hard drive.</LI>
+<LI>Otherwise, the installer will run<I> cfdisk</I> to allow you to set
+ up your desired partitions. If they are already as you wish, type 'Q'
+ to quit. See below for a detailed guide to using <A HREF="#cfdisk">
+cfdisk</A>.</LI>
+<LI>Your swap partition, if any, will be automatically detected. Say <CODE>
+yes</CODE> if the detected partition corresponds to that.</LI>
+<LI>You will then be asked to specify the partition for the root <CODE>/</CODE>
+ directory. Select the partition you have created for the <CODE>/</CODE>
+, and continue to format the partition. Unless you prefer otherwise, the
+ xfs file system is recommended here.</LI>
+<LI>If you have other partitions to mount, you can do so. If you have a
+ partition for a <CODE>/home</CODE> directory, select the partition and
+ continue. Unless the partition is new or you would like to erase the
+ content of this partition, select not to format.</LI>
+<LI>Other partitions such as Windows partitions will be detected
+ automatically. If you would like to make those partitions automatically
+ usable during your Salix session, include them all to mount.</LI>
+<LI>The installer will start installing Salix. You will be asked first
+ where the source files are. If you are installing from the CD, select
+ &quot;from the CD&quot;. Everything should be detected automatically.</LI>
+<LI>You will be asked to choose an installation mode (<B>Full</B>,<B>
+ Basic</B> or<B> Core</B>).</LI>
+<LI>Installation of packages will start.</LI>
+<LI>After the installation, LILO setup will start up. Unless you are<B>
+ not</B> using LILO, choose the default options. You can refine the
+ bootloader configuration (for example, in a multi-boot scenario) after
+ booting into your new Salix installation.</LI>
+<LI>You will be asked some other questions regarding time-zone, username
+ and password. When all the basic questions are answered, the machine
+ will restart itself.</LI>
+<LI>That's all. The computer is good to go! Enjoy Salix!</LI>
+</UL>
+<P> <div class="note"><div class="admonition_header"><h2>Salix now uses sudo!</h2></div><div class="admonition"><div class="para"> By default, the first user
+ created has access to sudo, any others do not; to allow them access as
+ well, they need to be added to the wheel group. </div></div></div></P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="222PartitionManagement.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="224InstallingfromaSalixInstallationUSB.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="412CreatingaFoldermkdir.html">
+<LINK REL="Next" HREF="414CopyingMovingRemovingaFoldercpmvrm.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="412CreatingaFoldermkdir.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="414CopyingMovingRemovingaFoldercpmvrm.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="5_1_3">4.1.3. Copying &amp; Moving &amp; Removing a File - cp &amp; mv
+ &amp; rm</A></H3>
+<P> <CODE>cp</CODE> is perhaps one of the most used commands in a
+ console mode. <CODE>cp</CODE> copies a file or files from one location
+ to another. Since we created the file called <CODE>log</CODE> and it is
+ currently in the wrong directory, let us move it inside the <CODE>photo</CODE>
+ directory. You can do so by issuing <CODE>cp log photo/</CODE> but
+ perhaps it is better to call the log file not just <CODE>log</CODE> but
+ <CODE>log.txt</CODE>, so that it would be obvious to a Windows user
+ that it is a text file. Type in</P>
+<PRE>
+  cp log photo/log.txt
+</PRE>
+<P> and enter to execute the command.</P>
+<P> You can go inside the <CODE>photo</CODE> directory and check if the
+ copying has been done properly. <CODE>cd photo</CODE> and then <CODE>ls</CODE>
+. The file should be there. Let's add to the log file by saying that it
+ has been moved from <CODE>Music</CODE> to <CODE>photo</CODE>. Issuing</P>
+<PRE>
+  nano log.txt
+</PRE>
+<P> will bring up the text. Add a line to say it has been moved, and
+ then save and quit the application by <CODE>Ctrl+x</CODE>.</P>
+<P> Oh, but we forgot to delete the original <CODE>log</CODE> file in
+ the <CODE>Music</CODE> folder. Let's just get back to the <CODE>Music</CODE>
+ directory using <CODE>cd ..</CODE> and remove the <CODE>log</CODE> file
+ by issuing <CODE>rm log</CODE>. The <CODE>rm</CODE> command removes a
+ file or files. For example, if you would like to remove all photos with
+ .jpg extension but not with .png, you can issue a command something
+ like:</P>
+<PRE>
+  rm *.jpg
+</PRE>
+<P> This will remove all the files with .jpg extension within the
+ directory you are in. Note that the <CODE>rm</CODE> command will not
+ ask you to confirm your order. It will just carry out your instructions
+ without further ado and once a file is removed, it is deleted forever.
+ You cannot recover it from the recycle bin.</P>
+<P> In this example, we used <CODE>cp</CODE> to copy the log file and
+ then later on deleted it. Normally, this would be done by issuing a <CODE>
+mv</CODE> command;</P>
+<PRE>
+  mv log photo/
+</PRE>
+<P> You can also use the <CODE>mv</CODE> command to rename a file. Let's
+ say that you did not like the earlier decision to call the log file <CODE>
+log.txt</CODE> and you now want to rename it as <CODE>log</CODE> again.
+ Type in</P>
+<PRE>
+  mv photo/log.txt photo/log
+</PRE>
+<P> and execute the command. Now the file name has been changed back to <CODE>
+log</CODE>.</P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="412CreatingaFoldermkdir.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="414CopyingMovingRemovingaFoldercpmvrm.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

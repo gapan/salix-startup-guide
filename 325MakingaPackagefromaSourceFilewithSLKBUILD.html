@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="324spkg.html">
+<LINK REL="Next" HREF="326UpgradingSalixtoaNewerVersion.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="324spkg.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="326UpgradingSalixtoaNewerVersion.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3 ID="roll-your-own"><A NAME="4_2_5">3.2.5. Making a Package from a
+ Source File with SLKBUILD</A></H3>
+<P> Installing software from a source file is in most cases not
+ difficult. You can compile a lot of software generally with the
+ following commands.</P>
+<UL>
+<LI>unpack a source file, move inside the folder.</LI>
+<LI>type in <CODE>./configure</CODE> on the terminal.</LI>
+<LI>type in <CODE>make</CODE>.</LI>
+<LI>type in <CODE>sudo make install</CODE>.</LI>
+<LI>type your password.</LI>
+</UL>
+<P> Make sure to read accompanying files such as &quot;README&quot;, &quot;INSTALL&quot; and
+ so on for installation instructions before compiling. These files may
+ list dependency packages which you need to install prior to the
+ configuration.</P>
+<PRE>
+  ./configure --help
+</PRE>
+<P> or</P>
+<PRE>
+  ./configure --help=short output
+</PRE>
+<P> should also help you with some configuration options.</P>
+<P> Although you should manage to install the software after the final
+ command, it is essentially<B> untracked</B>, and neither Gslapt nor
+ slapt-get can see that the software is installed. A better way is to
+ create a Salix package using SLKBUILD, which is a build script you can
+ prepare before issuing</P>
+<PRE>
+  fakeroot slkbuild -X
+</PRE>
+<P> to create a Salix compatible package which can then be installed
+ with <A HREF="#spkg">spkg</A> (the<I> fakeroot</I> package should also
+ be installed). For more on SLKBUILD, please consult <A HREF="http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild">
+SLKBUILD</A> and <A HREF="http://docs.salixos.org/wiki/New_to_Packaging">
+New to Packaging</A>.</P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="324spkg.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="326UpgradingSalixtoaNewerVersion.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

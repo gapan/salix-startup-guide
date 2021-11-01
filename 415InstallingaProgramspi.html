@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="414CopyingMovingRemovingaFoldercpmvrm.html">
+<LINK REL="Next" HREF="42GettingstartedwithSalixRatpoison.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="414CopyingMovingRemovingaFoldercpmvrm.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="42GettingstartedwithSalixRatpoison.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="5_1_5">4.1.5. Installing a Program - spi</A></H3>
+<P> Maybe a little bird has told you that there is a wonderful
+ application called<I> cowsay</I> in Linux, and now you would like to
+ see what this program can do.</P>
+<P> If this is the first time you are installing an application on
+ Salix, the first thing you should do is to update the package database
+ on your computer by executing</P>
+<PRE>
+  sudo spi -u
+</PRE>
+<P> Then to search for an application (in this case, &quot;cowsay&quot;), type in</P>
+<PRE>
+  spi cowsay
+</PRE>
+<P> Notice that you don't need to type <CODE>sudo</CODE> just for
+ searching for a package. The output you will get should be similar to
+ this:</P>
+<PRE>
+  george[~]$ spi cowsay
+  Available packages:
+  None
+  
+  Available SlackBuilds:
+  cowsay [Not installed]: cowsay (A Configurable Speaking/Thinking
+                          Cow)
+  xcowsay [Not installed]: xcowsay (displays a cute cow and message
+                           on your desktop)
+</PRE>
+<P> You can see that there is no available package for cowsay in the
+ official repositories of Salix or Slackware. Instead, a SlackBuild is
+ available. <A HREF="http://slackbuilds.org">SBo</A> maintains extra
+ packages for Slackware, which, of course, can be utilized by Salix
+ users. These SlackBuilds, however, are not maintained by Salix or
+ Slackware, but rather from individual Slackware users and are not
+ guaranteed to work 100% of the time. Packages, on the other hand,
+ should work perfectly fine all the time, with no exceptions.</P>
+<P> To install cowsay using the SlackBuild, you simply must run:</P>
+<PRE>
+  sudo spi -i cowsay
+</PRE>
+<P> Actually this is not different at all from what you would have done
+ if cowsay was available as a package. Installing any of the available
+ packages involves downloading the package and actually installing it,
+ while installing something using a SlackBuild, involves downloading the
+ SlackBuild script and all required source files, compiling the source
+ code, packaging it up and installing the package that has been created.
+ All that, of course, is done automatically. It's only just that
+ installing something using a SlackBuild is generally a bit (or a lot)
+ slower since it includes the extra step for compiling the source code.</P>
+<P> If you are not sure what this <CODE>-i</CODE> is in the above
+ command, you can check it with <CODE>spi --help</CODE>. You will see a
+ lot of lines running up the terminal quickly until the application is
+ installed.</P>
+<P> Once it is installed, you might want to test it. First get out of
+ the superuser mode by typing <CODE>exit</CODE>. Then type in <CODE>
+cowsay</CODE>. Nothing happens, and, in fact, you will see that you are
+ now in a strange mode that you cannot execute any commands. This is
+ because the application is still running, but as you don't see
+ anything, perhaps it is not running properly. To terminate the process,
+ press <CODE>Ctrl+c</CODE>. You will get back the normal input line back
+ on your terminal.</P>
+<PRE>
+  george[Desktop]$ cowsay
+  ^C
+  george[Desktop]$
+</PRE>
+<P> So what was going wrong? Check</P>
+<PRE>
+  cowsay -h
+</PRE>
+<P> You will see that you need to type in a <CODE>[message]</CODE>. Try
+ again with</P>
+<PRE>
+  cowsay Hello Salix!
+</PRE>
+<P> We have merely scratched the surface of the power of the command
+ line here. The best way to learn more is by using it, but remember to
+ use the help tools, and consult online documentation such as that
+ listed in the Salix forum. <A HREF="http://linuxcommand.org/index.php">
+Linuxcommand.org</A> can be particularly recommended if you wish to gain
+ a comprehensive grounding. Proceed cautiously, but don't be afraid to
+ experiment.</P>
+<P> A final tip - it can be difficult to copy longer commands
+ accurately. If you select the text with the mouse, clicking the middle
+ button or wheel will paste it accurately into the command line or
+ wherever you wish. This only works in a terminal running within a GUI.</P>
+<P></P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="414CopyingMovingRemovingaFoldercpmvrm.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="42GettingstartedwithSalixRatpoison.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

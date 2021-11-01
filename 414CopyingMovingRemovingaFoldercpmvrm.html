@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="413CopyingMovingRemovingaFilecpmvrm.html">
+<LINK REL="Next" HREF="415InstallingaProgramspi.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="413CopyingMovingRemovingaFilecpmvrm.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="415InstallingaProgramspi.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="5_1_4">4.1.4. Copying &amp; Moving &amp; Removing a Folder - cp &amp;
+ mv &amp; rm</A></H3>
+<P> So now you have the folder called <CODE>photo</CODE> and a log file
+ in the <CODE>Music</CODE> directory. This is a little strange as we
+ should normally have the folder not in <CODE>Music</CODE> but in <CODE>
+Pictures</CODE>. But now you know how to move a file, perhaps the same
+ command will work for moving a folder?</P>
+<P> But...</P>
+<PRE>
+  cp photo ../Pictures
+</PRE>
+<P> remember that <CODE>..</CODE> refers to the folder one level up)
+ will give an error like this.</P>
+<PRE>
+  george[Music]$ cp photo ../Pictures
+  cp: omitting directory 'photo/'
+  george[Music]$
+</PRE>
+<P> Let's see what we can do here. The first thing when encountering
+ such a problem is to check the corresponding help file. This can
+ normally be done by issuing a command with an option like <CODE>cp
+ --help</CODE>. It is possible that <CODE>--help</CODE> will just be <CODE>
+-h</CODE>, and there may be no help at all. <CODE>man</CODE> is another
+ command if this is the case.</P>
+<PRE>
+  man cp
+</PRE>
+<P> will give a more in-depth explanation of this command. (To get out
+ of the manual, press <CODE>q</CODE>).</P>
+<P> If you read the help carefully, you will see that you need to give
+ an extra option <CODE>-r</CODE> if you wish to copy a folder to another
+ location. So now</P>
+<PRE>
+  cp -r photo ../Pictures
+</PRE>
+<P> should copy the <CODE>photo</CODE> folder inside the correct <CODE>
+Pictures</CODE> directory. After checking that the folder has been
+ safely copied, you can remove the <CODE>photo</CODE> folder from the <CODE>
+Music</CODE> directory:</P>
+<PRE>
+  rm -r photo/
+</PRE>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="413CopyingMovingRemovingaFilecpmvrm.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="415InstallingaProgramspi.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

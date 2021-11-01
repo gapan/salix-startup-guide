@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="224InstallingfromaSalixInstallationUSB.html">
+<LINK REL="Next" HREF="3YourSalix.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="224InstallingfromaSalixInstallationUSB.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="3YourSalix.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3 ID="cfdisk"><A NAME="3_2_5">2.2.5. Partition management with cfdisk</A>
+</H3>
+<P> These instructions assume that you will create a single partition to
+ hold Salix, plus a swap partition, as an illustration; however,<I>
+ cfdisk</I> can create any partitioning scheme required. Note that you
+ can also delete partitions (which will irrevocably destroy their
+ contents). New partitions can be created in free space. For the
+ purposes of this example, it is assumed the entire disk is free. Swap,
+ if you need it, should normally be twice your RAM, so if that is 250
+ MB, swap should be 500 MB. If you have more than 2 GB of RAM, you
+ needn't take this rule too strictly and you can have smaller sized swap
+ partitions.</P>
+<P> You can move between the commands listed at the bottom of the screen
+ with the arrow keys, or select the command by typing the first letter,
+ such as 'Q' to<B> Quit</B>.</P>
+<UL>
+<LI>Make a<B> New</B> partition, taking up all but 1 GB of the disk
+ (this will be used for swap space). Note that you can choose whether to
+ create a Primary or Extended partition; the former is what is needed in
+ this example, but an extended partition will allow for the creation of
+ logical partitions within it, when a more complex setup is needed.</LI>
+<LI>Make this partition<B> Bootable</B> (with 'B'). Use the up and down
+ arrow keys to select a particular partition, if there is more than one.
+ The default partition type is 'Linux' so that partition is done.</LI>
+<LI>Next, make another new partition, taking up the rest of the drive.</LI>
+<LI>Change its<B> Type</B> to 82, Linux Swap.</LI>
+<LI>When you are happy with it,<B> Write</B> the partition table to
+ disk.</LI>
+<LI><B>Quit</B> to continue with Salix installation.</LI>
+</UL>
+<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="249" SRC="cfdisk_bp.png"
+WIDTH="480"></P>
+<P> <div class="note"><div class="admonition_header"><h2>GPT</h2></div><div class="admonition"><div class="para"> If your hard drive is partitioned using the
+ GPT scheme, instead of the older MBR scheme, instead of cfdisk, you get
+ cgdisk. While there are some differences between them, you'll find out
+ that they are mostly the same, so the instructions provided for cfdisk
+ apply to cgdisk, for the most part. </div></div></div></P>
+<H4>2.2.5.1. cfdisk usage details</H4>
+<H5>2.2.5.1.1. Hard disk names</H5>
+<P> SCSI harddisks are named with<I> sdx</I>, where<I> x</I> is a
+ harddisk letter. The disk with the lowest SCSI ID on the first
+ controller will become<I> sda</I>, the next after that, sdb, and so on.</P>
+<H5>2.2.5.1.2. Hard disk partitions</H5>
+<P> GNU/Linux systems often use a partition scheme inherited from
+ MS-DOS. With this, a harddisk can have up to four primary partitions.
+ If you want more, you have to make one of these an extended partition
+ where you can make several logical partitions. The partitions are named
+ with the disk they belong to, and a number. The first primary partition
+ on the first disk is therefore<I> sda1</I>, the second primary
+ partition is<I> sda2</I>, and so on. The first and second logical
+ partition on an extended partition on the first disk is<I> sda5</I> and<I>
+ sda6</I>, and so on.</P>
+<H4>2.2.5.2. Using cfdisk</H4>
+<H5>2.2.5.2.1. The user interface</H5>
+<P> After<I> cfdisk</I> is started you'll get an interface where the
+ current partition table is listed with the names and some data about
+ each partition and some command buttons on the bottom of the screen. To
+ change between partitions, use the up and down arrow keys. To change
+ between commands, use the left and right arrow keys.</P>
+<H5>2.2.5.2.2. Deleting a partition</H5>
+<P> To delete an existing partition, highlight it with the up and down
+ keys, select the Delete command with the left and right arrow keys and
+ press<I> Enter</I> or just press <CODE>D</CODE>.</P>
+<H5>2.2.5.2.3. Making a new partition</H5>
+<P> To make a new partition, select the New command with the left and
+ right arrow keys, and press<I> Enter</I>. You'll get the choice between
+ a primary and a logical partition. If you want a logical partition, the
+ program will automatically make an extended partition for you. Then you
+ must choose the size of the partition (in MB). If you can't enter a
+ value in MB, return to the main screen with the <CODE>Esc</CODE> key
+ and select MB with the Units command.</P>
+<H5>2.2.5.2.4. Set the type of a partition</H5>
+<P> To set the type of a partition, highlight the desired partition and
+ select the<I> Type</I> command. You'll get a list of different types.
+ Press<I> space</I>, and you'll get even more. Find what type you need,
+ and enter the number at the prompt. Linux is <CODE>83</CODE>, Linux
+ swap is <CODE>82</CODE>.</P>
+<H5>2.2.5.2.5. Make a partition bootable</H5>
+<P> To be able to boot from a primary partition, you need to make it
+ bootable. Highlight the partition and select the<I> Bootable</I>
+ command.</P>
+<H5>2.2.5.2.6. Write the result to disk and quit</H5>
+<P> When you are content with the layout of the disk, select the<I>
+ Write</I> command. The partition table will be written to disk.
+ Remember that this will destroy all data on partitions you have deleted
+ or changed. You should, therefore, be very sure that you want to do
+ this before actually pressing the Return key.</P>
+<P> To exit the program, select the<I> Quit</I> command. The installer
+ will then detect any partitions you have created and offer you the
+ option to assign mount points to them.</P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="224InstallingfromaSalixInstallationUSB.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="3YourSalix.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

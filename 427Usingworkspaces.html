@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="426Editingtheconfigurationfile.html">
+<LINK REL="Next" HREF="428Addinganitemtothemenu.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="426Editingtheconfigurationfile.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="428Addinganitemtothemenu.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="5_2_7">4.2.7. Using workspaces</A></H3>
+<P> If you have several terminals open, and various browser windows and
+ some other applications, the number of windows may become unwieldy. To
+ help with this, Ratpoison allows you to use workspaces. (In the online
+ Ratpoison manual, these are referred to more precisely as &quot;groups&quot;.)
+ You might then put all browser windows in one workspace, for instance.</P>
+<P> <CODE>C-t w</CODE> lists the windows in the current workspace; <CODE>
+C-t W</CODE> shows four more workspaces, which were set up in the last
+ line of the configuration file. In a console, type <CODE>rpws help</CODE>
+ .</P>
+<PRE>
+  $ rpws help
+  Usage:
+       rpws init n [-k] [-a]  - setup rpws with n workspaces.
+                                  -a sets up command aliases;
+                                  -k sets up key bindings and aliases.
+       rpws dump &lt;fname&gt;      - dumps the current layout to &lt;fname&gt;
+       rpws restore &lt;fname&gt;   - restores rpws workspaces from &lt;fname&gt;
+       rpws help              - this documentation
+       rpws n                 - switch to this workspace
+  
+  Usage:
+      Add the following line in ~/.ratpoisonrc
+  
+           exec /path/to/rpws init 6 -k
+  
+      This creates 6 aliases rpws1, rpws2, etc. It also binds the keys
+      M-F1, M-F2, etc to each rpwsN alias. Moreover, rpwsn (Next) and
+      rpwsp (Prev) are created, and C-M-{Right,Left} are bound to
+      rpws{n,p}. Full list of keybindings created are:
+  
+          M-F$i           Goto workspace $i
+          C-M-Right       Goto Next workspace
+          C-M-Left        Goto Prev workspace
+          C-t F$i         Move window to workspace $i
+          C-t F11         Move current window to prev workspace
+          C-t F12         Move current window to next workspace
+  
+  for more detailed documentation run &quot;perldoc /usr/bin/rpws&quot;
+</PRE>
+<P> The usage summary you will see may be a little cryptic. Just as <CODE>
+C</CODE> means Control, <CODE>M</CODE> refers to Alt. Use Alt with the
+ function keys to access each workspace. Ctrl-Alt and the arrows move up
+ and down workspaces. The remaining options move the current window to a
+ different workspace.</P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="426Editingtheconfigurationfile.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="428Addinganitemtothemenu.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

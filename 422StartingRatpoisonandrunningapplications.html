@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="421Overview.html">
+<LINK REL="Next" HREF="423Vimprobablebrowsing.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="421Overview.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="423Vimprobablebrowsing.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<H3><A NAME="5_2_2">4.2.2. Starting Ratpoison and running applications</A>
+</H3>
+<P> When you boot Salix Ratpoison, there is no graphical login screen:
+ when you log in, you enter the Linux terminal. Log in as your normal
+ user and type</P>
+<PRE>
+  startx
+</PRE>
+<P> to start Ratpoison itself.</P>
+<P> You should then see the Salix wallpaper, and a message will appear
+ briefly telling you how to view a list of commands. Type <CODE>Ctrl-t</CODE>
+ (<CODE>C-t</CODE>, in Ratpoison's own notation) then a question mark;
+ pressing any key takes you back to where you were before. There is
+ nothing to see (apart from the beautiful Salix wallpaper)! But it's
+ just as easy to set Ratpoison to work as with any more conventional
+ desktop.</P>
+<P> To select an application from the menu, type <CODE>C-t r</CODE>, and
+ use the arrow keys to navigate (Vim's <CODE>hjkl</CODE> keys also
+ work). Right arrow (or <CODE>l</CODE>) accesses submenus (such as
+ &quot;Network&quot;) and left arrow (or <CODE>h</CODE>) goes back up a level.
+ Right arrow or enter runs the application (if you open one by mistake,
+ don't worry, just type <CODE>C-t r</CODE> again - we will see how to
+ close windows and applications later).</P>
+<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="74" SRC="ratmenu.png" WIDTH="150">
+</P>
+<P> Some common options are available directly at the top. The<I>
+ Vimprobable2</I> browser, for instance, can be found under Network but
+ also by just selecting &quot;Browser&quot;. Remember to use the keyboard and not
+ the mouse! A third way to open it bypasses the menu altogether:</P>
+<PRE>
+  C-t v
+</PRE>
+<P> You can create more shortcuts like this for applications you use a
+ lot by adding them to the configuration file, which we will look at
+ below.</P>
+<P><I> apvlv</I>, under Accessories, can be used to read pdf documents
+ such as this guide. Also under accessories, &quot;Unit conversion&quot; starts
+ the console application units, which will convert between a large range
+ of scales, such as time, weight, or currency, including some quite
+ unusual ones.</P>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="421Overview.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="423Vimprobablebrowsing.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>
