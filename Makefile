@@ -3,8 +3,7 @@ SSH_PORT=22
 SSH_USER=web
 SSH_TARGET_DIR=/srv/www/guide.salixos.org
 
-html: htmltmp fix-anchors
-	rm -rf output/htmlsep
+html: htmltmp fix-anchors prepare-worktree
 	rm -rf output/img
 	mkdir -p output/htmlsep
 	cp -r img output/
@@ -49,6 +48,13 @@ html: htmltmp fix-anchors
 	rm -f output/guide.html
 	cp -f output/htmlsep/toc.html output/htmlsep/index.html
 
+prepare-worktree:
+	rm -rf output/htmlsep
+	git worktree prune
+	rm -rf .git/worktree/htmlsep
+	git worktree add -B public output/htmlsep origin/public
+	rm -rf output/htmlsep/*
+
 fix-anchors:
 	perl -i -p -e 's/<\/A>\n/<\/A>/' output/guide.html
 	sed -i 's/^\(<A NAME=.*<\/A>\)\(<H.*<\/H[0-9]>\)/\2\n\1/' output/guide.html
@@ -56,6 +62,12 @@ fix-anchors:
 htmltmp: 
 	mkdir -p output
 	txt2tags -t html -C config.t2t -o output/guide.html guide.t2t
+
+publish: html
+	cd output/htmlsep && \
+	git add --all && \
+	git commit -m "Publish on `date`" && \
+	git push -u origin public
 
 ebook-prepare: htmltmp fix-anchors
 	sed -i 's/^NOTESTART/<B><I>/' output/guide.html
