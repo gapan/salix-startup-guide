@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="428Addinganitemtothemenu.html">
@@ -16,50 +16,102 @@
 <li class="previous"><A HREF="428Addinganitemtothemenu.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="5Support.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="5_2_9">4.2.9. Summary</A></H3>
-<P> Here is a short list of key bindings common to many of the Salix
- Ratpoison edition's applications.</P>
-<TABLE CELLPADDING="4">
-<TR><TH>Shortcuts</TH><TH>Description</TH></TR>
-<TR><TD>gg</TD><TD>go to the top</TD></TR>
-<TR><TD>G</TD><TD>go to the bottom</TD></TR>
-<TR><TD>h</TD><TD>left</TD></TR>
-<TR><TD>j</TD><TD>down</TD></TR>
-<TR><TD>k</TD><TD>up</TD></TR>
-<TR><TD>l</TD><TD>right</TD></TR>
-<TR><TD>TAB</TD><TD>select form fields, links. C-z to type in some forms</TD>
-</TR>
-<TR><TD>o</TD><TD>open</TD></TR>
-<TR><TD>t</TD><TD>open in new tab/window</TD></TR>
-<TR><TD>f</TD><TD>follow a link</TD></TR>
-<TR><TD>d</TD><TD>close/delete</TD></TR>
-<TR><TD>H</TD><TD>go back</TD></TR>
-<TR><TD>/</TD><TD>search forwards</TD></TR>
-<TR><TD>?</TD><TD>search backwards</TD></TR>
-<TR><TD>ESC</TD><TD>return to command mode (and clear the buffer of any
- mistyped keystrokes)</TD></TR>
-<TR><TD>:</TD><TD>pass a non-shortcut command to the application</TD></TR>
-</TABLE>
-<P> For a summary of Ratpoison's own shortcuts, type <CODE>C-t ?</CODE>.</P>
-<P> While what is covered here should be enough to get you started, many
- more features of the applications and especially Ratpoison itself are
- described in online manuals, guides and the manpages. Once you are used
- to the core features and have them at your fingertips, it's worth
- digging around further, as well as investigating suitable applications
- to add to the set. Configuration may be done straightforwardly by
- editing the files - suggestions may be found online. One of Ratpoison's
- principal charms is how easily it can be tailored to fit each user's
- needs and taste.</P>
-<P> One miscellaneous item is the mount manager in the System menu,
- which may also be called from the command line as<I> gmountman</I>.
- When needed, this deals with the mounting of removable devices,
- including DVDs. Also,<I> banish</I> may be called at any time by the
- shortcut <CODE>C-t b</CODE>.</P>
-<P> Remember to check frequently for package updates using<I> slapt-get</I>
- or<I> spi</I>.</P>
-<P> Finally, to shut down Ratpoison, there is an entry in the Exit
- submenu, from where it is also possible to reboot or shut down the
- computer.</P>
+<h3><a NAME="6_2_6">4.2.6. Editing the configuration file</a></h3>
+<p> After using<em> Alpine</em> a little, one problem may become
+ apparent. Its shortcut for selecting a file, for example to attach it,
+ is <code>C-t</code>. But that's Ratpoison's escape key combination! In
+ fact, Ratpoison has a solution for such conflicts, referred to somewhat
+ cryptically in the shortcut list as<em> meta</em>: <code>C-t t</code>
+ should send <code>C-t</code> to the application in the active window.
+ However, this does not work in the terminal, which does not recognize
+ the character if it receives it in this form.</p>
+<p> Everything in Ratpoison is configurable, and the <code>C-t</code>
+ combination itself is no exception. A temporary solution is to reassign
+ the binding using Ratpoison's command input feature. <code>C-t :</code>
+ conjures up an input line at the top right of the screen. This can be
+ used for passing instructions to Ratpoison. For instance, one way of
+ opening an application in a new console is:</p>
+<pre>
+C-t :exec xterm -e alpine
+</pre>
+<p> which starts the program we just installed. The colon command can be
+ used to pass a number of instructions to Ratpoison; see</p>
+<pre>
+man ratpoison
+</pre>
+<p> for a full list together with shortcuts where they have been
+ defined. In fact, there is a shortcut for <code>exec</code>. Just type</p>
+<pre>
+C-t ! [application]
+</pre>
+<p> <code>C-t C-!</code> opens it in a console.</p>
+<p> To change the <code>C-t</code> default, do: <code>C-t :escape
+ Super_L</code>, which is the so-called &quot;Windows key&quot; to the left of the
+ keyboard. As well as resolving the conflict with<em> Alpine</em>, this
+ has the great benefit of being just one keystroke. Some functions may
+ not work correctly, in particular, the very useful <code>C-t C-t</code>
+ to go back to where you just were, and performance varies from one
+ keyboard to another, so it's worth experimenting. Another possibility
+ is the &quot;Menu&quot; key. To return to the default: <code>C-t :escape C-t</code>
+.</p>
+<p> To make such a change permanent, edit<em> ~/.ratpoisonrc</em>. If
+ you are using Ratpoison, you can open the file now (with<em> GVim</em>
+ or<em> Vim</em>) and tile it horizontally with the window where you are
+ reading this guide (<code>C-t Shift-s</code>). Let's go through some
+ items in the file.</p>
+<pre>
+# .ratpoisonrc
+
+banish
+% !! there is no such application in the repositories
+
+set border 0
+set barpadding 0 0
+set font terminus
+set winfmt %n%s%a
+
+bind W exec rpallwin
+bind r exec ~/.ratmenu/main.sh
+
+bind F1 exec rpws move1
+bind F2 exec rpws move2
+bind F3 exec rpws move3
+bind F4 exec rpws move4
+bind F5 exec rpws move5
+bind F11 exec rpws moveprev
+bind F12 exec rpws movenext
+
+bind v exec vimprobable2
+
+# set default background
+%this will need updating
+exec feh --bg-scale /usr/share/xfce4/backdrops/StairWay.png
+
+# create 5 workspaces and create aliases (run: rpws help)
+exec rpws init 5 -k
+
+</pre>
+<p><em> banish</em> sends the mouse pointer to bottom right
+ (incidentally, you may wish to install<em> unclutter</em>, which makes
+ it fade out altogether after a few seconds of stillness; place the line</p>
+<pre>
+unclutter &amp;
+</pre>
+<p> in your<em> ~/.xinitrc</em> to run it automatically when X is
+ started). We've seen all but one of the custom keybindings in the
+ &quot;bind&quot; statements. To change the wallpaper, point to a different image.
+ The final item sets up workspaces, which we'll look at next - including
+ <code>C-t W</code>.</p>
+<p> Before editing the file, create a backup copy in case anything goes
+ wrong. To change the <code>C-t</code> default, simply add a line:</p>
+<pre>
+escape Menu
+</pre>
+<p> We've seen many of the custom keybindings in the &quot;bind&quot; statements.</p>
+<p> The final item, together with the bindings to function keys, sets up
+ workspaces; we'll look at these next - including <code>C-t W</code>.</p>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="428Addinganitemtothemenu.html"><strong>Previous</strong></A></li>

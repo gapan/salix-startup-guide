@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="412CreatingaFoldermkdir.html">
@@ -16,59 +16,40 @@
 <li class="previous"><A HREF="412CreatingaFoldermkdir.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="414CopyingMovingRemovingaFoldercpmvrm.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="5_1_3">4.1.3. Copying &amp; Moving &amp; Removing a File - cp &amp; mv
- &amp; rm</A></H3>
-<P> <CODE>cp</CODE> is perhaps one of the most used commands in a
- console mode. <CODE>cp</CODE> copies a file or files from one location
- to another. Since we created the file called <CODE>log</CODE> and it is
- currently in the wrong directory, let us move it inside the <CODE>photo</CODE>
- directory. You can do so by issuing <CODE>cp log photo/</CODE> but
- perhaps it is better to call the log file not just <CODE>log</CODE> but
- <CODE>log.txt</CODE>, so that it would be obvious to a Windows user
- that it is a text file. Type in</P>
-<PRE>
-  cp log photo/log.txt
-</PRE>
-<P> and enter to execute the command.</P>
-<P> You can go inside the <CODE>photo</CODE> directory and check if the
- copying has been done properly. <CODE>cd photo</CODE> and then <CODE>ls</CODE>
-. The file should be there. Let's add to the log file by saying that it
- has been moved from <CODE>Music</CODE> to <CODE>photo</CODE>. Issuing</P>
-<PRE>
-  nano log.txt
-</PRE>
-<P> will bring up the text. Add a line to say it has been moved, and
- then save and quit the application by <CODE>Ctrl+x</CODE>.</P>
-<P> Oh, but we forgot to delete the original <CODE>log</CODE> file in
- the <CODE>Music</CODE> folder. Let's just get back to the <CODE>Music</CODE>
- directory using <CODE>cd ..</CODE> and remove the <CODE>log</CODE> file
- by issuing <CODE>rm log</CODE>. The <CODE>rm</CODE> command removes a
- file or files. For example, if you would like to remove all photos with
- .jpg extension but not with .png, you can issue a command something
- like:</P>
-<PRE>
-  rm *.jpg
-</PRE>
-<P> This will remove all the files with .jpg extension within the
- directory you are in. Note that the <CODE>rm</CODE> command will not
- ask you to confirm your order. It will just carry out your instructions
- without further ado and once a file is removed, it is deleted forever.
- You cannot recover it from the recycle bin.</P>
-<P> In this example, we used <CODE>cp</CODE> to copy the log file and
- then later on deleted it. Normally, this would be done by issuing a <CODE>
-mv</CODE> command;</P>
-<PRE>
-  mv log photo/
-</PRE>
-<P> You can also use the <CODE>mv</CODE> command to rename a file. Let's
- say that you did not like the earlier decision to call the log file <CODE>
-log.txt</CODE> and you now want to rename it as <CODE>log</CODE> again.
- Type in</P>
-<PRE>
-  mv photo/log.txt photo/log
-</PRE>
-<P> and execute the command. Now the file name has been changed back to <CODE>
-log</CODE>.</P>
+<h2><a NAME="6_1">4.1. Working with the Command Line Interface</a></h2>
+<p> This section deals with working in a console mode or with a terminal
+ (such as Xfce terminal, xterm, konsole and so forth), and serves merely
+ as a light introduction to the command line interface (CLI). The
+ intended audience here is not seasoned travelers but new journeymen in
+ the land of Linux, who are willing to discover more about what one can
+ do with it. We will go through some examples in this section for you to
+ follow, and hopefully by the end of this walkthrough, you will have no
+ problem working with the &quot;black screen&quot;. For those who would like to
+ know more about CLI, there are a couple of useful resources available
+ on the net, and some are listed in the <a href="http://forum.salixos.org">
+Salix Forum</a>.</p>
+<p> So why learn CLI commands at all? Graphical user interfaces for
+ applications have been steadily improving in Linux and are probably now
+ comparable to any OS in their ease of use. On the other hand, where
+ Linux excels, in particular, is in the area of command line
+ applications, its traditional strength. Without the CLI, you would be
+ effectively missing out on half of what Linux can offer.</p>
+<p> There is another reason. From time to time, you might have to work
+ in the console. For instance, if the machine fails to start up a
+ graphical desktop environment during booting, then you are more or less
+ forced to fix the problem without the graphical user interface (GUI).</p>
+<p> Of course, there are many other reasons to learn CLI commands, but
+ for now we will start by learning how to move around directories.</p>
+<p> First, open up a terminal or move to a console: you can do the
+ latter by pressing<strong> Ctrl+Alt+F2</strong>, for example. To get
+ back to the graphical desktop, press<strong> Alt+F4</strong>, for
+ example. F number keys are used to switch between consoles; if F4 or F7
+ doesn't do the trick, try others.</p>
+<p> However, the simplest option is to open a terminal within the GUI:
+ there is probably an option to do so in the panel, or if not, in the
+ menu.</p>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="412CreatingaFoldermkdir.html"><strong>Previous</strong></A></li>

@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="426Editingtheconfigurationfile.html">
@@ -16,51 +16,35 @@
 <li class="previous"><A HREF="426Editingtheconfigurationfile.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="428Addinganitemtothemenu.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="5_2_7">4.2.7. Using workspaces</A></H3>
-<P> If you have several terminals open, and various browser windows and
- some other applications, the number of windows may become unwieldy. To
- help with this, Ratpoison allows you to use workspaces. (In the online
- Ratpoison manual, these are referred to more precisely as &quot;groups&quot;.)
- You might then put all browser windows in one workspace, for instance.</P>
-<P> <CODE>C-t w</CODE> lists the windows in the current workspace; <CODE>
-C-t W</CODE> shows four more workspaces, which were set up in the last
- line of the configuration file. In a console, type <CODE>rpws help</CODE>
- .</P>
-<PRE>
-  $ rpws help
-  Usage:
-       rpws init n [-k] [-a]  - setup rpws with n workspaces.
-                                  -a sets up command aliases;
-                                  -k sets up key bindings and aliases.
-       rpws dump &lt;fname&gt;      - dumps the current layout to &lt;fname&gt;
-       rpws restore &lt;fname&gt;   - restores rpws workspaces from &lt;fname&gt;
-       rpws help              - this documentation
-       rpws n                 - switch to this workspace
-  
-  Usage:
-      Add the following line in ~/.ratpoisonrc
-  
-           exec /path/to/rpws init 6 -k
-  
-      This creates 6 aliases rpws1, rpws2, etc. It also binds the keys
-      M-F1, M-F2, etc to each rpwsN alias. Moreover, rpwsn (Next) and
-      rpwsp (Prev) are created, and C-M-{Right,Left} are bound to
-      rpws{n,p}. Full list of keybindings created are:
-  
-          M-F$i           Goto workspace $i
-          C-M-Right       Goto Next workspace
-          C-M-Left        Goto Prev workspace
-          C-t F$i         Move window to workspace $i
-          C-t F11         Move current window to prev workspace
-          C-t F12         Move current window to next workspace
-  
-  for more detailed documentation run &quot;perldoc /usr/bin/rpws&quot;
-</PRE>
-<P> The usage summary you will see may be a little cryptic. Just as <CODE>
-C</CODE> means Control, <CODE>M</CODE> refers to Alt. Use Alt with the
- function keys to access each workspace. Ctrl-Alt and the arrows move up
- and down workspaces. The remaining options move the current window to a
- different workspace.</P>
+<h3><a NAME="6_2_4">4.2.4. Window management</a></h3>
+<p> Let's now see how Ratpoison deals with several open windows. <code>
+C-t w</code> generates a list showing all of them. Notice that each one
+ is associated with a number: <code>C-t</code> followed by the number
+ changes to that one. <code>C-t</code> <code>C-t</code> returns to the
+ previous window. This is very useful indeed for switching rapidly back
+ and forth between two apps - for instance, an editor and a browser -
+ and is an example of how Ratpoison shines ergonomically. <code>C-t k</code>
+ closes the current window, and <code>C-t shift-k</code> kills the
+ current application. To see a list of commands, type <code>C-t ?</code>
+ for further detail, see also</p>
+<pre>
+man ratpoison
+</pre>
+<p> and the online manual, which we opened above with<em> Vimprobable2</em>
+.</p>
+<p> To work with two or more windows together, Ratpoison allows the user
+ to tile windows. <code>C-t s</code> splits the screen with the current
+ window above whichever window was last open; <code>C-t S</code> splits
+ them horizontally. These steps can be repeated to split the focused
+ window further. <code>C-t TAB</code> (or <code>C-t</code> and an arrow
+ key) moves the focus around, and <code>C-t C-[arrow]</code> swaps the
+ tiled windows over. <code>C-t Q</code> undoes the splitting and allows
+ the currently focused window to fill the screen. In practice, it's
+ rarely useful to have more than one or two windows visible:</p>
+<p> <img alt="" class="center" HEIGHT="338" src="vimprobable.png" WIDTH="600">
+</p>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="426Editingtheconfigurationfile.html"><strong>Previous</strong></A></li>

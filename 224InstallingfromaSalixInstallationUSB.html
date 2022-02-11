@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="223InstallingfromaSalixInstallationCD.html">
@@ -16,27 +16,20 @@
 <li class="previous"><A HREF="223InstallingfromaSalixInstallationCD.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="225Partitionmanagementwithcfdisk.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="3_2_4">2.2.4. Installing from a Salix Installation USB</A></H3>
-<P> Installing Salix from a USB key is also possible. You can use<I> dd</I>
- to transfer the contents of the Salix iso image to your USB stick,
- using a command line like this:</P>
-<PRE>
-  dd if=salix_image_file.iso of=/dev/sdb
-</PRE>
-<P> Of course, you'll have to replace<I> salix_image_file.iso</I> with
- the exact path and name to the iso file you would like to use.</P>
-<P> <div class="warning"><div class="admonition_header"><h2>dd is very dangerous!</h2></div><div class="admonition"><div class="para"> The dd command wipes
- all the data from the specified target device. In the example given
- above that device is /dev/sdb, but it could very well be a different
- one in your case. Always double check which partition and device you
- are reading from and writing to, e.g. using <CODE>sudo fdisk -l</CODE>.
- If you are not 100% certain, then do not proceed as this could
- permanently destroy the contents of an entire hard drive. </div></div></div></P>
-<P> After writing the iso image to your USB stick and setting your BIOS
- to boot from it, the installer works exactly as described above when
- booting from a CDROM. The only difference is that when you are asked
- for the medium to use as a source for the packages installation, you
- should select the<I> &quot;Install from a Salix USB&quot;</I> option.</P>
+<h3><a NAME="4_2_1">2.2.1. Before starting</a></h3>
+<p> Installing Salix on your computer is simple. But before starting, it
+ is wise to check the following points:</p>
+<ul>
+<li>Have you backed up all the important files you have?</li>
+<li>Check if your computer comes with Linux-friendly/supported hardware.</li>
+<li>Minimum recommended specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
+ HD space, or equivalent, though a lower spec machine may run without a
+ problem).</li>
+<li>At least one separate. <a href="http://en.wikipedia.org/wiki/Disk_partitioning">
+partition</a> dedicated for Salix on your computer.</li>
+</ul>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="223InstallingfromaSalixInstallationCD.html"><strong>Previous</strong></A></li>

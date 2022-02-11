@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="429Summary.html">
@@ -16,83 +16,53 @@
 <li class="previous"><A HREF="429Summary.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="6Appendix.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H1><A NAME="6">5. Support</A></H1>
-<P> If you are still quite new to either Salix, Slackware or even Linux
- in general, then you should first of all take some time to study Salix
- Startup Guide, as it is specifically intended to be accessible to
- newcomers. The desktop link, Salix Online, will bring you to the Salix <A
-HREF="http://www.salixos.org">Homepage</A>. You could also use the <A HREF="http://webchat.freenode.net/?randomnick=1&amp;channels=salix&amp;prompt=1">
-IRC link</A> to be in live communication with members of the community
- and get instant help if necessary. If you do, however, you might want
- to modify the default<I> qwebircxxx</I> login to something more
- personal and human readable.</P>
-<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="378" SRC="salix-online.png"
-WIDTH="600"></P>
-<P> We hope that the information here will allow you to get Salix up and
- running fairly straightforwardly, to begin exploring its potential,
- and, above all, to use it for what you want to do. Nonetheless,
- sometimes you may not know how to do something or be able to make it
- work.</P>
-<P> While Salix aims to be elegant and intuitive, every operating system
- has its own characteristics, and if you are new to Linux, the sheer
- fact that it is different means there will inevitably be a process of
- adaptation (see Linux is <A HREF="http://linux.oneandoneis2.org/LNW.htm">
-Not Windows</A>), even where its very best features are concerned. The
- only way to climb the learning curve is by trying things out and using
- them. The more you explore Salix, the quicker you will become familiar
- with it. However, it is worth emphasising that the default set of
- applications (they vary depending on the version of Salix you choose,
- see <A HREF="#list_of_applications">List of Applications</A>) include
- many that have a very similar look and feel to those found on other
- operating systems, such as the office suite LibreOffice, which offers
- full compatibility with common file formats.</P>
-<P> Our <A HREF="http://docs.salixos.org">Wiki</A> and <A HREF="http://forum.salixos.org">
-Forum</A> will be two other important sources of information. The search
- option of the forum will quickly show you if the question you have in
- mind has already been posted by a member of the community and if it has
- been answered. For the same reason, please also search the internet. If
- you are working on the command line (<A HREF="#working_with_cli">
-Working with the Command Line Interface</A>), remember to consult <CODE>
-man</CODE> (and try <CODE>man salix</CODE> for a summary of key points
- specific to this distribution). There are several online forums devoted
- to Linux, such as <A HREF="http://www.linuxquestions.org/">
-linuxquestions.org</A>. It should be noted that each forum has its own
- subculture, and sometimes explicit posting guidelines. If you post a
- query to a forum, bear <A HREF="http://www.sas.upenn.edu/~haroldfs/dravling/grice.html">
-Paul Grice's conversational maxims</A> in mind: for instance, be as
- specific as possible and mention any information you have already found
- out. To put it another way, remember you are consulting a human
- community, not an interactive online encyclopedia; it is a
- conversation, something which can be easily lost sight of online.</P>
-<P> Forums are a concrete example of one of the qualities at the heart
- of Linux, which is that it is community-based. Rather than being a
- commercial product, in almost all cases it is developed by enthusiasts
- collaborating together for the sheer delight of making good software.
- This community extends out into the users of the distribution on its
- forums. Even if you just want to use core office, multimedia or network
- applications productively, over time the power that Linux gives users
- tends to promote self-reliance and an ability to configure and fix
- their computer setup independently. The same approach underlies the
- development of Linux as an operating system; where there is room for
- improvement, someone will dive in and tinker. The cumulative result is
- that Linux today is highly usable out of the box.</P>
-<P> The best way to learn Linux is by using it to the full, finding out
- in the process how to make it do exactly what you want. After a while,
- though, it may be helpful to supplement this experience with some more
- systematic background. As mentioned in the section introducing the
- command line, the <A HREF="http://www.salixos.org/forum/viewforum.php?f=30&amp;sid=8007ff0fe74d8ba139ecb29032db24d2">
-Documentation</A> board on the Salix forums contains a useful post on <A HREF="http://www.salixos.org/forum/viewtopic.php?f=30&amp;t=852">
-tutorials and guides</A>. Wherever you find problems recur, it may be
- worth reading up on the underlying issues over time to gain broader
- knowledge, especially when it comes to general features of Linux that
- may be unfamiliar to you, such as file permissions.</P>
-<P> Some users may face problems at the very beginning with peripherals
- or the network. This can seem daunting if you are also adapting to a
- different operating system at the same time. Explore the options under
- Menu/System carefully. If difficulties persist, with judicious use of
- the information and help in the wiki and forums, you should hopefully
- get the essentials set up as you wish reasonably quickly; then you will
- be able to take Linux at your own pace.</P>
+<h3><a NAME="6_2_7">4.2.7. Using workspaces</a></h3>
+<p> If you have several terminals open, and various browser windows and
+ some other applications, the number of windows may become unwieldy. To
+ help with this, Ratpoison allows you to use workspaces. (In the online
+ Ratpoison manual, these are referred to more precisely as &quot;groups&quot;.)
+ You might then put all browser windows in one workspace, for instance.</p>
+<p> <code>C-t w</code> lists the windows in the current workspace; <code>
+C-t W</code> shows four more workspaces, which were set up in the last
+ line of the configuration file. In a console, type <code>rpws help</code>
+ .</p>
+<pre>
+$ rpws help
+Usage:
+     rpws init n [-k] [-a]  - setup rpws with n workspaces.
+                                -a sets up command aliases;
+                                -k sets up key bindings and aliases.
+     rpws dump &lt;fname&gt;      - dumps the current layout to &lt;fname&gt;
+     rpws restore &lt;fname&gt;   - restores rpws workspaces from &lt;fname&gt;
+     rpws help              - this documentation
+     rpws n                 - switch to this workspace
+
+Usage:
+    Add the following line in ~/.ratpoisonrc
+
+         exec /path/to/rpws init 6 -k
+
+    This creates 6 aliases rpws1, rpws2, etc. It also binds the keys
+    M-F1, M-F2, etc to each rpwsN alias. Moreover, rpwsn (Next) and
+    rpwsp (Prev) are created, and C-M-{Right,Left} are bound to
+    rpws{n,p}. Full list of keybindings created are:
+
+        M-F$i           Goto workspace $i
+        C-M-Right       Goto Next workspace
+        C-M-Left        Goto Prev workspace
+        C-t F$i         Move window to workspace $i
+        C-t F11         Move current window to prev workspace
+        C-t F12         Move current window to next workspace
+
+for more detailed documentation run &quot;perldoc /usr/bin/rpws&quot;
+</pre>
+<p> The usage summary you will see may be a little cryptic. Just as <code>
+C</code> means Control, <code>M</code> refers to Alt. Use Alt with the
+ function keys to access each workspace. Ctrl-Alt and the arrows move up
+ and down workspaces. The remaining options move the current window to a
+ different workspace.</p>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="429Summary.html"><strong>Previous</strong></A></li>

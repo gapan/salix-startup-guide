@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="421Overview.html">
@@ -16,46 +16,95 @@
 <li class="previous"><A HREF="421Overview.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="423Vimprobablebrowsing.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="5_2_2">4.2.2. Starting Ratpoison and running applications</A>
-</H3>
-<P> When you boot Salix Ratpoison, there is no graphical login screen:
- when you log in, you enter the Linux terminal. Log in as your normal
- user and type</P>
-<PRE>
-  startx
-</PRE>
-<P> to start Ratpoison itself.</P>
-<P> You should then see the Salix wallpaper, and a message will appear
- briefly telling you how to view a list of commands. Type <CODE>Ctrl-t</CODE>
- (<CODE>C-t</CODE>, in Ratpoison's own notation) then a question mark;
- pressing any key takes you back to where you were before. There is
- nothing to see (apart from the beautiful Salix wallpaper)! But it's
- just as easy to set Ratpoison to work as with any more conventional
- desktop.</P>
-<P> To select an application from the menu, type <CODE>C-t r</CODE>, and
- use the arrow keys to navigate (Vim's <CODE>hjkl</CODE> keys also
- work). Right arrow (or <CODE>l</CODE>) accesses submenus (such as
- &quot;Network&quot;) and left arrow (or <CODE>h</CODE>) goes back up a level.
- Right arrow or enter runs the application (if you open one by mistake,
- don't worry, just type <CODE>C-t r</CODE> again - we will see how to
- close windows and applications later).</P>
-<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="74" SRC="ratmenu.png" WIDTH="150">
-</P>
-<P> Some common options are available directly at the top. The<I>
- Vimprobable2</I> browser, for instance, can be found under Network but
- also by just selecting &quot;Browser&quot;. Remember to use the keyboard and not
- the mouse! A third way to open it bypasses the menu altogether:</P>
-<PRE>
-  C-t v
-</PRE>
-<P> You can create more shortcuts like this for applications you use a
- lot by adding them to the configuration file, which we will look at
- below.</P>
-<P><I> apvlv</I>, under Accessories, can be used to read pdf documents
- such as this guide. Also under accessories, &quot;Unit conversion&quot; starts
- the console application units, which will convert between a large range
- of scales, such as time, weight, or currency, including some quite
- unusual ones.</P>
+<h3><a NAME="6_1_5">4.1.5. Installing a Program - spi</a></h3>
+<p> Maybe a little bird has told you that there is a wonderful
+ application called<em> cowsay</em> in Linux, and now you would like to
+ see what this program can do.</p>
+<p> If this is the first time you are installing an application on
+ Salix, the first thing you should do is to update the package database
+ on your computer by executing</p>
+<pre>
+sudo spi -u
+</pre>
+<p> Then to search for an application (in this case, &quot;cowsay&quot;), type in</p>
+<pre>
+spi cowsay
+</pre>
+<p> Notice that you don't need to type <code>sudo</code> just for
+ searching for a package. The output you will get should be similar to
+ this:</p>
+<pre>
+george[~]$ spi cowsay
+Available packages:
+None
+
+Available SlackBuilds:
+cowsay [Not installed]: cowsay (A Configurable Speaking/Thinking
+                        Cow)
+xcowsay [Not installed]: xcowsay (displays a cute cow and message
+                         on your desktop)
+</pre>
+<p> You can see that there is no available package for cowsay in the
+ official repositories of Salix or Slackware. Instead, a SlackBuild is
+ available. <a href="http://slackbuilds.org">SBo</a> maintains extra
+ packages for Slackware, which, of course, can be utilized by Salix
+ users. These SlackBuilds, however, are not maintained by Salix or
+ Slackware, but rather from individual Slackware users and are not
+ guaranteed to work 100% of the time. Packages, on the other hand,
+ should work perfectly fine all the time, with no exceptions.</p>
+<p> To install cowsay using the SlackBuild, you simply must run:</p>
+<pre>
+sudo spi -i cowsay
+</pre>
+<p> Actually this is not different at all from what you would have done
+ if cowsay was available as a package. Installing any of the available
+ packages involves downloading the package and actually installing it,
+ while installing something using a SlackBuild, involves downloading the
+ SlackBuild script and all required source files, compiling the source
+ code, packaging it up and installing the package that has been created.
+ All that, of course, is done automatically. It's only just that
+ installing something using a SlackBuild is generally a bit (or a lot)
+ slower since it includes the extra step for compiling the source code.</p>
+<p> If you are not sure what this <code>-i</code> is in the above
+ command, you can check it with <code>spi --help</code>. You will see a
+ lot of lines running up the terminal quickly until the application is
+ installed.</p>
+<p> Once it is installed, you might want to test it. First get out of
+ the superuser mode by typing <code>exit</code>. Then type in <code>
+cowsay</code>. Nothing happens, and, in fact, you will see that you are
+ now in a strange mode that you cannot execute any commands. This is
+ because the application is still running, but as you don't see
+ anything, perhaps it is not running properly. To terminate the process,
+ press <code>Ctrl+c</code>. You will get back the normal input line back
+ on your terminal.</p>
+<pre>
+george[Desktop]$ cowsay
+^C
+george[Desktop]$
+</pre>
+<p> So what was going wrong? Check</p>
+<pre>
+cowsay -h
+</pre>
+<p> You will see that you need to type in a <code>[message]</code>. Try
+ again with</p>
+<pre>
+cowsay Hello Salix!
+</pre>
+<p> We have merely scratched the surface of the power of the command
+ line here. The best way to learn more is by using it, but remember to
+ use the help tools, and consult online documentation such as that
+ listed in the Salix forum. <a href="http://linuxcommand.org/index.php">
+Linuxcommand.org</a> can be particularly recommended if you wish to gain
+ a comprehensive grounding. Proceed cautiously, but don't be afraid to
+ experiment.</p>
+<p> A final tip - it can be difficult to copy longer commands
+ accurately. If you select the text with the mouse, clicking the middle
+ button or wheel will paste it accurately into the command line or
+ wherever you wish. This only works in a terminal running within a GUI.</p>
+<p></p>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="421Overview.html"><strong>Previous</strong></A></li>

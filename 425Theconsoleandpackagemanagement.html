@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="424Windowmanagement.html">
@@ -16,54 +16,48 @@
 <li class="previous"><A HREF="424Windowmanagement.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="426Editingtheconfigurationfile.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="5_2_5">4.2.5. The console and package management</A></H3>
-<P> To open the command line, type <CODE>C-t c</CODE>. There is no
- automatic package management in the Ratpoison edition, so you will need
- to make regular manual checks for updates:</P>
-<PRE>
-  sudo spi --update  #update the package list
-  sudo spi --upgrade #upgrade to reflect any changes
-</PRE>
-<P><I> (the parts including the # symbol and after them are comments and
- you don't need to type them).</I></P>
-<P> Apart from the<I> Vimprobable2</I> browser, the default applications
- include<I> Alpine</I> as the mail client and<I> Gnome Commander</I> as
- the file manager.<I> Music On Console</I> and<I> Whaaw Media Player</I>
- are the audio and video players, with<I> GVim</I> as text/code editor.<I>
- apvlv</I> can be used to view pdf files. As we have just seen, package
- management is console-based, using<I> slapt-get</I> and<I> slapt-src</I>
-. Further options are available in the repository.<I> Firefox</I> may be
- installed adding the<I> pentadactyl</I> or<I> vimperator</I> addon for
- mouse-free browsing, or alternatively<I> Jumanji</I>,<I> XXXTerm</I> or<I>
- w3m</I>, a browser for the command line.<I> Thunderbird</I> can be used
- with the<I> Muttator</I> addon while<I> Claws-mail</I> works almost
- entirely from the keyboard;<I> mcabber</I> and<I> irssi</I> are Jabber
- and IRC clients for the console.</P>
-<P> Note: To see how to edit Alpine's configuration file to access mail
- from one popular provider via SMTP, see the page in the <A HREF="http://www.salixos.org/wiki/index.php/How_to_set_up_Alpine_with_a_Gmail_account">
-Salix wiki</A>.</P>
-<P> Wordgrinder and sc are word processing and spreadsheet applications.
- Flash is not included but is available from the repositories. Screen
- for managing multiple consoles works well with Ratpoison. Users are
- encouraged to tailor and expand the application selection according to
- taste; when it comes to text processing, for instance,<I> PyRoom</I> is
- an elegant choice for full-screen, distraction-free writing, and it
- might be complemented by<I> Antiword</I> to convert proprietary file
- formats into plain text.</P>
-<P> Note that the<I> Gslapt</I> and<I> Sourcery</I> graphical package
- management tools (equivalent to<I> slapt-get</I> and<I> slapt-src</I>)
- may also be used with out mouse, though this is perhaps more awkward
- than working on the command line. In either case, regular manual
- upgrading will still be necessary.</P>
-<P> As an example, we will install<I> mplayer2</I>, the classic console
- media player.</P>
-<PRE>
-  sudo spi -u
-  sudo spi -i mplayer2
-</PRE>
-<P> Note: To see how to edit Alpine's configuration file to access mail
- from one popular provider via SMTP, see the page in the <A HREF="http://www.salixos.org/wiki/index.php/How20to20set20up20Alpine20with20a20Gmail20account">
-Salix wiki</A>.</P>
+<h3><a NAME="6_2_2">4.2.2. Starting Ratpoison and running applications</a>
+</h3>
+<p> When you boot Salix Ratpoison, there is no graphical login screen:
+ when you log in, you enter the Linux terminal. Log in as your normal
+ user and type</p>
+<pre>
+startx
+</pre>
+<p> to start Ratpoison itself.</p>
+<p> You should then see the Salix wallpaper, and a message will appear
+ briefly telling you how to view a list of commands. Type <code>Ctrl-t</code>
+ (<code>C-t</code>, in Ratpoison's own notation) then a question mark;
+ pressing any key takes you back to where you were before. There is
+ nothing to see (apart from the beautiful Salix wallpaper)! But it's
+ just as easy to set Ratpoison to work as with any more conventional
+ desktop.</p>
+<p> To select an application from the menu, type <code>C-t r</code>, and
+ use the arrow keys to navigate (Vim's <code>hjkl</code> keys also
+ work). Right arrow (or <code>l</code>) accesses submenus (such as
+ &quot;Network&quot;) and left arrow (or <code>h</code>) goes back up a level.
+ Right arrow or enter runs the application (if you open one by mistake,
+ don't worry, just type <code>C-t r</code> again - we will see how to
+ close windows and applications later).</p>
+<p> <img alt="" class="center" HEIGHT="74" src="ratmenu.png" WIDTH="150">
+</p>
+<p> Some common options are available directly at the top. The<em>
+ Vimprobable2</em> browser, for instance, can be found under Network but
+ also by just selecting &quot;Browser&quot;. Remember to use the keyboard and not
+ the mouse! A third way to open it bypasses the menu altogether:</p>
+<pre>
+C-t v
+</pre>
+<p> You can create more shortcuts like this for applications you use a
+ lot by adding them to the configuration file, which we will look at
+ below.</p>
+<p><em> apvlv</em>, under Accessories, can be used to read pdf documents
+ such as this guide. Also under accessories, &quot;Unit conversion&quot; starts
+ the console application units, which will convert between a large range
+ of scales, such as time, weight, or currency, including some quite
+ unusual ones.</p>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="424Windowmanagement.html"><strong>Previous</strong></A></li>

@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="422StartingRatpoisonandrunningapplications.html">
@@ -16,60 +16,9 @@
 <li class="previous"><A HREF="422StartingRatpoisonandrunningapplications.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="424Windowmanagement.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="5_2_3">4.2.3. Vimprobable browsing</A></H3>
-<P> Notice that there are no menus, toolbars, buttons, or scrolling -
- just a line at the bottom containing the URL. To open a different page,
- type <CODE>o</CODE>, and <CODE>:open</CODE> should appear at the very
- bottom left of the screen. Type:</P>
-<PRE>
-  http://www.nongnu.org/ratpoison/doc/
-</PRE>
-<P> When the page has loaded, type <CODE>f</CODE> and then select a
- number to follow a link:</P>
-<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="845" SRC="ratpoisonmanual.png"
-WIDTH="600"></P>
-<P> <CODE>Shift-h</CODE> takes you back to where you were before. <CODE>
-t</CODE> works like <CODE>o</CODE> but opens the URL in a new window, as
- does <CODE>shift-f</CODE> instead of <CODE>f</CODE>. Pressing <CODE>TAB</CODE>
- after typing the beginning of a URL will suggest completions taken from
- the history; use <CODE>TAB</CODE> again to move through the choices (<CODE>
-shift-TAB</CODE> to go back up) and <CODE>Enter</CODE> to select. <CODE>
-O</CODE> rather than <CODE>o</CODE> (and <CODE>T</CODE> rather than <CODE>
-t</CODE>) allows you to edit the URL of the current page - try it. <CODE>
-j</CODE> and <CODE>k</CODE> scroll down and up. <CODE>Shift-l</CODE>
- moves one page forward in your browsing history. <CODE>d</CODE> closes
- the current window. For more details, consult <CODE>man vimprobable2</CODE>
-, as well as the Vimprobable website, see also <CODE>man vimprobablerc</CODE>
- for configuration options. Note that <CODE>.</CODE> and <CODE>,</CODE>
- are handy alternatives to <CODE>f</CODE> and <CODE>shift-f</CODE>.</P>
-<P> There are no tabs. In the next section, we will see how Ratpoison
- allows you to use windows to do the work of tabs, but more
- informatively.</P>
-<P> Note that if the input received by <CODE>o</CODE> or <CODE>t</CODE>
- can't be resolved into a URL, it will be sent to a search engine; the
- default is<I> DuckDuckGo</I>. If the first item is <CODE>i</CODE>, <CODE>
-s</CODE>, <CODE>w</CODE>, <CODE>wd</CODE>, or <CODE>y</CODE>, a
- different search engine is used in each case. These shortcuts are
- described in the Vimprobable man page and may also be customized in the
- .vimprobablerc configuration file.</P>
-<P> To insert data in forms (for instance, login and password) use tab
- till the cursor is in the right place. Another <CODE>TAB</CODE> moves
- to the next field or link; you may then use <CODE>ESC</CODE> to leave
- insert mode and return to command mode.</P>
-<P> If you find your keystrokes are still being interpreted as browser
- commands, which may happen as a result of the way certain sites are
- designed, try pressing enter twice instead of just once after typing <CODE>
-f</CODE> and selecting the number; failing this, try <CODE>C-z</CODE>.
- The converse problem may arise if you have inadvertently passed
- keystrokes to <CODE>o</CODE> or <CODE>t</CODE>; they will appear at the
- very bottom right of the browser window. To ignore them and return to
- command mode, clearing the buffer, press <CODE>ESC</CODE>.</P>
-<P> As described in Vimprobable's man page, it is necessary to create
- some files for all its features to work:</P>
-<PRE>
-  touch ~/.config/vimprobable/history
-</PRE>
-<P> though some of these may already be present.</P>
+<h2><a NAME="6_2">4.2. Getting started with Salix Ratpoison</a></h2>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="422StartingRatpoisonandrunningapplications.html"><strong>Previous</strong></A></li>

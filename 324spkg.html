@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="323slaptsrc.html">
@@ -16,31 +16,36 @@
 <li class="previous"><A HREF="323slaptsrc.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="325MakingaPackagefromaSourceFilewithSLKBUILD.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3 ID="spkg"><A NAME="4_2_4">3.2.4. spkg</A></H3>
-<P> If you would like to install or upgrade a package that you have
- manually downloaded or have built yourself, you can use<I> spkg</I>.
- Salix packages (just as Slackware packages) have filenames that end
- with the<I> .tgz</I>, or<I> .txz</I> extensions (there are also<I> .tlz</I>
- and<I> .tbz</I> but they are very rarely used). To either install a new
- package or upgrade a package you can use the following command:</P>
-<PRE>
-  sudo spkg [exact path to package]
-</PRE>
-<P> Note that the name of the package must be exact to the last
- character in the extension, e.g.<I>
- mozilla-firefox-24.3.0esr-x86_64-2gv.txz</I> (command line
- auto-complete using the TAB key helps in this respect). Removing a
- package is somewhat similar. You can remove a package by issuing</P>
-<PRE>
-  sudo spkg -d [software name]
-</PRE>
-<P> e.g. <CODE>sudo spkg -d skype</CODE></P>
-<P> <div class="note"><div class="admonition_header"><h2>Blacklisting packages</h2></div><div class="admonition"><div class="para"> If you are replacing a
- package that is available in the repositories, you will need to
- blacklist this package in<I> /etc/slapt-get/slapt-getrc</I> to prevent
- it from being &quot;downgraded&quot; when you next carry out a general package
- upgrade. (See above for how to do this in <A HREF="#Gslapt">Gslapt</A>
-). </div></div></div></P>
+<h3><a NAME="5_2_1">3.2.1. Salix Package Installer</a></h3>
+<p><em> spi</em> is a command line tool that combines some basic
+ functions of<em> slapt-get</em> and<em> slapt-src</em>. It installs
+ from the Salix repositories if the package is available there, if not,
+ it looks in <a href="http://slackbuilds.org">SBo</a> and repeats the
+ process recursively for any dependencies. This means all packages are
+ automatically installed from the repositories if they are available
+ there, even if it is a dependency of a package that is not. For a
+ summary of usage, see</p>
+<pre>
+spi --help
+</pre>
+<p> Note that the default action (if<em> spi</em> is called without
+ specifying e.g. <code>-i</code>) is to search for packages, reporting
+ whether they are installed or where they are available. <code>sudo spi
+ -u</code> will update package data for both<em> slapt-get</em> and<em>
+ slapt-src</em>, and <code>sudo spi -U</code> installs any upgrades
+ available. <code>sudo spi -i packagename</code> installs a specific
+ package and its dependencies, always preferring packages in the
+ repositories. <code>spi --simulate -i packagename</code> simulates
+ installation, and <code>spi --show</code> gives detailed information
+ about a particular package.</p>
+<p> <div class="note"><div class="admonition_header"><h2>Superuser privileges</h2></div><div class="admonition"><div class="para"> Superuser privileges are
+ required for actual installation and updating of packages but not
+ actions that just provide information. </div></div></div></p>
+<p> While<em> spi</em> brings basic package management together in one
+ all-purpose tool,<em> slapt-get</em> and<em> slapt-src</em> provide a
+ number of other powerful features.</p>
+
+<!--section id=&quot;slapt-get&quot;-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="323slaptsrc.html"><strong>Previous</strong></A></li>

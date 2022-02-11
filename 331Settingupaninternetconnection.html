@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="33ConfiguringYourSalix.html">
@@ -16,21 +16,45 @@
 <li class="previous"><A HREF="33ConfiguringYourSalix.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="332SettingupaPrinter.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="4_3_1">3.3.1. Setting up an internet connection</A></H3>
-<P> Network connections are managed by Wicd in Salix. It is an open
- source wired and wireless network manager for Linux which aims to
- provide a simple interface to connect to networks with a wide variety
- of settings.</P>
-<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="435" SRC="wicd.png" WIDTH="462">
-</P>
-<P> It will connect to wired (Ethernet only, no PPPoE/DSL support yet)
- and wireless networks.</P>
-<P> Note that<B> wicd</B> and<B> wireless</B> must be activated in the <A
-HREF="#system_services">system services</A> in order to make wireless
- networks visible on Wicd.</P>
-<P> <div class="note"><div class="admonition_header"><h2>3G modems</h2></div><div class="admonition"><div class="para"> To configure 3G connections, use<B>
- sakis3g</B> (installed automatically when using the &quot;Full&quot; installation
- method). </div></div></div></P>
+<h3><a NAME="5_2_5">3.2.5. Making a Package from a Source File with
+ SLKBUILD</a></h3>
+<p> Installing software from a source file is in most cases not
+ difficult. You can compile a lot of software generally with the
+ following commands.</p>
+<ul>
+<li>unpack a source file, move inside the folder.</li>
+<li>type in <code>./configure</code> on the terminal.</li>
+<li>type in <code>make</code>.</li>
+<li>type in <code>sudo make install</code>.</li>
+<li>type your password.</li>
+</ul>
+<p> Make sure to read accompanying files such as &quot;README&quot;, &quot;INSTALL&quot; and
+ so on for installation instructions before compiling. These files may
+ list dependency packages which you need to install prior to the
+ configuration.</p>
+<pre>
+./configure --help
+</pre>
+<p> or</p>
+<pre>
+./configure --help=short output
+</pre>
+<p> should also help you with some configuration options.</p>
+<p> Although you should manage to install the software after the final
+ command, it is essentially<strong> untracked</strong>, and neither
+ Gslapt nor slapt-get can see that the software is installed. A better
+ way is to create a Salix package using SLKBUILD, which is a build
+ script you can prepare before issuing</p>
+<pre>
+fakeroot slkbuild -X
+</pre>
+<p> to create a Salix compatible package which can then be installed
+ with <a href="#spkg">spkg</a> (the<em> fakeroot</em> package should
+ also be installed). For more on SLKBUILD, please consult <a href="http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild">
+SLKBUILD</a> and <a href="http://docs.salixos.org/wiki/New_to_Packaging">
+New to Packaging</a>.</p>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="33ConfiguringYourSalix.html"><strong>Previous</strong></A></li>

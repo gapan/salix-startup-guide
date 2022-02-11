@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="42GettingstartedwithSalixRatpoison.html">
@@ -16,32 +16,50 @@
 <li class="previous"><A HREF="42GettingstartedwithSalixRatpoison.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="422StartingRatpoisonandrunningapplications.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="5_2_1">4.2.1. Overview</A></H3>
-<P><I> Ratpoison</I> is a tiling window manager, somewhat like<I> xmonad</I>
- or<I> spectrwm</I>. Its two main features are that applications fill
- the whole screen, with no bars or buttons, and the user interface can
- be controlled entirely from the keyboard, with no mouse. If needed, any
- number of windows may be shown simultaneously and rearranged at will -
- hence the term &quot;tiling&quot; WM. All this may take some getting used to, but
- although - or perhaps because - the interface is so very different from
- the conventional point-and-click approach, it can quickly become highly
- intuitive. Learning which actual keys do what takes far less time than
- might be imagined. Apart from its efficiency and lack of clutter,
- Ratpoison is a good choice for anyone concerned about RSI (cumulative
- strain from long-term mouse use), or for netbook users, because &quot;every
- pixel counts&quot;. It is also highly configurable - and fast!</P>
-<P> The applications present for the Ratpoison edition aim to fit in
- with its minimalist (but not spartan) approach. The majority use
- vim-style keybindings, even though Ratpoison itself does not, so users
- will need to become comfortable with these if they are not already;
- cheat sheets are available online to help assimilate them, as well as
- guides (and manpages) for the individual applications. Common
- operations use only a small subset of keys, which makes the learning
- curve smoother: for basic browsing, for instance, all you need to get
- started is page and history navigation and to know how to open links
- and tabs or windows. Other functions can be learned by exploration at
- your own pace. To begin using Vim itself, try running <CODE>vimtutor</CODE>
- from a terminal, and just follow the instructions.</P>
+<h3><a NAME="6_1_4">4.1.4. Copying &amp; Moving &amp; Removing a Folder - cp &amp;
+ mv &amp; rm</a></h3>
+<p> So now you have the folder called <code>photo</code> and a log file
+ in the <code>Music</code> directory. This is a little strange as we
+ should normally have the folder not in <code>Music</code> but in <code>
+Pictures</code>. But now you know how to move a file, perhaps the same
+ command will work for moving a folder?</p>
+<p> But...</p>
+<pre>
+cp photo ../Pictures
+</pre>
+<p> remember that <code>..</code> refers to the folder one level up)
+ will give an error like this.</p>
+<pre>
+george[Music]$ cp photo ../Pictures
+cp: omitting directory 'photo/'
+george[Music]$
+</pre>
+<p> Let's see what we can do here. The first thing when encountering
+ such a problem is to check the corresponding help file. This can
+ normally be done by issuing a command with an option like <code>cp
+ --help</code>. It is possible that <code>--help</code> will just be <code>
+-h</code>, and there may be no help at all. <code>man</code> is another
+ command if this is the case.</p>
+<pre>
+man cp
+</pre>
+<p> will give a more in-depth explanation of this command. (To get out
+ of the manual, press <code>q</code>).</p>
+<p> If you read the help carefully, you will see that you need to give
+ an extra option <code>-r</code> if you wish to copy a folder to another
+ location. So now</p>
+<pre>
+cp -r photo ../Pictures
+</pre>
+<p> should copy the <code>photo</code> folder inside the correct <code>
+Pictures</code> directory. After checking that the folder has been
+ safely copied, you can remove the <code>photo</code> folder from the <code>
+Music</code> directory:</p>
+<pre>
+rm -r photo/
+</pre>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="42GettingstartedwithSalixRatpoison.html"><strong>Previous</strong></A></li>

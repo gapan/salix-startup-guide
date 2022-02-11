@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="349SystemLanguage.html">
@@ -16,15 +16,21 @@
 <li class="previous"><A HREF="349SystemLanguage.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="3411UserProfiles.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="4_4_10">3.4.10. System Clock</A></H3>
-<P> This utility will configure your computer clock. To execute it in a
- terminal, simply type</P>
-<PRE>
-  sudo clocksetup
-</PRE>
-<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="412" SRC="gtkclocksetup.png"
-WIDTH="504"></P>
-<P></P>
+<h3><a NAME="5_4_7">3.4.7. Lilosetup</a></h3>
+<p> Lilosetup will install a new LILO bootloader on your computer.</p>
+<p> <img alt="" class="center" HEIGHT="464" src="lilosetup.png" WIDTH="600">
+</p>
+<p> A bootloader is required to load the main operating system of a
+ computer and will initially display a boot menu if several operating
+ systems are available on the same computer.</p>
+<p> It is necessary to (re)configure the bootloader each time you
+ upgrade the kernel or install a new operating system on your computer.</p>
+<p> Lilosetup can also be useful in the process of a disaster recovery,
+ in which case you may have to launch it from a Live CD if you have lost
+ all other means to boot into your system.</p>
+<p></p>
+
+<!--section id=&quot;system_services&quot;-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="349SystemLanguage.html"><strong>Previous</strong></A></li>

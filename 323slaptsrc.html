@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="322slaptget.html">
@@ -16,39 +16,15 @@
 <li class="previous"><A HREF="322slaptget.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="324spkg.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3 ID="slapt-src"><A NAME="4_2_3">3.2.3. slapt-src</A></H3>
-<P><I> slapt-src</I> is a command line tool that makes the process of
- downloading and building software packages from <A HREF="http://slackbuilds.org">
-SBo</A> simple and easy. <A HREF="http://slackbuilds.org">SBo</A> keeps
- a large collection of build scripts for extra packages that are still
- not available from the official Salix / Slackware repositories.
- Thousands of extra packages are now available to users through this
- tool.</P>
-<P> To use the application, type in</P>
-<PRE>
-  sudo slapt-src -u
-</PRE>
-<P> first to update on your computer the list of build scripts available
- from Slackbuild.org.</P>
-<PRE>
-  slapt-src -l
-</PRE>
-<P> shows you a list of available packages, and as in slapt-get,</P>
-<PRE>
-  sudo slapt-src -i [package name]
-</PRE>
-<P> will build and install a package. For more command line
- instructions, please refer to</P>
-<PRE>
-  slapt-src --help
-</PRE>
-<P> Another small exercise for you! Skype is a commonly used application
- to make voice calls over the Internet. It is not available from the
- common Salix/Slackware repository, but its build script is available
- from Slackbuilds.org. Try installing &quot;skype&quot; by using slapt-src. (If
- you do not wish to install it, you may just want to build the package.
- Note that the skype is 32-bit only, so if you are running a 64-bit
- system, please try out some other application).</P>
+<h2><a NAME="5_2">3.2. Package management from the command line</a></h2>
+<p><em> slapt-get</em> and<em> slapt-src</em> are the command-line tools
+ for which<em> Gslapt</em> and<em> Sourcery</em> provide a GUI. This
+ section describes their use from the command line, where there is also
+ a tool that combines their most common functions,<em> spi</em>.<em>
+ spkg</em> is a tool to install packages manually while still making
+ them known to the package management system.</p>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="322slaptget.html"><strong>Previous</strong></A></li>

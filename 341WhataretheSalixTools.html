@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="34SalixTools.html">
@@ -16,16 +16,43 @@
 <li class="previous"><A HREF="34SalixTools.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="342ALSASoundCard.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3 ID="salixtools"><A NAME="4_4_1">3.4.1. What are the Salix Tools?</A></H3>
-<P> Salix tools are a collection of utilities that are designed to
- manage every aspect of Salix configuration easily. You can find these
- tools under the System section of the application menu. Of course,
- system management in Salix can also be done the usual (<A HREF="http://www.slackbook.org/html/book.html">
-manual</A>) Slackware way.</P>
-<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="531" SRC="salixtools-gtk.png"
-WIDTH="402"></P>
-<P> Please note that most Salix tools have an ncurses counterpart which
- can be used in a Linux terminal or console.</P>
+<h3><a NAME="5_3_2">3.3.2. Setting up a Printer</a></h3>
+<p> After writing a document, transferring photos from your camera, or
+ creating your own images with GIMP, you would probably like to print
+ them out with your printer. To do this, you need to have a printer
+ already installed on your system. &quot;<strong>Manage Printing</strong>&quot;,
+ which is found under &quot;System&quot; in the main application menu, handles the
+ installation and general management of your printers. (Ensure that
+ &quot;CUPS&quot; is enabled in the <a href="#system_services">system services</a>
+, or Manage Printing will not start properly).</p>
+<p> If you are buying a new printer, it is recommended to check the
+ availability of Linux drivers beforehand from the <a href="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/database/databaseintro">
+Open Printing database</a> (or search on the Internet). Some companies
+ offer printer drivers for Linux, but this is less common than desired
+ and could involve a lengthy installation process. For most Linux
+ friendly printers, you have to install drivers such as gutenprint or
+ HPIJS, both of which are available from the repositories.</p>
+<ul>
+<li>Select &quot;Add Printers and Classes&quot;.</li>
+<li>Under &quot;Printers&quot;, select &quot;Add Printer&quot;.</li>
+<li>Enter &quot;root&quot; as a username and your superuser password.</li>
+<li>Select your printer description and choose if you would like to
+ share the printer.</li>
+<li>Select the correct driver from the list (Model) - see an example
+ below. This is the important part. Or if you have a <a href="http://en.wikipedia.org/wiki/PostScript_Printer_Description">
+PPD</a> file instead, you can load it here.</li>
+</ul>
+<p> <img alt="" class="center" HEIGHT="427" src="addprinter.png" WIDTH="600">
+</p>
+<ul>
+<li>Select Add Printer, and finish the process by configuring details of
+ the printer.</li>
+<li>Now the printer should be usable on your computer.</li>
+</ul>
+<p> For setting up a network printer, please consult the Salix <a href="http://www.salixos.org/wiki/index.php/How_to_share_a_printer_via_CUPS">
+wiki</a>.</p>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="34SalixTools.html"><strong>Previous</strong></A></li>

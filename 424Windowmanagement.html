@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="423Vimprobablebrowsing.html">
@@ -16,33 +16,35 @@
 <li class="previous"><A HREF="423Vimprobablebrowsing.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="425Theconsoleandpackagemanagement.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="5_2_4">4.2.4. Window management</A></H3>
-<P> Let's now see how Ratpoison deals with several open windows. <CODE>
-C-t w</CODE> generates a list showing all of them. Notice that each one
- is associated with a number: <CODE>C-t</CODE> followed by the number
- changes to that one. <CODE>C-t</CODE> <CODE>C-t</CODE> returns to the
- previous window. This is very useful indeed for switching rapidly back
- and forth between two apps - for instance, an editor and a browser -
- and is an example of how Ratpoison shines ergonomically. <CODE>C-t k</CODE>
- closes the current window, and <CODE>C-t shift-k</CODE> kills the
- current application. To see a list of commands, type <CODE>C-t ?</CODE>
- for further detail, see also</P>
-<PRE>
-  man ratpoison
-</PRE>
-<P> and the online manual, which we opened above with<I> Vimprobable2</I>
-.</P>
-<P> To work with two or more windows together, Ratpoison allows the user
- to tile windows. <CODE>C-t s</CODE> splits the screen with the current
- window above whichever window was last open; <CODE>C-t S</CODE> splits
- them horizontally. These steps can be repeated to split the focused
- window further. <CODE>C-t TAB</CODE> (or <CODE>C-t</CODE> and an arrow
- key) moves the focus around, and <CODE>C-t C-[arrow]</CODE> swaps the
- tiled windows over. <CODE>C-t Q</CODE> undoes the splitting and allows
- the currently focused window to fill the screen. In practice, it's
- rarely useful to have more than one or two windows visible:</P>
-<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="338" SRC="vimprobable.png"
-WIDTH="600"></P>
+<h3><a NAME="6_2_1">4.2.1. Overview</a></h3>
+<p><em> Ratpoison</em> is a tiling window manager, somewhat like<em>
+ xmonad</em> or<em> spectrwm</em>. Its two main features are that
+ applications fill the whole screen, with no bars or buttons, and the
+ user interface can be controlled entirely from the keyboard, with no
+ mouse. If needed, any number of windows may be shown simultaneously and
+ rearranged at will - hence the term &quot;tiling&quot; WM. All this may take some
+ getting used to, but although - or perhaps because - the interface is
+ so very different from the conventional point-and-click approach, it
+ can quickly become highly intuitive. Learning which actual keys do what
+ takes far less time than might be imagined. Apart from its efficiency
+ and lack of clutter, Ratpoison is a good choice for anyone concerned
+ about RSI (cumulative strain from long-term mouse use), or for netbook
+ users, because &quot;every pixel counts&quot;. It is also highly configurable -
+ and fast!</p>
+<p> The applications present for the Ratpoison edition aim to fit in
+ with its minimalist (but not spartan) approach. The majority use
+ vim-style keybindings, even though Ratpoison itself does not, so users
+ will need to become comfortable with these if they are not already;
+ cheat sheets are available online to help assimilate them, as well as
+ guides (and manpages) for the individual applications. Common
+ operations use only a small subset of keys, which makes the learning
+ curve smoother: for basic browsing, for instance, all you need to get
+ started is page and history navigation and to know how to open links
+ and tabs or windows. Other functions can be learned by exploration at
+ your own pace. To begin using Vim itself, try running <code>vimtutor</code>
+ from a terminal, and just follow the instructions.</p>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="423Vimprobablebrowsing.html"><strong>Previous</strong></A></li>

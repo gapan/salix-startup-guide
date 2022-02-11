@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Salix Start-Up Guide</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="427Usingworkspaces.html">
@@ -16,32 +16,57 @@
 <li class="previous"><A HREF="427Usingworkspaces.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="429Summary.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<H3><A NAME="5_2_8">4.2.8. Adding an item to the menu</A></H3>
-<P> The directory <CODE>~/.ratmenu</CODE> contains the main menu file<I>
- menu.sh</I>, and the submenus it calls; all these are editable scripts.
- We will now edit the Network menu using<I> GVim</I>.<I> GVim</I> is in
- the menu, but try calling it using the colon</P>
-<PRE>
-  C-t :exec gvim ~/.ratmenu/multimedia.sh
-</PRE>
-<P> or simply</P>
-<PRE>
-  C-t ! gvim ~/.ratmenu/multimedia.sh
-</PRE>
-<P> <IMG ALIGN="middle" ALT="" BORDER="0" HEIGHT="328" SRC="ratmenu_edit.png"
-WIDTH="600"></P>
-<P> Note that graphical applications are called directly, but command
- line programs need to be opened inside a terminal.</P>
-<P> Use <CODE>j</CODE> and <CODE>k</CODE> to navigate to where you want
- to add the entry for<I> Mplayer2</I>, type <CODE>i</CODE> to insert, <CODE>
-ESC</CODE> to return to command mode, and <CODE>:wq</CODE> to write and
- save. Test the change by typing</P>
-<PRE>
-  C-t r
-</PRE>
-<P> The new item should already appear. If all is well, you may close
- the editor.</P>
-<P></P>
+<h3><a NAME="6_2_5">4.2.5. The console and package management</a></h3>
+<p> To open the command line, type <code>C-t c</code>. There is no
+ automatic package management in the Ratpoison edition, so you will need
+ to make regular manual checks for updates:</p>
+<pre>
+sudo spi --update  #update the package list
+sudo spi --upgrade #upgrade to reflect any changes
+</pre>
+<p><em> (the parts including the # symbol and after them are comments
+ and you don't need to type them).</em></p>
+<p> Apart from the<em> Vimprobable2</em> browser, the default
+ applications include<em> Alpine</em> as the mail client and<em> Gnome
+ Commander</em> as the file manager.<em> Music On Console</em> and<em>
+ Whaaw Media Player</em> are the audio and video players, with<em> GVim</em>
+ as text/code editor.<em> apvlv</em> can be used to view pdf files. As
+ we have just seen, package management is console-based, using<em>
+ slapt-get</em> and<em> slapt-src</em>. Further options are available in
+ the repository.<em> Firefox</em> may be installed adding the<em>
+ pentadactyl</em> or<em> vimperator</em> addon for mouse-free browsing,
+ or alternatively<em> Jumanji</em>,<em> XXXTerm</em> or<em> w3m</em>, a
+ browser for the command line.<em> Thunderbird</em> can be used with the<em>
+ Muttator</em> addon while<em> Claws-mail</em> works almost entirely
+ from the keyboard;<em> mcabber</em> and<em> irssi</em> are Jabber and
+ IRC clients for the console.</p>
+<p> Note: To see how to edit Alpine's configuration file to access mail
+ from one popular provider via SMTP, see the page in the <a href="http://www.salixos.org/wiki/index.php/How_to_set_up_Alpine_with_a_Gmail_account">
+Salix wiki</a>.</p>
+<p> Wordgrinder and sc are word processing and spreadsheet applications.
+ Flash is not included but is available from the repositories. Screen
+ for managing multiple consoles works well with Ratpoison. Users are
+ encouraged to tailor and expand the application selection according to
+ taste; when it comes to text processing, for instance,<em> PyRoom</em>
+ is an elegant choice for full-screen, distraction-free writing, and it
+ might be complemented by<em> Antiword</em> to convert proprietary file
+ formats into plain text.</p>
+<p> Note that the<em> Gslapt</em> and<em> Sourcery</em> graphical
+ package management tools (equivalent to<em> slapt-get</em> and<em>
+ slapt-src</em>) may also be used with out mouse, though this is perhaps
+ more awkward than working on the command line. In either case, regular
+ manual upgrading will still be necessary.</p>
+<p> As an example, we will install<em> mplayer2</em>, the classic
+ console media player.</p>
+<pre>
+sudo spi -u
+sudo spi -i mplayer2
+</pre>
+<p> Note: To see how to edit Alpine's configuration file to access mail
+ from one popular provider via SMTP, see the page in the <a href="http://www.salixos.org/wiki/index.php/How20to20set20up20Alpine20with20a20Gmail20account">
+Salix wiki</a>.</p>
+
+<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="427Usingworkspaces.html"><strong>Previous</strong></A></li>
