@@ -126,7 +126,7 @@ pdf: tex
 	rm -f output/guide.out
 	rm -f output/guide.toc
 	rm -f output/guide.tex
-	pdftk A=1stpage.pdf B=output/guide.pdf cat A B output output/SalixStartupGuide.pdf
+	qpdf --empty --pages 1stpage.pdf output/guide.pdf -- output/SalixStartupGuide.pdf
 
 all: html pdf epub mobi
 
