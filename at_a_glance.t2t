@@ -44,12 +44,12 @@ can tailor the software selection through the Salix package management tools
 as required.
 
 A **Basic** mode installation is mostly targeted at advanced users. It
-includes the respective desktop environment of each edition, and a
+includes only the desktop environment accompaniede by a
 very minimal selection of software on top, namely the Salix system
 configuration tools and a web browser. Wi-fi connection tools or drivers are not present and
 only wired network connections are supported out of the box. The user is
 expected to know how to install extra software and tailor the
-installation to his/her needs.
+installation to their needs.
 
 A **Core** mode installation does not provide any graphical environment.
 It only installs a command line system, including the Salix command line
