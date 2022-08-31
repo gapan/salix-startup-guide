@@ -43,10 +43,11 @@ NOTEEND
 
 Your computer must be set to boot on the optical drive/USB port first
 before defaulting to the internal hard disk drive.
-If that is not the case, you need to first modify the
-[BIOS http://en.wikipedia.org/wiki/BIOS] setting, usually by pressing the Del
+If that is not the case, you need to first modify the respective
+[BIOS https://en.wikipedia.org/wiki/BIOS] or
+[UEFI https://en.wikipedia.org/wiki/UEFI] setting, usually by pressing the Del
 key or the F2 key (or some other key combinations depending on your
-machine). Once in the BIOS, find the //boot menu// or similar and
+machine). Once in the BIOS/UEFI screen, find the //boot menu// or similar and
 set the order of the boot devices properly, with your optical drive/USB
 port in the first position. Save your changes and reboot your computer.
 Insert the Salix CD/DVD or USB key, and start up your computer.
