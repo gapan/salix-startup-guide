@@ -354,44 +354,11 @@ management in Salix can also be done the usual
 ([manual http://www.slackbook.org/html/book.html])
 Slackware way.
 
-% ### = check image
-% ### this image probably needs updating
 [img/salixtools-gtk.png]
 
 Please note that most Salix tools have an ncurses
 counterpart which can be used in a Linux terminal or console. 
 
-
-+++ALSA Sound Card+++
-
-ALSA Sound Card manages the system sound card configuration. It will
-display available sound cards in your system and let you select the card
-you want to use in preference. This is particularly useful when you have
-multiple sound cards in your system, and you would like to assign a
-sound card for your system other than the one automatically picked
-during installation/start-up.
-
-[img/gtkalsasetup.png]
-
-
-+++Rebuild Icon Cache+++
-
-As the name indicates, Rebuild Icon Cache reconnects some icons that may
-have become lost after updating your system/installing some new
-program and makes them appear again in the application menu.
-
-
-CLEARPAGE
-+++Hostnames+++
-
-Hostnames manages the host names used by your computer. This tool
-facilitates defining/overviewing host names used while setting up your
-machine as a server.
-
-[img/gtkhostsetup.png]
-
-
-CLEARPAGE
 +++Dotnew+++
 
 Dotnew manages the system configuration upgrades used by Slackware. It
@@ -402,6 +369,32 @@ found in the system.
 
 To execute this utility in a terminal, simply type
 ``` sudo dotnew
+
+
++++GUEFI+++
+
+GUEFI is a Python/GTK+3 application that acts as a frontend for efibootmgr.
+It provides an easy to use interface for managing UEFI boot options.
+
+Using GUEFI you can:
+- Create a new UEFI boot entry
+- Edit a UEFI boot entry
+- Delete a UEFI boot entry
+- Change the UEFI boot order
+- Enable/disable a UEFI boot entry
+- Configure a UEFI boot entry to be the default during the next boot only
+
+[img/guefi.png]
+
+
+CLEARPAGE
++++Hostnames+++
+
+Hostnames manages the host names used by your computer. This tool
+facilitates defining/overviewing host names used while setting up your
+machine as a server.
+
+[img/gtkhostsetup.png]
 
 
 CLEARPAGE
@@ -421,24 +414,45 @@ To execute this utility in a terminal, simply type
 
 
 CLEARPAGE
-+++Lilosetup+++
-% Decide what to do about Lilosetup versus Bootsetup
++++Rebuild Icon Cache+++
 
-Lilosetup will install a new LILO bootloader on your computer.
+As the name indicates, Rebuild Icon Cache reconnects some icons that may
+have become lost after updating your system/installing some new
+program and makes them appear again in the application menu.
 
-% ### change this image when bootsetup's ready
-[img/lilosetup.png]
 
-A bootloader is required to load the main operating system of a computer
-and will initially display a boot menu if several operating systems are
-available on the same computer.
+CLEARPAGE
++++Repository Mirror+++
 
-It is necessary to (re)configure the bootloader each time you upgrade the
-kernel or install a new operating system on your computer.
+This tool can be used to to select your preferred repository mirror. The
+country code where each mirror is located is shown next to each entry. You
+should usually choose a mirror that is closer to you geographically, as they
+will be usually faster. Of course you can also use this tool when your
+preferred mirror goes temporarily offline to switch to another.
 
-Lilosetup  can also be useful in the process of a disaster recovery, in
-which case you may have to launch it from a Live CD if you have lost all
-other means to boot into your system.
+[img/gtkreposetup.png]
+
+To execute this utility in a terminal, simply type
+``` sudo reposetup
+
+CLEARPAGE
++++System Clock+++
+
+This utility will configure your computer clock.
+To execute it in a terminal, simply type
+``` sudo clocksetup
+
+[img/gtkclocksetup.png]
+
+
+CLEARPAGE
++++System Language+++
+
+This utility will configure the language of your system.
+To execute it in a terminal, simply type
+``` sudo localesetup
+
+[img/gtklocalesetup.png]
 
 
 CLEARPAGE
@@ -454,26 +468,6 @@ To execute this utility in a terminal, simply type
 ``` sudo servicesetup
 
 [img/gtkservicesetup.png]
-
-
-CLEARPAGE
-+++System Language+++
-
-This utility will configure the language of your system.
-To execute it in a terminal, simply type
-``` sudo localesetup
-
-[img/gtklocalesetup.png]
-
-
-CLEARPAGE
-+++System Clock+++
-
-This utility will configure your computer clock.
-To execute it in a terminal, simply type
-``` sudo clocksetup
-
-[img/gtkclocksetup.png]
 
 
 CLEARPAGE
@@ -503,11 +497,4 @@ with Gslapt.
 
 [img/salix-update-notifier.png]
 
-
-+++reposetup+++
-
-//reposetup// is a command line tool to change the repository mirror,
-allowing you to choose a faster one or temporarily change mirrors if
-the one you normally use is down. You can run it from a terminal with:
-``` sudo reposetup
 
