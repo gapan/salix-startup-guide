@@ -16,29 +16,56 @@
 <li class="previous"><A HREF="3YourSalix.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="311Gslapt.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<h3><a NAME="4_2_4">2.2.4. Installing from a Salix Installation USB</a></h3>
-<p> Installing Salix from a USB key is also possible. You can use<em> dd</em>
- to transfer the contents of the Salix iso image to your USB stick,
- using a command line like this:</p>
+<h2><a NAME="4_1">3.1. Package Management</a></h2>
+<p> Installing applications (which roughly equates to &quot;installing
+ packages&quot;) is a fundamental part of the Linux experience. A Linux
+ distribution, such as Salix (or Slackware, on which it is based) could
+ be said to consist of its repositories, where the software available
+ for that distribution is kept. These packages have been compiled with
+ the kernel and build tools provided by the distribution and tested to
+ ensure they work together. Salix, like most distros (but not Slackware)
+ provides full dependency management, which means that any items the
+ package needs to run are installed too -- and also that they are
+ guaranteed to be available.</p>
+<p> Installing extra software is also possible through flatpaks and <a HREF="https://flathub.org">
+Flathub</a>. Just navigate to the software you wish to install and press
+ the &quot;Install&quot; button on the webpage. If your browser defaults to
+ downloading the <code>.flatpakref</code> file instead of opening it,
+ just open the Downloads folder and double-click it inside your file
+ manager.</p>
+<p> You can also create and install your own packages, for which Salix
+ provides a suite of console scripts, especially <code>slkbuild</code>;
+ for further information, see the wiki pages on packaging. When
+ installing packages from any other source, proceed with caution.</p>
+<p> <a HREF="http://slackbuilds.org">slackbuilds.org</a> (SBo) provides
+ build scripts for further software not present in the repositories.
+ This means the package will be built on your system before being
+ installed. Salix provides a command-lie tool,<i> slapt-src</i>, for
+ this purpose. But it has limited dependency management, as not
+ dependencies are listed at SBo. Therefore the build is not guaranteed
+ to be successful and some manual tinkering may be needed. Unlike the
+ software provided in the repositories, these scripts are not maintained
+ by either Salix or Slackware but by individual users, and as such are
+ not the responsibility of either distribution, although help may be
+ found on the forum. If the build fails, the last ten lines or so of the
+ output usually provide an indication of the reason. Most commonly, this
+ is a missing dependency, which may be a build dependency (needed to
+ compile the package, but not to run it). Common packages that are
+ required by several SlackBuilds, but not included as part of a standard
+ Salix installation are<i> cmake</i> and<i> linuxdoc-tools</i>, so first
+ make sure you have these installed if you encounter any problems. If
+ you don't mind using a bit of extra space on your hard drive, then most
+ of these problems could disappear by installing the<i> slackware/d</i>
+ and<i> slackware/l</i> package sets:</p>
 <pre>
-dd if=salix_image_file.iso of=/dev/sdb
+  sudo slapt-get --install-set slackware/d --install-set slackware/l
 </pre>
-<p> Of course, you'll have to replace<em> salix_image_file.iso</em> with
- the exact path and name to the iso file you would like to use.</p>
-<p> <div class="warning"><div class="admonition_header"><h2>dd is very dangerous!</h2></div><div class="admonition"><div class="para"> The dd command wipes
- all the data from the specified target device. In the example given
- above that device is /dev/sdb, but it could very well be a different
- one in your case. Always double check which partition and device you
- are reading from and writing to, e.g. using <code>sudo fdisk -l</code>.
- If you are not 100% certain, then do not proceed as this could
- permanently destroy the contents of an entire hard drive. </div></div></div></p>
-<p> After writing the iso image to your USB stick and setting your BIOS
- to boot from it, the installer works exactly as described above when
- booting from a CDROM. The only difference is that when you are asked
- for the medium to use as a source for the packages installation, you
- should select the<em> &quot;Install from a Salix USB&quot;</em> option.</p>
-
-<!--section id=&quot;cfdisk&quot;-->
+<p> However, you shouldn't really need to revert to SBo often, if at
+ all. The Salix repositories offer thousands of packages and even more
+ are available through <a HREF="https://flathub.org">Flathub</a>.</p>
+<p> <div class="important"><div class="admonition_header"><h2>Reminder!</h2></div><div class="admonition"><div class="para"> You need to have superuser
+ privileges in order to install or upgrade packages. </div></div></div></p>
+<p></p>
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="3YourSalix.html"><strong>Previous</strong></A></li>

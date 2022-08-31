@@ -16,25 +16,41 @@
 <li class="previous"><A HREF="331Settingupaninternetconnection.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="333SalixCodecsInstaller.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<h3><a NAME="5_2_6">3.2.6. Upgrading Salix to a Newer Version</a></h3>
-<p> If you wish to upgrade an older version of Salix on your machine to
- the latest, please refer to the following link for upgrading your
- Salix.</p>
+<h3><a NAME="4_3_2">3.3.2. Setting up a Printer</a></h3>
+<p> After writing a document, transferring photos from your camera, or
+ creating your own images with GIMP, you would probably like to print
+ them out with your printer. To do this, you need to have a printer
+ already installed on your system. &quot;<b>Manage Printing</b>&quot;, which is
+ found under &quot;System&quot; in the main application menu, handles the
+ installation and general management of your printers. (Ensure that
+ &quot;CUPS&quot; is enabled in the <a HREF="#system_services">system services</a>
+, or Manage Printing will not start properly).</p>
+<p> If you are buying a new printer, it is recommended to check the
+ availability of Linux drivers beforehand from the <a HREF="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/database/databaseintro">
+Open Printing database</a>(or search on the Internet). Some companies
+ offer printer drivers for Linux, but this is less common than desired
+ and could involve a lengthy installation process. For most Linux
+ friendly printers, you have to install drivers such as gutenprint or
+ HPIJS, both of which are available from the repositories.</p>
 <ul>
-<li><a href="http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.0_to_13.1">
-Salix 13.0 to 13.1</a>.</li>
-<li><a href="http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.1_to_13.37">
-Salix 13.1 to 13.37</a>.</li>
-<li><a href="http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.37_to_14.0">
-Salix 13.37 to 14.0</a>.</li>
-<li><a href="http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.0_to_14.1">
-Salix 14.0 to 14.1</a>.</li>
-<li><a href="http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.1_to_14.2">
-Salix 14.1 to 14.2</a>.</li>
+<li>Select &quot;Add Printers and Classes&quot;.</li>
+<li>Under &quot;Printers&quot;, select &quot;Add Printer&quot;.</li>
+<li>Enter &quot;root&quot; as a username and your superuser password.</li>
+<li>Select your printer description and choose if you would like to
+ share the printer.</li>
+<li>Select the correct driver from the list (Model) - see an example
+ below. This is the important part. Or if you have a <a HREF="http://en.wikipedia.org/wiki/PostScript_Printer_Description">
+PPD</a> file instead, you can load it here.</li>
 </ul>
-<p></p>
-
-<!--section-->
+<p> <img ALIGN="middle" ALT="" BORDER="0" HEIGHT="427" SRC="addprinter.png"
+WIDTH="600"></p>
+<ul>
+<li>Select Add Printer, and finish the process by configuring details of
+ the printer.</li>
+<li>Now the printer should be usable on your computer.</li>
+</ul>
+<p> For setting up a network printer, please consult the Salix <a HREF="http://www.salixos.org/wiki/index.php/How_to_share_a_printer_via_CUPS">
+wiki</a>.</p>
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="331Settingupaninternetconnection.html"><strong>Previous</strong></A></li>

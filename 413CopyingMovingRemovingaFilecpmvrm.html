@@ -16,40 +16,59 @@
 <li class="previous"><A HREF="412CreatingaFoldermkdir.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="414CopyingMovingRemovingaFoldercpmvrm.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<h2><a NAME="6_1">4.1. Working with the Command Line Interface</a></h2>
-<p> This section deals with working in a console mode or with a terminal
- (such as Xfce terminal, xterm, konsole and so forth), and serves merely
- as a light introduction to the command line interface (CLI). The
- intended audience here is not seasoned travelers but new journeymen in
- the land of Linux, who are willing to discover more about what one can
- do with it. We will go through some examples in this section for you to
- follow, and hopefully by the end of this walkthrough, you will have no
- problem working with the &quot;black screen&quot;. For those who would like to
- know more about CLI, there are a couple of useful resources available
- on the net, and some are listed in the <a href="http://forum.salixos.org">
-Salix Forum</a>.</p>
-<p> So why learn CLI commands at all? Graphical user interfaces for
- applications have been steadily improving in Linux and are probably now
- comparable to any OS in their ease of use. On the other hand, where
- Linux excels, in particular, is in the area of command line
- applications, its traditional strength. Without the CLI, you would be
- effectively missing out on half of what Linux can offer.</p>
-<p> There is another reason. From time to time, you might have to work
- in the console. For instance, if the machine fails to start up a
- graphical desktop environment during booting, then you are more or less
- forced to fix the problem without the graphical user interface (GUI).</p>
-<p> Of course, there are many other reasons to learn CLI commands, but
- for now we will start by learning how to move around directories.</p>
-<p> First, open up a terminal or move to a console: you can do the
- latter by pressing<strong> Ctrl+Alt+F2</strong>, for example. To get
- back to the graphical desktop, press<strong> Alt+F4</strong>, for
- example. F number keys are used to switch between consoles; if F4 or F7
- doesn't do the trick, try others.</p>
-<p> However, the simplest option is to open a terminal within the GUI:
- there is probably an option to do so in the panel, or if not, in the
- menu.</p>
-
-<!--section-->
+<h3><a NAME="5_1_3">4.1.3. Copying &amp; Moving &amp; Removing a File - cp &amp; mv
+ &amp; rm</a></h3>
+<p> <code>cp</code> is perhaps one of the most used commands in a
+ console mode. <code>cp</code> copies a file or files from one location
+ to another. Since we created the file called <code>log</code> and it is
+ currently in the wrong directory, let us move it inside the <code>photo</code>
+ directory. You can do so by issuing <code>cp log photo/</code> but
+ perhaps it is better to call the log file not just <code>log</code> but
+ <code>log.txt</code>, so that it would be obvious to a Windows user
+ that it is a text file. Type in</p>
+<pre>
+  cp log photo/log.txt
+</pre>
+<p> and enter to execute the command.</p>
+<p> You can go inside the <code>photo</code> directory and check if the
+ copying has been done properly. <code>cd photo</code> and then <code>ls</code>
+. The file should be there. Let's add to the log file by saying that it
+ has been moved from <code>Music</code> to <code>photo</code>. Issuing</p>
+<pre>
+  nano log.txt
+</pre>
+<p> will bring up the text. Add a line to say it has been moved, and
+ then save and quit the application by <code>Ctrl+x</code>.</p>
+<p> Oh, but we forgot to delete the original <code>log</code> file in
+ the <code>Music</code> folder. Let's just get back to the <code>Music</code>
+ directory using <code>cd ..</code> and remove the <code>log</code> file
+ by issuing <code>rm log</code>. The <code>rm</code> command removes a
+ file or files. For example, if you would like to remove all photos with
+ .jpg extension but not with .png, you can issue a command something
+ like:</p>
+<pre>
+  rm *.jpg
+</pre>
+<p> This will remove all the files with .jpg extension within the
+ directory you are in. Note that the <code>rm</code> command will not
+ ask you to confirm your order. It will just carry out your instructions
+ without further ado and once a file is removed, it is deleted forever.
+ You cannot recover it from the recycle bin.</p>
+<p> In this example, we used <code>cp</code> to copy the log file and
+ then later on deleted it. Normally, this would be done by issuing a <code>
+mv</code> command;</p>
+<pre>
+  mv log photo/
+</pre>
+<p> You can also use the <code>mv</code> command to rename a file. Let's
+ say that you did not like the earlier decision to call the log file <code>
+log.txt</code> and you now want to rename it as <code>log</code> again.
+ Type in</p>
+<pre>
+  mv photo/log.txt photo/log
+</pre>
+<p> and execute the command. Now the file name has been changed back to <code>
+log</code>.</p>
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="412CreatingaFoldermkdir.html"><strong>Previous</strong></A></li>

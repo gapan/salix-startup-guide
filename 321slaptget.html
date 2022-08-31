@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="32Packagemanagementfromthecommandline.html">
+<LINK REL="Next" HREF="322slaptsrc.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="32Packagemanagementfromthecommandline.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="322slaptsrc.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<h3 ID="slapt-get"><a NAME="4_2_1">3.2.1. slapt-get</a></h3>
+<p> <a HREF="http://software.jaos.org/git/slapt-get/plain/FAQ.html">
+slapt-get</a> is a command line tool for Slackware package management.
+ It allows one to search Slackware/Salix mirrors for packages, compare
+ them with installed packages, install new packages, or upgrade all
+ installed packages. To use the application, open a Terminal window and
+ first issue the command</p>
+<pre>
+  sudo slapt-get -u
+</pre>
+<p> in order to update the package database on your computer. Then</p>
+<pre>
+  slapt-get -l
+</pre>
+<p> to list all the available packages,</p>
+<pre>
+  slapt-get --search [package name]
+</pre>
+<p> to search for a package, and</p>
+<pre>
+  sudo slapt-get -i [package name]
+</pre>
+<p> to install a package. For more command line instructions, please
+ refer to</p>
+<pre>
+  slapt-get --help
+</pre>
+<p> Here is a little exercise for you. Try installing<i> w3m</i> which
+ is a terminal based web browser, by using slapt-get.</p>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="32Packagemanagementfromthecommandline.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="322slaptsrc.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

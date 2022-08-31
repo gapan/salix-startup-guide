@@ -5,76 +5,26 @@
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
-<LINK REL="Prev" HREF="312Sourcery.html">
-<LINK REL="Next" HREF="321SalixPackageInstaller.html">
+<LINK REL="Prev" HREF="311Gslapt.html">
+<LINK REL="Next" HREF="321slaptget.html">
 <link rel="stylesheet" href="default.css" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </HEAD>
 <BODY>
 <p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
-<li class="previous"><A HREF="312Sourcery.html"><strong>Previous</strong></A></li>
-<li class="Next"><A HREF="321SalixPackageInstaller.html"><strong>Next</strong></A></li></ul>
+<li class="previous"><A HREF="311Gslapt.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="321slaptget.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<h2><a NAME="5_1">3.1. Package Management</a></h2>
-<p> Installing applications (which roughly equates to &quot;installing
- packages&quot;) is a fundamental part of the Linux experience. A Linux
- distribution, such as Salix (or Slackware, on which it is based) could
- be said to consist of its repositories, where the software available
- for that distribution is kept. These packages have been compiled with
- the kernel and build tools provided by the distribution and tested to
- ensure they work together. Salix, like most distros (but not Slackware)
- provides full dependency management, which means that any items the
- package needs to run are installed too -- and also that they are
- guaranteed to be available.</p>
-<p> <a href="http://slackbuilds.org">slackbuilds.org</a> (SBo) provides
- build scripts for further software not present in the repositories.
- This means the package will be built on your system before being
- installed. Salix provides a graphical tool,<em> Sourcery</em>, to
- manage this; its command-line equivalent is<em> slapt-src</em>. Both do
- have limited dependency management, but the build is not guaranteed to
- be successful and some manual tinkering may be needed.</p>
-<p> Unlike the software provided in the repositories, these scripts are
- not maintained by either Salix or Slackware but by individual users,
- and as such are not the responsibility of either distribution, although
- help may be found on the forum. If the build fails, the last ten lines
- or so of the output usually provide an indication of the reason. Most
- commonly, this is a missing dependency, which may be a build dependency
- (needed to compile the package, but not to run it). Common packages
- that are required by several SlackBuilds, but not included as part of a
- standard Salix installation are<em> cmake</em> and<em> linuxdoc-tools</em>
-, so first make sure you have these installed if you encounter any
- problems.</p>
-<p> If you don't mind using a bit of extra space on your hard drive,
- then most of these problems could disappear by installing the<em>
- slackware/d</em> and<em> slackware/l</em> package sets:</p>
-<pre>
-sudo slapt-get --install-set slackware/d --install-set slackware/l
-</pre>
-<p> You can also create and install your own packages, for which Salix
- provides a suite of console scripts, especially <code>slkbuild</code>;
- for further information, see the wiki pages on packaging. When
- installing packages from any other source, proceed with caution.</p>
-<p> In a nutshell, the first place to look for an application you'd like
- to use is the Salix repositories, which also access the core of
- Slackware packages around which Salix is built (<em>Gslapt</em>,<em>
- slapt-get</em>); second port of call should generally be the slackbuild
- repo (<em>Sourcery</em>,<em> slapt-src</em>). It is not recommended
- (especially for beginners) to reconfigure the package management tools
- to access any other repositories. Should you wish to install any such
- package, it is probably best to download it individually and install
- manually (for instance with<em> pkgtool</em> or <a href="#spkg">spkg</a>
-). Finally, you can <a href="#roll-your-own">make your own package</a>.</p>
-<p> Note that<em> twapake</em> is a useful tool available from the
- repositories to keep track of installed packages, from whatever source.</p>
-<p> <div class="important"><div class="admonition_header"><h2>Reminder!</h2></div><div class="admonition"><div class="para"> You need to have superuser
- privileges in order to install or upgrade packages. </div></div></div></p>
-<p></p>
-
-<!--section id=&quot;Gslapt&quot;-->
+<h2><a NAME="4_2">3.2. Package management from the command line</a></h2>
+<p><i> slapt-get</i> and<i> slapt-src</i> are the basic command-line
+ tools used for installing packages.<i> Gslapt</i> provides a GUI for<i>
+ slapt-get</i>. This section describes their use from the command line,
+ along with the<i> flatpak</i> command line tool which is used to
+ install software that comes in flatpaks.</p>
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
-<li class="previous"><A HREF="312Sourcery.html"><strong>Previous</strong></A></li>
-<li class="Next"><A HREF="321SalixPackageInstaller.html"><strong>Next</strong></A></li></ul>
+<li class="previous"><A HREF="311Gslapt.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="321slaptget.html"><strong>Next</strong></A></li></ul>
 </BODY>
 </HTML>

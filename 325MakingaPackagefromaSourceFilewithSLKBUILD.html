@@ -5,7 +5,7 @@
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
-<LINK REL="Prev" HREF="324spkg.html">
+<LINK REL="Prev" HREF="324flatpak.html">
 <LINK REL="Next" HREF="326UpgradingSalixtoaNewerVersion.html">
 <link rel="stylesheet" href="default.css" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,43 +13,49 @@
 <BODY>
 <p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
-<li class="previous"><A HREF="324spkg.html"><strong>Previous</strong></A></li>
+<li class="previous"><A HREF="324flatpak.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="326UpgradingSalixtoaNewerVersion.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<h3><a NAME="5_2_2">3.2.2. slapt-get</a></h3>
-<p> <a href="http://software.jaos.org/git/slapt-get/plain/FAQ.html">
-slapt-get</a> is a command line tool for Slackware package management.
- It allows one to search Slackware/Salix mirrors for packages, compare
- them with installed packages, install new packages, or upgrade all
- installed packages. To use the application, open a Terminal window and
- first issue the command</p>
+<h3 ID="roll-your-own"><a NAME="4_2_5">3.2.5. Making a Package from a
+ Source File with SLKBUILD</a></h3>
+<p> Installing software from a source file is in most cases not
+ difficult. You can compile a lot of software generally with the
+ following commands.</p>
+<ul>
+<li>unpack a source file, move inside the folder.</li>
+<li>type in <code>./configure</code> on the terminal.</li>
+<li>type in <code>make</code>.</li>
+<li>type in <code>sudo make install</code>.</li>
+<li>type your password.</li>
+</ul>
+<p> Make sure to read accompanying files such as &quot;README&quot;, &quot;INSTALL&quot; and
+ so on for installation instructions before compiling. These files may
+ list dependency packages which you need to install prior to the
+ configuration.</p>
 <pre>
-sudo slapt-get -u
+  ./configure --help
 </pre>
-<p> in order to update the package database on your computer. Then</p>
+<p> or</p>
 <pre>
-slapt-get -l
+  ./configure --help=short output
 </pre>
-<p> to list all the available packages,</p>
+<p> should also help you with some configuration options.</p>
+<p> Although you should manage to install the software after the final
+ command, it is essentially<b> untracked</b>, and neither Gslapt nor
+ slapt-get can see that the software is installed. A better way is to
+ create a Salix package using SLKBUILD, which is a build script you can
+ prepare before issuing</p>
 <pre>
-slapt-get --search [package name]
+  fakeroot slkbuild -X
 </pre>
-<p> to search for a package, and</p>
-<pre>
-sudo slapt-get -i [package name]
-</pre>
-<p> to install a package. For more command line instructions, please
- refer to</p>
-<pre>
-slapt-get --help
-</pre>
-<p> Here is a little exercise for you. Try installing<em> w3m</em> which
- is a terminal based web browser, by using slapt-get.</p>
-
-<!--section id=&quot;slapt-src&quot;-->
+<p> to create a Salix compatible package which can then be installed
+ with <a HREF="#spkg">spkg</a> (the<i> fakeroot</i> package should also
+ be installed). For more on SLKBUILD, please consult <a HREF="http://www.salixos.org/wiki/index.php/Building_packages_with_slkbuild">
+SLKBUILD</a> and <a HREF="http://docs.salixos.org/wiki/New_to_Packaging">
+New to Packaging</a>.</p>
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
-<li class="previous"><A HREF="324spkg.html"><strong>Previous</strong></A></li>
+<li class="previous"><A HREF="324flatpak.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="326UpgradingSalixtoaNewerVersion.html"><strong>Next</strong></A></li></ul>
 </BODY>
 </HTML>

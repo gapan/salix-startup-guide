@@ -1191,7 +1191,7 @@ ul li p:last-child, ul li div.para:last-child {
 	content:" ";
 }
 
-.docnav li.previous, .docnav li.next {
+.docnav li.previous, .docnav li.Next {
 	position:absolute;
 	top:1em;
 }
@@ -1205,12 +1205,12 @@ ul li p:last-child, ul li div.para:last-child {
 	text-align:left;
 }
 
-.docnav li.next {
+.docnav li.Next {
 	right:0px;
 	text-align:right;
 }
 
-.docnav li.previous strong, .docnav li.next strong {
+.docnav li.previous strong, .docnav li.Next strong {
 	height:22px;
 	display:block;
 }
@@ -1220,7 +1220,7 @@ ul li p:last-child, ul li div.para:last-child {
 	text-align:center;
 }
 
-.docnav li.next a strong {
+.docnav li.Next a strong {
 	background:  url(stock-go-forward.png) top right no-repeat;
 	padding-top:3px;
 	padding-bottom:4px;

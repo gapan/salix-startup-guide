@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="222PartitionManagement.html">
+<LINK REL="Next" HREF="224InstallingfromaSalixInstallationUSB.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="222PartitionManagement.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="224InstallingfromaSalixInstallationUSB.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<h3><a NAME="3_2_3">2.2.3. Installing from a Salix Installation Disc</a></h3>
+<p> Installing Salix from a Salix Installation optical disc is somewhat
+ similar to installing Slackware, but the entire process is considerably
+ shorter and less complicated. Everything is done efficiently in a
+ semi-graphical command line interface.</p>
+<p> To start the installation process, you may type <code>setup</code>
+ (or press the up arrow on your keyboard to revoke the same command -
+ useful if your actual keymap doesn't match the one that is used by
+ default in the installer). Once the installer starts, you will be
+ presented with several dialogs to customize the installation process.
+ Here is what you will have to do:</p>
+<ul>
+<li>Select your keymap.</li>
+<li>The installer will run<i> cfdisk</i> (or<i> cgdisk</i>) to allow you
+ to set up your desired partitions. If they are already as you wish,
+ type 'Q' to quit. See below for a detailed guide to using <a HREF="#cfdisk">
+cfdisk</a>.</li>
+<li>Your swap partition, if any, will be automatically detected. Say <code>
+yes</code> if the detected partition corresponds to that.</li>
+<li>You will then be asked to specify the partition for the root <code>/</code>
+ directory. Select the partition you have created for the <code>/</code>
+, and continue to format the partition. Unless you prefer otherwise, the
+ xfs file system is recommended here.</li>
+<li>If you have other partitions to mount, you can do so. If you have a
+ partition for a <code>/home</code> directory, select the partition and
+ continue. Unless the partition is new or you would like to erase the
+ content of this partition, select not to format.</li>
+<li>Other partitions such as Windows partitions will be detected
+ automatically. If you would like to make those partitions automatically
+ usable during your Salix session, include them all to mount.</li>
+<li>The installer will start installing Salix. You will be asked first
+ where the source files are. If you are installing from the CD, select
+ &quot;from the CD&quot;. Everything should be detected automatically.</li>
+<li>You will be asked to choose an installation mode (<b>Full</b>,<b>
+ Basic</b> or<b> Core</b>).</li>
+<li>Installation of packages will start.</li>
+<li>After the installation, LILO (or eLILO for EUFI systems) setup will
+ start up. Unless you are<b> not</b> using LILO/eLILO, choose the
+ default options. You can refine the bootloader configuration (for
+ example, in a multi-boot scenario) after booting into your new Salix
+ installation.</li>
+<li>You will be asked some other questions regarding time-zone, username
+ and password. Make sure you add at least one user to your system,
+ otherwise you will not be able to log in!</li>
+<li>When all the basic questions are answered, you will be presented the
+ option to reboot the system.</li>
+<li>That's all. The computer is good to go! Enjoy Salix!</li>
+</ul>
+<p> <div class="note"><div class="admonition_header"><h2>Salix now uses sudo!</h2></div><div class="admonition"><div class="para"> By default, the first user
+ created has access to sudo, any others do not; to allow them access as
+ well, they need to be added to the wheel group. The<b> root</b> user is
+ disabled by default in Salix. </div></div></div></p>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="222PartitionManagement.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="224InstallingfromaSalixInstallationUSB.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

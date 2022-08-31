@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="321slaptget.html">
+<LINK REL="Next" HREF="323spkg.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="321slaptget.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="323spkg.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<h3 ID="slapt-src"><a NAME="4_2_2">3.2.2. slapt-src</a></h3>
+<p><i> slapt-src</i> is a command line tool that makes the process of
+ downloading and building software packages from <a HREF="http://slackbuilds.org">
+SBo</a> simple and easy. <a HREF="http://slackbuilds.org">SBo</a> keeps
+ a large collection of build scripts for extra packages that are still
+ not available from the official Salix / Slackware repositories.
+ Thousands of extra packages are now available to users through this
+ tool.</p>
+<p> To use the application, type in</p>
+<pre>
+  sudo slapt-src -u
+</pre>
+<p> first to update on your computer the list of build scripts available
+ from Slackbuild.org.</p>
+<pre>
+  slapt-src -l
+</pre>
+<p> shows you a list of available packages, and as in slapt-get,</p>
+<pre>
+  sudo slapt-src -i [package name]
+</pre>
+<p> will build and install a package. For more command line
+ instructions, please refer to</p>
+<pre>
+  slapt-src --help
+</pre>
+<p> Another small exercise for you! Skype is a commonly used application
+ to make voice calls over the Internet. It is not available from the
+ common Salix/Slackware repository, but its build script is available
+ from Slackbuilds.org. Try installing &quot;skype&quot; by using slapt-src. (If
+ you do not wish to install it, you may just want to build the package.
+ Note that the skype is 32-bit only, so if you are running a 64-bit
+ system, please try out some other application).</p>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="321slaptget.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="323spkg.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

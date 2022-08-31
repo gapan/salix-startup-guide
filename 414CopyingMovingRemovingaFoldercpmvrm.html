@@ -6,7 +6,7 @@
 <LINK REL="Start" HREF="index.html">
 <LINK REL="Contents" HREF="toc.html">
 <LINK REL="Prev" HREF="413CopyingMovingRemovingaFilecpmvrm.html">
-<LINK REL="Next" HREF="415InstallingaProgramspi.html">
+<LINK REL="Next" HREF="415InstallingaProgramslaptget.html">
 <link rel="stylesheet" href="default.css" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </HEAD>
@@ -14,68 +14,53 @@
 <p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="413CopyingMovingRemovingaFilecpmvrm.html"><strong>Previous</strong></A></li>
-<li class="Next"><A HREF="415InstallingaProgramspi.html"><strong>Next</strong></A></li></ul>
+<li class="Next"><A HREF="415InstallingaProgramslaptget.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<h3><a NAME="6_1_1">4.1.1. Moving Around - cd</a></h3>
-<p> You should be in your user directory (denoted as <code>~</code>),
- which is normally the same as <code>/home/your_user_name</code>
- (replace <code>your_user_name</code> with your own). In Salix, this
- directory contains <code>Desktop</code>, <code>Music</code>, <code>
-Documents</code> and so on. To see its contents, type <code>ls</code>
- and press enter. You will see something like this:</p>
+<h3><a NAME="5_1_4">4.1.4. Copying &amp; Moving &amp; Removing a Folder - cp &amp;
+ mv &amp; rm</a></h3>
+<p> So now you have the folder called <code>photo</code> and a log file
+ in the <code>Music</code> directory. This is a little strange as we
+ should normally have the folder not in <code>Music</code> but in <code>
+Pictures</code>. But now you know how to move a file, perhaps the same
+ command will work for moving a folder?</p>
+<p> But...</p>
 <pre>
-george[~]$ ls
-Desktop      Download    Pictures    Templates    salix
-Documents    Music       Music       Videos
+  cp photo ../Pictures
 </pre>
-<p> Now to move around directories, we use the command <code>cd</code>.
- If you just type in <code>cd</code> and enter, it will take you to your
- home directory, but as we are already there, in this case, nothing will
- happen. <code>cd</code> must otherwise be followed either by a name of
- a directory which is within the directory you are in or by a full path
- to the directory you wish to move into. You can also go one directory
- up by typing</p>
+<p> remember that <code>..</code> refers to the folder one level up)
+ will give an error like this.</p>
 <pre>
-cd ..
+  george[Music]$ cp photo ../Pictures
+  cp: omitting directory 'photo/'
+  george[Music]$
 </pre>
-<p> (be careful, there is a space between <code>cd</code> and <code>..</code>
-). Remember in Linux,<em> arguments are separated by spaces</em>. So for
- now, let's move to the root directory. The root directory is, as the
- name suggests, the core of your directories - every directory stems
- from here.</p>
-<p> To move to the root <code>/</code>, type in</p>
+<p> Let's see what we can do here. The first thing when encountering
+ such a problem is to check the corresponding help file. This can
+ normally be done by issuing a command with an option like <code>cp
+ --help</code>. It is possible that <code>--help</code> will just be <code>
+-h</code>, and there may be no help at all. <code>man</code> is another
+ command if this is the case.</p>
 <pre>
-cd /
+  man cp
 </pre>
-<p> Type in <code>ls</code> to see the list of files and directories in
- the directory. You should see something like <code>tmp/</code>, <code>
-usr/</code>, <code>home</code> and so on. OK, not so interesting here.
- Let us move back to your home directory with</p>
+<p> will give a more in-depth explanation of this command. (To get out
+ of the manual, press <code>q</code>).</p>
+<p> If you read the help carefully, you will see that you need to give
+ an extra option <code>-r</code> if you wish to copy a folder to another
+ location. So now</p>
 <pre>
-cd /home/your_user_name
+  cp -r photo ../Pictures
 </pre>
-<p> or just</p>
+<p> should copy the <code>photo</code> folder inside the correct <code>
+Pictures</code> directory. After checking that the folder has been
+ safely copied, you can remove the <code>photo</code> folder from the <code>
+Music</code> directory:</p>
 <pre>
-cd
+  rm -r photo/
 </pre>
-<p> Now move into the <code>Music</code> directory by issuing</p>
-<pre>
-cd Music
-</pre>
-<p> In fact, you do not have to type to the end. By pressing Tab after
- the first letter or two, you may complete the rest of the directory
- name automatically.</p>
-<p> The important thing to notice here is this is a<em> relative path</em>
-: unlike where the whole path was specified above, starting from the
- root of the filesystem <code>/</code>, if the path doesn't begin with <code>
-/</code> it is understood as starting from whatever the current
- directory is, in this case, your user's home. So <code>Music</code>, in
- this case, means the same as <code>/home/your_user_name/Music</code>.</p>
-
-<!--section-->
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="413CopyingMovingRemovingaFilecpmvrm.html"><strong>Previous</strong></A></li>
-<li class="Next"><A HREF="415InstallingaProgramspi.html"><strong>Next</strong></A></li></ul>
+<li class="Next"><A HREF="415InstallingaProgramslaptget.html"><strong>Next</strong></A></li></ul>
 </BODY>
 </HTML>

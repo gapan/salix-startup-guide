@@ -16,16 +16,61 @@
 <li class="previous"><A HREF="41WorkingwiththeCommandLineInterface.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="412CreatingaFoldermkdir.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<h3><a NAME="5_4_13">3.4.13. reposetup</a></h3>
-<p><em> reposetup</em> is a command line tool to change the repository
- mirror, allowing you to choose a faster one or temporarily change
- mirrors if the one you normally use is down. You can run it from a
- terminal with:</p>
+<h3><a NAME="5_1_1">4.1.1. Moving Around - cd</a></h3>
+<p> You should be in your user directory (denoted as <code>~</code>),
+ which is normally the same as <code>/home/your_user_name</code>
+ (replace <code>your_user_name</code> with your own). In Salix, this
+ directory contains <code>Desktop</code>, <code>Music</code>, <code>
+Documents</code> and so on. To see its contents, type <code>ls</code>
+ and press enter. You will see something like this:</p>
 <pre>
-sudo reposetup
+  george[~]$ ls
+  Desktop      Download    Pictures    Templates    salix
+  Documents    Music       Music       Videos
 </pre>
-
-<!--section-->
+<p> Now to move around directories, we use the command <code>cd</code>.
+ If you just type in <code>cd</code> and enter, it will take you to your
+ home directory, but as we are already there, in this case, nothing will
+ happen. <code>cd</code> must otherwise be followed either by a name of
+ a directory which is within the directory you are in or by a full path
+ to the directory you wish to move into. You can also go one directory
+ up by typing</p>
+<pre>
+  cd ..
+</pre>
+<p> (be careful, there is a space between <code>cd</code> and <code>..</code>
+). Remember in Linux,<i> arguments are separated by spaces</i>. So for
+ now, let's move to the root directory. The root directory is, as the
+ name suggests, the core of your directories - every directory stems
+ from here.</p>
+<p> To move to the root <code>/</code>, type in</p>
+<pre>
+  cd /
+</pre>
+<p> Type in <code>ls</code> to see the list of files and directories in
+ the directory. You should see something like <code>tmp/</code>, <code>
+usr/</code>, <code>home</code> and so on. OK, not so interesting here.
+ Let us move back to your home directory with</p>
+<pre>
+  cd /home/your_user_name
+</pre>
+<p> or just</p>
+<pre>
+  cd
+</pre>
+<p> Now move into the <code>Music</code> directory by issuing</p>
+<pre>
+  cd Music
+</pre>
+<p> In fact, you do not have to type to the end. By pressing Tab after
+ the first letter or two, you may complete the rest of the directory
+ name automatically.</p>
+<p> The important thing to notice here is this is a<i> relative path</i>
+: unlike where the whole path was specified above, starting from the
+ root of the filesystem <code>/</code>, if the path doesn't begin with <code>
+/</code> it is understood as starting from whatever the current
+ directory is, in this case, your user's home. So <code>Music</code>, in
+ this case, means the same as <code>/home/your_user_name/Music</code>.</p>
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="41WorkingwiththeCommandLineInterface.html"><strong>Previous</strong></A></li>

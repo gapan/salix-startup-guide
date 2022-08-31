@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>Salix Start-Up Guide</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="414CopyingMovingRemovingaFoldercpmvrm.html">
+<LINK REL="Next" HREF="5Support.html">
+<link rel="stylesheet" href="default.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY>
+<p id="title"><a class="left" href="http://www.salixos.org"><img src="salix-logo.png" alt="Salix Website"></a><a class="right" href="http://docs.salixos.org"><img src="documentation.png" alt="Documentation Site"></a></p>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="414CopyingMovingRemovingaFoldercpmvrm.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="5Support.html"><strong>Next</strong></A></li></ul>
+<HR NOSHADE>
+<h3><a NAME="5_1_5">4.1.5. Installing a Program - slapt-get</a></h3>
+<p> Maybe a little bird has told you that there is a wonderful
+ application called<i> cowsay</i> in Linux, and now you would like to
+ see what this program can do.</p>
+<p> If this is the first time you are installing an application on
+ Salix, the first thing you should do is to update the package database
+ on your computer by executing</p>
+<pre>
+  sudo slapt-get -u 
+</pre>
+<p> Then to search for an application (in this case, &quot;cowsay&quot;), type in</p>
+<pre>
+  slapt-get --search cowsay
+</pre>
+<p> Notice that you don't need to type <code>sudo</code> just for
+ searching for a package. The output you will get should be similar to
+ this:</p>
+<pre>
+  george[~]$ slapt-get --search cowsay
+  cowsay-3.03-noarch-1salix15.0 [inst=no]: cowsay (A Configurable Speaking/Thinking Cow)
+  xcowsay-1.5.1-x86_64-2salix15.0 [inst=no]: xcowsay (display a cute cow and speech bubble)
+</pre>
+<p> To install it, you simply must run:</p>
+<pre>
+  sudo slapt-get -i cowsay
+</pre>
+<p> If you are not sure what this <code>-i</code> is in the above
+ command, you can check it with <code>slapt-get --help</code>. You will
+ see a lot of lines running up the terminal quickly until the
+ application is installed.</p>
+<p> Once it is installed, you might want to test it. First get out of
+ the superuser mode by typing <code>exit</code>. Then type in <code>
+cowsay</code>. Nothing happens, and, in fact, you will see that you are
+ now in a strange mode that you cannot execute any commands. This is
+ because the application is still running, but as you don't see
+ anything, perhaps it is not running properly. To terminate the process,
+ press <code>Ctrl+c</code>. You will get back the normal input line back
+ on your terminal.</p>
+<pre>
+  george[Desktop]$ cowsay
+  ^C
+  george[Desktop]$
+</pre>
+<p> So what was going wrong? Check</p>
+<pre>
+  cowsay -h
+</pre>
+<p> You will see that you need to type in a <code>[message]</code>. Try
+ again with</p>
+<pre>
+  cowsay Hello Salix!
+</pre>
+<p> We have merely scratched the surface of the power of the command
+ line here. The best way to learn more is by using it, but remember to
+ use the help tools, and consult online documentation such as that
+ listed in the Salix forum. <a HREF="http://linuxcommand.org/index.php">
+Linuxcommand.org</a> can be particularly recommended if you wish to gain
+ a comprehensive grounding. Proceed cautiously, but don't be afraid to
+ experiment.</p>
+<p> A final tip - it can be difficult to copy longer commands
+ accurately. If you select the text with the mouse, clicking the middle
+ button or wheel will paste it accurately into the command line or
+ wherever you wish. This only works in a terminal running within a GUI.</p>
+<HR NOSHADE>
+<ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
+<li class="previous"><A HREF="414CopyingMovingRemovingaFoldercpmvrm.html"><strong>Previous</strong></A></li>
+<li class="Next"><A HREF="5Support.html"><strong>Next</strong></A></li></ul>
+</BODY>
+</HTML>

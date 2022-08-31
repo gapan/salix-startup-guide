@@ -16,53 +16,7 @@
 <li class="previous"><A HREF="225Partitionmanagementwithcfdisk.html"><strong>Previous</strong></A></li>
 <li class="Next"><A HREF="31PackageManagement.html"><strong>Next</strong></A></li></ul>
 <HR NOSHADE>
-<h3><a NAME="4_2_3">2.2.3. Installing from a Salix Installation CD</a></h3>
-<p> Installing Salix from a Salix Installation CD is somewhat similar to
- installing Slackware, but the entire process is considerably shorter
- and less complicated. Everything is done efficiently in a
- semi-graphical command line interface.</p>
-<ul>
-<li>Select your keymap.</li>
-<li>If you prefer to let Salix do everything including partition
- management, just select AUTOPARTITION. Note that this will delete
- everything on the hard drive.</li>
-<li>Otherwise, the installer will run<em> cfdisk</em> to allow you to
- set up your desired partitions. If they are already as you wish, type
- 'Q' to quit. See below for a detailed guide to using <a href="#cfdisk">
-cfdisk</a>.</li>
-<li>Your swap partition, if any, will be automatically detected. Say <code>
-yes</code> if the detected partition corresponds to that.</li>
-<li>You will then be asked to specify the partition for the root <code>/</code>
- directory. Select the partition you have created for the <code>/</code>
-, and continue to format the partition. Unless you prefer otherwise, the
- xfs file system is recommended here.</li>
-<li>If you have other partitions to mount, you can do so. If you have a
- partition for a <code>/home</code> directory, select the partition and
- continue. Unless the partition is new or you would like to erase the
- content of this partition, select not to format.</li>
-<li>Other partitions such as Windows partitions will be detected
- automatically. If you would like to make those partitions automatically
- usable during your Salix session, include them all to mount.</li>
-<li>The installer will start installing Salix. You will be asked first
- where the source files are. If you are installing from the CD, select
- &quot;from the CD&quot;. Everything should be detected automatically.</li>
-<li>You will be asked to choose an installation mode (<strong>Full</strong>
-,<strong> Basic</strong> or<strong> Core</strong>).</li>
-<li>Installation of packages will start.</li>
-<li>After the installation, LILO setup will start up. Unless you are<strong>
- not</strong> using LILO, choose the default options. You can refine the
- bootloader configuration (for example, in a multi-boot scenario) after
- booting into your new Salix installation.</li>
-<li>You will be asked some other questions regarding time-zone, username
- and password. When all the basic questions are answered, the machine
- will restart itself.</li>
-<li>That's all. The computer is good to go! Enjoy Salix!</li>
-</ul>
-<p> <div class="note"><div class="admonition_header"><h2>Salix now uses sudo!</h2></div><div class="admonition"><div class="para"> By default, the first user
- created has access to sudo, any others do not; to allow them access as
- well, they need to be added to the wheel group. </div></div></div></p>
-
-<!--section-->
+<h1><a NAME="4">3. Your Salix</a></h1>
 <HR NOSHADE>
 <ul class="docnav"><li class="home"><A HREF="toc.html"><strong>Contents</strong></A></li>
 <li class="previous"><A HREF="225Partitionmanagementwithcfdisk.html"><strong>Previous</strong></A></li>
