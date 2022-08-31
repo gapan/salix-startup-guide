@@ -67,7 +67,7 @@ wise to check the following points:
 - Minimum recommended specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
   HD space, or equivalent, though a lower spec machine may run
   without a problem).
-- At least one separate.
+- At least one separate
   [partition http://en.wikipedia.org/wiki/Disk_partitioning]
   dedicated for Salix on your computer.
 -
