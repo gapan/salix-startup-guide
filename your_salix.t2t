@@ -14,13 +14,23 @@ not Slackware) provides full dependency management, which means that any
 items the package needs to run are installed too -- and also that
 they are guaranteed to be available.
 
+Installing extra software is also possible through flatpaks and
+[Flathub https://flathub.org]. Just navigate to the software you wish to
+install and press the "Install" button on the webpage. If your browser
+defaults to downloading the ``.flatpakref`` file instead of opening it, just
+open the Downloads folder and double-click it inside your file manager.
+
+You can also create and install your own packages, for which Salix
+provides a suite of console scripts, especially ``slkbuild``; for
+further information, see the wiki pages on packaging. When installing
+packages from any other source, proceed with caution.
+
 [slackbuilds.org URLSBO] (SBo) provides build scripts for further
 software not present in the repositories. This means the package will be
-built on your system before being installed. Salix provides a graphical tool,
-//Sourcery//, to manage this; its command-line equivalent is
-//slapt-src//. Both do have limited dependency management, but the build
+built on your system before being installed. Salix provides a command-lie tool,
+//slapt-src//, for this purpose. But it has limited dependency management, as
+not dependencies are listed at SBo. Therefore the build
 is not guaranteed to be successful and some manual tinkering may be needed.
-
 Unlike the software provided in the repositories, these scripts are not  
 maintained by either Salix or Slackware but by individual users, and as 
 such are not the responsibility of either distribution, although help may
@@ -31,30 +41,14 @@ the package, but not to run it). Common packages that are required by
 several SlackBuilds, but not included as part of a standard Salix
 installation are //cmake// and //linuxdoc-tools//, so first make sure
 you have these installed if you encounter any problems.
-
 If you don't mind using a bit of extra space on your hard drive, then
 most of these problems could disappear by installing the //slackware/d//
 and //slackware/l// package sets:
 ``` sudo slapt-get --install-set slackware/d --install-set slackware/l
 
-You can also create and install your own packages, for which Salix
-provides a suite of console scripts, especially ``slkbuild``; for
-further information, see the wiki pages on packaging. When installing
-packages from any other source, proceed with caution.
-
-In a nutshell, the first place to look for an application you'd like to
-use is the Salix repositories, which also access the core of Slackware
-packages around which Salix is built (//Gslapt//, //slapt-get//); second
-port of call should generally be the slackbuild repo (//Sourcery//,
-//slapt-src//). It is not recommended (especially for beginners)
-to reconfigure the package management tools to access any other
-repositories. Should you wish to install any such package, it is
-probably best to download it individually and install manually (for
-instance with //pkgtool// or [spkg #spkg]). Finally, you can
-[make your own package #roll-your-own].
-
-Note that //twapake// is a useful tool available from the repositories to 
-keep track of installed packages, from whatever source.
+However, you shouldn't really need to revert to SBo often, if at all.
+The Salix repositories offer thousands of packages and even more are
+available through [Flathub https://flathub.org].
 
 IMPORTANTSTART Reminder!
 You need to have superuser privileges in order to install or upgrade
@@ -83,33 +77,6 @@ to ensure your installed system is up to date with the repositories -- click on
 "Mark all upgrades", then "Execute".
 
 [img/gslapt.png]
-
-
-CLEARPAGE
-+++Sourcery+++
-
-//Sourcery// is a graphical frontend to [slapt-src #slapt-src], a
-utility to build and install packages from source using SlackBuilds
-or SLKBUILDs. Before use, you should first click on the
-**Update** button on the toolbar to ensure that the latest updates from
-the software repositories are known to //Sourcery//. The search field is
-there for you to search for a particular package, and installations,
-uninstallations or reinstallations of selected packages are done
-by left or right clicking on their status boxes.
-
-Installation/uninstallation/reinstallation will take place once you
-click on the **Execute** button.
-
-Please be sure to look at the README file for the application, and any other
-information, before installing. In //Sourcery//, these files can be accessed
-by clicking **Get Information** before selecting to install; you can also right-click
-on the tick box after you've selected it for installation. The readme file, in
-particular, often has information about dependencies or configuration steps
-required to make the build work; for example, //privoxy// needs a 'privoxy'
-group to be created of which your user is a member, and without this not
-only will the application not work, the build will fail.
-
-[img/sourcery.png]
 
 
 ++Package management from the command line++
