@@ -243,7 +243,7 @@ WARNINGEND
 
 After writing the iso image to your USB stick and setting your BIOS to
 boot from it, the installer works exactly as described above when
-booting from a CDROM. The only difference is that when you are asked for
+booting from an optical disc. The only difference is that when you are asked for
 the medium to use as a source for the packages installation, you should
 select the //"Install from a Salix USB"// option.
 
