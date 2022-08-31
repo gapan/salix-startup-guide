@@ -236,7 +236,6 @@ package. The output you will get should be similar to this:
 george[~]$ slapt-get --search cowsay
 cowsay-3.03-noarch-1salix15.0 [inst=no]: cowsay (A Configurable Speaking/Thinking Cow)
 xcowsay-1.5.1-x86_64-2salix15.0 [inst=no]: xcowsay (display a cute cow and speech bubble)
-
 ```
 
 To install it, you simply must run:
