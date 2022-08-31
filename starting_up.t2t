@@ -125,8 +125,6 @@ WARNINGEND
 
 - Salix needs, at the very minimum, one partition which holds the root
   directory and must be assigned as ``/``.
-- If you are on a UEFI system, you will also need a small EFI system partition
-  (200 MB is more than enough)
 - It is often recommended to have one swap partition though modern RAM
   sizes now often mean it isn't needed. If you already
   have another Linux OS running on your machine, its swap partition can be
@@ -163,7 +161,7 @@ IMPORTANTSTART EFI
 On (U)EFI systems, it is mandatory to have a separate partition allocated for
 **/boot**. This partition should have a type of **ef00**, when created in
 cgdisk. This partition should be formatted using the **FAT32**
-filesystem.
+filesystem. A size of 200 MB should be more than enough.
 IMPORTANTEND
 
 
