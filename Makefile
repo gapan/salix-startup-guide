@@ -47,6 +47,7 @@ html: htmltmp fix-anchors prepare-worktree
 		output/htmlsep/*.html
 	rm -f output/guide.html
 	cp -f output/htmlsep/toc.html output/htmlsep/index.html
+	echo "guide.salixos.org" > output/htmlsep/CNAME
 
 prepare-worktree:
 	rm -rf output/htmlsep
@@ -67,7 +68,7 @@ publish: html
 	cd output/htmlsep && \
 	git add --all && \
 	git commit -m "Publish on `date`" && \
-	git push -u origin public
+	git push -f -u origin public
 
 ebook-prepare: htmltmp fix-anchors
 	sed -i 's/^NOTESTART/<B><I>/' output/guide.html
