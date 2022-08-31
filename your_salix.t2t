@@ -269,23 +269,18 @@ CLEARPAGE
 
 +++Setting up an internet connection+++
 
-Network connections are managed by Wicd in Salix. It is an open source
+Network connections are managed by NetworkManager in Salix. It is an open source
 wired and wireless network manager for Linux which aims to provide a
 simple interface to connect to networks with a wide variety of
-settings.
+settings. You will find NetworkManager in your system tray.
 
-[img/wicd.png]
+[img/networkmanager.png]
 
 It will connect to wired (Ethernet only, no PPPoE/DSL support yet) and
 wireless networks.
 
-Note that **wicd** and **wireless** must be activated in the
-[system services #system_services] in order to make wireless networks visible on
-Wicd.
-
-NOTESTART 3G modems
-To configure 3G connections, use **sakis3g** (installed automatically when using the "Full" installation method).
-NOTEEND
+Note that **networkmanager** must be activated in the
+[system services #system_services] in order to use it..
 
 
 +++Setting up a Printer+++
