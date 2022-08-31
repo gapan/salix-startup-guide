@@ -208,14 +208,17 @@ the installation process. Here is what you will have to do:
   your new Salix installation.
 % see Max's commments on  whether install to MBR is the  default, p. 11
 - You will be asked some other questions regarding time-zone, username and
-  password. When all the basic questions are answered, the machine will restart
-  itself.
+  password. Make sure you add at least one user to your system, otherwise you
+  will not be able to log in!
+- When all the basic questions are answered, you will be presented the option
+  to reboot the system.
 - That's all. The computer is good to go! Enjoy Salix!
 -
 
 NOTESTART Salix now uses sudo!
 By default, the first user created has access to sudo, any others do not; to
-allow them access as well, they need to be added to the wheel group.
+allow them access as well, they need to be added to the wheel group. The **root**
+user is disabled by default in Salix.
 NOTEEND
 
 
