@@ -280,6 +280,3 @@ or wheel will paste it accurately into the command line or wherever you
 wish. This only works in a terminal running within a GUI.
 
 
-CLEARPAGE
-%!Include: mini_walkthroughs_ratpoison.t2t
-
