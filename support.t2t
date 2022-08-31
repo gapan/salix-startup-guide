@@ -7,11 +7,10 @@ Startup Guide, as it is specifically intended to be accessible to
 newcomers. The desktop link, Salix Online, will bring you to the Salix
 [Homepage URLSITE]. You could also
 use the
-[IRC link http://webchat.freenode.net/?randomnick=1&channels=salix&prompt=1] 
+[IRC link https://web.libera.chat/#salix] 
 to be in live communication with members of the community and get
 instant help if necessary. If you do, however, you might want to modify
-the default //qwebircxxx// login to something more personal and human
-readable.
+the default //GuestXX// login to something more personal.
 
 [img/salix-online.png]
 
