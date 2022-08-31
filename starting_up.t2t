@@ -179,9 +179,7 @@ the installer starts, you will be presented with several dialogs to customize
 the installation process. Here is what you will have to do:
 
 - Select your keymap.
-- If you prefer to let Salix do everything including partition management, just
-  select AUTOPARTITION. Note that this will delete everything on the hard drive.
-- Otherwise, the installer will run //cfdisk// to allow you to set up your desired
+- The installer will run //cfdisk// (or //cgdisk//) to allow you to set up your desired
   partitions. If they are already as you wish, type 'Q' to quit. See below for 
   a detailed guide to using [cfdisk #cfdisk].
 - Your swap partition, if any, will be automatically detected. Say ``yes`` if the
