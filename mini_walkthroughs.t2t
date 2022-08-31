@@ -215,7 +215,7 @@ from the ``Music`` directory:
 ``` rm -r photo/
 
 
-+++Installing a Program - spi+++
++++Installing a Program - slapt-get+++
 
 Maybe a little bird has told you that there is a wonderful application
 called //cowsay// in Linux, and now you would like to see what this
@@ -224,50 +224,26 @@ program can do.
 If this is the first time you are installing an application
 on Salix, the first thing you should do is to update the package
 database on your computer by executing
-``` sudo spi -u
+``` sudo slapt-get -u 
 
 Then to
 search for an application (in this case, "cowsay"), type in
-``` spi cowsay
+``` slapt-get --search cowsay
 
 Notice that you don't need to type ``sudo`` just for searching for a
 package. The output you will get should be similar to this:
 ```
-george[~]$ spi cowsay
-Available packages:
-None
+george[~]$ slapt-get --search cowsay
+cowsay-3.03-noarch-1salix15.0 [inst=no]: cowsay (A Configurable Speaking/Thinking Cow)
+xcowsay-1.5.1-x86_64-2salix15.0 [inst=no]: xcowsay (display a cute cow and speech bubble)
 
-Available SlackBuilds:
-cowsay [Not installed]: cowsay (A Configurable Speaking/Thinking
-                        Cow)
-xcowsay [Not installed]: xcowsay (displays a cute cow and message
-                         on your desktop)
 ```
 
-You can see that there is no available package for cowsay in the official
-repositories of Salix or Slackware. Instead, a SlackBuild is available.
-[SBo URLSBO] maintains extra packages for Slackware,
-which, of course, can be utilized by Salix users. These SlackBuilds,
-however, are not maintained by Salix or Slackware, but rather from
-individual Slackware users and are not guaranteed to work 100%
-of the time. Packages, on the other hand, should work perfectly fine all
-the time, with no exceptions.
-
-To install cowsay using the SlackBuild, you simply must run:
-``` sudo spi -i cowsay
-
-Actually this is not different at all from what you would have done if
-cowsay was available as a package. Installing any of the available
-packages involves downloading the package and actually installing it,
-while installing something using a SlackBuild, involves downloading the
-SlackBuild script and all required source files, compiling the source
-code, packaging it up and installing the package that has been created.
-All that, of course, is done automatically. It's only just that installing
-something using a SlackBuild is generally a bit (or a lot) slower since
-it includes the extra step for compiling the source code.
+To install it, you simply must run:
+``` sudo slapt-get -i cowsay
 
 If you are not sure what this
-``-i`` is in the above command, you can check it with ``spi --help``.
+``-i`` is in the above command, you can check it with ``slapt-get --help``.
 You will see a
 lot of lines running up the terminal quickly until the application is
 installed.
