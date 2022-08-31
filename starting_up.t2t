@@ -201,8 +201,9 @@ the installation process. Here is what you will have to do:
 - You will be asked to choose an installation mode (**Full**, **Basic** or
   **Core**).
 - Installation of packages will start.
-- After the installation, LILO setup will start up. Unless you are **not**
-  using LILO, choose the default options. You can refine the bootloader
+- After the installation, LILO (or eLILO for EUFI systems) setup will start
+  up. Unless you are **not**
+  using LILO/eLILO, choose the default options. You can refine the bootloader
   configuration (for example, in a multi-boot scenario) after booting into
   your new Salix installation.
 % see Max's commments on  whether install to MBR is the  default, p. 11
