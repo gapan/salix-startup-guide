@@ -18,12 +18,13 @@ These torrents are hosted by Salix's torrent server,
 made possible by generous donations from users.
 NOTEEND
 
-An ISO image is an archive file of an optical disc. It can be easily
-eendered or burned to a DVD or CD by using media authoring or disc
-burning software. The resulting CD should contain the contents of the .iso 
-file, but not the .iso file itself; if it
-does, you have made a mistake in the process. Alternatively, if your system 
-supports booting from USB, a USB stick may be used.
+An ISO image is an archive file of an optical disc. It can be easily burned to
+an optical disc by using media authoring or disc burning software. The
+resulting disc should contain the contents of the .iso file, but not the .iso
+file itself; if it does, you have made a mistake in the process. These days, it
+might be more usual to write the .iso file to a USB stick, using a tool like
+**dd**, or any image writing software.
+
 % Link to below?
 
 NOTESTART Checking download integrity
