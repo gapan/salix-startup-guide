@@ -7,7 +7,7 @@ html: htmltmp fix-anchors prepare-worktree
 	rm -rf output/img
 	mkdir -p output/htmlsep
 	cp -r img output/
-	mogrify -resize '600>' output/img/*.png
+	mogrify -resize '760>' output/img/*.png
 	htmldoc -t htmlsep --outdir output/htmlsep output/guide.html
 	cp css/*.css output/htmlsep/
 	cp img-css/*.png output/htmlsep/
