@@ -117,6 +117,8 @@ tex:
 		output/guide.tex
 	sed -i "/end{tabular}/s/end{tabular}/end{tabulary}/" \
 		output/guide.tex
+	sed -i 's|$$\\backslash$$_|\\_|g' \
+		output/guide.tex
 
 pdf: tex
 	xelatex -output-directory=output output/guide.tex
