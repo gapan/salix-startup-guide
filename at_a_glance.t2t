@@ -44,7 +44,7 @@ can tailor the software selection through the Salix package management tools
 as required.
 
 A **Basic** mode installation is mostly targeted at advanced users. It
-includes only the desktop environment accompaniede by a
+includes only the desktop environment accompanied by a
 very minimal selection of software on top, namely the Salix system
 configuration tools and a web browser. Wi-fi connection tools or drivers are not present and
 only wired network connections are supported out of the box. The user is
@@ -72,6 +72,7 @@ mode to install the X window system and any graphical environment on top of it i
   the **largest** third party software package repositories for Slackware
   offered to date.
 - The Salix repositories are offered for both the **32-bit** and **64-bit** architectures.
+- It is also possible to install software using **Flatpaks**.
 -
 
 NOTESTART In Short, Salix is...
