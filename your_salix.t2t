@@ -81,39 +81,10 @@ to ensure your installed system is up to date with the repositories -- click on
 
 ++Package management from the command line++
 
-//slapt-get// and //slapt-src// are the command-line tools for which //Gslapt// and //Sourcery//
-provide a GUI. This section describes their use from the command line, where there is also
-a tool that combines their most common functions, //spi//. //spkg// is a tool to install
-packages manually while still making them known to the package management system.
-
-
-+++Salix Package Installer+++
-
-//spi// is a command line tool that combines some basic functions of
-//slapt-get// and //slapt-src//. It installs from the Salix repositories
-if the package is available there, if not, it looks in [SBo URLSBO]
-and repeats the process recursively for any dependencies. This means all packages
-are automatically installed from the repositories if they are available there,
-even if it is a dependency of a package that is not. For a summary of usage, see
-``` spi --help
-
-Note that the default action (if //spi// is called without specifying e.g.
-``-i``) is to search for packages, reporting whether they are installed
-or where they are available. ``sudo spi -u`` will update package data for both //slapt-get//
-and //slapt-src//, and ``sudo spi -U`` installs any upgrades available.
-``sudo spi -i packagename``
-installs a specific package and its dependencies, always preferring packages
-in the repositories. ``spi --simulate -i packagename`` simulates installation, and ``spi --show``
-gives detailed information about a particular package.
-
-NOTESTART Superuser privileges
-Superuser privileges are required for actual installation and updating
-of packages but not actions that just provide information.
-NOTEEND
-
-While //spi// brings basic package
-management together in one all-purpose tool, //slapt-get// and //slapt-src//
-provide a number of other powerful features.
+//slapt-get// and //slapt-src// are the basic command-line tools used for installing
+packages. //Gslapt// provides a GUI for //slapt-get//. This section describes their use
+from the command line, along with the //flatpak// command line tool which is used to
+install software that comes in flatpaks.
 
 
 +++slapt-get+++[slapt-get]
@@ -205,6 +176,42 @@ you next carry out a general package upgrade. (See above for how to do
 this in [Gslapt #Gslapt]).
 NOTEEND
 
+
++++flatpak+++
+
+Software that is installed using flatpaks is managed separately from the main
+package management tools described earlier.
+
+A popular source for flatpaks is [Flathub https://flathub.org]. Salix comes
+with a GUI helper tool, ``flatpakref-installer`` to install software that way.
+
+You may use the ``flatpak`` command like tool to manage your flatpak software.
+
+To install a flatpak you can run a command like the following:
+``` flatpak install flathub org.kde.krita
+You will find this command in the respective webpage of the software you'd like
+to install in Flathub.
+
+To run software that is installed through flatpaks your run something like this:
+``` flatpak run org.kde.krita
+This command is also available in the software's page in Flathub. But a menu entry
+is usually added, so you don't have to remember that.
+
+To get a list of installed flatpaks, you may run:
+``` flatpak list
+
+To update all of your flatpaks to their latest version, you can run:
+``` flatpak update
+
+Uninstalling a flatpak is possible by:
+``` flatpak uninstall org.kde.krita
+
+You may find more information about the ``flatpak`` command by running:
+``` man flatpak
+or
+``` flatpak --help
+
+
 +++Making a Package from a Source File with SLKBUILD+++[roll-your-own]
 
 Installing software from a source file is in most cases not difficult.
@@ -247,11 +254,12 @@ and [New to Packaging http://docs.salixos.org/wiki/New_to_Packaging].
 If you wish to upgrade an older version of Salix on your machine to the
 latest, please refer to the following link for upgrading your Salix.
 
-- [Salix 13.0 to 13.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.0_to_13.1].
-- [Salix 13.1 to 13.37 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.1_to_13.37].
-- [Salix 13.37 to 14.0 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.37_to_14.0].
-- [Salix 14.0 to 14.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.0_to_14.1].
-- [Salix 14.1 to 14.2 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.1_to_14.2].
+- [Salix 14.2 to 15.0 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.2_to_15.0]
+- [Salix 14.1 to 14.2 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.1_to_14.2]
+- [Salix 14.0 to 14.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_14.0_to_14.1]
+- [Salix 13.37 to 14.0 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.37_to_14.0]
+- [Salix 13.1 to 13.37 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.1_to_13.37]
+- [Salix 13.0 to 13.1 http://www.salixos.org/wiki/index.php/How_to_upgrade_Salix_13.0_to_13.1]
 -
 
 
