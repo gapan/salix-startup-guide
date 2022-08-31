@@ -64,8 +64,10 @@ wise to check the following points:
 - Have you backed up all the important files you have?
 - Check if your computer comes with Linux-friendly/supported
   hardware.
-- Minimum recommended specification (Intel PIII 1 GHz, 512 Mb RAM, 8Gb
-  HD space, or equivalent, though a lower spec machine may run
+- Minimum recommended specification (1 GB RAM, 12 GB HD space.
+  Any 64-bit capable CPU for a 64-bit
+  installation. An Intel PIII 1 GHz CPU or equivalent CPU for
+  a 32-bit installation, though a lower spec machine may run
   without a problem).
 - At least one separate
   [partition http://en.wikipedia.org/wiki/Disk_partitioning]
@@ -123,6 +125,8 @@ WARNINGEND
 
 - Salix needs, at the very minimum, one partition which holds the root
   directory and must be assigned as ``/``.
+- If you are on a UEFI, you will also need a small EFI system partition
+  (200 MB is more than enough)
 - It is often recommended to have one swap partition though modern RAM
   sizes now often mean it isn't needed. If you already
   have another Linux OS running on your machine, its swap partition can be
