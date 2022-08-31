@@ -11,7 +11,7 @@ Slackware adheres to refers to the viewpoint of system design, Salix
 also applies it to the viewpoint of the end user.
 
 
-+++Salix Features+++
+++Salix Features++
 
 - One application per task rationale.
 - Fully backwards compatible with Slackware.
@@ -25,7 +25,7 @@ also applies it to the viewpoint of the end user.
 -
 
 
-+++Installation Modes+++
+++Installation Modes++
 
 Salix offers three software installation options: **Full**, **Basic**
 and **Core**, to meet your demands!
@@ -62,7 +62,7 @@ mode method. Expert users can of course use this
 mode to install the X window system and any graphical environment on top of it if desired.
 
 
-+++Salix Repositories & Package Management+++
+++Salix Repositories & Package Management++
 
 - //slapt-get// and its graphical interface //Gslapt// are the primary tools used for
   package management while //slapt-src// and //Sourcery// are included to allow the easy installation
