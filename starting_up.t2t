@@ -159,7 +159,7 @@ is xfs.
 
 IMPORTANTSTART EFI
 On (U)EFI systems, it is mandatory to have a separate partition allocated for
-**/boot**. This partition should have a type of **ef00**, when created in
+**/boot/efi**. This partition should have a type of **ef00**, when created in
 cgdisk. This partition should be formatted using the **FAT32**
 filesystem. A size of 200 MB should be more than enough.
 IMPORTANTEND
