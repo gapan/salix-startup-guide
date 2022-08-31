@@ -172,6 +172,12 @@ installing Slackware, but the entire process is considerably shorter and
 less complicated. Everything is done efficiently in a
 semi-graphical command line interface.
 
+To start the installation process, you may type ``setup`` (or press the up
+arrow on your keyboard to revoke the same command - useful if your actual
+keymap doesn't match the one that is used by default in the installer). Once
+the installer starts, you will be presented with several dialogs to customize
+the installation process. Here is what you will have to do:
+
 - Select your keymap.
 - If you prefer to let Salix do everything including partition management, just
   select AUTOPARTITION. Note that this will delete everything on the hard drive.
