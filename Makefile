@@ -128,7 +128,7 @@ pdf: tex
 	rm -f output/guide.out
 	rm -f output/guide.toc
 	rm -f output/guide.tex
-	qpdf --empty --pages 1stpage.pdf output/guide.pdf -- output/SalixStartupGuide.pdf
+	qpdf --empty --pages 1stpage.pdf output/guide.pdf -- output/salix-startup-guide.pdf
 
 all: html pdf epub mobi
 
