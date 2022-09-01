@@ -73,7 +73,7 @@ your Salix system:
   for installing software from the huge
   collection that is available in [Flathub https://flathub.org]. Finally, //slapt-src//
   is included to allow building software from source using [SBo https://slackbuilds.org]
-  as the primary source.!
+  as the primary source.
 - A wide range of packages from Slackware, Slackbuild and Salix repositories.
 - The Salix repositories offer **dependency resolution support** and are
   the **largest** third party software package repositories for Slackware
