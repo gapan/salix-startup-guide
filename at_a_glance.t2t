@@ -64,15 +64,21 @@ mode to install the X window system and any graphical environment on top of it i
 
 ++Salix Repositories & Package Management++
 
+Here are the key points you need to be aware of with respect to installing software on
+your Salix system:
+
 - //slapt-get// and its graphical interface //Gslapt// are the primary tools used for
-  package management while //slapt-src// and //Sourcery// are included to allow the easy installation
- of an even wider selection of software!
+  package management.
+- It is also possible to install software using **Flatpaks**. //flatpak// is available
+  for installing software from the huge
+  collection tthat is available in [Flathub https://flathub.org]. Finally, //slapt-src//
+  is included to allow building software from source using [SBo https://slackbuilds.org]
+  as the primary source.!
 - A wide range of packages from Slackware, Slackbuild and Salix repositories.
 - The Salix repositories offer **dependency resolution support** and are
   the **largest** third party software package repositories for Slackware
   offered to date.
 - The Salix repositories are offered for both the **32-bit** and **64-bit** architectures.
-- It is also possible to install software using **Flatpaks**.
 -
 
 NOTESTART In Short, Salix is...
