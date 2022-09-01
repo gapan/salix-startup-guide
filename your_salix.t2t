@@ -58,7 +58,7 @@ IMPORTANTEND
 CLEARPAGE
 +++Gslapt+++[Gslapt]
 
-//Gslapt// is the GUI version of [slapt-get #slapt-get]. It allows one to
+//Gslapt// is the GUI version of //slapt-get//. It allows one to
 search Slackware/Salix mirrors for packages.
 Before use you should first click on the **Update** button to ensure that
 the latest updates from the software repositories are known to //Gslapt//.
