@@ -140,14 +140,6 @@ will build and install a package. For
 more command line instructions, please refer to
 ``` slapt-src --help
 
-Another small exercise for you! Skype is a commonly used application to
-make voice calls over the Internet. It is not available from the common
-Salix/Slackware repository, but its build script is available from
-Slackbuilds.org. Try installing "skype" by using slapt-src. (If you do
-not wish to install it, you may just want to build the package.
-Note that the skype is 32-bit only, so if you are running a
-64-bit system, please try out some other application).
-
 
 +++spkg+++[spkg]
 
@@ -166,7 +158,7 @@ Removing a package is somewhat similar. You can remove a package by
 issuing
 ``` sudo spkg -d [software name]
 
-e.g. ``sudo spkg -d skype``
+e.g. ``sudo spkg -d mozilla-firefox``
 
 NOTESTART Blacklisting packages
 If you are replacing a package that is available in the repositories,
