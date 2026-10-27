@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="202.4874"
+   height="66.002586"
+   id="svg3010"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="salix-blackbg.svg"
+   inkscape:export-filename="/home/george/Desktop/salix-logo.png"
+   inkscape:export-xdpi="179.56"
+   inkscape:export-ydpi="179.56">
+  <defs
+     id="defs3012" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.5"
+     inkscape:cx="71.617831"
+     inkscape:cy="47.545673"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1020"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="1"
+     fit-margin-left="1"
+     fit-margin-right="1"
+     fit-margin-bottom="1" />
+  <metadata
+     id="metadata3015">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(1.0000001,1.0023665)">
+    <g
+       id="g4388">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/ale/Desktop/Logo8.png"
+         rx="2.7401738"
+         ry="2.5817585"
+         y="0.092625923"
+         x="0.094992332"
+         height="63.812599"
+         width="63.810017"
+         id="rect3939"
+         style="fill:#241f1c;fill-opacity:1;stroke:#241f1c;stroke-width:0.18998486;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/ale/Desktop/Logo8.png"
+         sodipodi:nodetypes="cccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path3076"
+         d="M 57.023746,8.5377106 C 38.958261,11.84461 25.909111,5.095836 12.331903,20.972472 l 44.69644,0 c 0.08604,-3.715577 -0.168817,-7.782682 -0.0046,-12.4347614 z m -46.699,16.8474704 C 9.1736739,28.584283 8.372281,32.384405 7.9998228,36.897635 l 46.3978962,0 c 1.178532,-3.191506 2.002044,-6.992229 2.393301,-11.512454 z M 7.778592,41.31034 c -0.073004,3.650014 -0.3742784,7.508168 0.07169,12.009285 l 0.00567,0.01456 C 24.279959,52.386494 41.26547,55.358935 52.334273,41.31037 Z"
+         style="fill:#66ff00;fill-opacity:1;stroke:#66ff00;stroke-width:0.24258097px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="69.090904"
+       y="52.653011"
+       id="text4365"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4367"
+         x="69.090904"
+         y="52.653011"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold'">Salix</tspan></text>
+  </g>
+</svg>
